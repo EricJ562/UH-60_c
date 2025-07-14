@@ -12,32 +12,6 @@ class CfgPatches
 	};
 };
 
-class VehicleTransport
-{
-	class Carrier
-	{
-		cargoBayDimensions[]		= { "VTV_limit_1", "VTV_limit_2" };
-		disableHeightLimit			= 1;								// If set to 1 disable height limit of transported vehicles
-		maxLoadMass					= 500;							// Maximum cargo weight (in Kg) which the vehicle can transport
-		cargoAlignment[]			= { "center", "left" };				// Array of 2 elements defining alignment of vehicles in cargo space.
-																		// Possible values are left, right, center, front, back. Order is important.
-
-		cargoSpacing[]				= { 0, 0.15, 0 };					// Offset from X,Y,Z axes (in metres)
-
-		exits[]						= { "VTV_exit_1", "VTV_exit_2" };	// Memory points in model defining loading ramps, could have multiple
-		unloadingInterval			= 2;								// Time between unloading vehicles (in seconds)
-		loadingDistance				= 10;								// Maximal distance for loading in exit point (in meters).
-		loadingAngle				= 60;								// Maximal sector where cargo vehicle must be to for loading (in degrees).
-		parachuteClassDefault		= "B_Parachute_02_F";				// Type of parachute used when dropped in air. Can be overridden by parachuteClass in Cargo.
-		parachuteHeightLimitDefault	= 50;
-
-		class CargoTypeWhitelist
- 		{
- 			B_Quadbike_01_F = 1;
- 		};
-	};
-};
-
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
 class SensorTemplateActiveRadar;
@@ -109,8 +83,8 @@ class CfgVehicles
 	{
 		features = "Slingload: Slingloads up to 6000kg";
 		destrType = "DestructWreck";		
-		picture="\A3\air_f_beta\Heli_Transport_01\Data\UI\Heli_Transport_01_base_CA.paa";
-		icon="\UH-60\Data\UI\UH-92_Icon.paa";
+		picture="\UH-60\Data\UI\UH_92_icon.paa";
+		icon="\UH-60\Data\UI\Map_UH_92.paa";
 		editorSubcategory="EdSubcat_Helicopters";
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		mapSize = 15;
@@ -317,6 +291,7 @@ class CfgVehicles
 			class HideGunMFD{source="user";animPeriod=0;initPhase=0;};	
 			class HideSlingFeed{source="user";animPeriod=0;initPhase=0;};
 			class Probe_Show{source="user";animPeriod=0;initPhase=0;};
+			class EOTech_Show{source="user";animPeriod=0;initPhase=0;};
 		};
 		class HitPoints: HitPoints
 		{
@@ -1747,6 +1722,8 @@ class CfgVehicles
 		accuracy=1;
 		side=1;
 		faction="TF160";
+		picture="\UH-60\Data\UI\MH_92_Icon.paa";
+		icon="\UH-60\Data\UI\Map_MH_92.paa";
 		crew = "160th_SOAR_Pilot";
 		typicalCargo[]={"160th_SOAR_Pilot"};
 		displayName = MH-92F (Insertion);

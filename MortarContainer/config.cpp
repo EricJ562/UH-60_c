@@ -35,7 +35,7 @@ class CfgVehicles
 		getInAction="GetInMortar";
 		getOutAction="GetOutLow";
 		picture="\UH-60\data\UI\Mortar_01_ca.paa";
-		icon="\UH-60\data\UI\map_Mortar_01_CA.paa";
+		icon="\UH-60\data\UI\CMC_01_icon_ca.paa";
 		cost=200000;
 		slingLoadCargoMemoryPoints[]={"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 		accuracy=0.25;

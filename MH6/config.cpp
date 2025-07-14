@@ -536,6 +536,8 @@ class CfgVehicles
 		crew="160th_SOAR_Pilot";
 		displayName="MH-15M Little Bird";
 		accuracy=1.5;
+		icon="\UH-60\Data\UI\Map_XX_15M_Icon.paa";
+		picture="\UH-60\Data\UI\MH_15M_Icon.paa";
 		receiveRemoteTargets=1;
 		reportRemoteTargets=1;
 		reportOwnPosition=1;

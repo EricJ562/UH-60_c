@@ -33,8 +33,8 @@ class CfgVehicles
 		cargoAction[]={"Mortar_Gunner"};
 		getInAction="GetInMortar";
 		getOutAction="GetOutLow";
-		picture="\A3\Static_f\Mortar_01\data\UI\Mortar_01_ca.paa";
-		icon="\A3\Static_f\Mortar_01\data\UI\map_Mortar_01_CA.paa";
+		picture="\UH-60\data\UI\Arty_Container_Icon.paa";
+		icon="\UH-60\data\UI\CMC_01_icon_ca.paa";
 		cost=200000;
 		accuracy=0.25;
 		threat[]={1,0.30000001,0.1};

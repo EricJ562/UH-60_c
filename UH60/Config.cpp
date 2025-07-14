@@ -75,8 +75,8 @@ class CfgVehicles
 	{
 		features = "Slingload: Slingloads up to 2000kg";
 		destrType = "DestructWreck";		
-		picture="\A3\air_f_beta\Heli_Transport_01\Data\UI\Heli_Transport_01_base_CA.paa";
-		icon="\A3\air_f_beta\Heli_Transport_01\Data\UI\Map_Heli_Transport_01_base_CA.paa";
+		picture="\uh-60\data\ui\uh_60_icon.paa";
+		icon="\UH-60\Data\UI\Map_UH_60_ca.paa";
 		vehicleClass="Air";
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		editorSubcategory="EdSubcat_Helicopters";
@@ -1219,7 +1219,7 @@ class CfgVehicles
 		};
 	};
 
-//Knighthawks
+//USNHelos
 
 	class ej_MH60S: ej_UH60M_base
 	{
@@ -2077,6 +2077,7 @@ class TurnOut
 		faction="TF160";
 		vehicleClass = "Air";
 		model = "\UH-60\MH60\ej_MH60M.p3d";
+		picture="\uh-60\data\ui\MH_60_icon.paa";
 		displayName = "MH-60M (Insertion)";
 		crew = "160th_SOAR_Pilot";
 		memoryPointsGetInCargo="pos cargo";

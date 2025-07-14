@@ -82,8 +82,8 @@ class CfgVehicles
 	{
 		features = "Slingload: Slingloads up to 6000kg";
 		destrType = "DestructWreck";		
-		picture="\A3\air_f_beta\Heli_Transport_01\Data\UI\Heli_Transport_01_base_CA.paa";
-		icon="\UH-60\Data\UI\UH-92_Icon.paa";
+		picture="\UH-60\Data\UI\MH-92DAP_Icon.paa";
+		icon="\UH-60\Data\UI\Map_MH_92.paa";
 		editorSubcategory="EdSubcat_Helicopters";
 		model = "\UH-60\MH92\ej_MH92DAP3.p3d";
 		memoryPointTaskMarker="TaskMarker_1_pos";

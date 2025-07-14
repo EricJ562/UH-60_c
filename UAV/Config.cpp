@@ -39,8 +39,8 @@ class CfgVehicles
 	{
 		features = "Slingload: Slingloads up to 500kg";
 		destrType = "DestructWreck";		
-		picture="\A3\air_f_beta\Heli_Transport_01\Data\UI\Heli_Transport_01_base_CA.paa";
-		icon="\A3\air_f_beta\Heli_Transport_01\Data\UI\Map_Heli_Transport_01_base_CA.paa";
+		icon="\UH-60\Data\UI\Map_MQ_17_Icon.paa";
+		picture="\UH-60\Data\UI\MQ_17_Icon.paa";
 		editorSubcategory="EdSubcat_Drones";
 		mapSize = 4;
 		class SpeechVariants
@@ -405,6 +405,8 @@ class CfgVehicles
 		accuracy=1;
 		side=1;
 		faction="BLU_F";
+		icon="\UH-60\Data\UI\Map_MQ_37_Icon.paa";
+		picture="\UH-60\Data\UI\MQ_37_Icon.paa";
 		displayName = MQ-37 Cargo Drone;
 		crew="B_UAV_AI";
 		typicalCargo[]={"B_UAV_AI"};

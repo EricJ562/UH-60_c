@@ -67,6 +67,8 @@ class CfgVehicles
 		editorSubcategory="EdSubcat_Helicopters";
 		vehicleClass="Air";
 		altFullForce = 4000;
+		picture="\uh-60\data\ui\KA_145_Icon.paa";
+		icon="\UH-60\Data\UI\Map_KA_145_Icon.paa";
 		altNoForce = 6000;
 		maxSpeed = 240;
 		memoryPointTaskMarker="TaskMarker_1_pos";
@@ -203,7 +205,8 @@ class CfgVehicles
 		memoryPointGun="machinegun_end";
 		weapons[] = {"gatling_2A42","CMFlareLauncher"};
 		magazines[] = {"250Rnd_30mm_HE_shells_Tracer_Green","250Rnd_30mm_APDS_shells_Tracer_Green","192Rnd_CMFlare_Chaff_Magazine"};
-
+		hiddenSelections[]={"camo1","camo2","camo3"};
+		hiddenSelectionsTextures[] ={"uh-60\data\ka52_01_co.paa","uh-60\data\ka52_02_co.paa","uh-60\data\ka145ductfans_co.paa"};
 		class Components: Components
 		{
 			class TransportPylonsComponent
@@ -2083,14 +2086,6 @@ class CfgVehicles
 		crew = "O_HelicrewRUS_F";
 		displayName="Ka-145 Hoplite";
 		accuracy = 1.50;
-		
-		icon = "\A3\Air_F\Heli_Light_02\Data\UI\Map_Heli_Light_02_rockets_CA.paa";
-		picture = "\A3\Air_F\Heli_Light_02\Data\UI\Heli_Light_02_rockets_CA.paa";
-
-		hiddenSelectionsTextures[] =
-		{
-			"uh-60\data\ka52_01_co.paa","uh-60\data\ka52_02_co.paa","uh-60\data\ka145ductfans_co.paa"
-		};
 		availableForSupportTypes[] = {"CAS_Heli"};
 		cost = 2000000;
 	};

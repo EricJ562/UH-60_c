@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class Ej_MH60MDAP
 	{
-		units[] = {"ej_MH60MDAP4DP","ej_MH60MDAP2","ej_MH60SI2"};
+		units[] = {"ej_MH60MDAP4DP","ej_MH60MDAP2","ej_MH60SI2","ej_HH60H"};
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
@@ -74,8 +74,8 @@ class CfgVehicles
 	{
 		features = "Slingload: Slingloads up to 2000kg";
 		destrType = "DestructWreck";		
-		picture="\A3\air_f_beta\Heli_Transport_01\Data\UI\Heli_Transport_01_base_CA.paa";
-		icon="\A3\air_f_beta\Heli_Transport_01\Data\UI\Map_Heli_Transport_01_base_CA.paa";
+		picture="\uh-60\data\ui\MH_60_icon.paa";
+		icon="\uh-60\Data\UI\Map_UH_60_ca.paa";
 		vehicleClass="Air";
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		editorSubcategory="EdSubcat_Helicopters";
@@ -456,10 +456,8 @@ class CfgVehicles
 			class ReloadMagazine_2{source="reloadmagazine";weapon="M240_veh_2";};
 			class Revolving_2{source="revolving";weapon="M240_veh_2";};
 			class HidePilotMFD{source="user";animPeriod=0;initPhase=0;};
-			class Wheel_1_source			{source = wheel; wheel = Wheel_1;};
-			class Wheel_2_source			{source = wheel; wheel = Wheel_2;};
-			class Wheel_3_source			{source = wheel; wheel = Wheel_3;};
 			class Probe_Show{source="user";animPeriod=0;initPhase=0;};
+			class Doors_Show{source="user";animPeriod=0;initPhase=0;};
 			class Fuelprobe_Extend{source="user";animPeriod=0;initPhase=0;};
 		};
 		class UserActions
@@ -730,7 +728,6 @@ class CfgVehicles
 		transportSoldier = 0;
 		cost=200000;
 		ace_fastroping_enabled = 0;
-		slingLoadMaxCargoMass=500;
 		textureList[]={"SOAR",1};
 		weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,5000Rnd_762x51_Belt_Red};
@@ -927,12 +924,10 @@ class CfgVehicles
 		model = "\UH-60\MH60\ej_MH60MDAP4DP.p3d";
 		crew = "160th_SOAR_Pilot";
 		enableManualFire=1;
-		hideWeaponsCargo = 1;
 		selectionFireAnim="muzzleFlash_1";
 		transportSoldier = 0;
 		cost=200000;
 		ace_fastroping_enabled = 0;
-		slingLoadMaxCargoMass=500;
         	USAF_RefuelType = "probe";
         	USAF_RefuelPoint[] = {-1.146, -1.159, -9.243};
 		textureList[]={"SOAR",1};
@@ -1143,6 +1138,178 @@ class CfgVehicles
 						maxweight=400;
 						UIposition[]={0.58999997,0.40000001};
 					};
+				};
+			};
+		};
+	};
+	class ej_HH60H: ej_MH60MDAP_base
+	{
+		author="EricJ";
+		scope=2;
+		accuracy=1;
+		side=1;
+		picture="\uh-60\data\ui\HH_60_icon.paa";
+		icon="\uh-60\Data\UI\Map_UH_60_ca.paa";
+		faction="USN";
+		crew="B_Helipilot_F";
+		typicalCargo[]={"B_Helipilot_F"};
+		displayName = HH-60H (Insertion);
+		ace_fastroping_enabled = 1;
+		textureList[]={"USN",1};
+		cargoProxyIndexes[] = {1,2,3,4,5,6,7,8};
+		transportSoldier=8;
+		fuelCapacity = 1564;
+		slingLoadMaxCargoMass=0;
+		ace_fastroping_ropeOrigins[] = {"ropeOriginRight"};
+		model = "\UH-60\hh\ej_HH60H.p3d";
+		attenuationEffectType="OpenCarAttenuation";
+		memoryPointsGetInCargo="pos cargo";
+		memoryPointsGetInCargoDir="pos cargo dir";
+	cargoAction[]={"passenger_flatground_leanleft","passenger_flatground_leanright","passenger_flatground_crosslegs","passenger_flatground_leanleft"};
+		class Components: Components
+
+		{
+			class TransportPylonsComponent
+			{
+				uiPicture="\UH-60\Data\UI\Heli_Blackhawk.paa";
+				class Pylons
+				{
+					class PylonLeft1
+					{
+						attachment="";
+						priority=5;
+						hardpoints[]=
+						{
+							"B_HH60_Hellfire",
+						};
+						turret[]={0};
+						maxweight=400;
+						UIposition[]={0.059999999,0.40000001};
+					};
+		              };
+	              };
+		};
+		class CargoTurret;
+		class Turrets: Turrets
+		{
+			class CoPilotObs: MainTurret
+			{
+				ace_laser_selfdesignate_Enabled = 1;
+				isCopilot = 1;
+				body = "ObsTurret";
+				gun = "ObsGun";
+				gunnerAction = "pilot_Heli_Transport_01";
+				gunnerInAction = "pilot_Heli_Light_03_Enter";
+				memoryPointsGetInGunner="pos copilot";
+				memoryPointsGetInGunnerDir="pos copilot dir";		
+				gunnerGetInAction="GetInHeli_Transport_01Cargo";
+				gunnerGetOutAction="GetOutLow";
+				minElev = -2;
+				maxElev = +25;
+				initElev = 0;
+				minTurn = -360;  
+				maxTurn = 360; 
+				initTurn = 0;
+				gunBeg = "gun_end"; 
+				gunEnd = "gun_begin"; 						
+				memoryPointGunnerOptics = "commanderview";
+				animationSourceBody = "ObsTurret";
+				animationSourceGun = "ObsGun";
+				showAsCargo = 1;
+				showHMD = 1;
+				CanEject = 1;
+				startEngine = 0;
+				soundServo[] = {,db-40,1.0};				
+				outGunnerMayFire = 1; 
+				gunnerCompartments="Compartment3";
+				commanding=-3;	
+				primaryGunner = 1;										selectionFireAnim="muzzleFlash_1";
+				selectionFireAnim = "";
+				castGunnerShadow = 1;
+				viewGunnerShadow = 1;
+				gunnerOpticsModel = "";
+				gunnerOpticsEffect[] = {"TankCommanderOptics1"};				
+				gunnerForceOptics = false;
+				gunnerOpticsShowCursor = 1;
+				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
+				showAllTargets = 2;				
+				copilotHasFlares = 1;
+				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"EricJ_CMFlareLauncherDAP"};
+				magazines[] = {Laserbatteries,kuy_IR_Jammer_Magazine,"168Rnd_CMFlare_Chaff_Magazine"};									
+				stabilizedInAxes = "StabilizedInAxesBoth";
+				proxyIndex = 3;
+				gunnerName = "Co-Pilot"; 
+
+				class OpticsIn 
+				{
+					class Wide
+					{
+						initAngleX=0;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						initFov=0.46599999;
+						minFov=0.46599999;
+						maxFov=0.46599999;
+						opticsDisplayName="WFOV";
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+						thermalMode[]={0,1};
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MBT_03_w_F.p3d";
+					};
+					class Medium: Wide
+					{
+						initFov=0.093000002;
+						minFov=0.093000002;
+						maxFov=0.093000002;
+						opticsDisplayName="MFOV";
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MBT_03_w_F.p3d";
+					};
+					class Narrow: Wide
+					{
+						initFov=0.028999999;
+						minFov=0.028999999;
+						maxFov=0.028999999;
+						opticsDisplayName="NFOV";
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MBT_03_w_F.p3d";
+					};			
+				};
+				class OpticsOut 
+				{
+					class Monocular 
+					{
+						initAngleX = 0;
+						minAngleX = -30;
+						maxAngleX = 30;
+						initAngleY = 0;
+						minAngleY = -100;
+						maxAngleY = 100;
+						initFov = 1.1;
+						minFov = 0.133;
+						maxFov = 1.1;
+						visionMode[] = {"Normal","NVG","Ti"};
+						thermalMode[] = {2, 3};						
+						gunnerOpticsModel = "";
+						gunnerOpticsEffect[] = {};
+					};
+				};
+				class ViewOptics
+				{
+					initAngleX = 0; 
+					minAngleX = -30; 
+					maxAngleX = +30;
+					initAngleY = 40; 
+					minAngleY = -100; 
+					maxAngleY = +100;
+					initFov = 1.4; 
+					minFov = 0.3; 
+					maxFov = 1.0;
 				};
 			};
 		};

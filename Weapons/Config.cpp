@@ -2810,7 +2810,8 @@ class CfgWeapons
 			"PylonRack_2rnd_Hellfire_uh60",
 			"PylonRack_4rnd_Hellfire_uh60",
 			"PylonRack_2rnd_Hellfire_AH6",
-			"PylonRack_1rnd_Hellfire_AH6"
+			"PylonRack_1rnd_Hellfire_AH6",
+			"PylonRack_2rnd_Hellfire_HH60",
 		};
 		aiRateOfFire=5;
 		aiRateOfFireDistance=500;
@@ -3153,6 +3154,16 @@ class CfgMagazines
 		count=2;
 		mirrorMissilesIndexes[]={2,1};
 		hardpoints[]={"B_AH6_Hellfire"};
+		pylonWeapon="uh60_hellfire";
+	};
+	class PylonRack_2rnd_Hellfire_HH60: agm114_uh60_2
+	{
+		displayName="2x AGM-114K";
+		model="\UH-60\Misc\Weapons\M299\M299x2hh60.p3d";
+		mass=100;
+		count=2;
+		mirrorMissilesIndexes[]={2,1};
+		hardpoints[]={"B_HH60_Hellfire"};
 		pylonWeapon="uh60_hellfire";
 	};
 	class PylonRack_4rnd_Hellfire_uh60: agm114_uh60_4
@@ -4930,6 +4941,11 @@ class CfgNonAIVehicles
 	class ProxyPylonRack_1rnd_Hellfire_AH6: proxyWeapon
 	{
 		model="\UH-60\Misc\Weapons\M299\M299x2ah61.p3d";
+		simulation = pylonpod;
+	};
+	class PylonRack_2rnd_Hellfire_HH60: proxyWeapon
+	{
+		model="\UH-60\Misc\Weapons\M299\M299x2hh60.p3d";
 		simulation = pylonpod;
 	};
 };

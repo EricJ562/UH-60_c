@@ -54,8 +54,8 @@ class CfgVehicles
 	class ej_S94_base: Helicopter_Base_H
 	{
 		destrType = "DestructWreck";		
-		picture="\A3\air_f_beta\Heli_Transport_01\Data\UI\Heli_Transport_01_base_CA.paa";
-		icon="\A3\air_f_beta\Heli_Transport_01\Data\UI\Map_Heli_Transport_01_base_CA.paa";
+		picture="\uh-60\Data\UI\S_94_Icon.paa";
+		icon="\UH-60\Data\UI\Map_S_94_Icon.paa";
 		editorSubcategory="EdSubcat_Helicopters";
 		mapSize = 15;
 		cargoCanEject = 1;

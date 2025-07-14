@@ -527,6 +527,8 @@ class CfgVehicles
 		displayName="AH-15M Little Bird";
 		accuracy=1.5;
 		ForceInGarage=1;
+		icon="\UH-60\Data\UI\Map_XX_15M_Icon.paa";
+		picture="\UH-60\Data\UI\AH_15M_Icon.paa";
 		mainBladeRadius = 1.1;
 		tailBladeRadius=1.1;
 		weapons[] = {ej_master_arms_safe,ej_M134_minigun,EricJ_CMFlareLauncher};

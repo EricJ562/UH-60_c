@@ -6,7 +6,7 @@ class CfgPatches
 	{
 		requiredAddons[] = {"A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
 		requiredVersion=0.1;
-		units[]={"ej_ah96","ej_AH96_USA","ej_AH96_NATO"};
+		units[]={"ej_ah96"};
 		weapons[]={};
 	};
 };
@@ -83,11 +83,10 @@ class CfgVehicles
 		textPlural="$STR_A3_nameSound_veh_air_gunship_p";
 		nameSound="veh_air_gunship_s";
 		memoryPointTaskMarker="TaskMarker_1_pos";
-		_generalMacro="Heli_Attack_01_base_F";
 		model="\uh-60\AH96\ej_AH96.p3d";
 		editorSubcategory="EdSubcat_Helicopters";
-		icon="\A3\Air_F_Beta\Heli_Attack_01\Data\UI\Map_Heli_Attack_01_CA.paa";
-		picture="\A3\Air_F_Beta\Heli_Attack_01\Data\UI\Heli_Attack_01_CA.paa";
+		icon="\UH-60\Data\UI\Map_AH_96_Icon.paa";
+		picture="\UH-60\Data\UI\AH_96_Icon.paa";
 		class RotorLibHelicopterProperties
 		{
 			RTDconfig="A3\Air_F_Beta\Heli_Attack_01\RTD_Heli_Attack_01.xml";

@@ -26,4 +26,11 @@ class CfgUnitInsignia
 		texture = "\uh-60\Data\Patches\TF562.paa"; 
 		textureVehicle = ""; 
 	};
+	class BRPMC
+	{
+		displayName = "Black River PMC"; 
+		author = "EricJ"; 
+		texture = "\uh-60\Data\Patches\BRPMC.paa"; 
+		textureVehicle = ""; 
+	};
 };
