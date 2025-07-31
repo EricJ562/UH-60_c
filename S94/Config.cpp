@@ -402,27 +402,7 @@ class CfgVehicles
 		};
 		class AnimationSources: AnimationSources
 		{
-			class Gun_HRot{source="user";animPeriod=1e-006;initPhase=0;};
-			class Gun_VRot{source="user";animPeriod=1e-006;initPhase=0;};
-			class HideWeapon{source = "user";animPeriod = 0.00001;initPhase = 0;};
-			class Gatling{source = "revolving";weapon = "M197_MH60";};
-			class Gatling_1{source="revolving";weapon=LMG_Minigun_Transport;};
-			class Gatling_2{source="revolving";weapon=LMG_Minigun_Transport2;};
-			class Cannon{source = "ammorandom";weapon = "M230";};
-			class Missiles_revolving{source = "revolving";weapon = "missiles_DAGR";};
-			class ReloadAnim{source="reload";weapon="M240_veh";};
-			class ReloadMagazine{source="reloadmagazine";weapon="M240_veh";};
-			class Revolving{source="revolving";weapon="M240_veh";};
-			class ReloadAnim_2{source="reload";weapon="M240_veh_2";};
-			class ReloadMagazine_2{source="reloadmagazine";weapon="M240_veh_2";};
-			class Revolving_2{source="revolving";weapon="M240_veh_2";};
-			class FormationLights {AnimPeriod = 1;source = "user";InitPhase = 1; };
-			class HidePilotMFD{source="user";animPeriod=0;initPhase=0;};
-			class HideGunMFD{source="user";animPeriod=0;initPhase=0;};	
 			class HideSlingFeed{source="user";animPeriod=0;initPhase=0;};
-			class Wheel_1_source			{source = wheel; wheel = Wheel_1;};
-			class Wheel_2_source			{source = wheel; wheel = Wheel_2;};
-			class Wheel_3_source			{source = wheel; wheel = Wheel_3;};
 		};
 		class UserActions
 		{
@@ -444,6 +424,21 @@ class CfgVehicles
 				condition="this animationPhase ""copip"" > 0.5 AND (player == (driver this) && (alive this))";
 				statement="this animate [""copip"",0];";
 			}; 
+		};
+		class RenderTargets
+		{
+			class MFD1
+			{
+				renderTarget = "rendertarget0";
+				class View01
+				{
+					pointPosition = "slingpip0_pos";
+					pointDirection = "slingpip0_dir";
+					renderQuality = 2;
+					renderVisionMode = 0;
+					fov=0.69999999;
+				};
+			};
 		};
 		class Reflectors: Reflectors
 		{
