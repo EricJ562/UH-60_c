@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class Ej_UH60M
 	{
-		units[] = {"ej_MH60A","ej_MH60AL","ej_UH60M_BR","ej_UH60M_NATO","ej_UH60M_MEV_NOESSS","ej_MH60L","ej_UH60M_UT","ej_UH60M","ej_MH60S","ej_MH60SI","ej_MH60M","ej_UH60M_U","ej_UH60M_MEV","ej_MH60MS"};
+		units[] = {"ej_MH60A","ej_MH60AL","ej_UH60M_BR","ej_UH60M_NATO","ej_UH60M_MEV_NOESSS","ej_MH60L","ej_UH60M_UT","ej_UH60M","ej_MH60S","ej_MH60SI","ej_MH60M","ej_UH60M_U","ej_UH60M_MEV","ej_MH60MS","ej_HH60HA"};
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 2.20;
@@ -110,7 +110,7 @@ class CfgVehicles
 		selectionHRotorMove = "main rotor blur";
 		selectionVRotorStill = "tail rotor static";
 		selectionVRotorMove = "tail rotor blur";
-		weapons[]={"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+		weapons[]={"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
 		availableForSupportTypes[]={"Drop","Transport"};
 		LockDetectionSystem = CM_Lock_Radar + CM_Lock_Laser;
@@ -532,11 +532,10 @@ class CfgVehicles
 			class Gun_HRot{source="user";animPeriod=1e-006;initPhase=0;};
 			class Gun_VRot{source="user";animPeriod=1e-006;initPhase=0;};
 			class HideWeapon{source = "user";animPeriod = 0.00001;initPhase = 0;};
-			class Gatling{source = "revolving";weapon = "M197_MH60";};
 			class Gatling_1{source="revolving";weapon=M134_uh60;};
 			class Gatling_2{source="revolving";weapon=M134_uh60_2;};
-			class Cannon{source = "ammorandom";weapon = "M230";};
-			class Missiles_revolving{source = "revolving";weapon = "missiles_DAGR";};
+			class Gatling_1{source="revolving";weapon=M134E_uh60;};
+			class Gatling_2{source="revolving";weapon=M134E_uh60_2;};
 			class ReloadAnim{source="reload";weapon="M240_veh";};
 			class ReloadMagazine{source="reloadmagazine";weapon="M240_veh";};
 			class Revolving{source="revolving";weapon="M240_veh";};
@@ -544,9 +543,6 @@ class CfgVehicles
 			class ReloadMagazine_2{source="reloadmagazine";weapon="M240_veh_2";};
 			class Revolving_2{source="revolving";weapon="M240_veh_2";};
 			class HidePilotMFD{source="user";animPeriod=0;initPhase=0;};
-			class Wheel_1_source			{source = wheel; wheel = Wheel_1;};
-			class Wheel_2_source			{source = wheel; wheel = Wheel_2;};
-			class Wheel_3_source			{source = wheel; wheel = Wheel_3;};
 			class Probe_Show{source="user";animPeriod=0;initPhase=0;};
 			class Tanks_Show{source="user";animPeriod=0;initPhase=0;};
 			class Fuelprobe_Extend{source="user";animPeriod=0;initPhase=0;};
@@ -634,7 +630,10 @@ class CfgVehicles
 		};
 		dammageHalf[] = {};	
 		dammageFull[] = {};
+
 		#include "sounds.hpp"
+		#include "Cherokee_01.hpp"
+
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[]={"\uh-60\data\uh60m_fuselage_co.paa","\uh-60\data\uh60m_engine_co.paa","\uh-60\data\default_co.paa"};	
 		class Damage
@@ -782,7 +781,7 @@ class CfgVehicles
 				LockDetectionSystem = 1 + 2 + 4 + 8;
 				incomingMissileDetectionSystem = 16;
 				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -794,70 +793,70 @@ class CfgVehicles
 			class NATO
 			{
 				displayName="NATO";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_nato_co.paa","\uh-60\data\uh60m_engine_nato_co.paa","\uh-60\data\default_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class ADF
 			{
 				displayName="ADF";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_adf.paa","\uh-60\data\uh60m_engine_adf.paa","\uh-60\data\default_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class RDA
 			{
 				displayName="RDA SEC-FOR";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_rda_co.paa","\uh-60\data\uh60m_engine_rda_co.paa","\uh-60\data\default_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class Desert
 			{
 				displayName="Desert";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_desert_co.paa","\uh-60\data\uh60m_engine_desert_co.paa","\uh-60\data\default_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class Black
 			{
 				displayName="Black";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_black_co.paa","\uh-60\data\uh60m_engine_black_co.paa","\uh-60\data\default_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class BlackRiver
 			{
 				displayName="Black River PMC";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_blackriver_co.paa","\uh-60\data\uh60m_engine_blackriver_co.paa","\uh-60\data\default_co.paa"};
 				factions[]={"BRPMC"};
 			};
 			class USArmy
 			{
 				displayName="US Army";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_co.paa","\uh-60\data\uh60m_engine_co.paa","\uh-60\data\default_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class USArmyMEV
 			{
 				displayName="US ArmyMEV";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_mev_co.paa", "\uh-60\data\uh60m_engine_mev_co.paa", "\uh-60\data\default_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class USN
 			{
 				displayName="USN";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_Navy_co.paa","\uh-60\data\uh60m_engine_Navy_co.paa","\uh-60\data\default_co.paa"};
 				factions[]={"TF160","BLU_F"};
 			};
 			class SOAR
 			{
 				displayName="SOAR";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_dap_co.paa","\uh-60\data\uh60m_engine_DAP_co.paa","\uh-60\data\default_co.paa"};
 				factions[]={"TF160","BLU_F"};
 			};
@@ -869,11 +868,11 @@ class CfgVehicles
 	};
 	class ej_UH60M: ej_UH60M_base
 	{
-		dlc=EricJ_UH60;
+		dlc=Flanker562_UH60;
 		scope=2;
 		side=1;
 		faction="USA";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="UH60M";
 		displayName = UH-60M;
 		crew="B_HelipilotUSA_F";
@@ -891,13 +890,13 @@ class CfgVehicles
 	};
 	class ej_UH60M_NATO: ej_UH60M
 	{
-		dlc=EricJ_UH60;
+		dlc=Flanker562_UH60;
 		scope=2;
 		side=1;
 		faction="BLU_F";
 		typicalCargo[]={"B_Helipilot_F"};
 		typicalCargo[]={"B_Helipilot_F"};
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="UH60M";
 		displayName = UH-60M (NATO);
 		textureList[]={"NATO",1};
@@ -905,7 +904,7 @@ class CfgVehicles
 	};
 	class ej_UH60M_U: ej_UH60M_base
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="UH60M_U";
 		scope=2;
 		accuracy=1;
@@ -951,7 +950,7 @@ class CfgVehicles
 				LockDetectionSystem = 1 + 2 + 4 + 8;
 				incomingMissileDetectionSystem = 16;
 				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1007,8 +1006,8 @@ class CfgVehicles
 	};
 	class ej_UH60M_UT: ej_UH60M_U
 	{
-		dlc=EricJ_UH60;
-		author="EricJ";
+		dlc=Flanker562_UH60;
+		author="Flanker562";
 		_generalMacro="UH60M_U";
 		scope=2;
 		accuracy=1;
@@ -1048,8 +1047,8 @@ class CfgVehicles
 	};
 	class ej_UH60M_MEV: ej_UH60M_base
 	{
-		dlc=EricJ_UH60;
-		author="EricJ";
+		dlc=Flanker562_UH60;
+		author="Flanker562";
 		_generalMacro="UH60M_MEV";
 		scope=2;
 		accuracy=1;
@@ -1135,7 +1134,7 @@ class CfgVehicles
 				LockDetectionSystem = 1 + 2 + 4 + 8;
 				incomingMissileDetectionSystem = 16;
 				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1145,8 +1144,8 @@ class CfgVehicles
 	};
 	class ej_UH60M_MEV_NOESSS: ej_UH60M_base
 	{
-		dlc=EricJ_UH60;
-		author="EricJ";
+		dlc=Flanker562_UH60;
+		author="Flanker562";
 		_generalMacro="UH60M_MEV";
 		scope=2;
 		accuracy=1;
@@ -1210,7 +1209,7 @@ class CfgVehicles
 				LockDetectionSystem = 1 + 2 + 4 + 8;
 				incomingMissileDetectionSystem = 16;
 				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1223,8 +1222,8 @@ class CfgVehicles
 
 	class ej_MH60S: ej_UH60M_base
 	{
-		dlc=EricJ_UH60;
-		author="EricJ";
+		dlc=Flanker562_UH60;
+		author="Flanker562";
 		_generalMacro="MH60S";
 		scope=2;
 		accuracy=1;
@@ -1248,8 +1247,8 @@ class CfgVehicles
 	};
 	class ej_MH60SI: ej_MH60S
 	{
-		dlc=EricJ_UH60;
-		author="EricJ";
+		dlc=Flanker562_UH60;
+		author="Flanker562";
 		_generalMacro="ej_MH60SI";
 		scope=2;
 		accuracy=1;
@@ -1363,7 +1362,7 @@ class CfgVehicles
 				LockDetectionSystem = 1 + 2 + 4 + 8;
 				incomingMissileDetectionSystem = 16;
 				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1371,6 +1370,236 @@ class CfgVehicles
 			};
                 };
         };
+	class ej_HH60HA: ej_UH60M_base
+	{
+		author="Flanker562";
+		scope=2;
+		accuracy=1;
+		side=1;
+		picture="\uh-60\data\ui\HH_60_icon.paa";
+		icon="\uh-60\Data\UI\Map_UH_60_ca.paa";
+		faction="USN";
+		crew="B_Helipilot_F";
+		typicalCargo[]={"B_Helipilot_F"};
+		displayName = HH-60H (Minigun);
+		ace_fastroping_enabled = 1;
+		textureList[]={"USN",1};
+		cargoProxyIndexes[] = {};
+		transportSoldier=0;
+		weapons[]={"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon","uh60_hellfire"};
+		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine","2rnd_Hellfire_Rail_mag"};
+		fuelCapacity = 1564;
+		slingLoadMaxCargoMass=2722;
+		model = "\UH-60\hh\ej_HH60HA.p3d";
+		attenuationEffectType="OpenCarAttenuation";
+		class CargoTurret;
+		class Turrets: Turrets
+		{
+			class RightDoorGun: MainTurret
+			{
+				isCopilot = 0;
+				body = "Turret2";
+				gun = "Gun_2";
+				minElev=-40;
+				maxElev=15;
+				initElev=-20;	
+				minTurn=-140; 
+				maxTurn=5; 
+				initTurn=-90;
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody = "Turret_2";
+				animationSourceGun = "Gun_2";
+				stabilizedInAxes = 0;
+				gunBeg="muzzle_2";
+				gunEnd="chamber_2";
+				weapons[]={"ad_50BMG"};
+				magazines[]={"ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag"};
+				gunnerName = "Right M2 Gunner";
+				memoryPointGun="machinegun_2";
+				memoryPointGunnerOptics="gunnerview_2";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_hmg02_low";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -3;
+				primaryGunner = 0;			
+				selectionFireAnim = "m134flash_1";
+				proxyIndex = 2;
+				gunnerCompartments = "Compartment2";		
+				hasGunner = 1;
+				hasCrew = 1;
+				class ViewOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=+30;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=+100;
+					initFov=0.7;
+					minFov=0.25;
+					maxFov=1.1;
+				};
+			};
+			class MainTurret: MainTurret 
+			{
+				isCopilot = 0;
+				body = "mainTurret";
+				gun = "mainGun";			
+				minElev=-30; 
+				maxElev=15; 
+				initElev=-30;				
+				minTurn=-5; 
+				maxTurn=160; 
+				initTurn=90;				
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody="mainTurret";
+				animationSourceGun="mainGun";
+				stabilizedInAxes = 0;
+				gunBeg = "muzzle_1";
+				gunEnd = "chamber_1";
+				weapons[]={"M134_uh60"};
+				magazines[]={"3000Rnd_762x51_Belt_Red"};
+				gunnerName = "Left M134 Gunner";
+				memoryPointGun = "machinegun";
+				memoryPointGunnerOptics = "gunnerview";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_Heli_Transport_01";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -2;
+				proxyIndex = 3;
+				primaryGunner = 0;
+				selectionFireAnim = "m134flash";
+				gunnerCompartments = "Compartment2";
+			};
+			class CoPilotObs: MainTurret
+			{
+				ace_laser_selfdesignate_Enabled = 1;
+				isCopilot = 1;
+				body = "ObsTurret";
+				gun = "ObsGun";
+				gunnerAction = "pilot_Heli_Transport_01";
+				gunnerInAction = "pilot_Heli_Light_03_Enter";
+				memoryPointsGetInGunner="pos copilot";
+				memoryPointsGetInGunnerDir="pos copilot dir";		
+				gunnerGetInAction="GetInHeli_Transport_01Cargo";
+				gunnerGetOutAction="GetOutLow";
+				minElev = -2;
+				maxElev = +25;
+				initElev = 0;
+				minTurn = -360;  
+				maxTurn = 360; 
+				initTurn = 0;
+				gunBeg = "gun_end"; 
+				gunEnd = "gun_begin"; 						
+				memoryPointGunnerOptics = "commanderview";
+				animationSourceBody = "ObsTurret";
+				animationSourceGun = "ObsGun";
+				showAsCargo = 1;
+				showHMD = 1;
+				CanEject = 1;
+				startEngine = 0;
+				soundServo[] = {,db-40,1.0};				
+				outGunnerMayFire = 1; 
+				gunnerCompartments="Compartment3";
+				commanding=-3;	
+				primaryGunner = 1;										selectionFireAnim="muzzleFlash_1";
+				selectionFireAnim = "";
+				castGunnerShadow = 1;
+				viewGunnerShadow = 1;
+				gunnerOpticsModel = "";
+				gunnerOpticsEffect[] = {"TankCommanderOptics1"};				
+				gunnerForceOptics = false;
+				gunnerOpticsShowCursor = 1;
+				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
+				showAllTargets = 2;				
+				copilotHasFlares = 1;
+				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
+				magazines[] = {Laserbatteries,kuy_IR_Jammer_Magazine,"168Rnd_CMFlare_Chaff_Magazine"};									
+				stabilizedInAxes = "StabilizedInAxesBoth";
+				proxyIndex = 1;
+				gunnerName = "Co-Pilot"; 
+
+				class OpticsIn 
+				{
+					class Wide
+					{
+						initAngleX=0;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						initFov=0.46599999;
+						minFov=0.46599999;
+						maxFov=0.46599999;
+						opticsDisplayName="WFOV";
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+						thermalMode[]={0,1};
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MBT_03_w_F.p3d";
+					};
+					class Medium: Wide
+					{
+						initFov=0.093000002;
+						minFov=0.093000002;
+						maxFov=0.093000002;
+						opticsDisplayName="MFOV";
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MBT_03_w_F.p3d";
+					};
+					class Narrow: Wide
+					{
+						initFov=0.028999999;
+						minFov=0.028999999;
+						maxFov=0.028999999;
+						opticsDisplayName="NFOV";
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MBT_03_w_F.p3d";
+					};			
+				};
+				class OpticsOut 
+				{
+					class Monocular 
+					{
+						initAngleX = 0;
+						minAngleX = -30;
+						maxAngleX = 30;
+						initAngleY = 0;
+						minAngleY = -100;
+						maxAngleY = 100;
+						initFov = 1.1;
+						minFov = 0.133;
+						maxFov = 1.1;
+						visionMode[] = {"Normal","NVG","Ti"};
+						thermalMode[] = {2, 3};						
+						gunnerOpticsModel = "";
+						gunnerOpticsEffect[] = {};
+					};
+				};
+				class ViewOptics
+				{
+					initAngleX = 0; 
+					minAngleX = -30; 
+					maxAngleX = +30;
+					initAngleY = 40; 
+					minAngleY = -100; 
+					maxAngleY = +100;
+					initFov = 1.4; 
+					minFov = 0.3; 
+					maxFov = 1.0;
+				};
+                           };
+		   };
+	};
+
 
 //SOAR Birds
 
@@ -1383,7 +1612,7 @@ class CfgVehicles
 		vehicleClass = "Air";
 		model = "\UH-60\MH60\ej_MH60A.p3d";
 		displayName = "MH-60A (Insertion-1987)";
-		crew = "160th_SOAR_Pilot";
+		crew = "B_Helipilot_160_Early";
 		memoryPointsGetInCargo="pos cargo";
 		memoryPointsGetInCargoDir="pos cargo dir";
 		hideWeaponsCargo = 1;
@@ -1402,6 +1631,93 @@ class CfgVehicles
 		Cost=200000;
 		slingLoadMaxCargoMass=4082;
 		class MFD{};
+		class TransportBackpacks
+		{
+			class _xx_ej_skram_SOAR_Early
+			{
+				backpack="ej_skram_SOAR_Early";
+				count=4;
+			};
+			class _xx_ej_speedball
+			{
+				backpack="ej_speedball";
+				count=4;
+			};
+		};
+		class TransportMagazines
+		{
+			class _xx_SmokeShellYellow
+			{
+				count=10;
+				magazine="SmokeShellYellow";
+			};
+			class _xx_30Rnd_9x21_Mag_SMG_02
+			{
+				count=14;
+				magazine="30Rnd_9x21_Mag_SMG_02";
+			};
+			class _xx_SmokeShellPurple
+			{
+				count=10;
+				magazine="SmokeShellPurple";
+			};
+			class _xx_FlareGreen_F
+			{
+				count=10;
+				magazine="FlareGreen_F";
+			};
+			class _xx_FlareRed_F
+			{
+				count=10;
+				magazine="FlareRed_F";
+			};
+			class _xx_FlareWhite_F
+			{
+				count=10;
+				magazine="FlareWhite_F";
+			};
+			class _xx_FlareYellow_F
+			{
+				count=10;
+				magazine="FlareYellow_F";
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				count=10;
+				name="FirstAidKit";
+			};
+			class _xx_Toolkit
+			{
+				name="Toolkit";
+				count=1;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=1;
+			};
+			class _xx_NVGoggles_OPFOR
+			{
+				count=2;
+				name="NVGoggles_OPFOR";
+			};
+		};
+		class TransportWeapons
+		{
+			class _xx_ej_flaregun
+			{
+				weapon="ej_flaregun";
+				count=2;
+			};
+			class _xx_SMG_05_F
+			{
+				weapon="SMG_05_F";
+				count=2;
+			};
+		};
 		class RenderTargets
 		{
 			class MFD1
@@ -1727,7 +2043,7 @@ class TurnOut
 		vehicleClass = "Air";
 		model = "\UH-60\MH60\ej_MH60AL.p3d";
 		displayName = "MH-60A (Insertion)";
-		crew = "160th_SOAR_Pilot";
+		crew = "B_Helipilot_160_Early";
 		memoryPointsGetInCargo="pos cargo";
 		memoryPointsGetInCargoDir="pos cargo dir";
 		hideWeaponsCargo = 1;
@@ -1746,6 +2062,93 @@ class TurnOut
 		Cost=200000;
 		slingLoadMaxCargoMass=4082;
 		class MFD{};
+		class TransportBackpacks
+		{
+			class _xx_ej_skram_SOAR_Early
+			{
+				backpack="ej_skram_SOAR_Early";
+				count=4;
+			};
+			class _xx_ej_speedball
+			{
+				backpack="ej_speedball";
+				count=4;
+			};
+		};
+		class TransportMagazines
+		{
+			class _xx_SmokeShellYellow
+			{
+				count=10;
+				magazine="SmokeShellYellow";
+			};
+			class _xx_30Rnd_9x21_Mag_SMG_02
+			{
+				count=14;
+				magazine="30Rnd_9x21_Mag_SMG_02";
+			};
+			class _xx_SmokeShellPurple
+			{
+				count=10;
+				magazine="SmokeShellPurple";
+			};
+			class _xx_FlareGreen_F
+			{
+				count=10;
+				magazine="FlareGreen_F";
+			};
+			class _xx_FlareRed_F
+			{
+				count=10;
+				magazine="FlareRed_F";
+			};
+			class _xx_FlareWhite_F
+			{
+				count=10;
+				magazine="FlareWhite_F";
+			};
+			class _xx_FlareYellow_F
+			{
+				count=10;
+				magazine="FlareYellow_F";
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				count=10;
+				name="FirstAidKit";
+			};
+			class _xx_Toolkit
+			{
+				name="Toolkit";
+				count=1;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=1;
+			};
+			class _xx_NVGoggles_OPFOR
+			{
+				count=2;
+				name="NVGoggles_OPFOR";
+			};
+		};
+		class TransportWeapons
+		{
+			class _xx_ej_flaregun
+			{
+				weapon="ej_flaregun";
+				count=2;
+			};
+			class _xx_SMG_05_F
+			{
+				weapon="SMG_05_F";
+				count=2;
+			};
+		};
 		class RenderTargets
 		{
 			class MFD1
@@ -2090,7 +2493,7 @@ class TurnOut
         	USAF_RefuelPoint[] = {-1.146, -1.159, -9.243};
 		ace_fastroping_enabled = 1;
 		ace_fastroping_ropeOrigins[] = {"ropeOriginLeft", "ropeOriginRight"};
-		weapons[]={"EricJ_CMFlareLauncherDAP","kuy_IR_Jammer_Weapon"};
+		weapons[]={"Flanker562_CMFlareLauncherDAP","kuy_IR_Jammer_Weapon"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
 		memoryPointCM[]={"Flare_launcher1","Flare_launcher2","Flare_launcher3"};
 		memoryPointCMDir[]={"Flare_launcher1_dir","Flare_launcher2_dir","Flare_launcher3_dir"};
@@ -2203,10 +2606,10 @@ class TurnOut
 				count=10;
 				magazine="SmokeShellYellow";
 			};
-			class _xx_30Rnd_65x39_caseless_mag
+			class _xx_30Rnd_65x39_caseless_FMJBT
 			{
 				count=14;
-				magazine="30Rnd_65x39_caseless_mag";
+				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
 			class _xx_SmokeShellPurple
 			{
@@ -2691,10 +3094,10 @@ class TurnOut
 				count=10;
 				magazine="SmokeShellYellow";
 			};
-			class _xx_30Rnd_65x39_caseless_mag
+			class _xx_30Rnd_65x39_caseless_FMJBT
 			{
 				count=14;
-				magazine="30Rnd_65x39_caseless_mag";
+				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
 			class _xx_SmokeShellPurple
 			{
@@ -3016,12 +3419,13 @@ class TurnOut
 	};
 	class ej_MH60L: ej_MH60M
 	{
-		dlc=EricJ_UH60;
+		dlc=Flanker562_UH60;
 		scope=2;
 		accuracy=1;
 		side=1;
 		faction="TF160";
 		vehicleClass = "Air";
+		crew = "B_Helipilot_160_Early";
 		model = "\UH-60\MH60\ej_MH60L.p3d";
 		displayName = "MH-60L (Insertion)";
 		class MFD{};
@@ -3080,6 +3484,93 @@ class TurnOut
 				displayName= "Retract Probe";
 				condition="this animationPhase ""FuelProbe_Extend"" > 0.5 AND (player == (driver this) && (alive this))";
 				statement="this animate [""FuelProbe_Extend"",0];";
+			};
+		};
+		class TransportBackpacks
+		{
+			class _xx_ej_skram_SOAR_Early
+			{
+				backpack="ej_skram_SOAR_Early";
+				count=4;
+			};
+			class _xx_ej_speedball
+			{
+				backpack="ej_speedball";
+				count=4;
+			};
+		};
+		class TransportMagazines
+		{
+			class _xx_SmokeShellYellow
+			{
+				count=10;
+				magazine="SmokeShellYellow";
+			};
+			class _xx_30Rnd_9x21_Mag_SMG_02
+			{
+				count=14;
+				magazine="30Rnd_9x21_Mag_SMG_02";
+			};
+			class _xx_SmokeShellPurple
+			{
+				count=10;
+				magazine="SmokeShellPurple";
+			};
+			class _xx_FlareGreen_F
+			{
+				count=10;
+				magazine="FlareGreen_F";
+			};
+			class _xx_FlareRed_F
+			{
+				count=10;
+				magazine="FlareRed_F";
+			};
+			class _xx_FlareWhite_F
+			{
+				count=10;
+				magazine="FlareWhite_F";
+			};
+			class _xx_FlareYellow_F
+			{
+				count=10;
+				magazine="FlareYellow_F";
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				count=10;
+				name="FirstAidKit";
+			};
+			class _xx_Toolkit
+			{
+				name="Toolkit";
+				count=1;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=1;
+			};
+			class _xx_NVGoggles_OPFOR
+			{
+				count=2;
+				name="NVGoggles_OPFOR";
+			};
+		};
+		class TransportWeapons
+		{
+			class _xx_ej_flaregun
+			{
+				weapon="ej_flaregun";
+				count=2;
+			};
+			class _xx_SMG_05_F
+			{
+				weapon="SMG_05_F";
+				count=2;
 			};
 		};
 	};

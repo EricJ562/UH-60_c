@@ -32,6 +32,17 @@ class CfgWeapons
 	class mortar_155mm_AMOS;
 	class CannonCore;
 	class mortar_82mm;
+	class HMG_127_APC; //External 
+	class ad_50BMG: HMG_127_APC
+	{
+		backgroundReload = 1;
+		displayName = ".50 BMG";
+		initSpeed = 1200;
+		magazineReloadTime = 10;
+		magazines[] = {"ad_100Rnd_SLAP_mag"};
+		maxRange = 2000;
+		reloadTime = 0;
+	};
 	class rockets_ATACMS: RocketPods
 	{
 		class gunClouds
@@ -355,7 +366,7 @@ class CfgWeapons
 		magazineReloadTime=6;
 		magazines[]=
 		{
-			"100rd_105mm_Shells",
+			"50rd_105mm_Shells",
 			"32Rnd_105mm_Smoke_white",
 			"32Rnd_105mm_Guided",
 			"32Rnd_105mm_Flare_white",
@@ -2431,7 +2442,7 @@ class CfgWeapons
 		};
 	};
 	class CMFlareLauncher;
-	class EricJ_CMFlareLauncher: CMFlareLauncher
+	class Flanker562_CMFlareLauncher: CMFlareLauncher
 	{
 		modes[]=
 		{
@@ -2533,7 +2544,7 @@ class CfgWeapons
 			multiplier=2;
 		};
 	};
-	class EricJ_CMFlareLauncherDAP: CMFlareLauncher
+	class Flanker562_CMFlareLauncherDAP: CMFlareLauncher
 	{
 		modes[]=
 		{
@@ -2635,7 +2646,7 @@ class CfgWeapons
 			multiplier=2;
 		};
 	};
-	class EricJ_CMFlareLauncherUH92: CMFlareLauncher
+	class Flanker562_CMFlareLauncherUH92: CMFlareLauncher
 	{
 		modes[]=
 		{
@@ -2785,7 +2796,7 @@ class CfgWeapons
 	class Uniform_Base;
 	class U_B_RWGPilotCoveralls: Uniform_Base
 	{
-		author="EricJ";
+		author="Flanker562";
 		scope=2;
 		displayName="Raven Warfare Group Coveralls";
 		picture="\A3\characters_f\data\ui\icon_U_B_coveralls_ca.paa";
@@ -2812,6 +2823,8 @@ class CfgWeapons
 			"PylonRack_2rnd_Hellfire_AH6",
 			"PylonRack_1rnd_Hellfire_AH6",
 			"PylonRack_2rnd_Hellfire_HH60",
+			"PylonRack_1rnd_Hellfire_hh60",
+			"2rnd_Hellfire_Rail_mag",
 		};
 		aiRateOfFire=5;
 		aiRateOfFireDistance=500;
@@ -3078,9 +3091,18 @@ class CfgMagazines
 	class VehicleMagazine;
 	class FakeMagazine_uh60;
 	class 12Rnd_missiles;
+	class 500Rnd_127x99_mag_Tracer_Red;
+	class ad_100Rnd_SLAP_mag: 500Rnd_127x99_mag_Tracer_Red
+	{
+		ammo = "ad_50_slap_tracer_red_round";
+		count = 100;
+		displayName = "100 Rnd .50 SLAP Tracer (Red) Mag";
+		quickReload = 1;
+		tracersEvery = 1;
+	};
 	class agm114_uh60_1: VehicleMagazine
 	{
-		author = "EricJ";
+		author = "Flanker562";
 		scope = 2;
 		displaynameshort = "AGM-114";
 		displayName = "AGM-114";
@@ -3094,7 +3116,7 @@ class CfgMagazines
 	};
 	class agm114_uh60_2: VehicleMagazine
 	{
-		author = "EricJ";
+		author = "Flanker562";
 		scope = 2;
 		displaynameshort = "AGM-114";
 		displayName = "AGM-114";
@@ -3108,7 +3130,7 @@ class CfgMagazines
 	};
 	class agm114_uh60_4: VehicleMagazine
 	{
-		author = "EricJ";
+		author = "Flanker562";
 		scope = 2;
 		displaynameshort = "AGM-114";
 		displayName = "AGM-114";
@@ -3138,12 +3160,27 @@ class CfgMagazines
 		hardpoints[]={"B_UH60_Hellfire"};
 		pylonWeapon="uh60_hellfire";
 	};
+	class 2rnd_Hellfire_Rail_mag: agm114_uh60_2
+	{
+		displayName="2x AGM-114K";
+		mass=100;
+		count=2;
+		mirrorMissilesIndexes[]={2,1};
+	};
 	class PylonRack_1rnd_Hellfire_AH6: agm114_uh60_1
 	{
 		displayName="1x AGM-114K";
 		model="\UH-60\Misc\Weapons\M299\M299x2ah61.p3d";
 		mass=100;
 		hardpoints[]={"B_AH6_Hellfire"};
+		pylonWeapon="uh60_hellfire";
+	};
+	class PylonRack_1rnd_Hellfire_hh60: agm114_uh60_1
+	{
+		displayName="1x AGM-114K";
+		model="\UH-60\Misc\Weapons\M299\M299x2hh601.p3d";
+		mass=100;
+		hardpoints[]={"B_HH60_Hellfire"};
 		pylonWeapon="uh60_hellfire";
 	};
 	class PylonRack_2rnd_Hellfire_AH6: agm114_uh60_2
@@ -3178,7 +3215,7 @@ class CfgMagazines
 	};
 	class agm117_uh60_1: VehicleMagazine
 	{
-		author = "EricJ";
+		author = "Flanker562";
 		scope = 2;
 		displaynameshort = "AGM-117";
 		displayName = "AGM-117";
@@ -3192,7 +3229,7 @@ class CfgMagazines
 	};
 	class agm117_uh60_2: VehicleMagazine
 	{
-		author = "EricJ";
+		author = "Flanker562";
 		scope = 2;
 		displaynameshort = "AGM-117";
 		displayName = "AGM-117";
@@ -3206,7 +3243,7 @@ class CfgMagazines
 	};
 	class agm117_uh60_4: VehicleMagazine
 	{
-		author = "EricJ";
+		author = "Flanker562";
 		scope = 2;
 		displaynameshort = "AGM-117";
 		displayName = "AGM-117";
@@ -3220,7 +3257,7 @@ class CfgMagazines
 	};
 	class agm117_uh60_4_NLOS: VehicleMagazine
 	{
-		author = "EricJ";
+		author = "Flanker562";
 		scope = 2;
 		displaynameshort = "R-NLOS";
 		displayName = "R-NLOS";
@@ -3266,7 +3303,7 @@ class CfgMagazines
 	};
 	class 1Rnd_Missile_AIM9X_ah96: VehicleMagazine
 	{
-		author="EricJ";
+		author="Flanker562";
 		scope=2;
 		displayNameShort="AIM-9X";
 		descriptionShort="AIM-9X";
@@ -3291,7 +3328,7 @@ class CfgMagazines
 	};
 	class 1Rnd_Missile_AGM152_ah96: VehicleMagazine
 	{
-		author="EricJ";
+		author="Flanker562";
 		scope=2;
 		displayNameShort="AGM-152C";
 		descriptionShort="AGM-152C";
@@ -3317,7 +3354,7 @@ class CfgMagazines
 	};
 	class 1Rnd_Missile_AGM145_ah96: VehicleMagazine
 	{
-		author="EricJ";
+		author="Flanker562";
 		scope=2;
 		displayNameShort="AGM-145D";
 		descriptionShort="AGM-145D";
@@ -3444,7 +3481,7 @@ class CfgMagazines
 	};
 	class 750Rnd_M197_MH60: VehicleMagazine
 	{
-		author="EricJ";
+		author="Flanker562";
 		scope=2;
 		displayName="M197";
 		displayNameShort="M197";
@@ -3660,19 +3697,19 @@ class CfgMagazines
 		nameSound="missiles";
 	};
 	class 8Rnd_82mm_Mo_shells;
-	class 100rd_105mm_Shells: 8Rnd_82mm_Mo_shells
+	class 50rd_105mm_Shells: 8Rnd_82mm_Mo_shells
 	{
-		author="EricJ";
+		author="Flanker562";
 		displayName="105mm HE Shells";
 		displayNameShort="HE";
-		count=100;
+		count=50;
 		ammo="105mm_HE";
 		muzzleImpulseFactor[]={0,0};
 		initSpeed=520;
 	};
 	class 32Rnd_105mm_Flare_white: 8Rnd_82mm_Mo_shells
 	{
-		author="EricJ";
+		author="Flanker562";
 		count=32;
 		ammo="Flare_105mm_White";
 		displayName="White Flare";
@@ -3681,7 +3718,7 @@ class CfgMagazines
 	};
 	class 32Rnd_105mm_Smoke_white: 8Rnd_82mm_Mo_shells
 	{
-		author="EricJ";
+		author="Flanker562";
 		count=32;
 		ammo="Smoke_105mm_White";
 		displayName="White Smoke";
@@ -3690,7 +3727,7 @@ class CfgMagazines
 	};
 	class 32Rnd_105mm_Guided: 8Rnd_82mm_Mo_shells
 	{
-		author="EricJ";
+		author="Flanker562";
 		count=32;
 		ammo="105mm_Guided";
 		displayName="Guided Round";
@@ -3737,6 +3774,13 @@ class CfgAmmo
 	class Sh_155mm_AMOS;
 	class SubmunitionBase;
 	class Flare_82mm_AMOS_White;
+	class B_127x99_SLAP_Tracer_Red; //External
+	class ad_50_slap_tracer_red_round: B_127x99_SLAP_Tracer_Red
+	{
+		hit = 50;
+		indirectHit = 6;
+		indirectHitRange = 0.4;
+	};
 	class R_ATACMS_HE: SubmunitionBase
 	{
 		artilleryLock=1;
@@ -4948,4 +4992,11 @@ class CfgNonAIVehicles
 		model="\UH-60\Misc\Weapons\M299\M299x2hh60.p3d";
 		simulation = pylonpod;
 	};
+	class PylonRack_1rnd_Hellfire_hh60: proxyWeapon
+	{
+		model="\UH-60\Misc\Weapons\M299\M299x2hh601.p3d";
+		simulation = pylonpod;
+	};
+
+
 };

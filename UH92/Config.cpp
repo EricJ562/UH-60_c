@@ -85,6 +85,7 @@ class CfgVehicles
 		destrType = "DestructWreck";		
 		picture="\UH-60\Data\UI\UH_92_icon.paa";
 		icon="\UH-60\Data\UI\Map_UH_92.paa";
+		model="UH-60\UH92\ej_UH92.p3d";
 		editorSubcategory="EdSubcat_Helicopters";
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		mapSize = 15;
@@ -105,6 +106,9 @@ class CfgVehicles
 		cyclicForwardForceCoef = 1.0;
 		backRotorForceCoef = 1.0;
 		enableManualFire = 0;
+		receiveRemoteTargets=1;
+		reportRemoteTargets=1;
+		reportOwnPosition=1;
 		irScanRangeMax = 2000;
 		class Library{libTextDesc = "UH-92";};
 		simulation = "helicopterX";
@@ -138,16 +142,13 @@ class CfgVehicles
 		slingLoadMaxCargoMass=6000;
 		slingLoadMemoryPoint="slingLoad0";
 		memoryPointDriverOptics="slingCamera";
-		weapons[]={"EricJ_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
+		weapons[]={"Flanker562_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
 		availableForSupportTypes[]={"Drop","Transport"};
 		LockDetectionSystem="1 + 8 + 4";
 		incomingMissileDetectionSystem=16
 		threat[]={0.80000001,0.1,0.60000002};
 		visualTargetSize=0.96;
-		receiveRemoteTargets=1;
-		reportRemoteTargets=1;
-		reportOwnPosition=1;
 		selectionFireAnim = "muzzleFlash";
 		selectionHRotorStill = "main rotor static";
 		selectionHRotorMove = "main rotor blur";
@@ -279,7 +280,6 @@ class CfgVehicles
 			class HideWeapon{source = "user";animPeriod = 0.00001;initPhase = 0;};
 			class Gatling_1{source="revolving";weapon=M134_UH60;};
 			class Gatling_2{source="revolving";weapon=M134_UH60_2;};
-			class Missiles_revolving{source = "revolving";weapon = "missiles_DAGR";};
 			class ReloadAnim{source="reload";weapon="M240_veh";};
 			class ReloadMagazine{source="reloadmagazine";weapon="M240_veh";};
 			class Revolving{source="revolving";weapon="M240_veh";};
@@ -291,7 +291,6 @@ class CfgVehicles
 			class HideGunMFD{source="user";animPeriod=0;initPhase=0;};	
 			class HideSlingFeed{source="user";animPeriod=0;initPhase=0;};
 			class Probe_Show{source="user";animPeriod=0;initPhase=0;};
-			class EOTech_Show{source="user";animPeriod=0;initPhase=0;};
 		};
 		class HitPoints: HitPoints
 		{
@@ -596,7 +595,10 @@ class CfgVehicles
 		};
 		dammageHalf[] = {};	
 		dammageFull[] = {};
+
 		#include "soundsuh92.hpp"
+		#include "Cherokee_01.hpp"
+
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[]={"\uh-60\data\uh60m_fuselage_co.paa","\uh-60\data\uh60m_engine_co.paa","\uh-60\data\ductfans_co.paa"};	
 		class Damage
@@ -693,17 +695,11 @@ class CfgVehicles
 						angleRangeHorizontal=26;
 						angleRangeVertical=26;
 					};
-					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
-					{
-					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar{};
 				};
 			};
-			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
-			{
-			};
-			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
-			{
-			};
+			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot{};
+			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot{};
 		};
 		class CargoTurret;
 		class Turrets: Turrets
@@ -833,7 +829,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,"EricJ_CMFlareLauncherDAP"};
+				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -917,63 +913,63 @@ class CfgVehicles
 			class NATO
 			{
 				displayName="NATO";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_nato_co.paa","\uh-60\data\uh60m_engine_nato_co.paa","\uh-60\data\natoductfans_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class Desert
 			{
 				displayName="Desert";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_desert_co.paa","\uh-60\data\uh60m_engine_desert_co.paa","\uh-60\data\desertductfans_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class RDA
 			{
 				displayName="RDA SECFOR";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_rda_co.paa","\uh-60\data\uh60m_engine_rda_co.paa","\uh-60\data\rdaductfans_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class USArmy
 			{
 				displayName="US Army";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_co.paa","\uh-60\data\uh60m_engine_co.paa","\uh-60\data\ductfans_co.paa"};
 				factions[]={"USA"};
 			};
 			class RWG
 			{
 				displayName="Raven Warfare Group";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_rwg_co.paa","\uh-60\data\uh60m_engine_rwg_co.paa","\uh-60\data\rwgductfans_co.paa"};
 				factions[]={"RWG"};
 			};
 			class SOAR
 			{
 				displayName="SOAR";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"uh-60\data\uh60m_fuselage_dap_co.paa","\uh-60\data\uh60m_engine_DAP_co.paa","\uh-60\data\dapductfans_co.paa"};
 				factions[]={"TF160"};
 			};
 			class BRPMC
 			{
 				displayName="BRPMC";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"uh-60\data\uh60m_fuselage_blackriver_co.paa","\uh-60\data\uh60m_engine_blackriver_co.paa","\uh-60\data\dapductfans_co.paa"};
 				factions[]={"BRPMC"};
 			};
 			class USArmyMEV
 			{
 				displayName="US ArmyMEV";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_mev_co.paa", "\uh-60\data\uh60m_engine_mev92_co.paa", "\uh-60\data\ductfans_co.paa"};
 				factions[]={"USA"};
 			};
 			class JASDF
 			{
 				displayName="Japan Air Self Defense Force";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_JASDF_co.paa", "\uh-60\data\uh60m_engine_Navy_co.paa", "\uh-60\data\usnductfans_co.paa"};
 				factions[]={"USA"};
 			};
@@ -985,22 +981,19 @@ class CfgVehicles
 	};
 	class ej_UH92: ej_uh92_base
 	{
-		author="EricJ";
-		_generalMacro="ej_UH92";
+		author="Flanker562";
 		scope=2;
 		accuracy=1;
 		side=1;
+		receiveRemoteTargets=1;
+		reportRemoteTargets=1;
+		reportOwnPosition=1;
 		faction="USA";
-		crew="B_Helipilotusa_F";
-		typicalCargo[]={"B_Helipilotusa_F"};
-		displayName = UH-92 Cherokee;
-		model = "\UH-60\UH92\ej_UH92.p3d";
-		memoryPointsGetInCargo="pos cargo";
-		ace_fastroping_enabled = 1;
-		cost=200000;
-		ace_fastroping_ropeOrigins[] = {"ropeOriginLeft", "ropeOriginRight"};
-		memoryPointsGetInCargoDir="pos cargo dir";
+		crew="B_Helipilot_F";
+		typicalCargo[]={"B_Helipilot_F"};
+		displayName = "UH-92 Cherokee";
 		textureList[]={"USArmy",1};
+		cost=200000;
 		class RenderTargets
 		{
 			class MFD1
@@ -1031,8 +1024,7 @@ class CfgVehicles
 	};
 	class ej_UH92_NATO: ej_uh92
 	{
-		author="EricJ";
-		_generalMacro="ej_UH92";
+		author="Flanker562";
 		scope=2;
 		accuracy=1;
 		side=1;
@@ -1046,8 +1038,7 @@ class CfgVehicles
 	};
 	class ej_UH92_MEV: ej_uh92_base
 	{
-		author="EricJ";
-		_generalMacro="ej_UH92";
+		author="Flanker562";
 		scope=2;
 		accuracy=1;
 		side=1;
@@ -1149,7 +1140,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,"EricJ_CMFlareLauncherDAP"};
+				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1231,8 +1222,7 @@ class CfgVehicles
 	};
 	class ej_UH92_U: ej_uh92_base
 	{
-		author="EricJ";
-		_generalMacro="ej_UH92";
+		author="Flanker562";
 		scope=2;
 		accuracy=1;
 		side=1;
@@ -1318,7 +1308,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,"EricJ_CMFlareLauncherDAP"};
+				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1447,12 +1437,13 @@ class CfgVehicles
 	class ej_UH92_RWG: ej_uh92_base
 	{
 		dlc=ej_Uh60;
-		author="EricJ";
-		_generalMacro="ej_UH92_RWG";
+		author="Flanker562";
 		scope=2;
 		accuracy=1;
 		side=2;
 		faction="RWG";
+		receiveRemoteTargets=0;
+		reportRemoteTargets=0;
 		crew="RWG_Helipilot_F";
 		ace_fastroping_enabled = 1;
 		ace_fastroping_ropeOrigins[] = {"ropeOriginLeft", "ropeOriginRight"};
@@ -1700,9 +1691,7 @@ class CfgVehicles
 	};
 	class ej_UH92_BRPMC: ej_uh92_RWG
 	{
-		dlc=ej_Uh60;
-		author="EricJ";
-		_generalMacro="ej_UH92_BRPMC";
+		author="Flanker562";
 		scope=2;
 		accuracy=1;
 		side=0;
@@ -1716,8 +1705,7 @@ class CfgVehicles
         };
 	class ej_MH92: ej_uh92_base
 	{
-		author="EricJ";
-		_generalMacro="ej_MH92";
+		author="Flanker562";
 		scope=2;
 		accuracy=1;
 		side=1;
@@ -1739,7 +1727,7 @@ class CfgVehicles
 		memoryPointsGetInCargo="pos cargo";
 		memoryPointsGetInCargoDir="pos cargo dir";
 		textureList[]={"SOAR",1};
-		weapons[] = {EricJ_CMFlareLauncherUH92,kuy_IR_Jammer_Weapon};
+		weapons[] = {Flanker562_CMFlareLauncherUH92,kuy_IR_Jammer_Weapon};
 		magazines[] = {240Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine};
 		slingLoadMaxCargoMass=5500;
 					cargoAction[]={"passenger_flatground_leanleft","passenger_flatground_leanright","passenger_flatground_crosslegs","passenger_flatground_leanleft"};
@@ -1819,10 +1807,10 @@ class CfgVehicles
 				count=10;
 				magazine="SmokeShellYellow";
 			};
-			class _xx_30Rnd_65x39_caseless_mag
+			class _xx_30Rnd_65x39_caseless_FMJBT
 			{
 				count=14;
-				magazine="30Rnd_65x39_caseless_mag";
+				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
 			class _xx_SmokeShellPurple
 			{
@@ -1967,15 +1955,9 @@ class CfgVehicles
 						maxSpeedThreshold=0;
 						aimDown=-30;
 					};
-					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
-					{
-					};
-					class LaserSensorComponent: SensorTemplateLaser
-					{
-					};
-					class NVSensorComponent: SensorTemplateNV
-					{
-					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar{};
+					class LaserSensorComponent: SensorTemplateLaser{};
+					class NVSensorComponent: SensorTemplateNV{};
 				};
 			};
 		};
@@ -2214,7 +2196,7 @@ class CfgVehicles
 				gunnerOpticsShowCursor = 1;
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
+				weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
 				magazines[] = {240Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,Laserbatteries};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -2412,8 +2394,7 @@ class CfgVehicles
 	};
 	class ej_MH92S: ej_MH92
 	{
-		author="EricJ";
-		_generalMacro="ej_MH92";
+		author="Flanker562";
 		scope=2;
 		accuracy=1;
 		side=1;
@@ -2424,94 +2405,6 @@ class CfgVehicles
 		model = "\UH-60\MH92\ej_MH92S.p3d";
 		cost=250000;
 		transportSoldier=2;
-		class Components: Components
-		{
-			class SensorsManagerComponent
-			{
-				class Components
-				{
-					class IRSensorComponent: SensorTemplateIR
-					{
-						class AirTarget      															{
-							minRange = 100;         														maxRange = 8000;
-							objectDistanceLimitCoef = 1;
-							viewDistanceLimitCoef = 1;
-						};
-						class GroundTarget : AirTarget
-						{
-							maxRange = 8000;
-						};
-						angleRangeHorizontal = 90;
-						angleRangeVertical = 90;
-						groundNoiseDistanceCoef = 0.1;
-						maxGroundNoiseDistance = 100;
-						minSpeedThreshold = 0;
-						maxSpeedThreshold = 0;
-						minTrackableSpeed = -600;
-						maxTrackableSpeed = 2600;
-						minTrackableATL = -1e10;
-						maxTrackableATL = 1e10;
-						typeRecognitionDistance = 1000;
-						animDirection = "";
-						aimDown = 15;
-					};
-					class VisualSensorComponent: SensorTemplateVisual
-					{
-						class AirTarget
-						{
-							minRange=100;
-							maxRange=4000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=1;
-						};
-						class GroundTarget
-						{
-							minRange=100;
-							maxRange=3500;
-							objectDistanceLimitCoef=1;
-							viewDistanceLimitCoef=1;
-						};
-						maxTrackableSpeed=70;
-						animDirection="Gun";
-						angleRangeHorizontal=26;
-						angleRangeVertical=26;
-					};
-					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
-					{
-						class AirTarget
-						{
-							minRange=8000;
-							maxRange=8000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=-1;
-						};
-						class GroundTarget
-						{
-							minRange=8000;
-							maxRange=8000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=-1;
-						};
-						maxTrackableSpeed=125;
-						angleRangeVertical=90;
-						groundNoiseDistanceCoef=-1;
-						maxGroundNoiseDistance=-1;
-						minSpeedThreshold=0;
-						maxSpeedThreshold=0;
-						aimDown=-30;
-					};
-					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
-					{
-					};
-					class LaserSensorComponent: SensorTemplateLaser
-					{
-					};
-					class NVSensorComponent: SensorTemplateNV
-					{
-					};
-				};
-			};
-		};
 		class UserActions
 		{
 			class SlingMFDOn
@@ -2747,7 +2640,7 @@ class CfgVehicles
 				gunnerOpticsShowCursor = 1;
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
+				weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
 				magazines[] = {240Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,Laserbatteries};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -2888,4 +2781,16 @@ class CfgVehicles
 		transportSoldier=1;
 		class Eventhandlers{};
 	};
+};
+
+class CfgFunctions
+{
+    class ej_engine
+    {
+        class hatchet
+        {   
+            class setup { file = "\UH-60_c\UH92\fnc_setup.sqf";};
+            class shutDown { file = "\UH-60_c\UH92\fnc_shutDown.sqf";};
+        };
+    };
 };

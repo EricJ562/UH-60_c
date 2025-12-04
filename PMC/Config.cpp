@@ -26,7 +26,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		faction="RWG";
 		_generalMacro="RWG_Helipilot_F";
 		scope=2;
@@ -102,7 +102,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		faction="RWG";
 		_generalMacro="RWG_Helicrew_F";
 		scope=2;
@@ -178,7 +178,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		faction="CIV_F";
 		_generalMacro="CIV_Helipilot_F";
 		scope=2;
@@ -235,7 +235,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		faction="RWG";
 		_generalMacro="RWG_Helipilot_F";
 		scope=2;
@@ -306,13 +306,13 @@ class CfgVehicles
 		faction="RWG";
 		forceInGarage=1;
 		crew="RWG_Repair_F";
-		author="EricJ";
+		author="Flanker562";
 		class textureSources
 		{
 			class Raven
 			{
 				displayName="Raven";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\UH-60\data\offroad_Raven_co.paa","\UH-60\data\offroad_Raven_co.paa"};
 				factions[]={"RWG"};
 			};

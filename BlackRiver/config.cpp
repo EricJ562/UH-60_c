@@ -16,7 +16,7 @@ class CfgVehicles
 	class O_Heli_Light_02_dynamicLoadout_F;
 	class BRMPC_PO30: O_Heli_Light_02_dynamicLoadout_F
 	{
-		author="EricJ";
+		author="Flanker562";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\O_Heli_Light_02_dynamicLoadout_F.jpg";
 		_generalMacro="BRMPC_PO30";
 		scope=2;
@@ -121,7 +121,7 @@ class CfgVehicles
 	class B_Gen_soldier_F;
 	class BRPMC_UAV_F: B_Gen_soldier_F
 	{
-		author="EricJ";
+		author="Flanker562";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\O_soldier_UAV_F.jpg";
 		_generalMacro="O_soldier_UAV_F";
 		scope=2;
@@ -208,7 +208,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="BRPMC_Pilot";
 		scope=2;
 		side=0;
@@ -297,7 +297,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="BRPMC_Pilot";
 		scope=2;
 		side=0;
@@ -386,7 +386,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="BRPMC_Soldier";
 		scope=2;
 		side=0;
@@ -464,7 +464,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="BRPMC_Soldier";
 		scope=2;
 		side=0;
@@ -549,7 +549,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="BRPMC_SLeader";
 		scope=2;
 		side=0;
@@ -634,7 +634,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="BRPMC_Soldier";
 		scope=2;
 		side=0;

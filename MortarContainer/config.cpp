@@ -25,7 +25,7 @@ class CfgVehicles
 	};
 	class ej_Mortar_base: StaticMortar
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_Mortar_Base";
 		scope=0;
 		displayname="81mm Mortar Container";
@@ -127,7 +127,7 @@ class CfgVehicles
 	};
 	class ej_Mortar_Container: ej_Mortar_base
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="Mortar_Container";
 		scope=2;
 		scopeCurator=2;
@@ -172,7 +172,7 @@ class CfgMagazines
 	class 8Rnd_82mm_Mo_shells;
 	class 8rd_82mm_Laser_Shell: 8Rnd_82mm_Mo_shells
 	{
-		author="EricJ";
+		author="Flanker562";
 		displayName=":82mm Laser Guided rounds";
 		displayNameShort="Laser Guided";
 		count=8;

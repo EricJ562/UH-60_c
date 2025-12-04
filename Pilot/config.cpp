@@ -27,7 +27,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="B_HelicrewUSA_F";
 		scope=2;
 		side=1;
@@ -108,7 +108,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="B_HelicrewUSA_F";
 		scope=2;
 		side=1;
@@ -189,7 +189,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="O_HelicrewRUS_F";
 		scope=2;
 		side=0;

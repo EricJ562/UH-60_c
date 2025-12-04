@@ -69,7 +69,7 @@ class CfgVehicles
 	};
 	class ej_AH96_base_F: Helicopter_Base_F
 	{
-		author="EricJ";
+		author="Flanker562";
 		mapSize=17.75;
 		class SpeechVariants
 		{
@@ -104,7 +104,8 @@ class CfgVehicles
 			maxTailRotorStress=30000;
 		};
 		memoryPointTaskMarker="TaskMarker_1_pos";
-		fuelCapacity=600;
+		fuelCapacity = 1561;
+		fuelConsumptionRate=0.126;
 		washDownStrength="1.1f";
 		fuelConsumptionRate=0.055500001;
 		maxSpeed=250;
@@ -129,7 +130,7 @@ class CfgVehicles
 		backRotorSpeed=1;
 		LockDetectionSystem="1 + 8 + 4";
 		incomingMissileDetectionSystem=16;
-		weapons[]={"ej_master_arms_safe","EricJ_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
+		weapons[]={"ej_master_arms_safe","Flanker562_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
 		memoryPointCM[]={"Flare_launcher1","Flare_launcher2","Flare_launcher3","Flare_launcher4"};
 		memoryPointCMDir[]={"Flare_launcher1_dir","Flare_launcher2_dir","Flare_launcher3_dir","flare_launcher4_dir"};
@@ -616,28 +617,28 @@ class CfgVehicles
 			class USMC1
 			{
 				displayName="USMC (HMLA-167)";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\ah96_body_HMLA167_co.paa","uh-60\data\ah96_engines_HMLA167_co.paa","uh-60\data\usmcductfans_co.paa","uh-60\data\SOAS_AAQ16_Flir_Navy_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class USArmy
 			{
 				displayName="US Army";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\ah96_body_army_co.paa","uh-60\data\ah96_engines_army_co.paa","uh-60\data\ductfansArmy_co.paa","uh-60\data\SOAS_AAQ16_Flir_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class NATO
 			{
 				displayName="NATO";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\ah96_body_nato_co.paa","uh-60\data\ah96_engines_nato_co.paa","uh-60\data\natoductfans_co.paa","uh-60\data\SOAS_AAQ16_Flir_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class RDA
 			{
 				displayName="RDA SECFOR";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\ah96_body_rda_co.paa","uh-60\data\ah96_engines_rda_co.paa","uh-60\data\rdaductfans_co.paa","uh-60\data\SOAS_AAQ16_Flir_co.paa"};
 				factions[]={"BLU_F"};
 			};
@@ -921,7 +922,7 @@ class CfgVehicles
 				turretInfoType="RscOptics_Heli_Attack_01_gunner";
 				discreteDistance[]={100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100};
 				discreteDistanceInitIndex=5;
-				weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncher,kuy_IR_Jammer_Weapon,M197_MH60,Laserdesignator_mounted};
+				weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,M197_MH60,Laserdesignator_mounted};
 				magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,750Rnd_M197_MH60,Laserbatteries};
 				class HitPoints
 				{
@@ -1227,7 +1228,7 @@ class CfgVehicles
 	};
 	class ej_AH96: ej_AH96_base_F
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_AH96";
 		scope=2;
 		side=1;

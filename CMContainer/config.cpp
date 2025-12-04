@@ -66,7 +66,7 @@ class CfgVehicles
 	};
 	class CMContainer_base_F: StaticMGWeapon
 	{
-		author="EricJ";
+		author="Flanker562";
 		scope=0;
 		scopeCurator=0;
 		vehicleClass="Autonomous";
@@ -465,7 +465,7 @@ class CfgVehicles
 	};
 	class ej_CMContainer: CMContainer_base_F
 	{
-		author="EricJ";
+		author="Flanker562";
 		scope=2;
 		scopeCurator=2;
 		side=1;

@@ -280,7 +280,7 @@ class CfgVehicles
 	};
 	class ej_MQ17: ej_MQ17_base
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_MQ17";
 		scope=2;
 		accuracy=1;
@@ -293,7 +293,7 @@ class CfgVehicles
 		cost=200000;
 		reportOwnPosition=1;
 		typicalCargo[]={"B_UAV_AI"};
-		weapons[]={"ej_master_arms_safe","EricJ_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
+		weapons[]={"ej_master_arms_safe","Flanker562_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
 		class Components: Components
 		{
@@ -336,7 +336,7 @@ class CfgVehicles
 	};
 	class ej_MQ17D: ej_MQ17
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_MQ17";
 		scope=2;
 		accuracy=1;
@@ -351,7 +351,7 @@ class CfgVehicles
 	};
 	class ej_MQ17SOAR: ej_MQ17
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_MQ17";
 		scope=2;
 		accuracy=1;
@@ -366,7 +366,7 @@ class CfgVehicles
 	};
 	class ej_MQ17C: ej_MQ17_base
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_MQ17";
 		scope=2;
 		accuracy=1;
@@ -382,7 +382,7 @@ class CfgVehicles
 	class ej_MQ17C;
 	class ej_MQ17C_CIV_F: ej_MQ17C
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_MQ17";
 		scope=2;
 		accuracy=1;
@@ -399,7 +399,7 @@ class CfgVehicles
           };
 	class ej_MQ37: ej_MQ17_base
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_MQ37";
 		scope=2;
 		accuracy=1;
@@ -420,12 +420,12 @@ class CfgVehicles
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[]={"uh-60\data\mq17_co.paa","uh-60\data\natoductfans_co.paa","uh-60\data\drone_co.paa"};
 		slingLoadCargoMemoryPoints[]={"SlingLoad1","SlingLoad2","SlingLoad3","SlingLoad4"};
-		weapons[]={"ej_master_arms_safe","EricJ_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
+		weapons[]={"ej_master_arms_safe","Flanker562_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
           };
 	class ej_MQ37D: ej_MQ37
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_MQ37";
 		scope=2;
 		accuracy=1;
@@ -440,7 +440,7 @@ class CfgVehicles
         };
 	class ej_MQ37USMC: ej_MQ37
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_MQ37";
 		scope=2;
 		accuracy=1;
@@ -455,7 +455,7 @@ class CfgVehicles
           };
 	class ej_MQ37USN: ej_MQ37
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_MQ37";
 		scope=2;
 		accuracy=1;

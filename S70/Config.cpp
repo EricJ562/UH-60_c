@@ -110,7 +110,7 @@ class CfgVehicles
 		selectionHRotorMove = "main rotor blur";
 		selectionVRotorStill = "tail rotor static";
 		selectionVRotorMove = "tail rotor blur";
-		weapons[]={"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+		weapons[]={"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
 		availableForSupportTypes[]={"Drop","Transport"};
 		LockDetectionSystem = CM_Lock_Radar + CM_Lock_Laser;
@@ -580,7 +580,9 @@ class CfgVehicles
 		};
 		dammageHalf[] = {};	
 		dammageFull[] = {};
+
 		#include "sounds.hpp"
+		#include "Cherokee_01.hpp"
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[]={"\uh-60\data\uh60m_fuselage_co.paa","\uh-60\data\uh60m_engine_co.paa","\uh-60\data\default_co.paa"};	
 		class Damage
@@ -659,7 +661,7 @@ class CfgVehicles
 				LockDetectionSystem = 1 + 2 + 4 + 8;
 				incomingMissileDetectionSystem = 16;
 				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -671,42 +673,42 @@ class CfgVehicles
 			class Black
 			{
 				displayName="Black";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_black_co.paa","\uh-60\data\uh60m_engine_black_co.paa","\uh-60\data\default_co.paa"};
 				factions[]={"BLU_F"};
 			};
 			class CIVWhite
 			{
 				displayName="White";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_white_co.paa","\uh-60\data\uh60m_engine_white_co.paa"};
 				factions[]={"CIV_F"};
 			};
 			class CIVRed
 			{
 				displayName="Red";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_Red_co.paa","\uh-60\data\uh60m_engine_Red_co.paa"};
 				factions[]={"CIV_F"};
 			};
 			class CIVGreen
 			{
 				displayName="Green";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_Green_co.paa","\uh-60\data\uh60m_engine_Green_co.paa"};
 				factions[]={"CIV_F"};
 			};
 			class CIVBlue
 			{
 				displayName="Blue";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_blue_co.paa","\uh-60\data\uh60m_engine_blue_co.paa"};
 				factions[]={"CIV_F"};
 			};
 			class CIVBlack
 			{
 				displayName="Black";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_black_co.paa","\uh-60\data\uh60m_engine_black_co.paa"};
 				factions[]={"CIV_F","BLU_F"};
 			};
@@ -718,7 +720,7 @@ class CfgVehicles
 	};
 	class ej_S70_U: ej_S70_base
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_S70_U";
 		scope=2;
 		accuracy=1;
@@ -758,7 +760,7 @@ class CfgVehicles
 				LockDetectionSystem = 1 + 2 + 4 + 8;
 				incomingMissileDetectionSystem = 16;
 				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;

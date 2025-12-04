@@ -25,7 +25,7 @@ class CfgVehicles
 	};
 	class ArtyContainer_base: StaticCannon
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ArtyContainer";
 		scope=0;
 		displayname="Light Howitzer Container";
@@ -89,7 +89,7 @@ class CfgVehicles
 				maxelev=80;
 				magazines[]=
 				{
-					"100rd_105mm_Shells",
+					"50rd_105mm_Shells",
 					"32Rnd_105mm_Smoke_white",
 					"32Rnd_105mm_Guided",
 					"32Rnd_105mm_Flare_white",
@@ -116,7 +116,7 @@ class CfgVehicles
 	};
 	class ArtyContainer: ArtyContainer_base
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ArtyContainer";
 		scope=2;
 		scopeCurator=2;

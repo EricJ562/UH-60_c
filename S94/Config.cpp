@@ -523,7 +523,8 @@ class CfgVehicles
 		};
 		dammageHalf[] = {};	
 		dammageFull[] = {};
-		#include "soundsuh92.hpp"
+		#include "soundsUH92.hpp"
+		#include "Cherokee_01.hpp"
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[]={"\uh-60\data\uh60m_fuselage_co.paa","\uh-60\data\uh60m_engine_co.paa","\uh-60\data\ductfans_co.paa"};	
 		class Damage
@@ -611,35 +612,35 @@ class CfgVehicles
 			class CIVWhite
 			{
 				displayName="White";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_white_co.paa","\uh-60\data\uh60m_engine_white_co.paa","\uh-60\data\whiteductfans_co.paa"};
 				factions[]={"CIV_F"};
 			};
 			class CIVRed
 			{
 				displayName="Red";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_Red_co.paa","\uh-60\data\uh60m_engine_Red_co.paa","\uh-60\data\redductfans_co.paa"};
 				factions[]={"CIV_F"};
 			};
 			class CIVGreen
 			{
 				displayName="Green";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_Green_co.paa","\uh-60\data\uh60m_engine_Green_co.paa","\uh-60\data\Greenductfans_co.paa"};
 				factions[]={"CIV_F"};
 			};
 			class CIVBlue
 			{
 				displayName="Blue";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_blue_co.paa","\uh-60\data\uh60m_engine_blue_co.paa","\uh-60\data\blueductfans_co.paa"};
 				factions[]={"CIV_F"};
 			};
 			class CIVBlack
 			{
 				displayName="Black";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_black_co.paa","\uh-60\data\uh60m_engine_black_co.paa","\uh-60\data\blackductfans_co.paa"};
 				factions[]={"CIV_F","BLU_F"};
 			};
@@ -651,7 +652,7 @@ class CfgVehicles
 	};
 	class ej_S94: ej_S94_base
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_S94";
 		scope=2;
 		accuracy=1;
@@ -665,7 +666,7 @@ class CfgVehicles
 	};
 	class ej_S94U: ej_S94
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_S94U";
 		scope=2;
 		slingLoadMaxCargoMass=6000;

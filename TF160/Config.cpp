@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class Ej_MH80
 	{
-		units[] = {"B_LSV_01_Medic_F","B_LSV_01_Repair_F","B_LSV_01_Rearm_F","B_LSV_01_Refuel_F","160th_SOAR_Pilot","160th_SOAR_Crew","ej_MH80","ej_MH67"};
+		units[] = {"B_LSV_01_Medic_F","B_LSV_01_Repair_F","B_LSV_01_Rearm_F","B_LSV_01_Refuel_F","160th_SOAR_Pilot","160th_SOAR_Crew","ej_MH80","ej_MH67","B_Helipilot_160_Early","B_helicrew_160_Early"};
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
@@ -26,7 +26,7 @@ class CfgWeapons
 	class U_Multicam_ej: Uniform_Base
 	{
 		dlc=u100;
-		author="EricJ";
+		author="Flanker562";
 		scope=2;
 		picture="\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
 		displayName="Multicam Flight Suit";
@@ -45,6 +45,174 @@ class CfgWeapons
 class CfgVehicles
 {
 	class B_Helipilot_F;
+	class B_Helipilot_160_Early: B_Helipilot_F
+	{
+		author="Flanker562";
+		class SpeechVariants
+		{
+			class Default
+			{
+				speechSingular[]=
+				{
+					"veh_infantry_pilot_s"
+				};
+				speechPlural[]=
+				{
+					"veh_infantry_pilot_p"
+				};
+			};
+		};
+		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
+		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
+		nameSound="veh_infantry_pilot_s";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Helipilot_F.jpg";
+		scope=2;
+		cost=160000;
+		detectSkill=90;
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+			"G_NATO_pilot"
+		};
+		modelSides[]={3,1};
+		uniformClass="U_B_HeliPilotCoveralls";
+		displayName="TF160 Pilot (Early)";
+		linkedItems[]=
+		{
+			"V_TacVest_blk",
+			"H_PilotHelmetHeli_B",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio",
+			"NVGoggles_OPFOR"
+		};
+		respawnLinkedItems[]=
+		{
+			"V_TacVest_blk",
+			"H_PilotHelmetHeli_B",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio",
+			"NVGoggles_OPFOR"
+		};
+		weapons[]=
+		{
+			"SMG_05_F",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"SMG_05_F",
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellOrange",
+			"Chemlight_green",
+			"Chemlight_green"
+		};
+		respawnMagazines[]=
+		{
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellOrange",
+			"Chemlight_green",
+			"Chemlight_green"
+		};
+		role="Crewman";
+		camouflage=2;
+		faction="TF160";
+	};
+	class B_helicrew_160_Early: B_Helipilot_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_helicrew_F.jpg";
+		_generalMacro="B_helicrew_F";
+		displayName="TF160 Crew (Early)";
+		modelSides[]={3,1};
+		uniformClass="U_B_HeliPilotCoveralls";
+		role="Crewman";
+		linkedItems[]=
+		{
+			"V_TacVest_blk",
+			"H_PilotHelmetHeli_B",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio",
+			"NVGoggles_OPFOR"
+		};
+		respawnLinkedItems[]=
+		{
+			"V_TacVest_blk",
+			"H_PilotHelmetHeli_B",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio",
+			"NVGoggles_OPFOR"
+		};
+		weapons[]=
+		{
+			"SMG_05_F",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"SMG_05_F",
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellOrange",
+			"Chemlight_green",
+			"Chemlight_green"
+		};
+		respawnMagazines[]=
+		{
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"30Rnd_9x21_Mag_SMG_02",
+			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellOrange",
+			"Chemlight_green",
+			"Chemlight_green"
+		};
+		faction="TF160";
+	};
 	class 160th_SOAR_Pilot: B_Helipilot_F
 	{
 		class SpeechVariants
@@ -58,7 +226,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="160th_SOAR_Pilot";
 		scope=2;
 		side=1;
@@ -91,16 +259,16 @@ class CfgVehicles
 		respawnWeapons[]={"ej_MX_SA_F","hgun_ACPC2_F","Throw","Put"};
 		magazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
 			"SmokeShell",
@@ -111,16 +279,16 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
 			"SmokeShell",
@@ -151,7 +319,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="160th_SOAR_Crew";
 		scope=2;
 		side=1;
@@ -184,16 +352,16 @@ class CfgVehicles
 		respawnWeapons[]={"ej_MX_SA_F","hgun_ACPC2_F","Throw","Put"};
 		magazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
 			"SmokeShell",
@@ -204,16 +372,16 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"9Rnd_45ACP_Mag",
 			"9Rnd_45ACP_Mag",
 			"SmokeShell",
@@ -245,7 +413,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="160th_SOAR_Medic";
 		scope=2;
 		side=1;
@@ -293,16 +461,16 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -313,16 +481,16 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -336,51 +504,11 @@ class CfgVehicles
 		modelSides[]={3,1};
 		detectSkill=60;
 	};
-	class B_Kitbag_mcamo;
-	class ej_skram_SOAR: B_Kitbag_mcamo	
-	{
-		dlc=uh60;
-		scope=2;
-		displayname="SKRAM Bag (SOAR)";
-		hiddenSelections[]={"Camo"};
-		hiddenSelectionsTextures[]={"\uh-60\data\uniforms\backpack_fast_mcamej_co.paa"};
-		class TransportItems
-		{
-			class _xx_FirstAidKit
-			{
-				name="FirstAidKit";
-				count=2;
-			};
-		};
-		class TransportMagazines
-		{
-			class _xx_30Rnd_65x39_caseless_mag
-			{
-				count=6;
-				magazine="30Rnd_65x39_caseless_mag";
-			};
-			class _xx_9Rnd_45ACP_Mag
-			{
-				magazine="9Rnd_45ACP_Mag";
-				count=2;
-			};
-			class _xx_SmokeShell
-			{
-				magazine="SmokeShell";
-				count=2;
-			};
-			class _xx_Chemlight_green
-			{
-				magazine="Chemlight_green";
-				count=2;
-			};
-		};
-	};
 	class B_Heli_Transport_03_F;
 	class ej_MH67: B_Heli_Transport_03_F
 	{
 		displayName="MH-67 Huron [TF 160]";
-		author="EricJ";
+		author="Flanker562";
 		vehicleClass="Air";
 		side=1;
 		scope=2;
@@ -395,12 +523,12 @@ class CfgVehicles
 			class SOAR
 			{
 				displayName="SOAR";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"UH-60\data\Heli_Transport_03_SOAR_CO.paa","UH-60\data\Heli_Transport2_03_SOAR_CO.paa"};
 				factions[]={"TF160"};
 			};
 		};
-		weapons[]={"EricJ_CMFlareLauncher"};
+		weapons[]={"Flanker562_CMFlareLauncher"};
 		receiveRemoteTargets=1;
 		reportRemoteTargets=1;
 		reportOwnPosition=1;
@@ -485,7 +613,7 @@ class CfgVehicles
 	class ej_MH80: B_Heli_Transport_01_F
 	{
 		#include "sounds.hpp"
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="B_Heli_Transport_01_F";
 		scope=2;
 		side=1;
@@ -506,7 +634,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[]={"\UH-60\Data\Heli_Transport_01_ext01_160th_CO.paa","\UH-60\Data\Heli_Transport_01_ext02_160th_CO.paa"};
 		slingLoadMaxCargoMass=3800;
 		displayName="MH-80 (TF160)";
-		weapons[]={"EricJ_CMFlareLauncher"};
+		weapons[]={"Flanker562_CMFlareLauncher"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine"};
 
 		class TransportBackpacks
@@ -529,10 +657,10 @@ class CfgVehicles
 				count=10;
 				magazine="SmokeShellYellow";
 			};
-			class _xx_30Rnd_65x39_caseless_mag
+			class _xx_30Rnd_65x39_caseless_FMJBT
 			{
 				count=14;
-				magazine="30Rnd_65x39_caseless_mag";
+				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
 			class _xx_SmokeShellPurple
 			{
@@ -621,7 +749,7 @@ class CfgVehicles
 				proxyIndex=3;
 				LODTurnedIn=1100;
 				LODTurnedOut=1100;
-				weapons[]={"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				weapons[]={"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 				magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
 				gunnerCompartments="Compartment3";
 				commanding=-3;
@@ -723,7 +851,7 @@ class CfgVehicles
 		faction="TF160";
 		Side=1;
 		ForceInGarage=1;
-		author="EricJ";
+		author="Flanker562";
         	hiddenSelectionsTextures[] = 
         	{
             		"\UH-60\Data\NATO_LSV_01_ammo_CO.paa",
@@ -736,7 +864,7 @@ class CfgVehicles
 			class LSVRearm
 			{
 				displayName="TF160 Ammo";
-				author="EricJ";
+				author="Flanker562";
 				textures[]=
 				{
 					"\UH-60\Data\NATO_LSV_01_ammo_CO.paa",
@@ -757,10 +885,10 @@ class CfgVehicles
 		};
 		class TransportMagazines
 		{
-			class _xx_30Rnd_65x39_caseless_mag
+			class _xx_30Rnd_65x39_caseless_FMJBT
 			{
 				count=12;
-				magazine="30Rnd_65x39_caseless_mag";
+				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
 			class _xx_1Rnd_HE_Grenade_shell
 			{
@@ -855,7 +983,7 @@ class CfgVehicles
 			class LSVFuel
 			{
 				displayName="TF160 Fuel";
-				author="EricJ";
+				author="Flanker562";
 				textures[]=
 				{
 					"\UH-60\Data\NATO_LSV_01_fuel_CO.paa",
@@ -870,13 +998,13 @@ class CfgVehicles
 			};
 		};
 		ForceInGarage=1;
-		author="EricJ";
+		author="Flanker562";
 		class TransportMagazines
 		{
-			class _xx_30Rnd_65x39_caseless_mag
+			class _xx_30Rnd_65x39_caseless_FMJBT
 			{
 				count=12;
-				magazine="30Rnd_65x39_caseless_mag";
+				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
 			class _xx_1Rnd_HE_Grenade_shell
 			{
@@ -960,7 +1088,7 @@ class CfgVehicles
 		faction="TF160";
 		Side=1;
 		ForceInGarage=1;
-		author="EricJ";
+		author="Flanker562";
         	hiddenSelectionsTextures[] = 
         	{
             		"\UH-60\Data\NATO_LSV_01_repair_CO.paa",
@@ -973,7 +1101,7 @@ class CfgVehicles
 			class LSVFuel
 			{
 				displayName="TF160 Fuel";
-				author="EricJ";
+				author="Flanker562";
 				textures[]=
 				{
 					"\UH-60\Data\NATO_LSV_01_repair_CO.paa",
@@ -989,10 +1117,10 @@ class CfgVehicles
 		};
 		class TransportMagazines
 		{
-			class _xx_30Rnd_65x39_caseless_mag
+			class _xx_30Rnd_65x39_caseless_FMJBT
 			{
 				count=12;
-				magazine="30Rnd_65x39_caseless_mag";
+				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
 			class _xx_1Rnd_HE_Grenade_shell
 			{
@@ -1076,7 +1204,7 @@ class CfgVehicles
 		faction="TF160";
 		Side=1;
 		ForceInGarage=1;
-		author="EricJ";
+		author="Flanker562";
         	hiddenSelectionsTextures[] = 
         	{
             		"\UH-60\Data\NATO_LSV_01_medevac_CO.paa",
@@ -1089,7 +1217,7 @@ class CfgVehicles
 			class LSVMedevac
 			{
 				displayName="TF160 Medevac";
-				author="EricJ";
+				author="Flanker562";
 				textures[]=
 				{
 					"\UH-60\Data\NATO_LSV_01_medevac_CO.paa",

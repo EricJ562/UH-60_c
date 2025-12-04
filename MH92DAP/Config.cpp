@@ -80,7 +80,7 @@ class CfgVehicles
 	};
 	class ej_MH92DAP_base: Helicopter_Base_H
 	{
-		features = "Slingload: Slingloads up to 6000kg";
+		features = "Slingload: Slingloads up to 500kg";
 		destrType = "DestructWreck";		
 		picture="\UH-60\Data\UI\MH-92DAP_Icon.paa";
 		icon="\UH-60\Data\UI\Map_MH_92.paa";
@@ -88,6 +88,9 @@ class CfgVehicles
 		model = "\UH-60\MH92\ej_MH92DAP3.p3d";
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		mapSize = 15;
+		receiveRemoteTargets=1;
+		reportRemoteTargets=1;
+		reportOwnPosition=1;
 		cargoCanEject = 1;
 		driverCanEject = 0;
 		maxFordingDepth = 1.5;
@@ -137,16 +140,13 @@ class CfgVehicles
 		slingLoadMaxCargoMass=6000;
 		slingLoadMemoryPoint="slingLoad0";
 		memoryPointDriverOptics="slingCamera";
-		weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncherUH92,ej_M134_minigun,kuy_IR_Jammer_Weapon};
+		weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncherUH92,ej_M134_minigun,kuy_IR_Jammer_Weapon};
 		magazines[] = {240Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,5000Rnd_762x51_Belt_Red};
 		availableForSupportTypes[]={"CAS_Heli"};
 		LockDetectionSystem="1 + 8 + 4";
 		incomingMissileDetectionSystem=16
 		threat[]={0.80000001,0.1,0.60000002};
 		visualTargetSize=0.96;
-		receiveRemoteTargets=1;
-		reportRemoteTargets=1;
-		reportOwnPosition=1;
 		selectionFireAnim = "muzzleFlash";
 		selectionHRotorStill = "main rotor static";
 		selectionHRotorMove = "main rotor blur";
@@ -198,10 +198,10 @@ class CfgVehicles
 				count=10;
 				magazine="SmokeShellYellow";
 			};
-			class _xx_30Rnd_65x39_caseless_mag
+			class _xx_30Rnd_65x39_caseless_FMJBT
 			{
 				count=14;
-				magazine="30Rnd_65x39_caseless_mag";
+				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
 			class _xx_SmokeShellPurple
 			{
@@ -868,15 +868,9 @@ class CfgVehicles
 						maxSpeedThreshold=0;
 						aimDown=-30;
 					};
-					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
-					{
-					};
-					class LaserSensorComponent: SensorTemplateLaser
-					{
-					};
-					class NVSensorComponent: SensorTemplateNV
-					{
-					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar{};
+					class LaserSensorComponent: SensorTemplateLaser{};
+					class NVSensorComponent: SensorTemplateNV{};
 				};
 			};
 		};
@@ -923,7 +917,7 @@ class CfgVehicles
 				gunnerOpticsShowCursor = 1;
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
+				weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
 				magazines[] = {240Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,Laserbatteries};									
 								
 				stabilizedInAxes = "StabilizedInAxesBoth";
@@ -1051,7 +1045,7 @@ class CfgVehicles
 			class SOAR
 			{
 				displayName="SOAR";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"uh-60\data\uh60m_fuselage_dap_co.paa","\uh-60\data\uh60m_engine_DAP_co.paa","\uh-60\data\dapductfans_co.paa"};
 				factions[]={"TF160"};
 			};
@@ -1063,8 +1057,7 @@ class CfgVehicles
 	};
 	class ej_MH92DAP3: ej_MH92DAP_base
 	{
-		author="EricJ";
-		_generalMacro="ej_MH92";
+		author="Flanker562";
 		scope=2;
 		accuracy=1;
 		side=1;

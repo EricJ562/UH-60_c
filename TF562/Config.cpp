@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class Ej_TF562
 	{
-		units[] = {TF562_Offroad_01_B,B_GMV_HMG,TF562_TL,TF562_Medic,TF562_JTAC,TF562_Grenadier,TF562_Rifleman,TF562_Engineer,TF562_Sharpshooter,TF562_LMG,TF562_UAV,TF562_UGV_MULE};
+		units[] = {TF562_Offroad_01_B,B_GMV_HMG,TF562_TL,TF562_Medic,TF562_JTAC,TF562_Grenadier,TF562_Rifleman,TF562_Engineer,TF562_Sharpshooter,TF562_LMG,TF562_UAV,TF562_UGV_MULE,TF562_MAR10Sniper};
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
@@ -68,12 +68,12 @@ class CfgVehicles
 		Displayname="TF562 Offroad";
 		faction="TF562";
 		crew="TF562_Rifleman";
-		author="EricJ";
+		author="Flanker562";
 	};
 	class B_LSV_01_armed_F;
 	class B_GMV_HMG: B_LSV_01_armed_F
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="B_GMV_HMG";
 		scope=2;
 		scopeCurator=2;
@@ -103,10 +103,10 @@ class CfgVehicles
 		};
 		class TransportMagazines
 		{
-			class _xx_30Rnd_65x39_caseless_mag
+			class _xx_30Rnd_65x39_caseless_FMJBT
 			{
 				count=50;
-				magazine="30Rnd_65x39_caseless_mag";
+				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
 			class _xx_Handgrenade
 			{
@@ -232,7 +232,7 @@ class CfgVehicles
 	class B_UGV_01_F;
 	class TF562_UGV_MULE: B_UGV_01_F
 	{
-		author="EricJ";
+		author="Flanker562";
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_UGV_01_F.jpg";
 		_generalMacro="TF562_UGV_MULE";
 		scope=2;
@@ -262,10 +262,10 @@ class CfgVehicles
 		};
 		class TransportMagazines
 		{
-			class _xx_30Rnd_65x39_caseless_mag
+			class _xx_30Rnd_65x39_caseless_FMJBT
 			{
 				count=50;
-				magazine="30Rnd_65x39_caseless_mag";
+				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
 			class _xx_Handgrenade
 			{
@@ -305,7 +305,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="TF562_TL";
 		scope=2;
 		side=1;
@@ -352,16 +352,16 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -375,16 +375,16 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -415,7 +415,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="TF562_Medic";
 		scope=2;
 		side=1;
@@ -464,16 +464,16 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -486,16 +486,16 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -524,7 +524,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="TF562_JTAC";
 		scope=2;
 		side=1;
@@ -576,16 +576,16 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -599,16 +599,16 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -639,7 +639,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="TF562_Rifleman";
 		scope=2;
 		side=1;
@@ -684,16 +684,16 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -706,16 +706,16 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -745,7 +745,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="TF562_Grenadier";
 		scope=2;
 		side=1;
@@ -790,16 +790,16 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -867,7 +867,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="TF562_UAV";
 		scope=2;
 		side=1;
@@ -912,16 +912,16 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -934,16 +934,16 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -974,7 +974,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="TF562_TL";
 		scope=2;
 		side=1;
@@ -1019,16 +1019,16 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -1044,16 +1044,16 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -1088,7 +1088,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="TF562_Sharpshooter";
 		scope=2;
 		side=1;
@@ -1135,14 +1135,16 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -1156,14 +1158,16 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -1181,6 +1185,123 @@ class CfgVehicles
 		role="Marksman";
 		detectSkill=80;
 	};
+	class TF562_MAR10Sniper: B_recon_F
+	{
+		class SpeechVariants
+		{
+			class Default
+			{
+				speechSingular[]={"veh_infantry_pilot_s"};
+				speechPlural[]={"veh_infantry_pilot_p"};
+			};
+		};
+		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
+		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
+		nameSound="veh_infantry_pilot_s";
+		author="Flanker562";
+		scope=2;
+		side=1;
+		faction="TF562";
+		identityTypes[]={"LanguageENG_F","Head_NATO","G_NATO_pilot"};
+		displayName="TF 562 Sniper (MAR-10)";
+		linkedItems[]=
+		{
+			"V_PlateCarrier2_rgr_noflag_F",
+			"H_HelmetB_light_desert",
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio",
+			"ej_PVS15D"
+		};
+		respawnLinkedItems[]=
+		{
+			"V_PlateCarrier2_rgr_noflag_F",
+			"H_HelmetB_light_desert",
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio",
+			"ej_PVS15D"
+		};
+		weapons[]=
+		{
+			"ej_srifle_tf562_02",
+			"hgun_P07_snds_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"
+		};
+		respawnWeapons[]=
+		{
+			"ej_srifle_tf562_02",
+			"hgun_P07_snds_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"
+		};
+		magazines[]=
+		{
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"MiniGrenade",
+			"MiniGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Chemlight_green",
+			"Chemlight_green",
+			"laserbatteries"
+		};
+		respawnMagazines[]=
+		{
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"10Rnd_338_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"MiniGrenade",
+			"MiniGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Chemlight_green",
+			"Chemlight_green",
+			"laserbatteries"
+		};
+		cost=160000;
+		camouflage=2;
+		modelSides[]={3,1};
+		role="Marksman";
+		detectSkill=80;
+		backpack="B_Kitbag_mcamo";
+	};
 	class TF562_LMG: B_recon_F
 	{
 		class SpeechVariants
@@ -1194,7 +1315,7 @@ class CfgVehicles
 		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="TF562_LMG";
 		scope=2;
 		side=1;
@@ -1240,10 +1361,12 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"100Rnd_65x39_caseless_mag",
-			"100Rnd_65x39_caseless_mag",
-			"100Rnd_65x39_caseless_mag",
-			"100Rnd_65x39_caseless_mag",
+			"100Rnd_65x39_caseless_FMJBT",
+			"100Rnd_65x39_caseless_FMJBT",
+			"100Rnd_65x39_caseless_FMJBT",
+			"100Rnd_65x39_caseless_FMJBT",
+			"100Rnd_65x39_caseless_FMJBT",
+			"100Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
@@ -1256,10 +1379,12 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"100Rnd_65x39_caseless_mag",
-			"100Rnd_65x39_caseless_mag",
-			"100Rnd_65x39_caseless_mag",
-			"100Rnd_65x39_caseless_mag",
+			"100Rnd_65x39_caseless_FMJBT",
+			"100Rnd_65x39_caseless_FMJBT",
+			"100Rnd_65x39_caseless_FMJBT",
+			"100Rnd_65x39_caseless_FMJBT",
+			"100Rnd_65x39_caseless_FMJBT",
+			"100Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",

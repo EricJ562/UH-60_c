@@ -36,10 +36,10 @@ class CfgPatches
 };
 class CfgVehicleClasses
 {
-	class Ericj_container
+	class Flanker562_container
 	{
-		displayName="EricJ Containers (Cherokee)";
-		mapbuilder_filter="EricJ containers";
+		displayName="Flanker562 Containers (Cherokee)";
+		mapbuilder_filter="Flanker562 containers";
 	};
 
 };
@@ -56,13 +56,13 @@ class CfgVehicles
 	class Slingload_base_F;
 	class ej_CheroContainerBase: Slingload_base_F
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainer";
 		scope=0;
 		scopeCurator=0;
 		editorCategory="EdCat_Supplies";
 		editorSubcategory="EdSubcat_Storage";
-		vehicleClass="EricJ_Container";
+		vehicleClass="Flanker562_Container";
 		maximumLoad=2000;
 		faction="TF160";
 		supplyRadius=10;
@@ -112,7 +112,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerAmmo: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerFuel";
 		scope=2;
 		mapSize=6.1900001;
@@ -225,7 +225,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerFuel: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerFuel";
 		scope=2;
 		mapSize=6.1900001;
@@ -337,7 +337,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerCargo: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		class SimpleObject
 		{
 			eden=1;
@@ -441,7 +441,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerMedevac: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerMedevac";
 		mapSize=6.3099999;
 		scope=2;
@@ -512,7 +512,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerBlue: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerBlue";
 		mapSize=6.3099999;
 		scope=2;
@@ -557,7 +557,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerGreen: ej_CheroContainerBlue
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerGreen";
 		scope=2;
 		scopeCurator=2;
@@ -586,7 +586,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerTan: ej_CheroContainerBlue
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerTan";
 		scope=2;
 		scopeCurator=2;
@@ -615,7 +615,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerOrange: ej_CheroContainerBlue
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerBlue";
 		scope=2;
 		scopeCurator=2;
@@ -626,7 +626,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerGray: ej_CheroContainerBlue
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerGray";
 		scope=2;
 		scopeCurator=2;
@@ -637,7 +637,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerRed: ej_CheroContainerBlue
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerRed";
 		scope=2;
 		scopeCurator=2;
@@ -648,7 +648,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerDarkBlue: ej_CheroContainerBlue
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerDarkBlue";
 		scope=2;
 		scopeCurator=2;
@@ -659,7 +659,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerYellow: ej_CheroContainerBlue
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerDarkBlue";
 		scope=2;
 		scopeCurator=2;
@@ -670,7 +670,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerLightGreen: ej_CheroContainerBlue
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerDarkBlue";
 		scope=2;
 		scopeCurator=2;
@@ -681,7 +681,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerRepair: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerRepair";
 		mapSize=6.3099999;
 		scope=2;
@@ -712,7 +712,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerRepairOPFOR: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerRepair";
 		scope=2;
 		scopeCurator=2;
@@ -742,7 +742,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerRepairAAF: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerRepair";
 		scope=2;
 		scopeCurator=2;
@@ -772,7 +772,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerFuelOPFOR: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerFuel";
 		scope=2;
 		class SimpleObject
@@ -807,7 +807,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerFuelAAF: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerFuel";
 		scope=2;
 		class SimpleObject
@@ -842,7 +842,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerCargoAAF: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		class SimpleObject
 		{
 			eden=1;
@@ -974,7 +974,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerCargoOPFOR: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		class SimpleObject
 		{
 			eden=1;
@@ -1106,7 +1106,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerAmmoAAF: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerFuel";
 		scope=2;
 		mapSize=6.1900001;
@@ -1122,7 +1122,7 @@ class CfgVehicles
 		scopeCurator=2;
 		editorCategory="EdCat_Supplies";
 		editorSubcategory="EdSubcat_Storage";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_MilCommonAAF_co.paa"};
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_AAFAmmo_co.paa"};
 		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
 		displayName="Cherokee Ammo Container (AAF)";
 		accuracy=0.5;
@@ -1219,7 +1219,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerAmmoOPFOR: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerAmmoOPFOR";
 		scope=2;
 		mapSize=6.1900001;
@@ -1235,7 +1235,7 @@ class CfgVehicles
 		scopeCurator=2;
 		editorCategory="EdCat_Supplies";
 		editorSubcategory="EdSubcat_Storage";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_OPFORCommon_co.paa"};
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_AmmoOPFOR_co.paa"};
 		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
 		displayName="Cherokee Ammo Container (CSAT)";
 		accuracy=0.5;
@@ -1332,7 +1332,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerMedevacAAF: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerMedevac";
 		mapSize=6.3099999;
 		scope=2;
@@ -1405,7 +1405,7 @@ class CfgVehicles
 	};
 	class ej_CheroContainerMedevacOPFOR: ej_CheroContainerBase
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ej_CheroContainerMedevacOPFOR";
 		mapSize=6.3099999;
 		scope=2;

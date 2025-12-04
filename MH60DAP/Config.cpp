@@ -110,7 +110,7 @@ class CfgVehicles
 		selectionHRotorMove = "main rotor blur";
 		selectionVRotorStill = "tail rotor static";
 		selectionVRotorMove = "tail rotor blur";
-		weapons[]={"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+		weapons[]={"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
 		availableForSupportTypes[]={"Drop","Transport"};
 		LockDetectionSystem = CM_Lock_Radar + CM_Lock_Laser;
@@ -600,7 +600,9 @@ class CfgVehicles
 		};
 		dammageHalf[] = {};	
 		dammageFull[] = {};
+
 		#include "sounds.hpp"
+
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[]={"\uh-60\data\uh60m_fuselage_co.paa","\uh-60\data\uh60m_engine_co.paa","\uh-60\data\default_co.paa"};	
 		class Damage
@@ -679,7 +681,7 @@ class CfgVehicles
 				LockDetectionSystem = 1 + 2 + 4 + 8;
 				incomingMissileDetectionSystem = 16;
 				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -691,14 +693,14 @@ class CfgVehicles
 			class SOAR
 			{
 				displayName="SOAR";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_dap_co.paa","\uh-60\data\uh60m_engine_DAP_co.paa","\uh-60\data\default_co.paa"};
 				factions[]={"TF160","BLU_F"};
 			};
 			class USN
 			{
 				displayName="USN";
-				author="EricJ";
+				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_Navy_co.paa","\uh-60\data\uh60m_engine_Navy_co.paa","\uh-60\data\default_co.paa"};
 				factions[]={"BLU_F"};
 			};
@@ -710,7 +712,6 @@ class CfgVehicles
 	};
 	class ej_MH60MDAP2: ej_MH60MDAP_base
 	{
-		dlc=EricJ_UH60;
 		scope=2;
 		accuracy=1;
 		side=1;
@@ -729,7 +730,7 @@ class CfgVehicles
 		cost=200000;
 		ace_fastroping_enabled = 0;
 		textureList[]={"SOAR",1};
-		weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
+		weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,5000Rnd_762x51_Belt_Red};
 		memoryPointGun[]=
 		{
@@ -790,7 +791,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"EricJ_CMFlareLauncherDAP"};
+				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,kuy_IR_Jammer_Magazine,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -868,6 +869,52 @@ class CfgVehicles
 					maxFov = 1.0;
 				};
 			};
+			class CargoTurret_01: CargoTurret
+			{
+				gunnerAction="passenger_inside_2";
+				gunnerCompartments="Compartment3";
+				memoryPointsGetInGunner="pos side";
+				memoryPointsGetInGunnerDir="pos side dir";
+				gunnerName="Left Side Crew Position";
+				proxyIndex=2;
+				maxElev=15;
+				minElev=-80;
+				maxTurn=30;
+				minTurn=-30;
+				isPersonTurret=1;
+				ejectDeadGunner=0;
+				usepip=0;
+				gunnerOutOpticsModel="";
+				gunnerOpticsModel="";
+				startEngine=0;
+				outGunnerMayFire=1;
+				inGunnerMayFire=0;
+				commanding=-2;
+				memoryPointGunnerOptics="";
+			};
+			class CargoTurret_02: CargoTurret
+			{
+				gunnerAction="passenger_inside_2";
+				gunnerCompartments="Compartment3";
+				memoryPointsGetInGunner="pos side 2";
+				memoryPointsGetInGunnerDir="pos side 2 dir";
+				gunnerName="Right Side Crew Position";
+				proxyIndex=1;
+				maxElev=14;
+				minElev=-80;
+				maxTurn=30;
+				minTurn=-30;
+				isPersonTurret=1;
+				ejectDeadGunner=0;
+				usepip=0;
+				gunnerOutOpticsModel="";
+				gunnerOpticsModel="";
+				startEngine=0;
+				outGunnerMayFire=1;
+				inGunnerMayFire=0;
+				commanding=-2;
+				memoryPointGunnerOptics="";
+			};
 		};
 		class Components: Components
 		{
@@ -913,7 +960,7 @@ class CfgVehicles
 	};
         class ej_MH60MDAP4DP: ej_MH60MDAP_base
 	{
-		dlc=EricJ_UH60;
+		dlc=Flanker562_UH60;
 		scope=2;
 		accuracy=1;
 		side=1;
@@ -931,7 +978,7 @@ class CfgVehicles
         	USAF_RefuelType = "probe";
         	USAF_RefuelPoint[] = {-1.146, -1.159, -9.243};
 		textureList[]={"SOAR",1};
-		weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
+		weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,5000Rnd_762x51_Belt_Red};
 		memoryPointGun[]=
 		{
@@ -991,7 +1038,7 @@ class CfgVehicles
 				gunnerOpticsShowCursor = 1;
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
+				weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
 				magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,Laserbatteries,5000Rnd_762x51_Belt};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1069,6 +1116,52 @@ class CfgVehicles
 					maxFov = 1.0;
 				};
 			};
+			class CargoTurret_01: CargoTurret
+			{
+				gunnerAction="passenger_inside_2";
+				gunnerCompartments="Compartment3";
+				memoryPointsGetInGunner="pos side";
+				memoryPointsGetInGunnerDir="pos side dir";
+				gunnerName="Left Side Crew Position";
+				proxyIndex=2;
+				maxElev=15;
+				minElev=-80;
+				maxTurn=30;
+				minTurn=-30;
+				isPersonTurret=1;
+				ejectDeadGunner=0;
+				usepip=0;
+				gunnerOutOpticsModel="";
+				gunnerOpticsModel="";
+				startEngine=0;
+				outGunnerMayFire=1;
+				inGunnerMayFire=0;
+				commanding=-2;
+				memoryPointGunnerOptics="";
+			};
+			class CargoTurret_02: CargoTurret
+			{
+				gunnerAction="passenger_inside_2";
+				gunnerCompartments="Compartment3";
+				memoryPointsGetInGunner="pos side 2";
+				memoryPointsGetInGunnerDir="pos side 2 dir";
+				gunnerName="Right Side Crew Position";
+				proxyIndex=1;
+				maxElev=14;
+				minElev=-80;
+				maxTurn=30;
+				minTurn=-30;
+				isPersonTurret=1;
+				ejectDeadGunner=0;
+				usepip=0;
+				gunnerOutOpticsModel="";
+				gunnerOpticsModel="";
+				startEngine=0;
+				outGunnerMayFire=1;
+				inGunnerMayFire=0;
+				commanding=-2;
+				memoryPointGunnerOptics="";
+			};
 		};
 		class Components: Components
 		{
@@ -1144,7 +1237,7 @@ class CfgVehicles
 	};
 	class ej_HH60H: ej_MH60MDAP_base
 	{
-		author="EricJ";
+		author="Flanker562";
 		scope=2;
 		accuracy=1;
 		side=1;
@@ -1159,7 +1252,7 @@ class CfgVehicles
 		cargoProxyIndexes[] = {1,2,3,4,5,6,7,8};
 		transportSoldier=8;
 		fuelCapacity = 1564;
-		slingLoadMaxCargoMass=0;
+		slingLoadMaxCargoMass=2722;
 		ace_fastroping_ropeOrigins[] = {"ropeOriginRight"};
 		model = "\UH-60\hh\ej_HH60H.p3d";
 		attenuationEffectType="OpenCarAttenuation";
@@ -1181,6 +1274,7 @@ class CfgVehicles
 						hardpoints[]=
 						{
 							"B_HH60_Hellfire",
+							"DAGR",
 						};
 						turret[]={0};
 						maxweight=400;
@@ -1234,7 +1328,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"EricJ_CMFlareLauncherDAP"};
+				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,kuy_IR_Jammer_Magazine,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1316,7 +1410,7 @@ class CfgVehicles
 	};
 	class ej_MH60SI2: ej_MH60MDAP_base
 	{
-		dlc=EricJ_UH60;
+		dlc=Flanker562_UH60;
 		scope=2;
 		accuracy=1;
 		side=1;
@@ -1335,7 +1429,7 @@ class CfgVehicles
 		selectionFireAnim="muzzleFlash_1";
 		transportSoldier = 0;
 		textureList[]={"USN",1};
-		weapons[]={"EricJ_CMFlareLauncher","kuy_IR_Jammer_Weapon","ej_M240_mg"};
+		weapons[]={"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon","ej_M240_mg"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240"};
 		class UserActions
 		{
@@ -1358,7 +1452,7 @@ class CfgVehicles
 				statement="this animate [""copip5"",0];";
 			};
 		};
-		weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
+		weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,5000Rnd_762x51_Belt};
 		memoryPointGun[]=
 		{
@@ -1419,7 +1513,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"EricJ_CMFlareLauncherDAP"};
+				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,kuy_IR_Jammer_Magazine,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;

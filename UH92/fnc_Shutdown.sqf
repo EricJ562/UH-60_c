@@ -1,0 +1,1 @@
+hct_vehicle removeEventHandler ["Engine", ej_eh_engine];

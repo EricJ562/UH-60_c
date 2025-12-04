@@ -473,7 +473,7 @@ class CfgVehicles
 		crew="160th_SOAR_Pilot";
 		displayName="AH-6J Little Bird";
 		accuracy=1.5;
-		weapons[] = {ej_master_arms_safe,ej_M134_minigun,EricJ_CMFlareLauncher};
+		weapons[] = {ej_master_arms_safe,ej_M134_minigun,Flanker562_CMFlareLauncher};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,5000Rnd_762x51_Belt_Red};
  		hiddenSelectionsTextures[]=
 		{
@@ -531,7 +531,7 @@ class CfgVehicles
 		picture="\UH-60\Data\UI\AH_15M_Icon.paa";
 		mainBladeRadius = 1.1;
 		tailBladeRadius=1.1;
-		weapons[] = {ej_master_arms_safe,ej_M134_minigun,EricJ_CMFlareLauncher};
+		weapons[] = {ej_master_arms_safe,ej_M134_minigun,Flanker562_CMFlareLauncher};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,5000Rnd_762x51_Belt_Red};
 		model="\uh-60\MH6\ej_ah15m.p3d";
 		receiveRemoteTargets=1;
@@ -618,7 +618,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,"EricJ_CMFlareLauncherDAP"};
+				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 1;

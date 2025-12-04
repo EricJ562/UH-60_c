@@ -25,7 +25,7 @@ class CfgVehicles
 	};
 	class MLRSContainer_base: StaticCannon
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ArtyContainer";
 		scope=0;
 		displayname="ATACMS Container";
@@ -114,11 +114,11 @@ class CfgVehicles
 		model="uh-60\misc\MLRSContainer\MLRS_Container.p3d";
 		artilleryScanner=1;
 		laserScanner=1;
-		slingLoadCargoMemoryPoints[]={"SlingLoad01","SlingLoad02","SlingLoad03","SlingLoad04"};
+		slingLoadCargoMemoryPoints[]={"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 	};
 	class MLRSContainer: MLRSContainer_base
 	{
-		author="EricJ";
+		author="Flanker562";
 		_generalMacro="ArtyContainer";
 		scope=2;
 		scopeCurator=2;
