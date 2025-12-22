@@ -696,6 +696,8 @@ class CfgVehicles
 						angleRangeVertical=26;
 					};
 					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar{};
+					class LaserSensorComponent: SensorTemplateLaser{};
+					class NVSensorComponent: SensorTemplateNV{};
 				};
 			};
 			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot{};
@@ -810,7 +812,15 @@ class CfgVehicles
 				memoryPointGunnerOptics = "commanderview";
 				animationSourceBody = "ObsTurret";
 				animationSourceGun = "ObsGun";
-				
+				class Components
+				{
+					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+					{
+					};
+					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+					{
+					};
+				};	
 				showHMD = 1;
 				CanEject = 1;
 				startEngine = 0;
@@ -985,9 +995,6 @@ class CfgVehicles
 		scope=2;
 		accuracy=1;
 		side=1;
-		receiveRemoteTargets=1;
-		reportRemoteTargets=1;
-		reportOwnPosition=1;
 		faction="USA";
 		crew="B_Helipilot_F";
 		typicalCargo[]={"B_Helipilot_F"};
@@ -1022,7 +1029,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class ej_UH92_NATO: ej_uh92
+	class ej_UH92_NATO: ej_uh92_base
 	{
 		author="Flanker562";
 		scope=2;
@@ -1887,8 +1894,8 @@ class CfgVehicles
 				{
 					class IRSensorComponent: SensorTemplateIR
 					{
-						class AirTarget      															{
-							minRange = 100;         														maxRange = 8000;
+						class AirTarget      																		{
+							minRange = 100;         																	maxRange = 8000;
 							objectDistanceLimitCoef = 1;
 							viewDistanceLimitCoef = 1;
 						};
@@ -2622,7 +2629,7 @@ class CfgVehicles
 				outGunnerMayFire = 1; 
 				gunnerCompartments="Compartment2";
 				commanding=-1;	
-				primaryGunner = 1;																class Components
+				primaryGunner = 1;																		class Components
 				{
 					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
 					{

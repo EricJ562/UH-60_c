@@ -131,4 +131,32 @@ class CfgUnitInsignia
 		texture = "\uh-60\Data\Patches\7IDSubdued.paa"; 
 		textureVehicle = ""; 
 	};
+	class 1ADColor
+	{
+		displayName = "1st Armored Division (Color)"; 
+		author = "Flanker562"; 
+		texture = "\uh-60\Data\Patches\1ADColor.paa"; 
+		textureVehicle = ""; 
+	};
+	class 1ADSubdued
+	{
+		displayName = "1st Armored Division (OCP)"; 
+		author = "Flanker562"; 
+		texture = "\uh-60\Data\Patches\1ADSubdued.paa"; 
+		textureVehicle = ""; 
+	};
+	class 82ndColor
+	{
+		displayName = "82nd Airborne Division (Color)"; 
+		author = "Flanker562"; 
+		texture = "\uh-60\Data\Patches\82ndColor.paa"; 
+		textureVehicle = ""; 
+	};
+	class 82ndSubdued
+	{
+		displayName = "82nd Airborne Division (OCP)"; 
+		author = "Flanker562"; 
+		texture = "\uh-60\Data\Patches\82ndSubdued.paa"; 
+		textureVehicle = ""; 
+	};
 };

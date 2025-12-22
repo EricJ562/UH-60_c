@@ -5,7 +5,7 @@ class CfgPatches
 	class Items_ej
 	{
 		units[] = {};
-		weapons[] = {};
+		weapons[] = {"SF762MX_ej"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Items"};
 	};
@@ -16,7 +16,7 @@ class MuzzleSlot_65: MuzzleSlot
 {
 	class compatibleItems 
 	{
-		SF762TMini_ej = 1;
+		SF762MX_ej = 1;
 	};
 };
 
@@ -30,13 +30,13 @@ class cfgWeapons
 	class InventoryUnderItem_Base_F;
 	class acc_pointer_IR;
 	class acc_flashlight;
-	class SF762TMini_ej: ItemCore
+	class SF762MX_ej: ItemCore
 	{
 		scope=2;
 		author = "Flanker562";
-		displayName="SureFire762 Tan Mini Suppressor";
+		displayName="SureFire MX Tan Suppressor";
 		picture="\uh-60\data\ui\sf556Tminiinv.paa";
-		model="\uh-60\Misc\Item\SureFire762Tmini.p3d";
+		model="\uh-60\Misc\Item\SureFireMX.p3d";
 		
 		class ItemInfo: InventoryMuzzleItem_Base_F
 		{

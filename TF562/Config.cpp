@@ -69,6 +69,43 @@ class CfgVehicles
 		faction="TF562";
 		crew="TF562_Rifleman";
 		author="Flanker562";
+		receiveRemoteTargets=1;
+		reportRemoteTargets=1;
+		reportOwnPosition=1;
+		class TransportBackpacks
+		{
+			class _xx_ej_ej_lmgsparpack
+			{
+				backpack="ej_lmgsparpack";
+				count=2;
+			};
+			class _xx_B_AssaultPack_rgr_ReconMedic
+			{
+				backpack="B_AssaultPack_rgr_ReconMedic";
+				count=1;
+			};
+		};
+		class TransportMagazines
+		{
+			class _xx_30Rnd_65x39_caseless_FMJBT
+			{
+				count=50;
+				magazine="30Rnd_65x39_caseless_FMJBT";
+			};
+			class _xx_Handgrenade
+			{
+				magazine="Handgrenade";
+				count=20;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=10;
+			};
+		};
 	};
 	class B_LSV_01_armed_F;
 	class B_GMV_HMG: B_LSV_01_armed_F
@@ -77,13 +114,13 @@ class CfgVehicles
 		_generalMacro="B_GMV_HMG";
 		scope=2;
 		scopeCurator=2;
-		DLC="Expansion";
 		side=1;
 		faction="TF562";
 		displayName="GMV (HMG)";
 		crew="TF562_Rifleman";
-		ReportRemoteTargets = 1;
-		ReceiveRemoteTargets = 1;
+		receiveRemoteTargets=1;
+		reportRemoteTargets=1;
+		reportOwnPosition=1;
 		typicalCargo[]=
 		{
 			"TF562_Rifleman"
@@ -365,8 +402,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -388,8 +426,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -401,6 +440,7 @@ class CfgVehicles
 		modelSides[]={3,1};
 		role="Rifleman";
 		detectSkill=80;
+		backpack="B_Kitbag_mcamo";
 	};
 	class TF562_Medic: B_recon_F
 	{
@@ -416,7 +456,6 @@ class CfgVehicles
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
 		author="Flanker562";
-		_generalMacro="TF562_Medic";
 		scope=2;
 		side=1;
 		faction="TF562";
@@ -477,8 +516,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -499,8 +539,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -589,8 +630,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -612,8 +654,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -625,6 +668,7 @@ class CfgVehicles
 		modelSides[]={3,1};
 		role="SecialOperative";
 		detectSkill=85;
+		backpack="B_Kitbag_mcamo";
 	};
 	class TF562_Rifleman: B_recon_F
 	{
@@ -697,8 +741,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -719,8 +764,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -731,6 +777,7 @@ class CfgVehicles
 		modelSides[]={3,1};
 		role="Rifleman";
 		detectSkill=70;
+		backpack="B_Kitbag_mcamo";
 	};	
 	class TF562_Grenadier: B_recon_F
 	{
@@ -803,6 +850,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
@@ -813,25 +863,26 @@ class CfgVehicles
 			"SmokeShellRed",
 			"1Rnd_Smoke_Grenade_shell",
 			"1Rnd_Smoke_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeOrange_Grenade_shell",
-			"1Rnd_SmokeYellow_Grenade_shell"
+			"1Rnd_SmokeRed_Grenade_shell"
 		};
 		respawnMagazines[]=
 		{
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
-			"30Rnd_65x39_caseless_mag",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
@@ -842,10 +893,7 @@ class CfgVehicles
 			"SmokeShellRed",
 			"1Rnd_Smoke_Grenade_shell",
 			"1Rnd_Smoke_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeOrange_Grenade_shell",
-			"1Rnd_SmokeYellow_Grenade_shell"
-
+			"1Rnd_SmokeRed_Grenade_shell"
 		};
 		cost=160000;
 		camouflage=2;
@@ -925,8 +973,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -947,8 +996,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -1032,11 +1082,12 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
 			"APERSMine_Range_Mag",
 			"APERSMine_Range_Mag",
 			"APERSMine_Range_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -1060,8 +1111,8 @@ class CfgVehicles
 			"APERSMine_Range_Mag",
 			"APERSMine_Range_Mag",
 			"APERSMine_Range_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -1148,8 +1199,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -1171,8 +1223,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -1184,6 +1237,7 @@ class CfgVehicles
 		modelSides[]={3,1};
 		role="Marksman";
 		detectSkill=80;
+		backpack="B_Kitbag_mcamo";
 	};
 	class TF562_MAR10Sniper: B_recon_F
 	{
@@ -1254,15 +1308,12 @@ class CfgVehicles
 			"10Rnd_338_Mag",
 			"10Rnd_338_Mag",
 			"10Rnd_338_Mag",
-			"10Rnd_338_Mag",
-			"10Rnd_338_Mag",
-			"10Rnd_338_Mag",
-			"10Rnd_338_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -1280,15 +1331,12 @@ class CfgVehicles
 			"10Rnd_338_Mag",
 			"10Rnd_338_Mag",
 			"10Rnd_338_Mag",
-			"10Rnd_338_Mag",
-			"10Rnd_338_Mag",
-			"10Rnd_338_Mag",
-			"10Rnd_338_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -1316,7 +1364,6 @@ class CfgVehicles
 		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
 		nameSound="veh_infantry_pilot_s";
 		author="Flanker562";
-		_generalMacro="TF562_LMG";
 		scope=2;
 		side=1;
 		faction="TF562";
@@ -1370,8 +1417,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -1388,8 +1436,9 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"MiniGrenade",
-			"MiniGrenade",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Chemlight_green",
@@ -1450,7 +1499,7 @@ class CfgGroups
                     class Unit4
                     {
                         side = 1;
-                        vehicle = "TF562_Rifleman";
+                        vehicle = "TF562_UAV";
                         rank = "PRIVATE";
                         position[] = {-10,-10,0};
                     };
@@ -1485,14 +1534,14 @@ class CfgGroups
                     class Unit9
                     {
                         side = 1;
-                        vehicle = "TF562_Rifleman";
+                        vehicle = "TF562_MAR10Sniper";
                         rank = "PRIVATE";
                         position[] = {25,-25,0};
                     };
                     class Unit10
                     {
                         side = 1;
-                        vehicle = "TF562_Rifleman";
+                        vehicle = "TF562_Grenadier";
                         rank = "PRIVATE";
                         position[] = {-25,-25,0};
                     };

@@ -81,7 +81,7 @@
 			};
 			class RotorNoiseExt
 			{
-				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_02\rotor_swist", db0, 1, 400};
+				sound[] = {"A3\Sounds_F\vehicles\air\Heli_Light_02\rotor_swist", db0, 1, 2000};
 				frequency = 1;
 				volume = "(camPos*(rotorThrust factor [0.6, 1]))";
 				cone[] = {0.7, 1.3, 1.0, 0}; //directional sound cone - a=angle direction of the sound b=angle fade (border of the external fade) x=volume in the inner cone  y=volume on the other hand, the direction of sound

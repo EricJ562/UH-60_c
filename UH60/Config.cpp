@@ -868,7 +868,6 @@ class CfgVehicles
 	};
 	class ej_UH60M: ej_UH60M_base
 	{
-		dlc=Flanker562_UH60;
 		scope=2;
 		side=1;
 		faction="USA";
@@ -890,7 +889,6 @@ class CfgVehicles
 	};
 	class ej_UH60M_NATO: ej_UH60M
 	{
-		dlc=Flanker562_UH60;
 		scope=2;
 		side=1;
 		faction="BLU_F";
@@ -1006,7 +1004,6 @@ class CfgVehicles
 	};
 	class ej_UH60M_UT: ej_UH60M_U
 	{
-		dlc=Flanker562_UH60;
 		author="Flanker562";
 		_generalMacro="UH60M_U";
 		scope=2;
@@ -1047,7 +1044,6 @@ class CfgVehicles
 	};
 	class ej_UH60M_MEV: ej_UH60M_base
 	{
-		dlc=Flanker562_UH60;
 		author="Flanker562";
 		_generalMacro="UH60M_MEV";
 		scope=2;
@@ -1144,7 +1140,6 @@ class CfgVehicles
 	};
 	class ej_UH60M_MEV_NOESSS: ej_UH60M_base
 	{
-		dlc=Flanker562_UH60;
 		author="Flanker562";
 		_generalMacro="UH60M_MEV";
 		scope=2;
@@ -1222,7 +1217,6 @@ class CfgVehicles
 
 	class ej_MH60S: ej_UH60M_base
 	{
-		dlc=Flanker562_UH60;
 		author="Flanker562";
 		_generalMacro="MH60S";
 		scope=2;
@@ -1247,7 +1241,6 @@ class CfgVehicles
 	};
 	class ej_MH60SI: ej_MH60S
 	{
-		dlc=Flanker562_UH60;
 		author="Flanker562";
 		_generalMacro="ej_MH60SI";
 		scope=2;
@@ -3419,7 +3412,6 @@ class TurnOut
 	};
 	class ej_MH60L: ej_MH60M
 	{
-		dlc=Flanker562_UH60;
 		scope=2;
 		accuracy=1;
 		side=1;

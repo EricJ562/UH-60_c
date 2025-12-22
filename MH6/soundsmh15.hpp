@@ -346,7 +346,7 @@
 					"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_ext_rotor_normal",
 					1.4125376,
 					1,
-					1500
+					1000
 				};
 				frequency="rotorSpeed * (1-rotorThrust/5)";
 				volume="camPos*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
