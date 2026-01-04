@@ -719,6 +719,7 @@ class CfgVehicles
 		vehicleClass = "Air";
 		availableForSupportTypes[]={"CAS_Heli"};
 		displayName = MH-60M DAP 2-Pylon;
+		editorPreview="\uh-60\data\Previews\MH60DAP2.jpg";
 		model = "\UH-60\MH60\ej_MH60MDAP2.p3d";
 		crew = "160th_SOAR_Pilot";
 		enableManualFire=1;
@@ -966,6 +967,7 @@ class CfgVehicles
 		side=1;
 		faction="TF160";
 		vehicleClass = "Air";
+		editorPreview="\uh-60\data\Previews\MH60DAP4.jpg";
 		availableForSupportTypes[]={"CAS_Heli"};
 		displayName = MH-60M DAP 4-Pylon;
 		model = "\UH-60\MH60\ej_MH60MDAP4DP.p3d";
@@ -1245,6 +1247,7 @@ class CfgVehicles
 		icon="\uh-60\Data\UI\Map_UH_60_ca.paa";
 		faction="USN";
 		crew="B_Helipilot_F";
+		editorPreview="\uh-60\data\Previews\HH60H.jpg";
 		typicalCargo[]={"B_Helipilot_F"};
 		displayName = HH-60H (Insertion);
 		ace_fastroping_enabled = 1;
@@ -1418,6 +1421,7 @@ class CfgVehicles
 		vehicleClass = "Air";
 		availableForSupportTypes[]={"CAS_Heli"};
 		displayName = MH-60S 2-Pylon;
+		editorPreview="\uh-60\data\Previews\MH60S2PYLON.jpg";
 		model = "\UH-60\MH60\ej_MH60SI2.p3d";
 		crew="B_Helipilot_F";
 		typicalCargo[]={"B_Helipilot_F"};

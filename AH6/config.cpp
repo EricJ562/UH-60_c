@@ -471,6 +471,7 @@ class CfgVehicles
 		side=1;
 		faction="TF160";
 		crew="160th_SOAR_Pilot";
+		editorPreview="\uh-60\data\Previews\AH6J.jpg";
 		displayName="AH-6J Little Bird";
 		accuracy=1.5;
 		weapons[] = {ej_master_arms_safe,ej_M134_minigun,Flanker562_CMFlareLauncher};
@@ -494,6 +495,9 @@ class CfgVehicles
 						priority=5;
 						hardpoints[]=
 						{
+							"DAR",
+							"DAGR",
+							"B_SHRIEKER",
 							"B_AH6_Rocket",
 							"B_AH6_Hellfire",
 						};
@@ -504,14 +508,34 @@ class CfgVehicles
 					class PylonRight1: PylonLeft1
 					{
 						attachment="PylonRack_7Rnd_Rockets";
-						priority=4;
+						priority=5;
 						hardpoints[]=
 						{
+							"DAR",
+							"DAGR",
+							"B_SHRIEKER",
 							"B_AH6_Rocket",
 							"B_AH6_Hellfire",
 						};
 						maxweight=100;
 						UIposition[]={0.059999999,0.15000001};
+					};
+				};
+				class Presets
+				{
+					class Empty
+					{
+						displayName="$STR_CUP_dn_AH6_Pylon_Empty";
+						attachment[]={};
+					};
+					class Default
+					{
+						displayName="Default Loadout";
+						attachment[]=
+						{
+							"PylonRack_7Rnd_Rockets",
+							"PylonRack_7Rnd_Rockets"
+						};
 					};
 				};
 			};
@@ -527,6 +551,7 @@ class CfgVehicles
 		displayName="AH-15M Little Bird";
 		accuracy=1.5;
 		ForceInGarage=1;
+		editorPreview="\uh-60\data\Previews\AH15M.jpg";
 		icon="\UH-60\Data\UI\Map_XX_15M_Icon.paa";
 		picture="\UH-60\Data\UI\AH_15M_Icon.paa";
 		mainBladeRadius = 1.1;
@@ -706,10 +731,13 @@ class CfgVehicles
 				{
 					class PylonLeft1
 					{
-						attachment="PylonRack_7Rnd_Rocket_04_HE_F";
+						attachment="PylonRack_7Rnd_Rockets";
 						priority=5;
 						hardpoints[]=
 						{
+							"DAR",
+							"DAGR",
+							"B_SHRIEKER",
 							"B_AH6_Rocket",
 							"B_RATTLER_PYLON",
 							"B_Missile_Pylon"
@@ -720,16 +748,36 @@ class CfgVehicles
 					};
 					class PylonRight1: PylonLeft1
 					{
-						attachment="PylonRack_7Rnd_Rocket_04_HE_F";
-						priority=4;
+						attachment="PylonRack_7Rnd_Rockets";
+						priority=5;
 						hardpoints[]=
 						{
+							"DAR",
+							"DAGR",
+							"B_SHRIEKER",
 							"B_AH6_Rocket",
 							"B_RATTLER_PYLON",
 							"B_Missile_Pylon"
 						};
 						maxweight=200;
 						UIposition[]={0.059999999,0.15000001};
+					};
+				};
+				class Presets
+				{
+					class Empty
+					{
+						displayName="$STR_CUP_dn_AH6_Pylon_Empty";
+						attachment[]={};
+					};
+					class Default
+					{
+						displayName="Default Loadout";
+						attachment[]=
+						{
+							"PylonRack_7Rnd_Rockets",
+							"PylonRack_7Rnd_Rockets"
+						};
 					};
 				};
 			};

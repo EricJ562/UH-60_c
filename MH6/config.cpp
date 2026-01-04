@@ -88,6 +88,7 @@ class CfgVehicles
 		backRotorForceCoef=1;
 		slingLoadMaxCargoMass=500;
 		slingLoadMemoryPoint="slingLoad0";
+		editorPreview="\uh-60\data\Previews\mh6m.jpg";
 		icon="\A3\Air_F\Heli_Light_01\Data\UI\Map_Heli_Light_01_CA.paa";
 		picture="\A3\Air_F\Heli_Light_01\Data\UI\Heli_Light_01_CA.paa";
 		fuelConsumptionRate=0.032200001;
@@ -512,6 +513,7 @@ class CfgVehicles
 		crew="160th_SOAR_Pilot";
 		displayName="MH-6J Little Bird";
 		accuracy=1.5;
+		editorPreview="\uh-60\data\Previews\mh6j.jpg";
 		weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncher,kuy_IR_Jammer_Weapon};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine};
 		ace_fastroping_enabled = 1;
@@ -541,6 +543,7 @@ class CfgVehicles
 		receiveRemoteTargets=1;
 		reportRemoteTargets=1;
 		reportOwnPosition=1;
+		editorPreview="\uh-60\data\Previews\mh15m.jpg";
 		weapons[] = {ej_master_arms_safe,EricJ_CMFlareLauncher,kuy_IR_Jammer_Weapon};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine};
 		ace_fastroping_enabled = 1;

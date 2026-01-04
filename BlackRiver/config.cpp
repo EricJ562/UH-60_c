@@ -445,7 +445,7 @@ class CfgVehicles
 			"SmokeShell",
 			"SmokeShellGreen",
 		};
-		cost=160000;
+		cost=250000;
 		camouflage=2;
 		modelSides[]={3,1};
 		uniformClass="U_B_GEN_Commander_F";
@@ -615,7 +615,7 @@ class CfgVehicles
 			"Chemlight_green",
 			"Chemlight_green"
 		};
-		cost=160000;
+		cost=200000;
 		camouflage=2;
 		modelSides[]={3,1};
 		uniformClass="U_B_GEN_Commander_F";
@@ -692,7 +692,7 @@ class CfgVehicles
 			"HandGrenade",
 			"HandGrenade"
 		};
-		cost=160000;
+		cost=200000;
 		camouflage=2;
 		modelSides[]={3,1};
 		uniformClass="U_B_GEN_Commander_F";

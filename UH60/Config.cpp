@@ -875,6 +875,7 @@ class CfgVehicles
 		_generalMacro="UH60M";
 		displayName = UH-60M;
 		crew="B_HelipilotUSA_F";
+		editorPreview="\uh-60\data\Previews\UH60M.jpg";
 		model = "\UH-60\UH60\ej_UH60M.p3d";
 		typicalCargo[]={"B_HelipilotUSA_F"};
 		textureList[]={"USArmy",1};
@@ -896,6 +897,7 @@ class CfgVehicles
 		typicalCargo[]={"B_Helipilot_F"};
 		author="Flanker562";
 		_generalMacro="UH60M";
+		editorPreview="\uh-60\data\Previews\UH60MNATO.jpg";
 		displayName = UH-60M (NATO);
 		textureList[]={"NATO",1};
 		ForceInGarage=1;
@@ -914,6 +916,7 @@ class CfgVehicles
 		crew="B_Helipilot_F";
 		typicalCargo[]={"B_Helipilot_F"};
 		displayName = UH-60M (Unarmed);
+		editorPreview="\uh-60\data\Previews\UH60MU.jpg";
 		model = "\UH-60\UH60\ej_UH60M_U.p3d";
 		textureList[]={"USArmy",1};
 		memoryPointsGetInCargo="pos cargo";
@@ -1017,6 +1020,7 @@ class CfgVehicles
 		crew="B_Helipilot_F";
 		typicalCargo[]={"B_Helipilot_F"};
 		displayName = UH-60M (Unarmed/ESSS);
+		editorPreview="\uh-60\data\Previews\UH60MUESSS.jpg";
 		model = "\UH-60\UH60\ej_UH60M_UT.p3d";
 		textureList[]={"USArmy",1};
 		slingLoadMaxCargoMass=3600;
@@ -1056,6 +1060,7 @@ class CfgVehicles
 		reportRemoteTargets=1;
 		reportOwnPosition=1;
 		crew="B_Helipilotusa_F";
+		editorPreview="\uh-60\data\Previews\UH60MMEV.jpg";
 		typicalCargo[]={"B_Helipilotusa_F"};
 		fuelCapacity = 950;
 		displayName = UH-60M (Medevac);
@@ -1152,6 +1157,7 @@ class CfgVehicles
 		transportSoldier = 4;
 		attendant = 1;
 		crew="B_Helipilotusa_F";
+		editorPreview="\uh-60\data\Previews\UH60MNOESSSMEV.jpg";
 		typicalCargo[]={"B_Helipilotusa_F"};
 		displayName = UH-60M (Medevac/No ESSS);
 		model = "\UH-60\UH60\ej_UH60M_MEV_NOESSS.p3d";
@@ -1231,6 +1237,7 @@ class CfgVehicles
 		reportRemoteTargets=1;
 		reportOwnPosition=1;
 		displayName = MH-60S (Transport);
+		editorPreview="\uh-60\data\Previews\MH60S.jpg";
 		model = "\UH-60\MH60\ej_MH60S.p3d";
 		weapons[]={"ej_master_arms_safe"};
 		textureList[]={"USN",1};
@@ -1251,6 +1258,7 @@ class CfgVehicles
 		typicalCargo[]={"B_Helipilot_F"};
 		displayName = MH-60S (Insertion);
 		ace_fastroping_enabled = 1;
+		editorPreview="\uh-60\data\Previews\MH60S.jpg";
 		ace_fastroping_ropeOrigins[] = {"ropeOriginLeft", "ropeOriginRight"};
 		model = "\UH-60\MH60\ej_MH60SI.p3d";
 		attenuationEffectType="OpenCarAttenuation";
@@ -1379,6 +1387,7 @@ class CfgVehicles
 		textureList[]={"USN",1};
 		cargoProxyIndexes[] = {};
 		transportSoldier=0;
+		editorPreview="\uh-60\data\Previews\HH60H.jpg";
 		weapons[]={"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon","uh60_hellfire"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine","2rnd_Hellfire_Rail_mag"};
 		fuelCapacity = 1564;
@@ -1604,6 +1613,7 @@ class CfgVehicles
 		faction="TF160";
 		vehicleClass = "Air";
 		model = "\UH-60\MH60\ej_MH60A.p3d";
+		editorPreview="\uh-60\data\Previews\MH60A1987.jpg";
 		displayName = "MH-60A (Insertion-1987)";
 		crew = "B_Helipilot_160_Early";
 		memoryPointsGetInCargo="pos cargo";
@@ -2035,6 +2045,7 @@ class TurnOut
 		faction="TF160";
 		vehicleClass = "Air";
 		model = "\UH-60\MH60\ej_MH60AL.p3d";
+		editorPreview="\uh-60\data\Previews\MH60A.jpg";
 		displayName = "MH-60A (Insertion)";
 		crew = "B_Helipilot_160_Early";
 		memoryPointsGetInCargo="pos cargo";
@@ -2473,6 +2484,7 @@ class TurnOut
 		faction="TF160";
 		vehicleClass = "Air";
 		model = "\UH-60\MH60\ej_MH60M.p3d";
+		editorPreview="\uh-60\data\Previews\MH60M.jpg";
 		picture="\uh-60\data\ui\MH_60_icon.paa";
 		displayName = "MH-60M (Insertion)";
 		crew = "160th_SOAR_Pilot";
@@ -2974,6 +2986,7 @@ class TurnOut
 		side=1;
 		faction="TF160";
 		vehicleClass = "Air";
+		editorPreview="\uh-60\data\Previews\MH60M.jpg";
 		model = "\UH-60\MH60\ej_MH60MS.p3d";
 		displayName = "MH-60M (Sniper)";
 		crew = "160th_SOAR_Pilot";
@@ -3418,6 +3431,7 @@ class TurnOut
 		faction="TF160";
 		vehicleClass = "Air";
 		crew = "B_Helipilot_160_Early";
+		editorPreview="\uh-60\data\Previews\MH60L.jpg";
 		model = "\UH-60\MH60\ej_MH60L.p3d";
 		displayName = "MH-60L (Insertion)";
 		class MFD{};

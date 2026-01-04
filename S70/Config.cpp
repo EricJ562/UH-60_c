@@ -726,6 +726,7 @@ class CfgVehicles
 		accuracy=1;
 		side=3;
 		faction="CIV_F";
+		editorPreview="\uh-60\data\Previews\s70.jpg";
 		crew="CIV_Helipilot_F";
 		typicalCargo[]={"CIV_Helipilot_F"};
 		displayName = S-70 Utility Blackhawk;

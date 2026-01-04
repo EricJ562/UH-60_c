@@ -19,6 +19,18 @@ class CfgVehicleClasses
 	class RUSFED{displayName="Russian Federation";};
 	class BRPMC{displayName="Black River PMC";};
 };
+
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class SensorTemplateDataLink;
+class Components;
+
 class CfgFactionClasses
 {
 	class RUSFED
@@ -476,6 +488,27 @@ class CfgVehicles
 			};
 		};
 	};
+	class ej_Titanpack: B_Kitbag_mcamo	
+	{
+		scope=2;
+		displayname="TF562 Titan Bag;
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=2;
+			};
+		};
+		class TransportMagazines
+		{
+			class _xx_1Rnd_ER_missiles
+			{
+				count=2;
+				magazine="1Rnd_ER_missiles";
+			};
+		};
+	};
 	class ej_skram: B_Kitbag_mcamo	
 	{
 		dlc=uh60;
@@ -674,6 +707,13 @@ class CfgMagazineWells
 			"100Rnd_65x39_caseless_black_FMJBT",
 		};
 	};
+	class Titan_Short
+	{
+		BI_Magazines[]=
+		{
+			"1Rnd_ER_missiles"
+		};
+	};
 };
 
 class CfgMagazines
@@ -748,6 +788,17 @@ class CfgMagazines
 			"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_lmg_Black_co.paa"
 		};
 	};
+	class 2Rnd_GAT_missiles;
+	class 1Rnd_ER_missiles: 2Rnd_GAT_missiles
+	{
+		author="Flanker562";
+		picture="\A3\weapons_f_beta\Launchers\Titan\data\UI\gear_titan_missile_at_CA.paa";
+		ammo="M_Titan_AT_ER";
+		displayName="Titan-ER";
+		displayNameShort="Titan-ER";
+		displayNameMFDFormat="MISSILE";
+		count=1;
+	};
 };
 
 class CfgAmmo
@@ -786,6 +837,97 @@ class CfgAmmo
 			duration=0.40000001;
 			frequency=20;
 			distance=1;
+		};
+	};
+	class M_Titan_AT;
+	class M_Titan_AT_ER: M_Titan_AT
+	{
+		submunitionAmmo="ammo_Penetrator_Titan_AT_long";
+		submunitionDirectionType="SubmunitionModelDirection";
+		submunitionInitSpeed=1000;
+		submunitionParentSpeedCoef=0;
+		submunitionInitialOffset[]={0,0,-0.2};
+		triggerOnImpact=1;
+		deleteParentWhenTriggered=0;
+		warheadName="TandemHEAT";
+		hit=150;
+		indirectHit=40;
+		indirectHitRange=2;
+		timeToLive=35;
+		initTime=0.15000001;
+		thrustTime=12;
+		thrust=40;
+		maxSpeed=200;
+		typicalSpeed=1660;
+		missileLockCone=12;
+		missileLockMaxDistance=8000;
+		missileLockMinDistance=200;
+		missileLockMaxSpeed=60;
+		maxControlRange=8000;
+		weaponLockSystem="2 + 16";
+		cmImmunity=0.5;
+		flightProfiles[]=
+		{
+			"Direct",
+			"TopDown"
+		};
+		class Direct
+		{
+		};
+		class TopDown
+		{
+			ascendHeight=200;
+			descendDistance=240;
+			minDistance=240;
+			ascendAngle=30;
+		};
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						maxTrackableSpeed=35;
+						angleRangeHorizontal=9.5;
+						angleRangeVertical=6;
+						maxTrackableATL=50;
+					};
+					class DataLinkSensorComponent: SensorTemplateDataLink
+					{
+						class AirTarget
+						{
+							minRange = 8000;
+							maxRange = 8000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						class GroundTarget
+						{
+							minRange = 8000;
+							maxRange = 8000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						maxTrackableSpeed = 35;
+					};
+				};
+			};
 		};
 	};
 };

@@ -292,6 +292,7 @@ class CfgVehicles
 		reportRemoteTargets=1;
 		cost=200000;
 		reportOwnPosition=1;
+		editorPreview="\uh-60\data\Previews\MQ17.jpg";
 		typicalCargo[]={"B_UAV_AI"};
 		weapons[]={"ej_master_arms_safe","Flanker562_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
@@ -345,6 +346,7 @@ class CfgVehicles
 		crew="B_UAV_AI";
 		typicalCargo[]={"B_UAV_AI"};
 		cost=200000;
+		editorPreview="\uh-60\data\Previews\MQ17.jpg";
 		displayName = MQ-17 Hawk (Desert);
 		hiddenSelections[]={"camo1","camo2"};
 		hiddenSelectionsTextures[]={"uh-60\data\mq17D_co.paa","uh-60\data\desertductfans_co.paa"};
@@ -361,6 +363,7 @@ class CfgVehicles
 		crew="B_UAV_AI";
 		typicalCargo[]={"B_UAV_AI"};
 		displayName = MQ-17 Hawk (SOAR);
+		editorPreview="\uh-60\data\Previews\MQ17.jpg";
 		hiddenSelections[]={"camo1","camo2"};
 		hiddenSelectionsTextures[]={"uh-60\data\mq17SOAR_co.paa","\uh-60\data\dapductfans_co.paa"};
 	};
@@ -377,6 +380,7 @@ class CfgVehicles
 		cost=200000;
 		typicalCargo[]={"B_UAV_AI"};
 		slingLoadMaxCargoMass=500;
+		editorPreview="\uh-60\data\Previews\MQ17CARGO.jpg";
 		model = "\UH-60\UAV\ej_MQ17C.p3d";
 	};
 	class ej_MQ17C;
@@ -389,10 +393,11 @@ class CfgVehicles
 		side=3;
 		cost=200000;
 		faction="CIV_IDAP_F";
-		displayName = MQ-17 Cargo Drone;
+		displayName = MQ-17 Cargo Drone (Civilian);
 		crew="C_IDAP_UAV_AI_F";
 		typicalCargo[]={"C_IDAP_UAV_AI_F"};
 		slingLoadMaxCargoMass=600;
+		editorPreview="\uh-60\data\Previews\MQ17C.jpg";
 		hiddenSelections[]={"camo1","camo2"};
 		hiddenSelectionsTextures[]={"uh-60\data\mq17_civ_co.paa","uh-60\data\whiteductfans_co.paa"};
 		model = "\UH-60\UAV\ej_MQ17CIV.p3d";
@@ -405,6 +410,7 @@ class CfgVehicles
 		accuracy=1;
 		side=1;
 		faction="BLU_F";
+		editorPreview="\uh-60\data\Previews\MQ37.jpg";
 		icon="\UH-60\Data\UI\Map_MQ_37_Icon.paa";
 		picture="\UH-60\Data\UI\MQ_37_Icon.paa";
 		displayName = MQ-37 Cargo Drone;
@@ -434,6 +440,7 @@ class CfgVehicles
 		typicalCargo[]={"B_UAV_AI"};
 		faction="BLU_F";
 		cost=200000;
+		editorPreview="\uh-60\data\Previews\MQ37.jpg";
 		displayName = MQ-37 Cargo Drone (Desert);
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[]={"uh-60\data\mq17D_co.paa","uh-60\data\desertductfans_co.paa","uh-60\data\drone_desert_co.paa"};
@@ -448,6 +455,7 @@ class CfgVehicles
 		cost=200000;
 		faction="USMC";
 		crew="B_UAV_AI";
+		editorPreview="\uh-60\data\Previews\MQ37.jpg";
 		typicalCargo[]={"B_UAV_AI"};
 		displayName = MQ-37 Cargo Drone (USMC);
 		hiddenSelections[]={"camo1","camo2","camo3"};
@@ -464,6 +472,7 @@ class CfgVehicles
 		typicalCargo[]={"B_UAV_AI"};
 		faction="USN";
 		cost=200000;
+		editorPreview="\uh-60\data\Previews\MQ37.jpg";
 		displayName = MQ-37 Cargo Drone (US Navy);
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[]={"uh-60\data\mq17USN_co.paa","uh-60\data\usnductfans_co.paa","uh-60\data\drone_usn_co.paa"};

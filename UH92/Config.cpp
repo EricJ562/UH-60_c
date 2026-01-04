@@ -21,6 +21,7 @@ class SensorTemplateMan;
 class SensorTemplateLaser;
 class SensorTemplateNV;
 class SensorTemplateDataLink;
+class SensorTemplatePassiveRadar;
 class DefaultVehicleSystemsDisplayManagerLeft
 {
 	class components;
@@ -37,7 +38,6 @@ class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
 {
 	class components;
 };
-
 #define mag_xx(a,b) class _xx_##a {magazine = a; count = b;}
 #define weap_xx(a,b) class _xx_##a {weapon = a; count = b;}
 
@@ -698,10 +698,38 @@ class CfgVehicles
 					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar{};
 					class LaserSensorComponent: SensorTemplateLaser{};
 					class NVSensorComponent: SensorTemplateNV{};
+					class DataLinkSensorComponent: SensorTemplateDataLink{};
 				};
 			};
 			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot{};
 			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot{};
+		};
+		class RenderTargets
+		{
+			class MFD1
+			{
+				renderTarget = "rendertarget0";
+				class View01
+				{
+					pointPosition = "z_flir_pos";
+					pointDirection = "z_flir_dir";
+					renderQuality = 2;
+					renderVisionMode = 2;
+					fov = 0.093;
+				};
+			};
+			class MFD2
+			{
+				renderTarget = "rendertarget1";
+				class View01
+				{
+					pointPosition = "slingpip0_pos";
+					pointDirection = "slingpip0_dir";
+					renderQuality = 2;
+					renderVisionMode = 0;
+					fov=0.69999999;
+				};
+			};
 		};
 		class CargoTurret;
 		class Turrets: Turrets
@@ -1001,33 +1029,7 @@ class CfgVehicles
 		displayName = "UH-92 Cherokee";
 		textureList[]={"USArmy",1};
 		cost=200000;
-		class RenderTargets
-		{
-			class MFD1
-			{
-				renderTarget = "rendertarget0";
-				class View01
-				{
-					pointPosition = "z_flir_pos";
-					pointDirection = "z_flir_dir";
-					renderQuality = 2;
-					renderVisionMode = 2;
-					fov = 0.093;
-				};
-			};
-			class MFD2
-			{
-				renderTarget = "rendertarget1";
-				class View01
-				{
-					pointPosition = "slingpip0_pos";
-					pointDirection = "slingpip0_dir";
-					renderQuality = 2;
-					renderVisionMode = 0;
-					fov=0.69999999;
-				};
-			};
-		};
+		editorPreview="\uh-60\data\Previews\UH92.jpg";
 	};
 	class ej_UH92_NATO: ej_uh92_base
 	{
@@ -1038,6 +1040,7 @@ class CfgVehicles
 		ForceInGarage=1;
 		faction="BLU_F";
 		crew="B_Helipilot_F";
+		editorPreview="\uh-60\data\Previews\UH92NATO.jpg";
 		typicalCargo[]={"B_Helipilot_F"};
 		displayName = UH-92 Cherokee (NATO);
 		textureList[]={"NATO",1};
@@ -1054,6 +1057,7 @@ class CfgVehicles
 		crew="B_Helipilotusa_F";
 		typicalCargo[]={"B_Helipilotusa_F"};
 		displayName = UH-92 Cherokee MEV;
+		editorPreview="\uh-60\data\Previews\UH92MEV.jpg";
 		model = "\UH-60\UH92\ej_UH92_MEV.p3d";
 		transportSoldier = 4;
 		memoryPointsGetInCargo="pos cargo";
@@ -1238,6 +1242,7 @@ class CfgVehicles
 		crew="B_Helipilotusa_F";
 		typicalCargo[]={"B_Helipilotusa_F"};
 		displayName = UH-92 Cherokee (Unarmed);
+		editorPreview="\uh-60\data\Previews\UH92U.jpg";
 		model = "\UH-60\UH92\ej_UH92_U.p3d";
 		transportSoldier = 12;
 		memoryPointsGetInCargo="pos cargo";
@@ -1453,6 +1458,7 @@ class CfgVehicles
 		reportRemoteTargets=0;
 		crew="RWG_Helipilot_F";
 		ace_fastroping_enabled = 1;
+		editorPreview="\uh-60\data\Previews\UH92RWG.jpg";
 		ace_fastroping_ropeOrigins[] = {"ropeOriginLeft", "ropeOriginRight"};
 		typicalCargo[]={"RWG_Helipilot_F"};
 		displayName = UH-92 Cherokee (RWG);
@@ -1703,6 +1709,7 @@ class CfgVehicles
 		accuracy=1;
 		side=0;
 		Forceingarage=1;
+		editorPreview="\uh-60\data\Previews\UH92BRPMC.jpg";
 		displayName = UH-92 Cherokee (Black River PMC);
 		faction="BRPMC";
 		crew="BRPMC_Pilot";
@@ -1717,13 +1724,14 @@ class CfgVehicles
 		accuracy=1;
 		side=1;
 		faction="TF160";
+		editorPreview="\uh-60\data\Previews\MH92.jpg";
 		picture="\UH-60\Data\UI\MH_92_Icon.paa";
 		icon="\UH-60\Data\UI\Map_MH_92.paa";
 		crew = "160th_SOAR_Pilot";
 		typicalCargo[]={"160th_SOAR_Pilot"};
 		displayName = MH-92F (Insertion);
 		model = "\UH-60\MH92\ej_MH92.p3d";
-		cost=200000;
+		cost=250000;
 		RadarTargetSize=1.4;
 		irTargetSize=0.80000001;
 		irScanRangeMax = 4000;
@@ -2407,6 +2415,7 @@ class CfgVehicles
 		side=1;
 		faction="TF160";
 		crew = "160th_SOAR_Pilot";
+		editorPreview="\uh-60\data\Previews\MH92.jpg";
 		typicalCargo[]={"160th_SOAR_Pilot"};
 		displayName = MH-92F (Sniper);
 		model = "\UH-60\MH92\ej_MH92S.p3d";

@@ -659,7 +659,9 @@ class CfgVehicles
 		side=3;
 		faction="CIV_F";
 		crew="CIV_Helipilot_F";
+		typicalCargo[]={"CIV_Helipilot_F"};
 		displayName = S-94;
+		editorPreview="\uh-60\data\Previews\S94.jpg";
 		model = "\UH-60\S94\ej_S94.p3d";
 		textureList[]={"CIVWhite",1};
 		cost=200;
@@ -671,6 +673,7 @@ class CfgVehicles
 		scope=2;
 		slingLoadMaxCargoMass=6000;
 		ForceinGarage=1;
+		editorPreview="\uh-60\data\Previews\S94.jpg";
 		model = "\UH-60\S94\ej_S94U.p3d";
 		displayName = S-94 Utility;
 		textureList[]={"CIVWhite",1};

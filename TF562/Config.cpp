@@ -439,7 +439,7 @@ class CfgVehicles
 		camouflage=2;
 		modelSides[]={3,1};
 		role="Rifleman";
-		detectSkill=80;
+		detectSkill=85;
 		backpack="B_Kitbag_mcamo";
 	};
 	class TF562_Medic: B_recon_F
@@ -669,6 +669,111 @@ class CfgVehicles
 		role="SecialOperative";
 		detectSkill=85;
 		backpack="B_Kitbag_mcamo";
+	};
+	class TF562_Titan: B_recon_F
+	{
+		class SpeechVariants
+		{
+			class Default
+			{
+				speechSingular[]={"veh_infantry_pilot_s"};
+				speechPlural[]={"veh_infantry_pilot_p"};
+			};
+		};
+		textSingular="$STR_A3_nameSound_veh_infantry_pilot_s";
+		textPlural="$STR_A3_nameSound_veh_infantry_pilot_p";
+		nameSound="veh_infantry_pilot_s";
+		author="Flanker562";
+		scope=2;
+		side=1;
+		class AttributeValues
+		{
+			ReceiveRemoteTargets = 1;
+		};
+		ReportRemoteTargets = 1;
+		faction="TF562";
+		identityTypes[]={"LanguageENG_F","Head_NATO","G_NATO_pilot"};
+		displayName="TF 562 Titan Gunner";
+		linkedItems[]=
+		{
+			"V_PlateCarrier1_rgr",
+			"H_HelmetB_light_desert",
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio",
+			"ej_PVS15D"
+		};
+		respawnLinkedItems[]=
+		{
+			"V_PlateCarrier1_rgr",
+			"H_HelmetB_light_desert",
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio",
+			"ej_PVS15D"
+		};
+		weapons[]=
+		{
+			"ej_MX_MK17_S_F",
+			"hgun_P07_snds_F",
+			"Throw",
+			"Put",
+			"launch_B_Titan_short_F"
+		};
+		respawnWeapons[]=
+		{
+			"ej_MX_MK17_S_F",
+			"hgun_P07_snds_F",
+			"Throw",
+			"Put",
+			"launch_B_Titan_short_F"
+		};
+		magazines[]=
+		{
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"1Rnd_ER_missiles"
+		};
+		respawnMagazines[]=
+		{
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"1Rnd_ER_missiles"
+		};
+		cost=250000;
+		camouflage=2;
+		modelSides[]={3,1};
+		role="SecialOperative";
+		detectSkill=85;
+		backpack="ej_Titanpack";
 	};
 	class TF562_Rifleman: B_recon_F
 	{
@@ -1123,7 +1228,7 @@ class CfgVehicles
 		camouflage=2;
 		modelSides[]={3,1};
 		role="Sapper";
-		detectSkill=80;
+		detectSkill=60;
 		backpack="B_AssaultPack_rgr_ReconExp";
 	};
 	class TF562_Sharpshooter: B_recon_F
@@ -1448,7 +1553,7 @@ class CfgVehicles
 		camouflage=2;
 		modelSides[]={3,1};
 		role="Rifleman";
-		detectSkill=80;
+		detectSkill=60;
 	};
 };
 

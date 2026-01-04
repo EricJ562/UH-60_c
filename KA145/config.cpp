@@ -2082,6 +2082,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = public;
 		side = 0;
+		editorPreview="\uh-60\data\Previews\ka145.jpg";
 		faction	= RUSFED;
 		crew = "O_HelicrewRUS_F";
 		displayName="Ka-145 Hoplite";

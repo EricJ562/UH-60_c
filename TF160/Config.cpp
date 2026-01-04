@@ -616,6 +616,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="B_Heli_Transport_01_F";
 		scope=2;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Heli_Transport_01_F.jpg";
 		side=1;
 		Armor=50;
 		ForceinGarage=1;

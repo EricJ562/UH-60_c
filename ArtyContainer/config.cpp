@@ -35,6 +35,7 @@ class CfgVehicles
 		getOutAction="GetOutLow";
 		picture="\UH-60\data\UI\Arty_Container_Icon.paa";
 		icon="\UH-60\data\UI\CMC_01_icon_ca.paa";
+		hiddenSelections[]={"camo","camo1"};
 		cost=200000;
 		accuracy=0.25;
 		threat[]={1,0.30000001,0.1};
@@ -43,7 +44,7 @@ class CfgVehicles
 			tex[]={};
 			mat[]=
 			{
-				"A3\Static_f\Mortar_01\data\Mortar_01.rvmat",
+				"UH-60\Data\Mat\Container.rvmat",
 				"A3\Static_f\Mortar_01\data\Mortar_01_damage.rvmat",
 				"A3\Static_f\Mortar_01\data\Mortar_01_destruct.rvmat"
 			};
@@ -122,7 +123,20 @@ class CfgVehicles
 		scopeCurator=2;
 		side=1;
 		faction="BLU_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_MilCommon_co.paa","\uh-60\data\m119_co.paa"};
 		crew="B_support_Mort_F";
+		availableForSupportTypes[]={"Artillery"};
+	};
+	class O_ArtyContainer: ArtyContainer_base
+	{
+		author="Flanker562";
+		_generalMacro="ArtyContainer";
+		scope=2;
+		scopeCurator=2;
+		side=0;
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_OPFORCommon_co.paa","\uh-60\data\m119d_co.paa"};
+		faction="OPF_F";
+		crew="O_support_Mort_F";
 		availableForSupportTypes[]={"Artillery"};
 	};
 };

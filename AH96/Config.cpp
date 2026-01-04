@@ -1235,6 +1235,7 @@ class CfgVehicles
 		faction="BLU_F";
 		crew="B_Helipilot_F";
 		accuracy=2.5;
+		editorPreview="\uh-60\data\Previews\AH96.jpg";
 		displayName="AH-96D Coyote (6 pylons)";
 		class Library{libTextDesc="AH-96 Coyote";};
 		availableForSupportTypes[]={"CAS_Heli"};

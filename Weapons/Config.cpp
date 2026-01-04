@@ -3737,7 +3737,7 @@ class CfgMagazines
 	class 12Rnd_230mm_rockets;
 	class 2Rnd_ATACMS_rockets: 12Rnd_230mm_rockets
 	{
-		author="$STR_A3_Bohemia_Interactive";
+		author="Flanker562";
 		displayName="ATACMS";
 		displayNameMFDFormat="AG";
 		ammo="R_ATACMS_HE";
