@@ -286,11 +286,83 @@ class CfgVehicles
 			class ReloadAnim_2{source="reload";weapon="M240_veh_2";};
 			class ReloadMagazine_2{source="reloadmagazine";weapon="M240_veh_2";};
 			class Revolving_2{source="revolving";weapon="M240_veh_2";};
-			class FormationLights {AnimPeriod = 1;source = "user";InitPhase = 1; };
 			class HidePilotMFD{source="user";animPeriod=0;initPhase=0;};
 			class HideGunMFD{source="user";animPeriod=0;initPhase=0;};	
 			class HideSlingFeed{source="user";animPeriod=0;initPhase=0;};
 			class Probe_Show{source="user";animPeriod=0;initPhase=0;};
+    			class lights_green_hide{source = "user";animPeriod = 0.001;initPhase = 1;};
+    			class hitGlass1
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass1";
+        			raw = 1;
+    			};
+    			class hitGlass2
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass2";
+        			raw = 1;
+    			};
+    			class hitGlass3
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass3";
+        			raw = 1;
+    			};
+    			class hitGlass4
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass4";
+        			raw = 1;
+    			};
+    			class hitGlass5
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass5";
+        			raw = 1;
+    			};
+    			class hitGlass6
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass6";
+        			raw = 1;
+    			};
+    			class hitGlass7
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass7";
+        			raw = 1;
+    			};
+    			class hitGlass8
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass8";
+        			raw = 1;
+    			};
+    			class hitGlass9
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass9";
+        			raw = 1;
+    			};
+    			class hitGlass10
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass10";
+        			raw = 1;
+    			};
+    			class hitGlass11
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass11";
+        			raw = 1;
+    			};
+    			class hitGlass12
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass12";
+        			raw = 1;
+    			};
 		};
 		class HitPoints: HitPoints
 		{
@@ -364,71 +436,123 @@ class CfgVehicles
 			};
 			class HitGlass1: HitGlass1
 			{
-				armor=1.3;
-				radius=0.44999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass1";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass1_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass1";
 			};
 			class HitGlass2: HitGlass2
 			{
-				armor=1.3;
-				radius=0.44999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass2";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass2_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass2";
 			};
 			class HitGlass3: HitGlass3
 			{
-				armor=1.3;
-				radius=0.34999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass3";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass3_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass3";
 			};
 			class HitGlass4: HitGlass4
 			{
-				armor=1.3;
-				radius=0.34999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass4";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass4_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass4";
 			};
 			class HitGlass5: HitGlass5
 			{
-				armor=1.3;
-				radius=0.46000001;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass5";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass5_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass5";
 			};
 			class HitGlass6: HitGlass6
 			{
-				armor=1.3;
-				radius=0.46000001;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass6";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass6_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass6";
 			};
 			class HitGlass7: HitGlass6
 			{
-				name="glass7";
-				convexComponent="glass7";
-				visual="glass7";
-				radius=0.2;
+        			armor = 0.2;
+        			armorComponent = "hit_glass7";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass7_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass7";
 			};
 			class HitGlass8: HitGlass7
 			{
-				name="glass8";
-				convexComponent="glass8";
-				visual="glass8";
+        			armorComponent = "hit_glass8";
+        			name = "hit_glass8_point";
+        			visual = "hit_glass8";
 			};
 			class HitGlass9: HitGlass6
 			{
-				name="glass9";
-				convexComponent="glass9";
-				visual="glass9";
-				radius=0.41999999;
+        			armorComponent = "hit_glass9";
+        			name = "hit_glass9_point";
+        			visual = "hit_glass9";
 			};
 			class HitGlass10: HitGlass9
 			{
-				name="glass10";
-				convexComponent="glass10";
-				visual="glass10";
+        			armorComponent = "hit_glass10";
+        			name = "hit_glass10_point";
+        			visual = "hit_glass10";
 			};
 			class HitGlass11: HitGlass9
 			{
-				name="glass11";
-				convexComponent="glass11";
-				visual="glass11";
+        			armorComponent = "hit_glass11";
+        			name = "hit_glass11_point";
+        			visual = "hit_glass11";
+			};
+			class HitGlass12: HitGlass9
+			{
+        			armorComponent = "hit_glass12";
+        			name = "hit_glass12_point";
+        			visual = "hit_glass12";
+			};
+			class HitGlass13: HitGlass9
+			{
+        			armorComponent = "hit_glass13";
+        			name = "hit_glass13_point";
+        			visual = "hit_glass13";
 			};
 		};
 		class UserActions
@@ -496,8 +620,8 @@ class CfgVehicles
 				showWindow = 0;
 				hideOnUse = 1;
 				onlyforplayer = 1;
-				condition = "player in this and this animationPhase ""FormationLights"" > 0.5";
-				statement = "this animate [""FormationLights"",0];";
+				condition = "player in this and this animationPhase ""lights_green_hide"" > 0.5";
+				statement = "this animate [""lights_green_hide"",0];";
 			};
 			class unFormationLights 
 			{
@@ -508,8 +632,8 @@ class CfgVehicles
 				showWindow = 0;
 				hideOnUse = 1;
 				onlyforplayer = 1;
-				condition = "player in this and this animationPhase ""FormationLights"" < 0.5";
-				statement = "this animate [""FormationLights"",1];";
+				condition = "player in this and this animationPhase ""lights_green_hide"" < 0.5";
+				statement = "this animate [""lights_green_hide"",1];";
 			};
 		};
 		class Reflectors: Reflectors
@@ -621,13 +745,13 @@ class CfgVehicles
 				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_damage.rvmat",
 				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_destruct.rvmat",
 
+				"A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_glass.rvmat",
+				"A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_glass_damage.rvmat",
+				"A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_glass_damage.rvmat",
+
 				"uh-60\data\mat\uh60m_navijak.rvmat",
 				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_damage.rvmat",
 				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_destruct.rvmat",
-
-				"a3\air_f_beta\heli_transport_01\data\heli_transport_01_glass.rvmat",
-				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_glass_damage.rvmat",
-				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_glass_destruct.rvmat",
 
 				"A3\data_F\default.rvmat",
 				"A3\data_F\default.rvmat",
@@ -643,66 +767,158 @@ class CfgVehicles
 
 				"A3\data_F\default.rvmat",
 				"A3\data_F\default.rvmat",
-				"A3\data_F\default_destruct.rvmat"
+				"A3\data_F\default_destruct.rvmat",
+
+				"A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_glass.rvmat",
+				"A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_glass_damage.rvmat",
+				"A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_glass_damage.rvmat",
 
 			};
 		};
 		class Components: Components
 		{
-			class Components
-			{
 			class SensorsManagerComponent
 			{
+				class Components
+				{
 					class IRSensorComponent: SensorTemplateIR
 					{
-						class AirTarget
-						{
-							minRange=500;
-							maxRange=4000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=1;
+						class AirTarget      																		{
+							minRange = 100;         																	maxRange = 8000;
+							objectDistanceLimitCoef = 1;
+							viewDistanceLimitCoef = 1;
 						};
-						class GroundTarget
+						class GroundTarget : AirTarget
 						{
-							minRange=500;
-							maxRange=3000;
-							objectDistanceLimitCoef=1;
-							viewDistanceLimitCoef=1;
+							maxRange = 8000;
 						};
-						maxTrackableSpeed=70;
-						animDirection="mainGun";
-						angleRangeHorizontal=26;
-						angleRangeVertical=26;
+						angleRangeHorizontal = 90;
+						angleRangeVertical = 90;
+						groundNoiseDistanceCoef = 0.1;
+						maxGroundNoiseDistance = 100;
+						minSpeedThreshold = 0;
+						maxSpeedThreshold = 0;
+						minTrackableSpeed = -600;
+						maxTrackableSpeed = 2600;
+						minTrackableATL = -1e10;
+						maxTrackableATL = 1e10;
+						typeRecognitionDistance = 1000;
+						animDirection = "";
+						aimDown = 15;
 					};
 					class VisualSensorComponent: SensorTemplateVisual
 					{
 						class AirTarget
 						{
-							minRange=500;
-							maxRange=3000;
+							minRange=100;
+							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=1;
 						};
 						class GroundTarget
 						{
-							minRange=500;
-							maxRange=2000;
+							minRange=100;
+							maxRange=8000;
 							objectDistanceLimitCoef=1;
 							viewDistanceLimitCoef=1;
 						};
 						maxTrackableSpeed=70;
-						animDirection="mainGun";
+						animDirection="Gun";
 						angleRangeHorizontal=26;
 						angleRangeVertical=26;
 					};
-					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar{};
-					class LaserSensorComponent: SensorTemplateLaser{};
-					class NVSensorComponent: SensorTemplateNV{};
-					class DataLinkSensorComponent: SensorTemplateDataLink{};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
 				};
 			};
-			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot{};
-			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot{};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components: components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoAirborneMiniMap";
+					};
+					class CrewDisplay
+					{
+						componentType="CrewDisplayComponent";
+						resource="RscCustomInfoCrew";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehiclePrimaryGunnerDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="PrimaryGunner";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components: components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoAirborneMiniMap";
+					};
+					class CrewDisplay
+					{
+						componentType="CrewDisplayComponent";
+						resource="RscCustomInfoCrew";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehiclePrimaryGunnerDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="PrimaryGunner";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
 		};
 		class RenderTargets
 		{
@@ -1930,14 +2146,14 @@ class CfgVehicles
 						class AirTarget
 						{
 							minRange=100;
-							maxRange=4000;
+							maxRange=8000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=1;
 						};
 						class GroundTarget
 						{
 							minRange=100;
-							maxRange=3500;
+							maxRange=8000;
 							objectDistanceLimitCoef=1;
 							viewDistanceLimitCoef=1;
 						};
@@ -1970,9 +2186,96 @@ class CfgVehicles
 						maxSpeedThreshold=0;
 						aimDown=-30;
 					};
-					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar{};
-					class LaserSensorComponent: SensorTemplateLaser{};
-					class NVSensorComponent: SensorTemplateNV{};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components: components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoAirborneMiniMap";
+					};
+					class CrewDisplay
+					{
+						componentType="CrewDisplayComponent";
+						resource="RscCustomInfoCrew";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehiclePrimaryGunnerDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="PrimaryGunner";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components: components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoAirborneMiniMap";
+					};
+					class CrewDisplay
+					{
+						componentType="CrewDisplayComponent";
+						resource="RscCustomInfoCrew";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehiclePrimaryGunnerDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="PrimaryGunner";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
 				};
 			};
 		};
@@ -2041,8 +2344,8 @@ class CfgVehicles
 				showWindow = 0;
 				hideOnUse = 1;
 				onlyforplayer = 1;
-				condition = "player in this and this animationPhase ""FormationLights"" > 0.5";
-				statement = "this animate [""FormationLights"",0];";
+				condition = "player in this and this animationPhase ""lights_green_hide"" > 0.5";
+				statement = "this animate [""lights_green_hide"",0];";
 			};
 			class unFormationLights 
 			{
@@ -2053,8 +2356,8 @@ class CfgVehicles
 				showWindow = 0;
 				hideOnUse = 1;
 				onlyforplayer = 1;
-				condition = "player in this and this animationPhase ""FormationLights"" < 0.5";
-				statement = "this animate [""FormationLights"",1];";
+				condition = "player in this and this animationPhase ""lights_green_hide"" < 0.5";
+				statement = "this animate [""lights_green_hide"",1];";
 			};
 			class Probe_Show
 			{
@@ -2482,24 +2785,24 @@ class CfgVehicles
 				displayName = "Formation Lights On";
 				position = "pilot";
 				priority = 2;
-				radius = 4;
+				radius = 15;
 				showWindow = 0;
 				hideOnUse = 1;
 				onlyforplayer = 1;
-				condition = "player in this and this animationPhase ""FormationLights"" > 0.5";
-				statement = "this animate [""FormationLights"",0];";
+				condition = "player in this and this animationPhase ""lights_green_hide"" > 0.5";
+				statement = "this animate [""lights_green_hide"",0];";
 			};
 			class unFormationLights 
 			{
 				displayName = "Formation Lights Off";
 				position = "pilot";
 				priority = 2;
-				radius = 4;
+				radius = 15;
 				showWindow = 0;
 				hideOnUse = 1;
 				onlyforplayer = 1;
-				condition = "player in this and this animationPhase ""FormationLights"" < 0.5";
-				statement = "this animate [""FormationLights"",1];";
+				condition = "player in this and this animationPhase ""lights_green_hide"" < 0.5";
+				statement = "this animate [""lights_green_hide"",1];";
 			};
 			class Probe_Show
 			{

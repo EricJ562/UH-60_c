@@ -39,26 +39,37 @@ class CfgVehicles
 	class Helicopter_Base_F: Helicopter
 	{
 		class Turrets;
+		class HitPoints;
 	};
 
 	class Helicopter_Base_H: Helicopter_Base_F
 	{
-		class Turrets: Turrets
+		class EventHandlers;
+		class Turrets: Turrets{class CopilotTurret;class MainTurret;};
+		class HitPoints: HitPoints
 		{
-			class CopilotTurret;
-			class MainTurret;
+			class HitGlass1;
+			class HitGlass2;
+			class HitGlass3;
+			class HitGlass4;
+			class HitGlass5;
+			class HitGlass6;
+			class HitHull;
+			class HitMissiles;
+			class HitEngine;
+			class HitAvionics;
+			class HitVRotor;
+			class HitHRotor;
+			class HitFuel;
+			class HitWinch;
 		};
 		class AnimationSources;
-		class Eventhandlers;
-		class Viewoptics;
-		class ViewPilot;
-		class RotorLibHelicopterProperties;
-		class CargoTurret;
+		class ViewOptics;
 		class Components;
-		class Reflectors
-		{
-			class Right;
-		};
+		class NewTurret;
+		class MainTurret;
+		class RotorLibHelicopterProperties;
+		class Reflectors{class Right;};
 	};
 
 	class ka145_base: Helicopter_Base_H
@@ -122,7 +133,6 @@ class CfgVehicles
 		cost=3000000;
 		memoryPointCM[]={"Flare_launcher1","Flare_launcher2"};
 		memoryPointCMDir[]={"Flare_launcher1_dir","Flare_launcher2_dir"};
-		driverAction="pilot_Heli_Transport_01";
 		precisegetinout = 1;
 		driverAction = "pilot_Heli_Transport_01";
 		driverInAction = "pilot_Heli_Light_03_Enter";
@@ -146,17 +156,17 @@ class CfgVehicles
 				magazine="SmokeShellRed";
 				count=2;
 			};
-			class _xx_30Rnd_65x39_caseless_green
+			class _xx_30Rnd_762x39_AK12_Mag_F
 			{
-				magazine="30Rnd_65x39_caseless_green";
+				magazine="30Rnd_762x39_AK12_Mag_F";
 				count=4;
 			};
 		};
 		class TransportWeapons
 		{
-			class _xx_arifle_Katiba_C_F
+			class _xx_arifle_AK12U_F
 			{
-				weapon="arifle_Katiba_C_F";
+				weapon="arifle_AK12U_F";
 				count=2;
 			};
 		};
@@ -321,15 +331,9 @@ class CfgVehicles
 						maxSpeedThreshold=0;
 						aimDown=30;
 					};
-					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
-					{
-					};
-					class LaserSensorComponent: SensorTemplateLaser
-					{
-					};
-					class NVSensorComponent: SensorTemplateNV
-					{
-					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar{};
+					class LaserSensorComponent: SensorTemplateLaser{};
+					class NVSensorComponent: SensorTemplateNV{};
 				};
 			};
 			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
@@ -2024,6 +2028,31 @@ class CfgVehicles
 				source="revolving";
 				weapon="gatling_30mm";
 			};
+    			class hitGlass1
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass1";
+        			raw = 1;
+    			};
+    			class hitGlass2
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass2";
+        			raw = 1;
+    			};
+    			class hitGlass3
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass3";
+        			raw = 1;
+    			};
+    			class hitGlass4
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass4";
+        			raw = 1;
+    			};
+
                 };	
 		hiddenSelections[] =
 		{
@@ -2075,6 +2104,125 @@ class CfgVehicles
 			};			
 		};	
 		aggregateReflectors[] = {{"Left", "Right"}};
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+				armor=999;
+				visual="zbytek";
+				minimalHit=0.050000001;
+				depends="Total";
+				radius=0.0099999998;
+			};
+			class HitFuel: HitFuel
+			{
+				armor=0.69999999;
+				radius=0.25;
+				minimalHit=0.050000001;
+				explosionShielding=2;
+			};
+			class HitAvionics: HitAvionics
+			{
+				armor=1.3;
+				radius=0.40000001;
+				minimalHit=0.050000001;
+				explosionShielding=1.5;
+			};
+			class HitMissiles: HitMissiles
+			{
+				armor=0.69999999;
+				radius=0.25;
+				minimalHit=0.050000001;
+				explosionShielding=1;
+			};
+			class HitEngine1
+			{
+				armor=0.69999999;
+				radius=0.34999999;
+				name="engine_1_hit";
+				explosionShielding=3;
+				minimalHit=0.1;
+				visual="motor";
+				passThrough=1;
+				convexComponent="engine_1_hit";
+				material=51;
+			};
+			class HitEngine2: HitEngine1
+			{
+				name="engine_2_hit";
+				convexComponent="engine_2_hit";
+			};
+			class HitEngine: HitEngine
+			{
+				armor=999;
+				radius=0.050000001;
+				minimalHit=1;
+				visual="camo2";
+				depends="0.5 * (HitEngine1 + HitEngine2)";
+			};
+			class HitHRotor: HitHRotor
+			{
+				armor=2.5999999;
+				radius=0.40000001;
+				minimalHit=0.090000004;
+				explosionShielding=2.5;
+			};
+			class HitVRotor: HitVRotor
+			{
+				armor=1.3;
+				radius=0.059999999;
+				minimalHit=0.050000001;
+				explosionShielding=6;
+			};
+			class HitGlass1: HitGlass1
+			{
+        			armor = 0.2;
+        			armorComponent = "hit_glass1";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass1_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass1";
+			};
+			class HitGlass2: HitGlass2
+			{
+        			armor = 0.2;
+        			armorComponent = "hit_glass2";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass2_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass2";
+			};
+			class HitGlass3: HitGlass3
+			{
+        			armor = 0.2;
+        			armorComponent = "hit_glass3";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass3_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass3";
+			};
+			class HitGlass4: HitGlass4
+			{
+        			armor = 0.2;
+        			armorComponent = "hit_glass4";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass4_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass4";
+			};
+		};
 		#include "rtd.hpp"
         };
 	class ej_ka145: ka145_base

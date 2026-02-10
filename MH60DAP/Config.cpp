@@ -1255,6 +1255,8 @@ class CfgVehicles
 		cargoProxyIndexes[] = {1,2,3,4,5,6,7,8};
 		transportSoldier=8;
 		fuelCapacity = 1564;
+		weapons[] = {Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon};
+		magazines[] = {120Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine};
 		slingLoadMaxCargoMass=2722;
 		ace_fastroping_ropeOrigins[] = {"ropeOriginRight"};
 		model = "\UH-60\hh\ej_HH60H.p3d";

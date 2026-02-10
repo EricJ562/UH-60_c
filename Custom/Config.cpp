@@ -130,7 +130,7 @@ class CfgWeapons
 			class LinkedItemsMuzzle
 			{
 				slot="MuzzleSlot";
-				item="SF762MX_ej";
+				item="SF762MXS_kj";
 			};
 		};
 	};
@@ -168,7 +168,7 @@ class CfgWeapons
 			class LinkedItemsMuzzle
 			{
 				slot="MuzzleSlot";
-				item="SF762MX_ej";
+				item="SF762MXS_kj";
 			};
             		class LinkedItemsUnder
             		{
@@ -222,7 +222,7 @@ class CfgWeapons
 			class LinkedItemsMuzzle
 			{
 				slot="MuzzleSlot";
-				item="SF762MX_ej";
+				item="SF762MXS_kj";
 			};
             		class LinkedItemsUnder
             		{
@@ -249,7 +249,7 @@ class CfgWeapons
 			class LinkedItemsMuzzle
 			{
 				slot="MuzzleSlot";
-				item="SF762MX_ej";
+				item="SF762MXS_kj";
 			};
 		};
 	};

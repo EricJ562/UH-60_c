@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class Ej_UH60M
 	{
-		units[] = {"ej_MH60A","ej_MH60AL","ej_UH60M_BR","ej_UH60M_NATO","ej_UH60M_MEV_NOESSS","ej_MH60L","ej_UH60M_UT","ej_UH60M","ej_MH60S","ej_MH60SI","ej_MH60M","ej_UH60M_U","ej_UH60M_MEV","ej_MH60MS","ej_HH60HA"};
+		units[] = {"ej_MH60A","ej_MH60AL","ej_MH60L","ej_UH60M_MEV","ej_UH60M","ej_MH60S","ej_MH60SI","ej_MH60M","ej_MH60MS","ej_HH60HA"};
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 2.20;
@@ -56,6 +56,7 @@ class CfgVehicles
 			class HitGlass5;
 			class HitGlass6;
 			class HitHull;
+			class HitMissiles;
 			class HitEngine;
 			class HitAvionics;
 			class HitVRotor;
@@ -100,6 +101,7 @@ class CfgVehicles
 		enableManualFire = 0;
 		class Library{libTextDesc = "UH-60";};
 		fuelCapacity = 1360;
+		model = "\UH-60\UH60\ej_UH60M.p3d";
 		fuelConsumptionRate=0.126;
 		maxSpeed = 282;
 		simulation = "helicopterX";
@@ -344,17 +346,15 @@ class CfgVehicles
 			class HitHull: HitHull
 			{
 				armor=999;
-				visual="camo1";
+				visual="zbytek";
 				minimalHit=0.050000001;
 				depends="Total";
 				radius=0.0099999998;
 			};
 			class HitFuel: HitFuel
 			{
-				name=camo1;
 				armor=0.69999999;
-				radius=0.125;
-				passthrough=0.5;
+				radius=0.25;
 				minimalHit=0.050000001;
 				explosionShielding=2;
 			};
@@ -362,158 +362,182 @@ class CfgVehicles
 			{
 				armor=1.3;
 				radius=0.40000001;
-				minimalHit=0.15000001;
+				minimalHit=0.050000001;
 				explosionShielding=1.5;
-				visual="podsvit pristroju";
 			};
-			class HitEngine1: HitEngine
+			class HitMissiles: HitMissiles
+			{
+				armor=0.69999999;
+				radius=0.25;
+				minimalHit=0.050000001;
+				explosionShielding=1;
+			};
+			class HitEngine1
 			{
 				armor=0.69999999;
 				radius=0.34999999;
+				name="engine_1_hit";
 				explosionShielding=3;
 				minimalHit=0.1;
-				name="engine_1_hit";
+				visual="motor";
+				passThrough=1;
 				convexComponent="engine_1_hit";
+				material=51;
 			};
 			class HitEngine2: HitEngine1
 			{
 				name="engine_2_hit";
 				convexComponent="engine_2_hit";
 			};
-			class HitEngine: HitEngine2
+			class HitEngine: HitEngine
 			{
 				armor=999;
+				radius=0.050000001;
+				minimalHit=1;
 				visual="camo2";
-				name="engine_hit";
-				convexComponent="engine_hit";
 				depends="0.5 * (HitEngine1 + HitEngine2)";
 			};
 			class HitHRotor: HitHRotor
 			{
 				armor=2.5999999;
 				radius=0.40000001;
-				minimalHit=0.1;
-				explosionShielding=2;
+				minimalHit=0.090000004;
+				explosionShielding=2.5;
 			};
 			class HitVRotor: HitVRotor
 			{
-				armor=2.5999999;
-				radius=0.40000001;
-				minimalHit=0.1;
-				explosionShielding=2;
+				armor=1.3;
+				radius=0.059999999;
+				minimalHit=0.050000001;
+				explosionShielding=6;
 			};
 			class HitGlass1: HitGlass1
 			{
-				name=glass1;
-				passthrough=0.5;
-				armor=1.3;
-				radius=0.44999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass1";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass1_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass1";
 			};
 			class HitGlass2: HitGlass2
 			{
-				name=glass2;
-				passthrough=0.5;
-				armor=1.3;
-				radius=0.44999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass2";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass2_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass2";
 			};
 			class HitGlass3: HitGlass3
 			{
-				name=glass3;
-				armor=1.3;
-				passthrough=0.5;
-				radius=0.34999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass3";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass3_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass3";
 			};
 			class HitGlass4: HitGlass4
 			{
-				name=glass4;
-				passthrough=0.5;
-				armor=1.3;
-				radius=0.34999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass4";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass4_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass4";
 			};
 			class HitGlass5: HitGlass5
 			{
-				name=glass5;
-				passthrough=0.5;
-				armor=1.3;
-				radius=0.46000001;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass5";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass5_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass5";
 			};
 			class HitGlass6: HitGlass6
 			{
-				name=glass6;
-				passthrough=0.5;
-				armor=1.3;
-				radius=0.46000001;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass6";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass6_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass6";
 			};
 			class HitGlass7: HitGlass6
 			{
-				name="glass7";
-				passthrough=0.5;
-				convexComponent="glass7";
-				visual="glass7";
-				radius=0.2;
+        			armor = 0.2;
+        			armorComponent = "hit_glass7";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass7_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass7";
 			};
 			class HitGlass8: HitGlass7
 			{
-				name="glass8";
-				passthrough=0.5;
-				convexComponent="glass8";
-				visual="glass8";
+        			armorComponent = "hit_glass8";
+        			name = "hit_glass8_point";
+        			visual = "hit_glass8";
 			};
 			class HitGlass9: HitGlass6
 			{
-				name="glass9";
-				passthrough=0.5;
-				convexComponent="glass9";
-				visual="glass9";
-				radius=0.41999999;
+        			armorComponent = "hit_glass9";
+        			name = "hit_glass9_point";
+        			visual = "hit_glass9";
 			};
 			class HitGlass10: HitGlass9
 			{
-				name="glass10";
-				convexComponent="glass10";
-				visual="glass10";
+        			armorComponent = "hit_glass10";
+        			name = "hit_glass10_point";
+        			visual = "hit_glass10";
 			};
 			class HitGlass11: HitGlass9
 			{
-				name="glass11";
-				convexComponent="glass11";
-				visual="glass11";
+        			armorComponent = "hit_glass11";
+        			name = "hit_glass11_point";
+        			visual = "hit_glass11";
 			};
 			class HitGlass12: HitGlass9
 			{
-				name="glass12";
-				convexComponent="glass12";
-				visual="glass12";
+        			armorComponent = "hit_glass12";
+        			name = "hit_glass12_point";
+        			visual = "hit_glass12";
 			};
-			class HitGlass13: HitGlass6
+			class HitGlass13: HitGlass9
 			{
-				name="glass13";
-				convexComponent="glass13";
-				visual="glass13";
-				radius=0.33000001;
+        			armorComponent = "hit_glass13";
+        			name = "hit_glass13_point";
+        			visual = "hit_glass13";
 			};
-			class HitWinch: HitWinch
-			{
-				name=winch;
-				passthrough=0.5;
-				armor=1.3;
-				radius=0.34999999;
-				explosionShielding=6;
-				class DestructionEffects{};
-			};
-		};
+		};       		
 		class Components: Components
-		{
-			class SensorsManagerComponent
-			{
-				class Components
-				{
+        	{
+            		class SensorsManagerComponent
+            		{
+                		class Components
+                		{
 					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
 					{
 					};
@@ -546,6 +570,78 @@ class CfgVehicles
 			class Probe_Show{source="user";animPeriod=0;initPhase=0;};
 			class Tanks_Show{source="user";animPeriod=0;initPhase=0;};
 			class Fuelprobe_Extend{source="user";animPeriod=0;initPhase=0;};
+    			class hitGlass1
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass1";
+        			raw = 1;
+    			};
+    			class hitGlass2
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass2";
+        			raw = 1;
+    			};
+    			class hitGlass3
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass3";
+        			raw = 1;
+    			};
+    			class hitGlass4
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass4";
+        			raw = 1;
+    			};
+    			class hitGlass5
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass5";
+        			raw = 1;
+    			};
+    			class hitGlass6
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass6";
+        			raw = 1;
+    			};
+    			class hitGlass7
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass7";
+        			raw = 1;
+    			};
+    			class hitGlass8
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass8";
+        			raw = 1;
+    			};
+    			class hitGlass9
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass9";
+        			raw = 1;
+    			};
+    			class hitGlass10
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass10";
+        			raw = 1;
+    			};
+    			class hitGlass11
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass11";
+        			raw = 1;
+    			};
+    			class hitGlass12
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass12";
+        			raw = 1;
+    			};
 		};
 		class Reflectors: Reflectors
 		{
@@ -868,249 +964,199 @@ class CfgVehicles
 	};
 	class ej_UH60M: ej_UH60M_base
 	{
-		scope=2;
-		side=1;
-		faction="USA";
 		author="Flanker562";
-		_generalMacro="UH60M";
-		displayName = UH-60M;
-		crew="B_HelipilotUSA_F";
-		editorPreview="\uh-60\data\Previews\UH60M.jpg";
-		model = "\UH-60\UH60\ej_UH60M.p3d";
-		typicalCargo[]={"B_HelipilotUSA_F"};
-		textureList[]={"USArmy",1};
-		receiveRemoteTargets=1;
-		reportRemoteTargets=1;
-		reportOwnPosition=1;
-		ace_fastroping_enabled = 1;
-		ace_fastroping_ropeOrigins[] = {"ropeOriginLeft", "ropeOriginRight"};
-		memoryPointsGetInCargo="pos cargo";
-		memoryPointsGetInCargoDir="pos cargo dir";
-		class MFD{};
-	};
-	class ej_UH60M_NATO: ej_UH60M
-	{
-		scope=2;
-		side=1;
-		faction="BLU_F";
-		typicalCargo[]={"B_Helipilot_F"};
-		typicalCargo[]={"B_Helipilot_F"};
-		author="Flanker562";
-		_generalMacro="UH60M";
-		editorPreview="\uh-60\data\Previews\UH60MNATO.jpg";
-		displayName = UH-60M (NATO);
-		textureList[]={"NATO",1};
-		ForceInGarage=1;
-	};
-	class ej_UH60M_U: ej_UH60M_base
-	{
-		author="Flanker562";
-		_generalMacro="UH60M_U";
 		scope=2;
 		accuracy=1;
 		side=1;
+		faction="USA";
+		accuracy = 1.5;
+		transportSoldier = 12;
+		crew="B_Helipilot_F";
+		typicalCargo[]={"B_Helipilot_F"};
 		receiveRemoteTargets=1;
 		reportRemoteTargets=1;
 		reportOwnPosition=1;
-		faction="USA";
-		crew="B_Helipilot_F";
-		typicalCargo[]={"B_Helipilot_F"};
-		displayName = UH-60M (Unarmed);
-		editorPreview="\uh-60\data\Previews\UH60MU.jpg";
-		model = "\UH-60\UH60\ej_UH60M_U.p3d";
+		editorPreview="\uh-60\data\Previews\UH60M.jpg";
+		displayName = UH-60M;
 		textureList[]={"USArmy",1};
-		memoryPointsGetInCargo="pos cargo";
-		memoryPointsGetInCargoDir="pos cargo dir";
-		class MFD{};
 		ace_fastroping_enabled = 1;
 		ace_fastroping_ropeOrigins[] = {"ropeOriginLeft", "ropeOriginRight"};
-		class CargoTurret;
+		memoryPointsGetInCargo="pos cargo";
+		memoryPointsGetInCargoDir="pos cargo dir";
+	};
+	class ej_UH60M_MEV: ej_UH60M_base
+	{
+		author="Flanker562";
+		scope=2;
+		accuracy=1;
+		side=1;
+		faction="USA";
+		accuracy = 1.5;
+		transportSoldier = 4;
+		crew="B_Helipilot_F";
+		editorPreview="\uh-60\data\Previews\UH60MMEV.jpg";
+		typicalCargo[]={"B_Helipilot_F"};
+		receiveRemoteTargets=1;
+		reportRemoteTargets=1;
+		fuelCapacity = 4766;
+		reportOwnPosition=1;
+		attendant=1;
+		model = "\UH-60\UH60\ej_UH60M_MEV.p3d";
+		displayName = UH-60Q MEV;
+		textureList[]={"USArmyMEV",1};
+		memoryPointsGetInCargo="pos cargo";
+		memoryPointsGetInCargoDir="pos cargo dir";
+
 		class Turrets: Turrets
 		{
-			class CoPilotObs: MainTurret
-			{
-				isCopilot = 1;
-				gunnerAction = "pilot_Heli_Transport_01";
-				gunnerInAction = "pilot_Heli_Light_03_Enter";
-				memoryPointsGetInGunner="pos copilot";
-				memoryPointsGetInGunnerDir="pos copilot dir";		
-				gunnerGetInAction="GetInHeli_Transport_01Cargo";
-				gunnerGetOutAction="GetOutLow";
-				memoryPointGunnerOptics = "";		
-				CanEject = 0;
-				startEngine = 0;
-				gunnerCompartments="Compartment3";
-				commanding=-3;	
-				primaryGunner = 0;										
-				selectionFireAnim = "";
-				castGunnerShadow = 1;
-				viewGunnerShadow = 1;
-				turretInfoType = "";
-				showAllTargets = 2;				
-				copilotHasFlares = 1;
-				LockDetectionSystem = 1 + 2 + 4 + 8;
-				incomingMissileDetectionSystem = 16;
-				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
-				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
-				stabilizedInAxes = "StabilizedInAxesBoth";
-				proxyIndex = 3;
-				gunnerName = "Co-Pilot"; 
-			};
 			class CargoTurret_01: CargoTurret
 			{
 				gunnerAction="passenger_inside_2";
 				gunnerCompartments="Compartment3";
-				memoryPointsGetInGunner="pos side";
-				memoryPointsGetInGunnerDir="pos side dir";
-				gunnerName="Left Side FFV Position";
-				proxyIndex=13;
-				maxElev=15;
-				minElev=-80;
-				maxTurn=30;
-				minTurn=-30;
+				memoryPointsGetInGunner="pos gunner";
+				memoryPointsGetInGunnerDir="pos gunner dir";
+				gunnerName="Left Side Crew Chief";
+				proxyIndex=5;
+				maxElev=23;
+				minElev=-30;
+				maxTurn=35;
+				minTurn=-35;
 				isPersonTurret=1;
-				ejectDeadGunner=0;
+				onlyForPlayer=1;
+				ejectDeadGunner=1;
 				usepip=0;
 				gunnerOutOpticsModel="";
 				gunnerOpticsModel="";
 				startEngine=0;
 				outGunnerMayFire=1;
 				inGunnerMayFire=0;
-				commanding=-2;
 				memoryPointGunnerOptics="";
+				enabledByAnimationSource="";
 			};
 			class CargoTurret_02: CargoTurret
 			{
 				gunnerAction="passenger_inside_2";
 				gunnerCompartments="Compartment3";
-				memoryPointsGetInGunner="pos side 2";
-				memoryPointsGetInGunnerDir="pos side 2 dir";
-				gunnerName="Right Side FFV Position";
-				proxyIndex=14;
-				maxElev=14;
-				minElev=-80;
-				maxTurn=30;
-				minTurn=-30;
+				memoryPointsGetInGunner="pos gunner2";
+				memoryPointsGetInGunnerDir="pos gunner2 dir";
+				gunnerName="Right Side Crew Chief";
+				proxyIndex=6;
+				maxElev=23;
+				minElev=-30;
+				maxTurn=35;
+				minTurn=-35;				
 				isPersonTurret=1;
 				ejectDeadGunner=0;
+				onlyForPlayer=1;
 				usepip=0;
 				gunnerOutOpticsModel="";
 				gunnerOpticsModel="";
 				startEngine=0;
 				outGunnerMayFire=1;
 				inGunnerMayFire=0;
-				commanding=-2;
 				memoryPointGunnerOptics="";
 			};
+			class CoPilotObs: MainTurret
+			{
+				isCopilot = 1;
+				gunnerAction = "pilot_Heli_Transport_01";
+				gunnerInAction = "pilot_Heli_Light_03_Enter";
+				memoryPointsGetInGunner="pos copilot";
+				memoryPointsGetInGunnerDir="pos copilot dir";		
+				gunnerGetInAction="GetInHeli_Transport_01Cargo";
+				gunnerGetOutAction="GetOutLow";
+				memoryPointGunnerOptics = "";		
+				CanEject = 0;
+				startEngine = 0;
+				gunnerCompartments="Compartment3";
+				commanding=-3;	
+				primaryGunner = 0;										
+				selectionFireAnim = "";
+				castGunnerShadow = 1;
+				viewGunnerShadow = 1;
+				turretInfoType = "";
+				showAllTargets = 2;				
+				copilotHasFlares = 1;
+				LockDetectionSystem = 1 + 2 + 4 + 8;
+				incomingMissileDetectionSystem = 16;
+				TurretCanSee = 1+2+4+8+16;
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
+				stabilizedInAxes = "StabilizedInAxesBoth";
+				proxyIndex = 1;
+				gunnerName = "Co-Pilot"; 
+			};
 		};
 	};
-	class ej_UH60M_UT: ej_UH60M_U
+	class ej_UH60M_U: ej_UH60M_base
 	{
 		author="Flanker562";
-		_generalMacro="UH60M_U";
 		scope=2;
 		accuracy=1;
 		side=1;
-		receiveRemoteTargets=1;
-		reportRemoteTargets=1;
-		reportOwnPosition=1;
 		faction="USA";
-		fuelCapacity = 950;
+		accuracy = 1.5;
 		crew="B_Helipilot_F";
+		editorPreview="\uh-60\data\Previews\UH60MU.jpg";
 		typicalCargo[]={"B_Helipilot_F"};
-		displayName = UH-60M (Unarmed/ESSS);
-		editorPreview="\uh-60\data\Previews\UH60MUESSS.jpg";
-		model = "\UH-60\UH60\ej_UH60M_UT.p3d";
+		receiveRemoteTargets=1;
+		reportRemoteTargets=1;
+		reportOwnPosition=1;
+		model = "\UH-60\UH60\ej_UH60M_U.p3d";
+		displayName = UH-60M Unarmed;
 		textureList[]={"USArmy",1};
-		slingLoadMaxCargoMass=3600;
-		class UserActions
-		{
-			class Tanks_Show
-			{
-				displayName= "Hide Fuel Tanks";
-				displayNameDefault = "";
-				position="";
-				radius=20;
-				onlyForplayer=true;
-				condition="this animationPhase ""tank_hide"" < 0.5 AND (player == (driver this) && (alive this))";
-				statement="this animate [""tank_hide"",1];";
-				priority=4;
-			}; 	
-
-			class Tanks_ShowOff: Tanks_Show
-			{
-				displayName= "Show Fuel Tanks";
-				condition="this animationPhase ""tank_hide"" > 0.5 AND (player == (driver this) && (alive this))";
-				statement="this animate [""tank_hide"",0];";
-			};
-		};
-	};
-	class ej_UH60M_MEV: ej_UH60M_base
-	{
-		author="Flanker562";
-		_generalMacro="UH60M_MEV";
-		scope=2;
-		accuracy=1;
-		side=1;
-		faction="USA";
-		transportSoldier = 4;
-		attendant = 1;
-		receiveRemoteTargets=1;
-		reportRemoteTargets=1;
-		reportOwnPosition=1;
-		crew="B_Helipilotusa_F";
-		editorPreview="\uh-60\data\Previews\UH60MMEV.jpg";
-		typicalCargo[]={"B_Helipilotusa_F"};
-		fuelCapacity = 950;
-		displayName = UH-60M (Medevac);
-		model = "\UH-60\UH60\ej_UH60M_MEV.p3d";
-		textureList[]={"USArmyMEV",1};
-		slingLoadMaxCargoMass=3600;
 		memoryPointsGetInCargo="pos cargo";
 		memoryPointsGetInCargoDir="pos cargo dir";
-		class MFD{};
-		class CargoTurret;
-        	
-		class ACE_Actions 
-		{
-            
-            		class ACE_MainActions 
-			{
-                		class Medical_Menu 
-				{
-                    			displayName = CSTRING(OpenMenu);
-                    			runOnHover = 0;
-                    			exceptions[] = {"isNotInside"};
-                    			condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
-                    			statement = QUOTE([_target] call DFUNC(openMenu));
-                    			icon = PATHTOEF(medical,UI\icons\medical_cross.paa);
-                		};
-            		};
-        	};
-		class UserActions
-		{
-			class Tanks_Show
-			{
-				displayName= "Hide Fuel Tanks";
-				displayNameDefault = "";
-				position="";
-				radius=20;
-				onlyForplayer=true;
-				condition="this animationPhase ""tank_hide"" < 0.5 AND (player == (driver this) && (alive this))";
-				statement="this animate [""tank_hide"",1];";
-				priority=4;
-			}; 	
 
-			class Tanks_ShowOff: Tanks_Show
-			{
-				displayName= "Show Fuel Tanks";
-				condition="this animationPhase ""tank_hide"" > 0.5 AND (player == (driver this) && (alive this))";
-				statement="this animate [""tank_hide"",0];";
-			};
-		};
 		class Turrets: Turrets
 		{
+			class CargoTurret_01: CargoTurret
+			{
+				gunnerAction="passenger_inside_2";
+				gunnerCompartments="Compartment3";
+				memoryPointsGetInGunner="pos gunner";
+				memoryPointsGetInGunnerDir="pos gunner dir";
+				gunnerName="Left Side Crew Chief";
+				proxyIndex=14;
+				maxElev=23;
+				minElev=-30;
+				maxTurn=35;
+				minTurn=-35;
+				isPersonTurret=1;
+				onlyForPlayer=1;
+				ejectDeadGunner=1;
+				usepip=0;
+				gunnerOutOpticsModel="";
+				gunnerOpticsModel="";
+				startEngine=0;
+				outGunnerMayFire=1;
+				inGunnerMayFire=0;
+				memoryPointGunnerOptics="";
+				enabledByAnimationSource="";
+			};
+			class CargoTurret_02: CargoTurret
+			{
+				gunnerAction="passenger_inside_2";
+				gunnerCompartments="Compartment3";
+				memoryPointsGetInGunner="pos gunner2";
+				memoryPointsGetInGunnerDir="pos gunner2 dir";
+				gunnerName="Right Side Crew Chief";
+				proxyIndex=15;
+				maxElev=23;
+				minElev=-30;
+				maxTurn=35;
+				minTurn=-35;				
+				isPersonTurret=1;
+				ejectDeadGunner=0;
+				onlyForPlayer=1;
+				usepip=0;
+				gunnerOutOpticsModel="";
+				gunnerOpticsModel="";
+				startEngine=0;
+				outGunnerMayFire=1;
+				inGunnerMayFire=0;
+				memoryPointGunnerOptics="";
+			};
 			class CoPilotObs: MainTurret
 			{
 				isCopilot = 1;
@@ -1138,89 +1184,13 @@ class CfgVehicles
 				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
 				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
-				proxyIndex = 3;
-				gunnerName = "Co-Pilot"; 
-			};
-		};
-	};
-	class ej_UH60M_MEV_NOESSS: ej_UH60M_base
-	{
-		author="Flanker562";
-		_generalMacro="UH60M_MEV";
-		scope=2;
-		accuracy=1;
-		side=1;
-		receiveRemoteTargets=1;
-		reportRemoteTargets=1;
-		reportOwnPosition=1;
-		faction="USA";
-		transportSoldier = 4;
-		attendant = 1;
-		crew="B_Helipilotusa_F";
-		editorPreview="\uh-60\data\Previews\UH60MNOESSSMEV.jpg";
-		typicalCargo[]={"B_Helipilotusa_F"};
-		displayName = UH-60M (Medevac/No ESSS);
-		model = "\UH-60\UH60\ej_UH60M_MEV_NOESSS.p3d";
-		textureList[]={"USArmyMEV",1};
-		slingLoadMaxCargoMass=3700;
-		memoryPointsGetInCargo="pos cargo";
-		memoryPointsGetInCargoDir="pos cargo dir";
-		class MFD{};
-		class CargoTurret;
-        	
-		class ACE_Actions 
-		{
-            
-            		class ACE_MainActions 
-			{
-                		class Medical_Menu 
-				{
-                    			displayName = CSTRING(OpenMenu);
-                    			runOnHover = 0;
-                    			exceptions[] = {"isNotInside"};
-                    			condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
-                    			statement = QUOTE([_target] call DFUNC(openMenu));
-                    			icon = PATHTOEF(medical,UI\icons\medical_cross.paa);
-                		};
-            		};
-        	};
-		class Turrets: Turrets
-		{
-			class CoPilotObs: MainTurret
-			{
-				isCopilot = 1;
-				gunnerAction = "pilot_Heli_Transport_01";
-				gunnerInAction = "pilot_Heli_Light_03_Enter";
-				memoryPointsGetInGunner="pos copilot";
-				memoryPointsGetInGunnerDir="pos copilot dir";		
-				gunnerGetInAction="GetInHeli_Transport_01Cargo";
-				gunnerGetOutAction="GetOutLow";
-				memoryPointGunnerOptics = "";		
-				CanEject = 0;
-				startEngine = 0;
-				gunnerCompartments="Compartment3";
-				commanding=-3;	
-				primaryGunner = 0;										
-				selectionFireAnim = "";
-				castGunnerShadow = 1;
-				viewGunnerShadow = 1;
-				turretInfoType = "";
-				showAllTargets = 2;				
-				copilotHasFlares = 1;
-				LockDetectionSystem = 1 + 2 + 4 + 8;
-				incomingMissileDetectionSystem = 16;
-				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
-				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
-				stabilizedInAxes = "StabilizedInAxesBoth";
-				proxyIndex = 3;
+				proxyIndex = 1;
 				gunnerName = "Co-Pilot"; 
 			};
 		};
 	};
 
-//USNHelos
-
+//Navy
 	class ej_MH60S: ej_UH60M_base
 	{
 		author="Flanker562";
@@ -1388,8 +1358,8 @@ class CfgVehicles
 		cargoProxyIndexes[] = {};
 		transportSoldier=0;
 		editorPreview="\uh-60\data\Previews\HH60H.jpg";
-		weapons[]={"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon","uh60_hellfire"};
-		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine","2rnd_Hellfire_Rail_mag"};
+		weapons[] = {Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,uh60_hellfire};
+		magazines[] = {120Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,2rnd_Hellfire_Rail_mag};
 		fuelCapacity = 1564;
 		slingLoadMaxCargoMass=2722;
 		model = "\UH-60\hh\ej_HH60HA.p3d";

@@ -405,99 +405,105 @@ class CfgVehicles
 			};
 			class HitGlass1: HitGlass1
 			{
-				name=glass1;
-				passthrough=0.5;
-				armor=1.3;
-				radius=0.44999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass1";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass1_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass1";
 			};
 			class HitGlass2: HitGlass2
 			{
-				name=glass2;
-				passthrough=0.5;
-				armor=1.3;
-				radius=0.44999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass2";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass2_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass2";
 			};
 			class HitGlass3: HitGlass3
 			{
-				name=glass3;
-				armor=1.3;
-				passthrough=0.5;
-				radius=0.34999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass3";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass3_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass3";
 			};
 			class HitGlass4: HitGlass4
 			{
-				name=glass4;
-				passthrough=0.5;
-				armor=1.3;
-				radius=0.34999999;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass4";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass4_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass4";
 			};
 			class HitGlass5: HitGlass5
 			{
-				name=glass5;
-				passthrough=0.5;
-				armor=1.3;
-				radius=0.46000001;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass5";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass5_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass5";
 			};
 			class HitGlass6: HitGlass6
 			{
-				name=glass6;
-				passthrough=0.5;
-				armor=1.3;
-				radius=0.46000001;
-				explosionShielding=6;
+        			armor = 0.2;
+        			armorComponent = "hit_glass6";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass6_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass6";
 			};
 			class HitGlass7: HitGlass6
 			{
-				name="glass7";
-				passthrough=0.5;
-				convexComponent="glass7";
-				visual="glass7";
-				radius=0.2;
+        			armor = 0.2;
+        			armorComponent = "hit_glass7";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass7_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass7";
 			};
 			class HitGlass8: HitGlass7
 			{
-				name="glass8";
-				passthrough=0.5;
-				convexComponent="glass8";
-				visual="glass8";
+        			armorComponent = "hit_glass8";
+        			name = "hit_glass8_point";
+        			visual = "hit_glass8";
 			};
 			class HitGlass9: HitGlass6
 			{
-				name="glass9";
-				passthrough=0.5;
-				convexComponent="glass9";
-				visual="glass9";
-				radius=0.41999999;
+        			armorComponent = "hit_glass9";
+        			name = "hit_glass9_point";
+        			visual = "hit_glass9";
 			};
 			class HitGlass10: HitGlass9
 			{
-				name="glass10";
-				convexComponent="glass10";
-				visual="glass10";
-			};
-			class HitGlass11: HitGlass9
-			{
-				name="glass11";
-				convexComponent="glass11";
-				visual="glass11";
-			};
-			class HitGlass12: HitGlass9
-			{
-				name="glass12";
-				convexComponent="glass12";
-				visual="glass12";
-			};
-			class HitGlass13: HitGlass6
-			{
-				name="glass13";
-				convexComponent="glass13";
-				visual="glass13";
-				radius=0.33000001;
+        			armorComponent = "hit_glass10";
+        			name = "hit_glass10_point";
+        			visual = "hit_glass10";
 			};
 			class HitWinch: HitWinch
 			{
@@ -607,7 +613,67 @@ class CfgVehicles
 			class HidePilotFeed{source="user";animPeriod=0;initPhase=0;};
 			class HidePilotNVGFeed{source="user";animPeriod=0;initPhase=0;};
 			class Muzzle_flash{source="ammorandom";weapon="M197_MH60";};
-			class FormationLights {AnimPeriod = 1;source = "user";InitPhase = 1; };
+    			class lights_green_hide{source = "user";animPeriod = 0.001;initPhase = 1;};
+    			class hitGlass1
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass1";
+        			raw = 1;
+    			};
+    			class hitGlass2
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass2";
+        			raw = 1;
+    			};
+    			class hitGlass3
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass3";
+        			raw = 1;
+    			};
+    			class hitGlass4
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass4";
+        			raw = 1;
+    			};
+    			class hitGlass5
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass5";
+        			raw = 1;
+    			};
+    			class hitGlass6
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass6";
+        			raw = 1;
+    			};
+    			class hitGlass7
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass7";
+        			raw = 1;
+    			};
+    			class hitGlass8
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass8";
+        			raw = 1;
+    			};
+    			class hitGlass9
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass9";
+        			raw = 1;
+    			};
+    			class hitGlass10
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass10";
+        			raw = 1;
+    			};
 		};
 		hiddenSelections[]={"camo1","camo2","camo3","camo4"};
 		hiddenSelectionsTextures[]={"uh-60\data\ah96_body_co.paa","uh-60\data\ah96_engines_co.paa","uh-60\data\usmcductfans_co.paa","uh-60\data\SOAS_AAQ16_Flir_Navy_co.paa"};	

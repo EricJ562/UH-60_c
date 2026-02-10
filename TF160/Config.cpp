@@ -13,6 +13,33 @@ class CfgPatches
 class Turrets;
 class MainTurret;
 class CopilotTurret;
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class SensorTemplateDataLink;
+class SensorTemplatePassiveRadar;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftPilot: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class Components;
 
 class CfgWeapons
 {
@@ -68,7 +95,7 @@ class CfgVehicles
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Helipilot_F.jpg";
 		scope=2;
 		cost=160000;
-		detectSkill=90;
+		detectSkill=70;
 		identityTypes[]=
 		{
 			"LanguageENG_F",
@@ -151,6 +178,7 @@ class CfgVehicles
 		modelSides[]={3,1};
 		uniformClass="U_B_HeliPilotCoveralls";
 		role="Crewman";
+		detectSkill=70;
 		linkedItems[]=
 		{
 			"V_TacVest_blk",
@@ -633,7 +661,6 @@ class CfgVehicles
 		camouflage=18;
 		radarTargetSize=0.39999999;
 		hiddenSelectionsTextures[]={"\UH-60\Data\Heli_Transport_01_ext01_160th_CO.paa","\UH-60\Data\Heli_Transport_01_ext02_160th_CO.paa"};
-		slingLoadMaxCargoMass=3800;
 		displayName="MH-80 (TF160)";
 		weapons[]={"Flanker562_CMFlareLauncher"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine"};
@@ -728,6 +755,126 @@ class CfgVehicles
 			{
 				weapon="ej_MX_SA_F";
 				count=2;
+			};
+		};
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=100;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=100;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						maxTrackableSpeed=70;
+						animDirection="Gun";
+						angleRangeHorizontal=26;
+						angleRangeVertical=26;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components: components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoAirborneMiniMap";
+					};
+					class CrewDisplay
+					{
+						componentType="CrewDisplayComponent";
+						resource="RscCustomInfoCrew";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehiclePrimaryGunnerDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="PrimaryGunner";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components: components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoAirborneMiniMap";
+					};
+					class CrewDisplay
+					{
+						componentType="CrewDisplayComponent";
+						resource="RscCustomInfoCrew";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehiclePrimaryGunnerDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="PrimaryGunner";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
 			};
 		};
 		class Turrets: Turrets

@@ -45,18 +45,20 @@ class CfgVehicles
 		};
 		class HitPoints: HitPoints
 		{
-			class HitHull;
-			class HitFuel;
-			class HitEngine;
-			class HitAvionics;
-			class HitVRotor;
-			class HitHRotor;
 			class HitGlass1;
 			class HitGlass2;
 			class HitGlass3;
 			class HitGlass4;
 			class HitGlass5;
 			class HitGlass6;
+			class HitHull;
+			class HitMissiles;
+			class HitEngine;
+			class HitAvionics;
+			class HitVRotor;
+			class HitHRotor;
+			class HitFuel;
+			class HitWinch;
 		};
 		class AnimationSources;
 		class Eventhandlers;
@@ -501,7 +503,151 @@ class CfgVehicles
 				animPeriod=1;
 				initPhase=0;
 			};
-			class FormationLights {AnimPeriod = 1;source = "user";InitPhase = 1; };
+    			class lights_green_hide{source = "user";animPeriod = 0.001;initPhase = 1;};
+    			class hitGlass1
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass1";
+        			raw = 1;
+    			};
+    			class hitGlass2
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass2";
+        			raw = 1;
+    			};
+    			class hitGlass3
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass3";
+        			raw = 1;
+    			};
+    			class hitGlass4
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass4";
+        			raw = 1;
+    			};
+
+		};
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+				armor=999;
+				visual="zbytek";
+				minimalHit=0.050000001;
+				depends="Total";
+				radius=0.0099999998;
+			};
+			class HitFuel: HitFuel
+			{
+				armor=0.69999999;
+				radius=0.25;
+				minimalHit=0.050000001;
+				explosionShielding=2;
+			};
+			class HitAvionics: HitAvionics
+			{
+				armor=1.3;
+				radius=0.40000001;
+				minimalHit=0.050000001;
+				explosionShielding=1.5;
+			};
+			class HitMissiles: HitMissiles
+			{
+				armor=0.69999999;
+				radius=0.25;
+				minimalHit=0.050000001;
+				explosionShielding=1;
+			};
+			class HitEngine1
+			{
+				armor=0.69999999;
+				radius=0.34999999;
+				name="engine_1_hit";
+				explosionShielding=3;
+				minimalHit=0.1;
+				visual="motor";
+				passThrough=1;
+				convexComponent="engine_1_hit";
+				material=51;
+			};
+			class HitEngine2: HitEngine1
+			{
+				name="engine_2_hit";
+				convexComponent="engine_2_hit";
+			};
+			class HitEngine: HitEngine
+			{
+				armor=999;
+				radius=0.050000001;
+				minimalHit=1;
+				visual="camo2";
+				depends="0.5 * (HitEngine1 + HitEngine2)";
+			};
+			class HitHRotor: HitHRotor
+			{
+				armor=2.5999999;
+				radius=0.40000001;
+				minimalHit=0.090000004;
+				explosionShielding=2.5;
+			};
+			class HitVRotor: HitVRotor
+			{
+				armor=1.3;
+				radius=0.059999999;
+				minimalHit=0.050000001;
+				explosionShielding=6;
+			};
+			class HitGlass1: HitGlass1
+			{
+        			armor = 0.2;
+        			armorComponent = "hit_glass1";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass1_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass1";
+			};
+			class HitGlass2: HitGlass2
+			{
+        			armor = 0.2;
+        			armorComponent = "hit_glass2";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass2_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass2";
+			};
+			class HitGlass3: HitGlass3
+			{
+        			armor = 0.2;
+        			armorComponent = "hit_glass3";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass3_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass3";
+			};
+			class HitGlass4: HitGlass4
+			{
+        			armor = 0.2;
+        			armorComponent = "hit_glass4";
+        			explosionShielding = 2;
+        			material = -1;
+        			minimalHit = 0;
+        			name = "hit_glass4_point";
+        			radius = 0.20;
+        			passThrough = 0;
+        			visual = "hit_glass4";
+			};
 		};
 	};
 	class ej_mh6j: ej_mh6_base

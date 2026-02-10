@@ -1481,6 +1481,110 @@ class CfgWeapons
 			maxRangeProbab = 0.60;
 		};
 	};
+	class missiles_SCALPELN: RocketPods
+	{
+		autoFire=0;
+		displayName="$STR_A3_missiles_SCALPEL0";
+		magazines[]=
+		{
+			"2Rnd_LG_scalpel",
+			"8Rnd_LG_scalpel",
+			"6Rnd_LG_scalpel",
+			"12Rnd_LG_scalpel",
+		};
+		aiRateOfFire=5;
+		aiRateOfFireDistance=500;
+		nameSound="MissileLauncher";
+		sounds[]=
+		{
+			"StandardSound"
+		};
+		class StandardSound
+		{
+			begin1[]=
+			{
+				"A3\Sounds_F\weapons\Rockets\missile_1",
+				1.1220185,
+				1.3,
+				1000
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+		};
+		lockingTargetSound[]=
+		{
+			"\A3\Sounds_F\weapons\Rockets\locked_1",
+			0.56234133,
+			1
+		};
+		lockedTargetSound[]=
+		{
+			"\A3\Sounds_F\weapons\Rockets\locked_3",
+			0.56234133,
+			2.5
+		};
+		cursor="EmptyCursor";
+		cursorAim="missile";
+		showAimCursorInternal=0;
+		weaponLockDelay=3;
+		weaponLockSystem=2;
+		cmImmunity=0.40000001;
+		textureType="semi";
+		modes[]=
+		{
+			"TopDown"
+		};
+		class TopDown: RocketPods
+		{
+			textureType="topDown";
+			displayName="$STR_A3_missiles_SCALPEL0";
+			reloadTime=0.1;
+			magazineReloadTime=0.1;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F\weapons\Rockets\missile_1",
+					1.1220185,
+					1.3,
+					1000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			lockingTargetSound[]=
+			{
+				"\A3\Sounds_F\weapons\Rockets\locked_1",
+				0.56234133,
+				1
+			};
+			lockedTargetSound[]=
+			{
+				"\A3\Sounds_F\weapons\Rockets\locked_3",
+				0.56234133,
+				2.5
+			};
+			aiRateOfFire=5;
+			aiRateOfFireDistance=500;
+			showToPlayer=1;
+			minRange=400;
+			minRangeProbab=0.2;
+			midRange=800;
+			midRangeProbab=0.95999998;
+			maxRange=6000;
+			maxRangeProbab=0.92000002;
+		};
+	};
 	class M134_uh60_2: M134_minigun
 	{
 		scope = 1;
@@ -3092,6 +3196,20 @@ class CfgMagazines
 	class FakeMagazine_uh60;
 	class 12Rnd_missiles;
 	class 500Rnd_127x99_mag_Tracer_Red;
+	class 8Rnd_LG_scalpel;
+	class 12Rnd_LG_scalpel: 8Rnd_LG_scalpel
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		scope=2;
+		displayName="$STR_A3_CfgMagazines_8Rnd_LG_scalpel0";
+		displayNameShort="$STR_A3_CfgMagazines_8Rnd_LG_scalpel_dns";
+		descriptionShort="$STR_A3_cfgMagazine_Scalpel_tooltip";
+		ammo="M_Scalpel_AT";
+		initSpeed=0;
+		count=12;
+		nameSound="missiles";
+		weight=400;
+	};
 	class ad_100Rnd_SLAP_mag: 500Rnd_127x99_mag_Tracer_Red
 	{
 		ammo = "ad_50_slap_tracer_red_round";
