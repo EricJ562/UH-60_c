@@ -131,6 +131,9 @@ class CfgVehicles
 		gearUpTime=3;
 		gearDownTime=3;
 		cost=3000000;
+		receiveRemoteTargets=1;
+		reportRemoteTargets=1;
+		reportOwnPosition=1;
 		memoryPointCM[]={"Flare_launcher1","Flare_launcher2"};
 		memoryPointCMDir[]={"Flare_launcher1_dir","Flare_launcher2_dir"};
 		precisegetinout = 1;

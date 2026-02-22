@@ -29,19 +29,28 @@ class CfgPatches
 						"ej_CheroContainerRed",
 						"ej_CheroContainerDarkBlue",
 						"ej_CheroContainerYellow",
-						"ej_CheroContainerLightGreen"
+						"ej_CheroContainerLightGreen",
+						"ej_CheroContainerCargoCIV",
+						"ej_CheroContainerFuelCIV",
+						"ej_CheroContainerRepairCIV",
+						"ej_CheroContainerMedevacCIV"
 		};
 		weapons[]={};
 	};
 };
-class CfgVehicleClasses
+class CfgEditorCategories
 {
-	class Flanker562_container
+	class Flanker562_objects
 	{
-		displayName="Flanker562 Containers (Cherokee)";
-		mapbuilder_filter="Flanker562 containers";
+		displayName="Flanker562 Objects";
 	};
-
+};
+class CfgEditorSubcategories
+{
+	class cherokee_containers
+	{
+		displayName="Containers";
+	};
 };
 class CfgVehicles
 {
@@ -60,8 +69,8 @@ class CfgVehicles
 		_generalMacro="ej_CheroContainer";
 		scope=0;
 		scopeCurator=0;
-		editorCategory="EdCat_Supplies";
-		editorSubcategory="EdSubcat_Storage";
+		editorCategory="Flanker562_objects";
+		editorSubcategory="cherokee_containers";
 		vehicleClass="Flanker562_Container";
 		maximumLoad=2000;
 		faction="TF160";
@@ -126,13 +135,233 @@ class CfgVehicles
 			init="''";
 		};
 		scopeCurator=2;
-		editorCategory="EdCat_Supplies";
-		editorSubcategory="EdSubcat_Storage";
 		hiddenSelectionsTextures[]={"\uh-60\data\Container_Ammo_co.paa"};
 		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
 		displayName="Cherokee Ammo Container";
 		accuracy=0.5;
 		faction="TF160";
+		transportAmmo=1000000000000;
+		secondaryExplosion=10000;
+		explosionEffect="SupplyExplosion";
+		damageTexDelay=1;
+		disableInventory=1;
+		class DestructionEffects
+		{
+			class FireBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionFire1";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class FireBig2
+			{
+				simulation="particles";
+				type="ObjectDestructionFire2";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class FireSparksBig1
+			{
+				simulation="particles";
+				type="FireSparks";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=2.8;
+			};
+			class LightBig1
+			{
+				simulation="light";
+				type="ObjectDestructionLight";
+				position="";
+				intensity=0.001;
+				interval=1;
+				lifeTime=3;
+			};
+			class Refract1
+			{
+				simulation="particles";
+				type="ObjectDestructionRefract";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class SmokeBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionSmoke";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3.5;
+			};
+			class SmokeBig1_2
+			{
+				simulation="particles";
+				type="ObjectDestructionSmoke1_2";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3.5;
+			};
+			class Sound
+			{
+				simulation="sound";
+				type="Fire";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+			class SparksBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionSparks";
+				position="";
+				intensity=0;
+				interval=1;
+				lifeTime=3;
+			};
+		};
+	};
+	class ej_CheroContainerAmmoAAF: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerFuel";
+		scope=2;
+		mapSize=6.1900001;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.362;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		scopeCurator=2;
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_AAFAmmo_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Ammo Container (AAF)";
+		accuracy=0.5;
+		faction="IND_F";
+		transportAmmo=1000000000000;
+		secondaryExplosion=10000;
+		explosionEffect="SupplyExplosion";
+		damageTexDelay=1;
+		disableInventory=1;
+		class DestructionEffects
+		{
+			class FireBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionFire1";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class FireBig2
+			{
+				simulation="particles";
+				type="ObjectDestructionFire2";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class FireSparksBig1
+			{
+				simulation="particles";
+				type="FireSparks";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=2.8;
+			};
+			class LightBig1
+			{
+				simulation="light";
+				type="ObjectDestructionLight";
+				position="";
+				intensity=0.001;
+				interval=1;
+				lifeTime=3;
+			};
+			class Refract1
+			{
+				simulation="particles";
+				type="ObjectDestructionRefract";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class SmokeBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionSmoke";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3.5;
+			};
+			class SmokeBig1_2
+			{
+				simulation="particles";
+				type="ObjectDestructionSmoke1_2";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3.5;
+			};
+			class Sound
+			{
+				simulation="sound";
+				type="Fire";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+			class SparksBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionSparks";
+				position="";
+				intensity=0;
+				interval=1;
+				lifeTime=3;
+			};
+		};
+	};
+	class ej_CheroContainerAmmoOPFOR: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerAmmoOPFOR";
+		scope=2;
+		mapSize=6.1900001;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.362;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		scopeCurator=2;
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_AmmoOPFOR_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Ammo Container (CSAT)";
+		accuracy=0.5;
+		faction="OPF_F";
 		transportAmmo=1000000000000;
 		secondaryExplosion=10000;
 		explosionEffect="SupplyExplosion";
@@ -239,8 +468,6 @@ class CfgVehicles
 			init="''";
 		};
 		scopeCurator=2;
-		editorCategory="EdCat_Supplies";
-		editorSubcategory="EdSubcat_Storage";
 		hiddenSelectionsTextures[]={"\uh-60\data\Container_Fuel_co.paa"};
 		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
 		displayName="Cherokee Fuel Container";
@@ -332,6 +559,102 @@ class CfgVehicles
 				intensity=0;
 				interval=1;
 				lifeTime=3;
+			};
+		};
+	};
+	class ej_CheroContainerFuelOPFOR: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		scope=2;
+		class SimpleObject
+		{
+			animate[]=
+			{
+				
+				{"Ammo_hide",0},
+				{"AmmoOrd_hide",1},
+				{"Grenades_hide",1},
+				{"Support_hide",1}
+			};
+			hide[]={};
+			verticalOffset=0;
+		};
+		scopeCurator=2;
+		transportFuel=100000000;
+		faction="OPF_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_FuelOPFOR_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Fuel Container (CSAT)";
+		class TransportItems
+		{
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=10;
+			};
+		};
+	};
+	class ej_CheroContainerFuelAAF: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		scope=2;
+		class SimpleObject
+		{
+			animate[]=
+			{
+				
+				{"Ammo_hide",0},
+				{"AmmoOrd_hide",1},
+				{"Grenades_hide",1},
+				{"Support_hide",1}
+			};
+			hide[]={};
+			verticalOffset=0;
+		};
+		scopeCurator=2;
+		faction="IND_F";
+		transportFuel=1000000000;
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_FuelAAF_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Fuel Container (AAF)";
+		class TransportItems
+		{
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=10;
+			};
+		};
+	};
+	class ej_CheroContainerFuelCIV: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		scope=2;
+		class SimpleObject
+		{
+			animate[]=
+			{
+				
+				{"Ammo_hide",0},
+				{"AmmoOrd_hide",1},
+				{"Grenades_hide",1},
+				{"Support_hide",1}
+			};
+			hide[]={};
+			verticalOffset=0;
+		};
+		scopeCurator=2;
+		faction="CIV_F";
+		transportFuel=1000000000;
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_FuelCIV_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Fuel Container (CIV)";
+		class TransportItems
+		{
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=10;
 			};
 		};
 	};
@@ -439,407 +762,6 @@ class CfgVehicles
 			};
 		};
 	};
-	class ej_CheroContainerMedevac: ej_CheroContainerBase
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerMedevac";
-		mapSize=6.3099999;
-		scope=2;
-		scopeCurator=2;
-		class SimpleObject
-		{
-			eden=1;
-			animate[]=
-			{
-				
-				{
-					"medicalhide",
-					0
-				}
-			};
-			hide[]={};
-			verticalOffset=1.359;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		editorCategory="EdCat_Supplies";
-		editorSubcategory="EdSubcat_Storage";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_Medic_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Medic Container";
-		faction="TF160";
-
-		class ACE_Actions 
-		{
-            
-            		class ACE_MainActions 
-			{
-                		class Medical_Menu 
-				{
-                    			displayName = CSTRING(OpenMenu);
-                    			runOnHover = 0;
-                    			exceptions[] = {"isNotInside"};
-                    			condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
-                    			statement = QUOTE([_target] call DFUNC(openMenu));
-                    			icon = PATHTOEF(medical,UI\icons\medical_cross.paa);
-                		};
-            		};
-        	};
-		accuracy=0.5;
-		attendant=1;
-		class AnimationSources: AnimationSources
-		{
-			class HideMedical
-			{
-				source="user";
-				animPeriod=1e-006;
-				initPhase=0;
-			};
-		};
-		class TransportItems
-		{
-			class _xx_FirstAidKit
-			{
-				name="FirstAidKit";
-				count=100;
-			};
-			class _xx_Medikit
-			{
-				name="Medikit";
-				count=20;
-			};
-		};
-	};
-	class ej_CheroContainerBlue: ej_CheroContainerBase
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerBlue";
-		mapSize=6.3099999;
-		scope=2;
-		class SimpleObject
-		{
-			animate[]=
-			{
-				
-				{"Ammo_hide",0},
-				{"AmmoOrd_hide",1},
-				{"Grenades_hide",1},
-				{"Support_hide",1}
-			};
-			hide[]={};
-			verticalOffset=0;
-		};
-		scopeCurator=2;
-		editorCategory="EdCat_Supplies";
-		editorSubcategory="EdSubcat_Storage";
-		faction="CIV_F";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_Blue_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Container (Blue)";
-		class TransportItems
-		{
-			class _xx_FirstAidKit
-			{
-				name="FirstAidKit";
-				count=100;
-			};
-			class _xx_Medikit
-			{
-				name="Medikit";
-				count=5;
-			};
-			class _xx_ToolKit
-			{
-				name="ToolKit";
-				count=5;
-			};
-		};
-	};
-	class ej_CheroContainerGreen: ej_CheroContainerBlue
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerGreen";
-		scope=2;
-		scopeCurator=2;
-		faction="CIV_F";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_Green_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Container (Green)";
-		class TransportItems
-		{
-			class _xx_FirstAidKit
-			{
-				name="FirstAidKit";
-				count=100;
-			};
-			class _xx_Medikit
-			{
-				name="Medikit";
-				count=5;
-			};
-			class _xx_ToolKit
-			{
-				name="ToolKit";
-				count=5;
-			};
-		};
-	};
-	class ej_CheroContainerTan: ej_CheroContainerBlue
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerTan";
-		scope=2;
-		scopeCurator=2;
-		faction="CIV_F";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_Tan_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Container (Tan)";
-		class TransportItems
-		{
-			class _xx_FirstAidKit
-			{
-				name="FirstAidKit";
-				count=100;
-			};
-			class _xx_Medikit
-			{
-				name="Medikit";
-				count=5;
-			};
-			class _xx_ToolKit
-			{
-				name="ToolKit";
-				count=5;
-			};
-		};
-	};
-	class ej_CheroContainerOrange: ej_CheroContainerBlue
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerBlue";
-		scope=2;
-		scopeCurator=2;
-		faction="CIV_F";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_Orange_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Container (Orange)";
-	};
-	class ej_CheroContainerGray: ej_CheroContainerBlue
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerGray";
-		scope=2;
-		scopeCurator=2;
-		faction="CIV_F";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_Gray_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Container (Gray)";
-	};
-	class ej_CheroContainerRed: ej_CheroContainerBlue
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerRed";
-		scope=2;
-		scopeCurator=2;
-		faction="CIV_F";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_Red_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Container (Red)";
-	};
-	class ej_CheroContainerDarkBlue: ej_CheroContainerBlue
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerDarkBlue";
-		scope=2;
-		scopeCurator=2;
-		faction="CIV_F";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_DarkBlue_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Container (Dark Blue)";
-	};
-	class ej_CheroContainerYellow: ej_CheroContainerBlue
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerDarkBlue";
-		scope=2;
-		scopeCurator=2;
-		faction="CIV_F";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_Yellow_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Container (Yellow)";
-	};
-	class ej_CheroContainerLightGreen: ej_CheroContainerBlue
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerDarkBlue";
-		scope=2;
-		scopeCurator=2;
-		faction="CIV_F";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_LightGreen_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Container (Light Green)";
-	};
-	class ej_CheroContainerRepair: ej_CheroContainerBase
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerRepair";
-		mapSize=6.3099999;
-		scope=2;
-		scopeCurator=2;
-		class SimpleObject
-		{
-			eden=1;
-			animate[]={};
-			hide[]={};
-			verticalOffset=1.3609999;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_repair_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Repair Container";
-		accuracy=0.5;
-		faction="TF160";
-		transportRepair=1000000000000;
-		class TransportItems
-		{
-			class _xx_ToolKit
-			{
-				name="ToolKit";
-				count=1;
-			};
-		};
-	};
-	class ej_CheroContainerRepairOPFOR: ej_CheroContainerBase
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerRepair";
-		scope=2;
-		scopeCurator=2;
-		class SimpleObject
-		{
-			eden=1;
-			animate[]={};
-			hide[]={};
-			verticalOffset=1.3609999;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_repairOPFOR_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Repair Container (CSAT)";
-		accuracy=0.5;
-		faction="OPF_F";
-		transportRepair=1000000000000;
-		class TransportItems
-		{
-			class _xx_ToolKit
-			{
-				name="ToolKit";
-				count=1;
-			};
-		};
-	};
-	class ej_CheroContainerRepairAAF: ej_CheroContainerBase
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerRepair";
-		scope=2;
-		scopeCurator=2;
-		class SimpleObject
-		{
-			eden=1;
-			animate[]={};
-			hide[]={};
-			verticalOffset=1.3609999;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_RepairAAF_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Repair Container (AAF)";
-		accuracy=0.5;
-		faction="IND_F";
-		transportRepair=1000000000000;
-		class TransportItems
-		{
-			class _xx_ToolKit
-			{
-				name="ToolKit";
-				count=1;
-			};
-		};
-	};
-	class ej_CheroContainerFuelOPFOR: ej_CheroContainerBase
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerFuel";
-		scope=2;
-		class SimpleObject
-		{
-			animate[]=
-			{
-				
-				{"Ammo_hide",0},
-				{"AmmoOrd_hide",1},
-				{"Grenades_hide",1},
-				{"Support_hide",1}
-			};
-			hide[]={};
-			verticalOffset=0;
-		};
-		scopeCurator=2;
-		editorCategory="EdCat_Supplies";
-		editorSubcategory="EdSubcat_Storage";
-		transportFuel=100000000;
-		faction="OPF_F";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_FuelOPFOR_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Fuel Container (CSAT)";
-		class TransportItems
-		{
-			class _xx_ToolKit
-			{
-				name="ToolKit";
-				count=10;
-			};
-		};
-	};
-	class ej_CheroContainerFuelAAF: ej_CheroContainerBase
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerFuel";
-		scope=2;
-		class SimpleObject
-		{
-			animate[]=
-			{
-				
-				{"Ammo_hide",0},
-				{"AmmoOrd_hide",1},
-				{"Grenades_hide",1},
-				{"Support_hide",1}
-			};
-			hide[]={};
-			verticalOffset=0;
-		};
-		scopeCurator=2;
-		editorCategory="EdCat_Supplies";
-		editorSubcategory="EdSubcat_Storage";
-		faction="IND_F";
-		transportFuel=1000000000;
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_FuelAAF_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Fuel Container (AAF)";
-		class TransportItems
-		{
-			class _xx_ToolKit
-			{
-				name="ToolKit";
-				count=10;
-			};
-		};
-	};
 	class ej_CheroContainerCargoAAF: ej_CheroContainerBase
 	{
 		author="Flanker562";
@@ -852,7 +774,6 @@ class CfgVehicles
 			verticalOffsetWorld=0;
 			init="''";
 		};
-		_generalMacro="B_Slingload_01_Cargo_F";
 		scope=2;
 		scopeCurator=2;
 		displayName="Cherokee Cargo Container (AAF)";
@@ -984,7 +905,6 @@ class CfgVehicles
 			verticalOffsetWorld=0;
 			init="''";
 		};
-		_generalMacro="B_Slingload_01_Cargo_F";
 		scope=2;
 		scopeCurator=2;
 		displayName="Cherokee Cargo Container (CSAT)";
@@ -1104,12 +1024,9 @@ class CfgVehicles
 			};
 		};
 	};
-	class ej_CheroContainerAmmoAAF: ej_CheroContainerBase
+	class ej_CheroContainerCargoCIV: ej_CheroContainerBase
 	{
 		author="Flanker562";
-		_generalMacro="ej_CheroContainerFuel";
-		scope=2;
-		mapSize=6.1900001;
 		class SimpleObject
 		{
 			eden=1;
@@ -1119,221 +1036,50 @@ class CfgVehicles
 			verticalOffsetWorld=0;
 			init="''";
 		};
-		scopeCurator=2;
-		editorCategory="EdCat_Supplies";
-		editorSubcategory="EdSubcat_Storage";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_AAFAmmo_co.paa"};
-		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Ammo Container (AAF)";
-		accuracy=0.5;
-		faction="IND_F";
-		transportAmmo=1000000000000;
-		secondaryExplosion=10000;
-		explosionEffect="SupplyExplosion";
-		damageTexDelay=1;
-		disableInventory=1;
-		class DestructionEffects
-		{
-			class FireBig1
-			{
-				simulation="particles";
-				type="ObjectDestructionFire1";
-				position="";
-				intensity=0.15000001;
-				interval=1;
-				lifeTime=3;
-			};
-			class FireBig2
-			{
-				simulation="particles";
-				type="ObjectDestructionFire2";
-				position="";
-				intensity=0.15000001;
-				interval=1;
-				lifeTime=3;
-			};
-			class FireSparksBig1
-			{
-				simulation="particles";
-				type="FireSparks";
-				position="";
-				intensity=1;
-				interval=1;
-				lifeTime=2.8;
-			};
-			class LightBig1
-			{
-				simulation="light";
-				type="ObjectDestructionLight";
-				position="";
-				intensity=0.001;
-				interval=1;
-				lifeTime=3;
-			};
-			class Refract1
-			{
-				simulation="particles";
-				type="ObjectDestructionRefract";
-				position="";
-				intensity=0.15000001;
-				interval=1;
-				lifeTime=3;
-			};
-			class SmokeBig1
-			{
-				simulation="particles";
-				type="ObjectDestructionSmoke";
-				position="";
-				intensity=0.15000001;
-				interval=1;
-				lifeTime=3.5;
-			};
-			class SmokeBig1_2
-			{
-				simulation="particles";
-				type="ObjectDestructionSmoke1_2";
-				position="";
-				intensity=0.15000001;
-				interval=1;
-				lifeTime=3.5;
-			};
-			class Sound
-			{
-				simulation="sound";
-				type="Fire";
-				position="";
-				intensity=1;
-				interval=1;
-				lifeTime=1;
-			};
-			class SparksBig1
-			{
-				simulation="particles";
-				type="ObjectDestructionSparks";
-				position="";
-				intensity=0;
-				interval=1;
-				lifeTime=3;
-			};
-		};
-	};
-	class ej_CheroContainerAmmoOPFOR: ej_CheroContainerBase
-	{
-		author="Flanker562";
-		_generalMacro="ej_CheroContainerAmmoOPFOR";
 		scope=2;
-		mapSize=6.1900001;
-		class SimpleObject
-		{
-			eden=1;
-			animate[]={};
-			hide[]={};
-			verticalOffset=1.362;
-			verticalOffsetWorld=0;
-			init="''";
-		};
 		scopeCurator=2;
-		editorCategory="EdCat_Supplies";
-		editorSubcategory="EdSubcat_Storage";
-		hiddenSelectionsTextures[]={"\uh-60\data\Container_AmmoOPFOR_co.paa"};
+		displayName="Cherokee Cargo Container (CIV)";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Blue_co.paa"};
 		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
-		displayName="Cherokee Ammo Container (CSAT)";
 		accuracy=0.5;
-		faction="OPF_F";
-		transportAmmo=1000000000000;
-		secondaryExplosion=10000;
-		explosionEffect="SupplyExplosion";
-		damageTexDelay=1;
-		disableInventory=1;
-		class DestructionEffects
+		faction="CIV_F";
+		class TransportItems
 		{
-			class FireBig1
+			class _xx_FirstAidKit
 			{
-				simulation="particles";
-				type="ObjectDestructionFire1";
-				position="";
-				intensity=0.15000001;
-				interval=1;
-				lifeTime=3;
+				name="FirstAidKit";
+				count=100;
 			};
-			class FireBig2
+			class _xx_Medikit
 			{
-				simulation="particles";
-				type="ObjectDestructionFire2";
-				position="";
-				intensity=0.15000001;
-				interval=1;
-				lifeTime=3;
+				name="Medikit";
+				count=20;
 			};
-			class FireSparksBig1
+			class _xx_C_UavTerminal
 			{
-				simulation="particles";
-				type="FireSparks";
-				position="";
-				intensity=1;
-				interval=1;
-				lifeTime=2.8;
+				name="C_UavTerminal";
+				count=20;
 			};
-			class LightBig1
+			class _xx_Toolkit
 			{
-				simulation="light";
-				type="ObjectDestructionLight";
-				position="";
-				intensity=0.001;
-				interval=1;
-				lifeTime=3;
+				name="Toolkit";
+				count=20;
 			};
-			class Refract1
+			class _xx_MineDetector
 			{
-				simulation="particles";
-				type="ObjectDestructionRefract";
-				position="";
-				intensity=0.15000001;
-				interval=1;
-				lifeTime=3;
+				name="MineDetector";
+				count=20;
 			};
-			class SmokeBig1
+			class _xx_ItemGPS
 			{
-				simulation="particles";
-				type="ObjectDestructionSmoke";
-				position="";
-				intensity=0.15000001;
-				interval=1;
-				lifeTime=3.5;
-			};
-			class SmokeBig1_2
-			{
-				simulation="particles";
-				type="ObjectDestructionSmoke1_2";
-				position="";
-				intensity=0.15000001;
-				interval=1;
-				lifeTime=3.5;
-			};
-			class Sound
-			{
-				simulation="sound";
-				type="Fire";
-				position="";
-				intensity=1;
-				interval=1;
-				lifeTime=1;
-			};
-			class SparksBig1
-			{
-				simulation="particles";
-				type="ObjectDestructionSparks";
-				position="";
-				intensity=0;
-				interval=1;
-				lifeTime=3;
+				name="ItemGPS";
+				count=20;
 			};
 		};
 	};
-	class ej_CheroContainerMedevacAAF: ej_CheroContainerBase
+	class ej_CheroContainerMedevac: ej_CheroContainerBase
 	{
 		author="Flanker562";
-		_generalMacro="ej_CheroContainerMedevac";
 		mapSize=6.3099999;
 		scope=2;
 		scopeCurator=2;
@@ -1353,8 +1099,74 @@ class CfgVehicles
 			verticalOffsetWorld=0;
 			init="''";
 		};
-		editorCategory="EdCat_Supplies";
-		editorSubcategory="EdSubcat_Storage";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Medic_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Medic Container";
+		faction="TF160";
+
+		class ACE_Actions 
+		{
+            
+            		class ACE_MainActions 
+			{
+                		class Medical_Menu 
+				{
+                    			displayName = CSTRING(OpenMenu);
+                    			runOnHover = 0;
+                    			exceptions[] = {"isNotInside"};
+                    			condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
+                    			statement = QUOTE([_target] call DFUNC(openMenu));
+                    			icon = PATHTOEF(medical,UI\icons\medical_cross.paa);
+                		};
+            		};
+        	};
+		accuracy=0.5;
+		attendant=1;
+		class AnimationSources: AnimationSources
+		{
+			class HideMedical
+			{
+				source="user";
+				animPeriod=1e-006;
+				initPhase=0;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=100;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=20;
+			};
+		};
+	};
+	class ej_CheroContainerMedevacAAF: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		mapSize=6.3099999;
+		scope=2;
+		scopeCurator=2;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]=
+			{
+				
+				{
+					"medicalhide",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=1.359;
+			verticalOffsetWorld=0;
+			init="''";
+		};
 		attendant=1;
 		faction="IND_F";
 		hiddenSelections[]={"camo"};
@@ -1406,7 +1218,6 @@ class CfgVehicles
 	class ej_CheroContainerMedevacOPFOR: ej_CheroContainerBase
 	{
 		author="Flanker562";
-		_generalMacro="ej_CheroContainerMedevacOPFOR";
 		mapSize=6.3099999;
 		scope=2;
 		scopeCurator=2;
@@ -1426,8 +1237,6 @@ class CfgVehicles
 			verticalOffsetWorld=0;
 			init="''";
 		};
-		editorCategory="EdCat_Supplies";
-		editorSubcategory="EdSubcat_Storage";
 		attendant=1;
 		faction="OPF_F";
 		hiddenSelectionsTextures[]={"\uh-60\data\Container_MedicOPFOR_co.paa"};
@@ -1474,5 +1283,356 @@ class CfgVehicles
 				count=20;
 			};
 		};
+	};
+	class ej_CheroContainerMedevacCIV: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		mapSize=6.3099999;
+		scope=2;
+		scopeCurator=2;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]=
+			{
+				
+				{
+					"medicalhide",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=1.359;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		attendant=1;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_MedicCIV_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Medic Container (CIV)";
+
+		class ACE_Actions 
+		{
+            
+            		class ACE_MainActions 
+			{
+                		class Medical_Menu 
+				{
+                    			displayName = CSTRING(OpenMenu);
+                    			runOnHover = 0;
+                    			exceptions[] = {"isNotInside"};
+                    			condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
+                    			statement = QUOTE([_target] call DFUNC(openMenu));
+                    			icon = PATHTOEF(medical,UI\icons\medical_cross.paa);
+                		};
+            		};
+        	};
+		accuracy=0.5;
+		attendant=1;
+		class AnimationSources: AnimationSources
+		{
+			class HideMedical
+			{
+				source="user";
+				animPeriod=1e-006;
+				initPhase=0;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=100;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=20;
+			};
+		};
+	};
+	class ej_CheroContainerRepair: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		mapSize=6.3099999;
+		scope=2;
+		scopeCurator=2;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.3609999;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_repair_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Repair Container";
+		accuracy=0.5;
+		faction="TF160";
+		transportRepair=1000000000000;
+		class TransportItems
+		{
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=1;
+			};
+		};
+	};
+	class ej_CheroContainerRepairCIV: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		mapSize=6.3099999;
+		scope=2;
+		scopeCurator=2;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.3609999;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_RepairCIV_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Repair Container (CIV)";
+		accuracy=0.5;
+		faction="TF160";
+		transportRepair=1000000000000;
+		class TransportItems
+		{
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=1;
+			};
+		};
+	};
+	class ej_CheroContainerRepairOPFOR: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		scope=2;
+		scopeCurator=2;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.3609999;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_repairOPFOR_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Repair Container (CSAT)";
+		accuracy=0.5;
+		faction="OPF_F";
+		transportRepair=1000000000000;
+		class TransportItems
+		{
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=1;
+			};
+		};
+	};
+	class ej_CheroContainerRepairAAF: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		scope=2;
+		scopeCurator=2;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.3609999;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_RepairAAF_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Repair Container (AAF)";
+		accuracy=0.5;
+		faction="IND_F";
+		transportRepair=1000000000000;
+		class TransportItems
+		{
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=1;
+			};
+		};
+	};
+	class ej_CheroContainerBlue: ej_CheroContainerBase
+	{
+		author="Flanker562";
+		mapSize=6.3099999;
+		scope=2;
+		class SimpleObject
+		{
+			animate[]=
+			{
+				
+				{"Ammo_hide",0},
+				{"AmmoOrd_hide",1},
+				{"Grenades_hide",1},
+				{"Support_hide",1}
+			};
+			hide[]={};
+			verticalOffset=0;
+		};
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Blue_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Container (Blue)";
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=100;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=5;
+			};
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=5;
+			};
+		};
+	};
+	class ej_CheroContainerGreen: ej_CheroContainerBlue
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerGreen";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Green_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Container (Green)";
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=100;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=5;
+			};
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=5;
+			};
+		};
+	};
+	class ej_CheroContainerTan: ej_CheroContainerBlue
+	{
+		author="Flanker562";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Tan_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Container (Tan)";
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=100;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=5;
+			};
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=5;
+			};
+		};
+	};
+	class ej_CheroContainerOrange: ej_CheroContainerBlue
+	{
+		author="Flanker562";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Orange_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Container (Orange)";
+	};
+	class ej_CheroContainerGray: ej_CheroContainerBlue
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerGray";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Gray_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Container (Gray)";
+	};
+	class ej_CheroContainerRed: ej_CheroContainerBlue
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerRed";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Red_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Container (Red)";
+	};
+	class ej_CheroContainerDarkBlue: ej_CheroContainerBlue
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerDarkBlue";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_DarkBlue_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Container (Dark Blue)";
+	};
+	class ej_CheroContainerYellow: ej_CheroContainerBlue
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerDarkBlue";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Yellow_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Container (Yellow)";
+	};
+	class ej_CheroContainerLightGreen: ej_CheroContainerBlue
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerDarkBlue";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_LightGreen_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Container (Light Green)";
 	};
 };

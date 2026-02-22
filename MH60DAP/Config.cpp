@@ -609,10 +609,6 @@ class CfgVehicles
 		{
 			tex[]={};
 			mat[]={
-				"uh-60\data\mat\uh60m_dust_filter.rvmat",
-				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_damage.rvmat",
-				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_destruct.rvmat",
-
 				"uh-60\data\mat\uh60m_engine.rvmat",
 				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_damage.rvmat",
 				"A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_destruct.rvmat",

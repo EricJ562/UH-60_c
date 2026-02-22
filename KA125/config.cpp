@@ -126,7 +126,6 @@ class CfgVehicles
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
 		RadarTargetSize=1.4;
-		gunnerUsesPilotView=1;
 		selectionHRotorStill = "main rotor static";
 		selectionHRotorMove = "main rotor blur";
 		selectionVRotorStill = "tail rotor static";
@@ -137,6 +136,9 @@ class CfgVehicles
 		gearRetracting=1;
 		gearUpTime=3;
 		gearDownTime=3;
+		receiveRemoteTargets=1;
+		reportRemoteTargets=1;
+		reportOwnPosition=1;
 		cost=3000000;
 		memoryPointCM[]={"Flare_launcher1","Flare_launcher2"};
 		memoryPointCMDir[]={"Flare_launcher1_dir","Flare_launcher2_dir"};
@@ -197,7 +199,6 @@ class CfgVehicles
 		};
 
 		maximumLoad = 2000;
-		cargoCanEject = 1;
 		driverCanEject = 0;
 
 		class Exhausts
@@ -1858,14 +1859,8 @@ class CfgVehicles
 				selection = "Light_L";
 			};			
 		};
-		hiddenSelections[] =
-		{
-			"camo1",
-			"camo2",
-			"camo3",
-			"camo4"
-		};
-		hiddenSelectionsTextures[]={"\uh-60\data\ka50_01_co.paa","\uh-60\data\ka50_02_co.paa","\uh-60\data\ka50_03_co.paa","\uh-60\data\ductfansRus1_co"};	
+		hiddenSelections[] ={"camo1","camo2","camo3","camo4"};
+		hiddenSelectionsTextures[]={"\uh-60\data\ka50_01_co.paa","\uh-60\data\ka50_02_co.paa","\uh-60\data\ka50_03_co.paa","\uh-60\data\ductfansRus1_co.paa"};	
 		aggregateReflectors[] = {{"Left", "Right"}};
 		class HitPoints: HitPoints
 		{
@@ -1993,13 +1988,29 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = public;
 		side = 0;
-		editorPreview="\uh-60\data\Previews\KA125PIMAGE.jpg";
+		editoInrPreview="\uh-60\data\Previews\KA125PIMAGE.jpg";
 		faction	= RUSFED;
 		crew = "O_HelicrewRUS_F";
 		displayName="Ka-125 Hokum C";
 		accuracy = 1.50;
 		availableForSupportTypes[] = {"CAS_Heli"};
 		cost = 2000000;
+	};
+	class kj_ka125_Black: kj_ka125_base
+	{
+		scope = 2;
+		scopeCurator = public;
+		side = 0;
+		ForceIngarage=1;
+		editorPreview="\uh-60\data\Previews\KA125BLACK.jpg";
+		faction	= RUSFED;
+		crew = "O_HelicrewRUS_F";
+		displayName="Ka-125 Hokum C (Black)";
+		accuracy = 1.50;
+		availableForSupportTypes[] = {"CAS_Heli"};
+		cost = 2000000;
+		hiddenSelections[] ={"camo1","camo2","camo3","camo4"};
+		hiddenSelectionsTextures[]={"\uh-60\data\ka50_blk_01_co.paa","\uh-60\data\ka50_blk_02_co.paa","\uh-60\data\ka50_blk_03_co.paa","\uh-60\data\dapductfans_co.paa"};	
 	};
 
 };
