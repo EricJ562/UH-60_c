@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class Ej_MH80
 	{
-		units[] = {"B_LSV_01_Medic_F","B_LSV_01_Repair_F","B_LSV_01_Rearm_F","B_LSV_01_Refuel_F","160th_SOAR_Pilot","160th_SOAR_Crew","ej_MH80","ej_MH67","B_Helipilot_160_Early","B_helicrew_160_Early"};
+		units[] = {"B_LSV_01_Medic_F","B_LSV_01_Repair_F","B_LSV_01_Rearm_F","B_LSV_01_Refuel_F","160th_SOAR_Pilot","160th_SOAR_Crew","ej_MH80","ej_MH67","B_Helipilot_160_Early","B_helicrew_160_Early","TF160_Mechanic"};
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
@@ -531,6 +531,94 @@ class CfgVehicles
 		camouflage=2;
 		modelSides[]={3,1};
 		detectSkill=60;
+	};
+	class TF160_Mechanic: B_Soldier_F
+	{
+		author="Flanker562";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_soldier_repair_F.jpg";
+		scope=2;
+		displayName="TF160 Mechanic";
+		engineer=1;
+		detectSkill=40;
+		cost=100000;
+		Faction="TF160";
+		camouflage=1.6;
+		backpack="B_AssaultPack_rgr_Repair";
+		linkedItems[]=
+		{
+			"V_PlateCarrier1_rgr",
+			"H_HelmetB_light_desert",
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio",
+			"160th_ANVIS"
+		};
+		respawnLinkedItems[]=
+		{
+			"V_PlateCarrier1_rgr",
+			"H_HelmetB_light_desert",
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio",
+			"160th_ANVIS"
+		};
+		weapons[]=
+		{
+			"ej_MX_SA_F",
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			"ej_MX_SA_F",
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellOrange",
+			"Chemlight_green",
+			"Chemlight_green"
+		};
+		respawnMagazines[]=
+		{
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellOrange",
+			"Chemlight_green",
+			"Chemlight_green"
+		};
+		icon="iconManEngineer";
+		role="Sapper";
+		picture="pictureRepair";
 	};
 	class B_Heli_Transport_03_F;
 	class ej_MH67: B_Heli_Transport_03_F
