@@ -785,6 +785,7 @@ class CfgVehicles
 				isCopilot = 0;
 				body = "Turret2";
 				gun = "Gun_2";
+				gunnerType="B_helicrew_F";
 				soundServo[] = {,db-40,1.0};
 				animationSourceHatch = "";
 				minElev=-90; maxElev=2; initElev=0;
@@ -823,6 +824,7 @@ class CfgVehicles
 				isCopilot = 0;
 				body = "mainTurret";
 				gun = "mainGun";
+				gunnerType="B_helicrew_F";
 				minElev=-90; maxElev=2; initElev=0;
 				minTurn=-7; maxTurn=160; initTurn=0;
 				soundServo[] = {,db-40,1.0};
@@ -860,6 +862,7 @@ class CfgVehicles
 				gunnerGetOutAction="GetOutLow";
 				memoryPointGunnerOptics = "";		
 				CanEject = 0;
+				gunnerType="B_helipilot_F";
 				startEngine = 0;
 				gunnerCompartments="Compartment3";
 				commanding=-3;	
@@ -1721,6 +1724,7 @@ class CfgVehicles
 				isCopilot = 0;
 				body = "Turret2";
 				gun = "Gun_2";
+				gunnerType="B_helicrew_160_Early";
 				minElev=-60;
 				maxElev=2;
 				initElev=-45;	
@@ -1768,7 +1772,8 @@ class CfgVehicles
 			{
 				isCopilot = 0;
 				body = "mainTurret";
-				gun = "mainGun";			
+				gun = "mainGun";
+				gunnerType="B_helicrew_160_Early";			
 				minElev=-60; 
 				maxElev=2; 
 				initElev=-45;				
@@ -1802,6 +1807,7 @@ class CfgVehicles
 				isCopilot = 1;
 				body = "ObsTurret";
 				gun = "ObsGun";
+				gunnerType="B_Helipilot_160_Early";
 				gunnerAction = "pilot_Heli_Transport_01";
 				gunnerInAction = "pilot_Heli_Light_03_Enter";
 				memoryPointsGetInGunner="pos copilot";
@@ -2153,6 +2159,7 @@ class TurnOut
 				isCopilot = 0;
 				body = "Turret2";
 				gun = "Gun_2";
+				gunnerType="B_helicrew_160_Early";
 				minElev=-60;
 				maxElev=2;
 				initElev=-45;	
@@ -2200,7 +2207,8 @@ class TurnOut
 			{
 				isCopilot = 0;
 				body = "mainTurret";
-				gun = "mainGun";			
+				gun = "mainGun";
+				gunnerType="B_helicrew_160_Early";			
 				minElev=-60; 
 				maxElev=2; 
 				initElev=-45;				
@@ -2234,6 +2242,7 @@ class TurnOut
 				isCopilot = 1;
 				body = "ObsTurret";
 				gun = "ObsGun";
+				gunnerType="B_Helipilot_160_Early";
 				gunnerAction = "pilot_Heli_Transport_01";
 				gunnerInAction = "pilot_Heli_Light_03_Enter";
 				memoryPointsGetInGunner="pos copilot";
@@ -2656,6 +2665,7 @@ class TurnOut
 				isCopilot = 0;
 				body = "Turret2";
 				gun = "Gun_2";
+				gunnerType="160th_SOAR_Crew";
 				minElev=-60;
 				maxElev=2;
 				initElev=-45;	
@@ -2703,7 +2713,8 @@ class TurnOut
 			{
 				isCopilot = 0;
 				body = "mainTurret";
-				gun = "mainGun";			
+				gun = "mainGun";
+				gunnerType="160th_SOAR_Crew";			
 				minElev=-60; 
 				maxElev=2; 
 				initElev=-45;				
@@ -2737,6 +2748,7 @@ class TurnOut
 				isCopilot = 1;
 				body = "ObsTurret";
 				gun = "ObsGun";
+				gunnerType="160th_SOAR_Pilot";
 				gunnerAction = "pilot_Heli_Transport_01";
 				gunnerInAction = "pilot_Heli_Light_03_Enter";
 				memoryPointsGetInGunner="pos copilot";
@@ -3145,6 +3157,7 @@ class TurnOut
 				isCopilot = 0;
 				body = "Turret2";
 				gun = "Gun_2";
+				gunnerType="160th_SOAR_Crew";
 				minElev=-60;
 				maxElev=2;
 				initElev=-45;	
@@ -3192,7 +3205,8 @@ class TurnOut
 			{
 				isCopilot = 0;
 				body = "mainTurret";
-				gun = "mainGun";			
+				gun = "mainGun";
+				gunnerType="160th_SOAR_Crew";			
 				minElev=-60; 
 				maxElev=2; 
 				initElev=-45;				
@@ -3226,6 +3240,7 @@ class TurnOut
 				isCopilot = 1;
 				body = "ObsTurret";
 				gun = "ObsGun";
+				gunnerType="160th_SOAR_Pilot";
 				gunnerAction = "pilot_Heli_Transport_01";
 				gunnerInAction = "pilot_Heli_Light_03_Enter";
 				memoryPointsGetInGunner="pos copilot";
