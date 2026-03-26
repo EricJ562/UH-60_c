@@ -2394,7 +2394,11 @@ class CfgVehicles
 				minElev=-60;
 				maxElev=18;
 				initElev=-45;		
-				minTurn=-160; 
+				minTurn=-160;
+				gunnerLeftHandAnimName="gunner_1_hand_l";
+				gunnerRightHandAnimName="gunner_1_hand_r";
+				gunnerLeftLegAnimName="gunner_1_legs";
+				gunnerRightLegAnimName="gunner_1_legs"; 
 				maxTurn=5; 
 				initTurn=0;
 				soundServo[] = {,db-40,1.0};
@@ -2440,7 +2444,11 @@ class CfgVehicles
 				body = "mainTurret";
 				gun = "mainGun";
 				gunnerType="160th_SOAR_Crew";			
-				minElev=-60; 
+				minElev=-60;
+				gunnerLeftHandAnimName="gunner_1_hand_l";
+				gunnerRightHandAnimName="gunner_1_hand_r";
+				gunnerLeftLegAnimName="gunner_1_legs";
+				gunnerRightLegAnimName="gunner_1_legs"; 
 				maxElev=18; 
 				initElev=-45;				
 				minTurn=-5; 

@@ -3790,6 +3790,24 @@ class CfgMagazines
 			"B_FUELTANK_HELI_AH96"
 		};
 	};
+	class PylonFuelTank_uh60: VehicleMagazine
+	{
+		scope=2;
+		ammo="DummyPylonAmmo";
+		displayName="Fuel Tank";
+		mass=200;
+		count=1;
+		initSpeed=0;
+		sound[]={};
+		reloadSound[]={};
+		nameSound="";
+		model="UH-60\Misc\Weapons\Fuel\PylonPod_Fuel_UH60.p3d";
+		pylonweapon="Pylon_DummyLauncher_UH60";
+		hardpoints[]=
+		{
+			"B_FUELTANK_HELI_UH60"
+		};
+	};
 	class 8Rnd_82mm_Mo_Flare_white_illumination;
 	class 16Rnd_105mm_Illum_white: 8Rnd_82mm_Mo_Flare_white_illumination
 	{
@@ -4977,12 +4995,12 @@ class CfgNonAIVehicles
 	class ProxyWeapon;
 	class ProxyAGM114Hellfire: ProxyWeapon
 	{
-		model = "\UH-60\Misc\Weapons\AGM114\AGM114Hellfire";
+		model = "\UH-60\Misc\Weapons\AGM114\AGM114Hellfire.p3d";
 		simulation = "maverickweapon";
 	};
 	class ProxyAGM117: ProxyWeapon
 	{
-		model = "\UH-60\Misc\Weapons\AGM117\AGM117";
+		model = "\UH-60\Misc\Weapons\AGM117\AGM117.p3d";
 		simulation = "maverickweapon";
 	};
 	class ProxyPylonRack_2rnd_Hellfire_uh60: proxyWeapon

@@ -92,6 +92,11 @@ class CfgVehicles
 				count=50;
 				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
+			class _xx_11rdJHPPlus_Mag
+			{
+				count=50;
+				magazine="11rdJHPPlus_Mag";
+			};
 			class _xx_Handgrenade
 			{
 				magazine="Handgrenade";
@@ -144,6 +149,11 @@ class CfgVehicles
 			{
 				count=50;
 				magazine="30Rnd_65x39_caseless_FMJBT";
+			};
+			class _xx_11rdJHPPlus_Mag
+			{
+				count=50;
+				magazine="11rdJHPPlus_Mag";
 			};
 			class _xx_Handgrenade
 			{
@@ -304,6 +314,11 @@ class CfgVehicles
 				count=50;
 				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
+			class _xx_11rdJHPPlus_Mag
+			{
+				count=50;
+				magazine="11rdJHPPlus_Mag";
+			};
 			class _xx_Handgrenade
 			{
 				magazine="Handgrenade";
@@ -374,7 +389,7 @@ class CfgVehicles
 		weapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -382,7 +397,7 @@ class CfgVehicles
 		respawnWeapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -399,10 +414,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -423,10 +438,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -490,14 +505,14 @@ class CfgVehicles
 		weapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
 		respawnWeapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
@@ -513,10 +528,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -536,10 +551,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -602,7 +617,7 @@ class CfgVehicles
 		weapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -610,7 +625,7 @@ class CfgVehicles
 		respawnWeapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -627,10 +642,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -651,10 +666,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -719,7 +734,7 @@ class CfgVehicles
 		weapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 			"launch_B_Titan_short_F"
@@ -727,7 +742,7 @@ class CfgVehicles
 		respawnWeapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 			"launch_B_Titan_short_F"
@@ -744,10 +759,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"1Rnd_ER_missiles"
 		};
 		respawnMagazines[]=
@@ -762,10 +777,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"1Rnd_ER_missiles"
 		};
 		cost=250000;
@@ -820,14 +835,14 @@ class CfgVehicles
 		weapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
 		respawnWeapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
@@ -843,10 +858,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -866,10 +881,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -929,14 +944,14 @@ class CfgVehicles
 		weapons[]=
 		{
 			"ej_MXGL_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
 		respawnWeapons[]=
 		{
 			"ej_MXGL_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
@@ -952,10 +967,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
@@ -982,10 +997,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
@@ -1052,14 +1067,14 @@ class CfgVehicles
 		weapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
 		respawnWeapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
@@ -1075,10 +1090,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -1098,10 +1113,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -1161,14 +1176,14 @@ class CfgVehicles
 		weapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
 		respawnWeapons[]=
 		{
 			"ej_MX_MK17_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
@@ -1184,10 +1199,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"APERSMine_Range_Mag",
 			"APERSMine_Range_Mag",
 			"APERSMine_Range_Mag",
@@ -1210,9 +1225,9 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"APERSMine_Range_Mag",
 			"APERSMine_Range_Mag",
 			"APERSMine_Range_Mag",
@@ -1276,7 +1291,7 @@ class CfgVehicles
 		weapons[]=
 		{
 			"ej_MXM_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -1284,7 +1299,7 @@ class CfgVehicles
 		respawnWeapons[]=
 		{
 			"ej_MXM_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -1301,10 +1316,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -1325,10 +1340,10 @@ class CfgVehicles
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
 			"30Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -1388,7 +1403,7 @@ class CfgVehicles
 		weapons[]=
 		{
 			"ej_srifle_tf562_02",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -1396,7 +1411,7 @@ class CfgVehicles
 		respawnWeapons[]=
 		{
 			"ej_srifle_tf562_02",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -1413,10 +1428,10 @@ class CfgVehicles
 			"10Rnd_338_Mag",
 			"10Rnd_338_Mag",
 			"10Rnd_338_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -1436,10 +1451,10 @@ class CfgVehicles
 			"10Rnd_338_Mag",
 			"10Rnd_338_Mag",
 			"10Rnd_338_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -1500,14 +1515,14 @@ class CfgVehicles
 		weapons[]=
 		{
 			"ej_SW_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
 		respawnWeapons[]=
 		{
 			"ej_SW_S_F",
-			"hgun_P07_snds_F",
+			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
 		};
@@ -1519,10 +1534,10 @@ class CfgVehicles
 			"100Rnd_65x39_caseless_FMJBT",
 			"100Rnd_65x39_caseless_FMJBT",
 			"100Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -1538,10 +1553,10 @@ class CfgVehicles
 			"100Rnd_65x39_caseless_FMJBT",
 			"100Rnd_65x39_caseless_FMJBT",
 			"100Rnd_65x39_caseless_FMJBT",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",

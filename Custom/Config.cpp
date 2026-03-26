@@ -4,7 +4,7 @@ class CfgPatches
 	{
 		units[] = {"B_T_LSV_01_repair_F","ej_speedball","ej_skram","ej_skram_SOAR","ej_survivalbag","ej_lmgsparpack"};
 		weapons[] = {};
-		magazines[]={"30Rnd_65x39_caseless_FMJBT","30Rnd_65x39_caseless_khaki_FMJBT","30Rnd_65x39_caseless_black_FMJBT","100Rnd_65x39_caseless_khaki_FMJBT","100Rnd_65x39_caseless_black_FMJBT","30Rnd_65x39_caseless_M651","30Rnd_65x39_caseless_khaki_M651","30Rnd_65x39_caseless_black_M651","100Rnd_65x39_caseless_M651","100Rnd_65x39_caseless_khaki_M651","100Rnd_65x39_caseless_black_M651"};
+		magazines[]={"30Rnd_65x39_caseless_FMJBT","30Rnd_65x39_caseless_khaki_FMJBT","30Rnd_65x39_caseless_black_FMJBT","100Rnd_65x39_caseless_khaki_FMJBT","100Rnd_65x39_caseless_black_FMJBT","30Rnd_65x39_caseless_M651","30Rnd_65x39_caseless_khaki_M651","30Rnd_65x39_caseless_black_M651","100Rnd_65x39_caseless_M651","100Rnd_65x39_caseless_khaki_M651","100Rnd_65x39_caseless_black_M651","9rdJHPPlus_Mag"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
 	};
@@ -714,6 +714,13 @@ class CfgMagazineWells
 			"1Rnd_ER_missiles"
 		};
 	};
+	class PistolHeavy_01_45ACP
+	{
+		BI_Magazines[]=
+		{
+			"11Rnd_45ACP_Mag"
+		};
+	};
 };
 
 class CfgMagazines
@@ -799,6 +806,17 @@ class CfgMagazines
 		displayNameMFDFormat="MISSILE";
 		count=1;
 	};
+	class 9Rnd_45ACP_Mag;
+	class 11rdJHPPlus_Mag: 9Rnd_45ACP_Mag
+	{
+		ammo = "ej_B_JHPPlus";
+		displayNameShort="JHP+";
+		displayname = "9-round JHP+";
+		initspeed = 384;
+		scope = 2;
+		mass=3;
+		count=11;
+	};
 };
 
 class CfgAmmo
@@ -838,6 +856,30 @@ class CfgAmmo
 			frequency=20;
 			distance=1;
 		};
+	};
+	class ej_B_JHPPlus: BulletBase
+	{
+		hit = 8.114167097;
+		typicalSpeed = 384;
+		airFriction = -0.002144635;
+		caliber = 0.385;
+		deflecting = 25;
+		visibleFire = 1.15;
+		audibleFire = 2.65;
+		cartridge="FxCartridge_9mm";
+		airLock=1;
+		aiAmmoUsageFlags=64;
+		dangerRadiusBulletClose=4;
+		dangerRadiusHit=8;
+		suppressionRadiusBulletClose=2;
+		suppressionRadiusHit=4;
+		cartridge="FxCartridge_9mm";
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
+		cost=100;
+		typicalSpeed=280;
+		tracerScale=0.60000002;
+		tracerStartTime=0.0074999998;
+		tracerEndTime=5;
 	};
 	class M_Titan_AT;
 	class M_Titan_AT_ER: M_Titan_AT

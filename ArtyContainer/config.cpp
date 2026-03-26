@@ -4,7 +4,7 @@ class CfgPatches
 	{
 		requiredaddons[]={"A3_Static_F"};
 		requiredversion=0.1;
-		units[]={"ArtyContainer"};
+		units[]={"ArtyContainer","O_ArtyContainer","I_ArtyContainer"};
 		weapons[]={};
 		magazines[]={};
 	};
@@ -137,6 +137,18 @@ class CfgVehicles
 		hiddenSelectionsTextures[]={"\uh-60\data\Container_OPFORCommon_co.paa","\uh-60\data\m119d_co.paa"};
 		faction="OPF_F";
 		crew="O_support_Mort_F";
+		availableForSupportTypes[]={"Artillery"};
+	};
+	class I_ArtyContainer: ArtyContainer_base
+	{
+		author="Flanker562";
+		_generalMacro="ArtyContainer";
+		scope=2;
+		scopeCurator=2;
+		side=2;
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_MilCommonAAF_co.paa","\uh-60\data\m119_co.paa"};
+		faction="IND_F";
+		crew="I_support_Mort_F";
 		availableForSupportTypes[]={"Artillery"};
 	};
 };

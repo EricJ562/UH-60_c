@@ -71,7 +71,6 @@ class CfgVehicles
 		scopeCurator=0;
 		editorCategory="Flanker562_objects";
 		editorSubcategory="cherokee_containers";
-		vehicleClass="Flanker562_Container";
 		maximumLoad=2000;
 		faction="TF160";
 		supplyRadius=10;
