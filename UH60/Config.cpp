@@ -1086,6 +1086,61 @@ class CfgVehicles
 				gunnerName = "Co-Pilot"; 
 			};
 		};
+		class Components: Components
+		{
+			class TransportPylonsComponent
+			{
+				uiPicture="\UH-60\Data\UI\Heli_Blackhawk.paa";
+				class Pylons
+				{
+					class PylonLeft1
+					{
+						attachment="PylonFuelTank_uh60_mev";
+						priority=5;
+						hardpoints[]=
+						{
+							"B_FUELTANK_HELI_UH60_MEV",
+						};
+						turret[]={0};
+						maxweight=400;
+						UIposition[]={0.059999999,0.40000001};
+					};
+					class PylonLeft2: PylonLeft1
+					{
+						attachment="";
+						priority=4;
+						hardpoints[]=
+						{
+							"B_FUELTANK_HELI_UH60_MEV",
+						};
+						maxweight=400;
+						UIposition[]={0.079999998,0.34999999};
+					};
+					class PylonRight2: PylonLeft2
+					{
+						attachment="";
+						priority=3;
+						hardpoints[]=
+						{
+							"B_FUELTANK_HELI_UH60_MEV",
+						};
+						maxweight=400;
+						UIposition[]={0.56999999,0.34999999};
+					};
+					class PylonRight1: PylonLeft1
+					{
+						attachment="PylonFuelTank_uh60_mev";
+						priority=2;
+						hardpoints[]=
+						{
+							"B_FUELTANK_HELI_UH60_MEV",
+						};
+						maxweight=400;
+						UIposition[]={0.58999997,0.40000001};
+					};
+				};
+			};
+		};
 	};
 	class ej_UH60M_U: ej_UH60M_base
 	{

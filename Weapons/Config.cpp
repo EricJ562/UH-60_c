@@ -3187,6 +3187,14 @@ class CfgWeapons
 			"PylonPod_Fuel_AH96"
 		};
 	};
+	class Pylon_DummyLauncher_uh60: MissileLauncher
+	{
+		showToPlayer=0;
+		magazines[]=
+		{
+			"PylonPod_Fuel_UH60"
+		};
+	};
 };
 
 
@@ -3801,8 +3809,26 @@ class CfgMagazines
 		sound[]={};
 		reloadSound[]={};
 		nameSound="";
+		model="UH-60\Misc\Weapons\Fuel\PylonPod_Fuel_UH60_MEV.p3d";
+		pylonweapon="Pylon_DummyLauncher_uh60";
+		hardpoints[]=
+		{
+			"B_FUELTANK_HELI_UH60_MEV"
+		};
+	};
+	class PylonFuelTank_uh602: VehicleMagazine
+	{
+		scope=2;
+		ammo="DummyPylonAmmo";
+		displayName="Fuel Tank";
+		mass=200;
+		count=1;
+		initSpeed=0;
+		sound[]={};
+		reloadSound[]={};
+		nameSound="";
 		model="UH-60\Misc\Weapons\Fuel\PylonPod_Fuel_UH60.p3d";
-		pylonweapon="Pylon_DummyLauncher_UH60";
+		pylonweapon="Pylon_DummyLauncher_uh60";
 		hardpoints[]=
 		{
 			"B_FUELTANK_HELI_UH60"
