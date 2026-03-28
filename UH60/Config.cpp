@@ -1095,7 +1095,7 @@ class CfgVehicles
 				{
 					class PylonLeft1
 					{
-						attachment="PylonFuelTank_uh60_mev";
+						attachment="PylonFuelTank_uh602";
 						priority=5;
 						hardpoints[]=
 						{
@@ -1129,7 +1129,7 @@ class CfgVehicles
 					};
 					class PylonRight1: PylonLeft1
 					{
-						attachment="PylonFuelTank_uh60_mev";
+						attachment="PylonFuelTank_uh602";
 						priority=2;
 						hardpoints[]=
 						{

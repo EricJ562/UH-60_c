@@ -3195,6 +3195,14 @@ class CfgWeapons
 			"PylonPod_Fuel_UH60"
 		};
 	};
+	class Pylon_DummyLauncher_uh60_mev: MissileLauncher
+	{
+		showToPlayer=0;
+		magazines[]=
+		{
+			"PylonPod_Fuel_UH602"
+		};
+	};
 };
 
 
