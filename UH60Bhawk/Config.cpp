@@ -645,40 +645,6 @@ class CfgVehicles
 				"A3\data_F\default_destruct.rvmat"
 			};
 		};
-		class CargoTurret;
-		class Turrets: Turrets
-		{
-			class CoPilotObs: MainTurret
-			{
-				isCopilot = 1;
-				gunnerAction = "pilot_Heli_Transport_01";
-				gunnerInAction = "pilot_Heli_Light_03_Enter";
-				memoryPointsGetInGunner="pos copilot";
-				memoryPointsGetInGunnerDir="pos copilot dir";		
-				gunnerGetInAction="GetInHeli_Transport_01Cargo";
-				gunnerGetOutAction="GetOutLow";
-				memoryPointGunnerOptics = "";		
-				CanEject = 0;
-				startEngine = 0;
-				gunnerCompartments="Compartment3";
-				commanding=-3;	
-				primaryGunner = 0;										
-				selectionFireAnim = "";
-				castGunnerShadow = 1;
-				viewGunnerShadow = 1;
-				turretInfoType = "";
-				showAllTargets = 2;				
-				copilotHasFlares = 1;
-				LockDetectionSystem = 1 + 2 + 4 + 8;
-				incomingMissileDetectionSystem = 16;
-				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
-				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
-				stabilizedInAxes = "StabilizedInAxesBoth";
-				proxyIndex = 3;
-				gunnerName = "Co-Pilot"; 
-			};
-		};
 		class Eventhandlers: Eventhandlers
 		{
 			init="if (local (_this select 0)) then {[(_this select 0), """", false, false] call bis_fnc_initVehicle;};";
@@ -703,6 +669,7 @@ class CfgVehicles
 		textureList[]={"USArmy",1};
 		weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,5000Rnd_762x51_Belt_Red};
+		class CargoTurret;
 		class Turrets: Turrets
 		{
 			class CoPilotObs: MainTurret
@@ -831,7 +798,7 @@ class CfgVehicles
 				memoryPointsGetInGunner="pos gunner";
 				memoryPointsGetInGunnerDir="pos gunner dir";
 				gunnerName="Left Side Crew Chief";
-				proxyIndex=5;
+				proxyIndex=2;
 				maxElev=23;
 				minElev=-30;
 				maxTurn=35;
@@ -855,7 +822,7 @@ class CfgVehicles
 				memoryPointsGetInGunner="pos gunner2";
 				memoryPointsGetInGunnerDir="pos gunner2 dir";
 				gunnerName="Right Side Crew Chief";
-				proxyIndex=6;
+				proxyIndex=1;
 				maxElev=23;
 				minElev=-30;
 				maxTurn=35;

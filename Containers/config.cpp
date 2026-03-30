@@ -33,7 +33,15 @@ class CfgPatches
 						"ej_CheroContainerCargoCIV",
 						"ej_CheroContainerFuelCIV",
 						"ej_CheroContainerRepairCIV",
-						"ej_CheroContainerMedevacCIV"
+						"ej_CheroContainerMedevacCIV",
+						"ej_CheroContainerSmallCargo",
+						"ej_CheroContainerSmallBlue",
+						"ej_CheroContainerSmallLightGreen",
+						"ej_CheroContainerSmallYellow",
+						"ej_CheroContainerSmallDarkBlue",
+						"ej_CheroContainerSmallRed",
+						"ej_CheroContainerSmallGray",
+						"ej_CheroContainerSmallOrange"
 		};
 		weapons[]={};
 	};
@@ -1634,4 +1642,327 @@ class CfgVehicles
 		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
 		displayName="Cherokee Container (Light Green)";
 	};
+	class ej_CheroContainerSmallBase: Slingload_base_F
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainer";
+		scope=0;
+		scopeCurator=0;
+		editorCategory="Flanker562_objects";
+		editorSubcategory="cherokee_containers";
+		maximumLoad=2000;
+		supplyRadius=10;
+		icon="iconObject_circle";
+		slingLoadCargoMemoryPoints[]={"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
+		destrType="DestructBuilding";
+		explosionEffect="";
+		class DestructionEffects
+		{
+		};
+		selectionDamage="DamT_1";
+		class Damage
+		{
+			tex[]={};
+			mat[]=
+			{
+				"A3\Supplies_F_Heli\Slingload\Data\Slingload_01_part1.rvmat",
+				"A3\Supplies_F_Heli\Slingload\Data\Slingload_01_part1_damage.rvmat",
+				"A3\Supplies_F_Heli\Slingload\Data\Slingload_01_part1_destruct.rvmat",
+				"A3\Supplies_F_Heli\Slingload\Data\Slingload_01_part2.rvmat",
+				"A3\Supplies_F_Heli\Slingload\Data\Slingload_01_part2_damage.rvmat",
+				"A3\Supplies_F_Heli\Slingload\Data\Slingload_01_part2_destruct.rvmat"
+			};
+		};
+		class AnimationSources;
+		hiddenSelections[]={"camo"};
+		model="\UH-60\Misc\Containers\Container_Small.p3d";
+		DLC="uh-60";
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=100;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=5;
+			};
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=5;
+			};
+		};
+	};
+	class ej_CheroContainerSmallCargo: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.362;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		_generalMacro="ej_CheroContainerCargo";
+		scope=2;
+		scopeCurator=2;
+		displayName="Small Cherokee Cargo Container";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_MilCommon_co.paa"};
+		accuracy=0.5;
+		faction="TF160";
+		class TransportMagazines
+		{
+			class _xx_1Rnd_HE_Grenade_shell
+			{
+				magazine="1Rnd_HE_Grenade_shell";
+				count=24;
+			};
+			class _xx_1Rnd_Smoke_Grenade_shell
+			{
+				magazine="1Rnd_Smoke_Grenade_shell";
+				count=4;
+			};
+			class _xx_1Rnd_SmokeGreen_Grenade_shell
+			{
+				magazine="1Rnd_SmokeGreen_Grenade_shell";
+				count=4;
+			};
+			class _xx_chemlight_green
+			{
+				magazine="chemlight_green";
+				count=12;
+			};
+			class _xx_Laserbatteries
+			{
+				magazine="Laserbatteries";
+				count=4;
+			};
+			class _xx_HandGrenade
+			{
+				magazine="HandGrenade";
+				count=12;
+			};
+			class _xx_MiniGrenade
+			{
+				magazine="MiniGrenade";
+				count=12;
+			};
+			class _xx_SmokeShell
+			{
+				magazine="SmokeShell";
+				count=4;
+			};
+			class _xx_SmokeShellGreen
+			{
+				magazine="SmokeShellGreen";
+				count=4;
+			};
+			class _xx_UGL_FlareWhite_F
+			{
+				magazine="UGL_FlareWhite_F";
+				count=4;
+			};
+			class _xx_UGL_FlareGreen_F
+			{
+				magazine="UGL_FlareGreen_F";
+				count=4;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=20;
+			};
+			class _xx_Laserdesignator
+			{
+				name="Laserdesignator";
+				count=2;
+			};
+			class _xx_acc_flashlight
+			{
+				name="acc_flashlight";
+				count=4;
+			};
+		};
+		class TransportBackpacks
+		{
+			class _xx_B_Kitbag_mcamo
+			{
+				backpack="B_Kitbag_mcamo";
+				count=4;
+			};
+		};
+	};
+	class ej_CheroContainerSmallBlue: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		mapSize=6.3099999;
+		scope=2;
+		class SimpleObject
+		{
+			animate[]=
+			{
+				
+				{"Ammo_hide",0},
+				{"AmmoOrd_hide",1},
+				{"Grenades_hide",1},
+				{"Support_hide",1}
+			};
+			hide[]={};
+			verticalOffset=0;
+		};
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Blue_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Container (Blue)";
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=100;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=5;
+			};
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=5;
+			};
+		};
+	};
+	class ej_CheroContainerSmallGreen: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerGreen";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Green_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Cherokee Container (Green)";
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=100;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=5;
+			};
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=5;
+			};
+		};
+	};
+	class ej_CheroContainerSmallTan: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Tan_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Container (Tan)";
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=100;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=5;
+			};
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=5;
+			};
+		};
+	};
+	class ej_CheroContainerSmallOrange: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Orange_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Container (Orange)";
+	};
+	class ej_CheroContainerSmallGray: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerGray";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Gray_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Container (Gray)";
+	};
+	class ej_CheroContainerSmallRed: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerRed";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Red_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Container (Red)";
+	};
+	class ej_CheroContainerSmallDarkBlue: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerDarkBlue";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_DarkBlue_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Container (Dark Blue)";
+	};
+	class ej_CheroContainerSmallYellow: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerDarkBlue";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Yellow_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Container (Yellow)";
+	};
+	class ej_CheroContainerSmallLightGreen: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerDarkBlue";
+		scope=2;
+		scopeCurator=2;
+		faction="CIV_F";
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_LightGreen_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Container (Light Green)";
+	};
+
 };
