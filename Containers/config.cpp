@@ -41,7 +41,11 @@ class CfgPatches
 						"ej_CheroContainerSmallDarkBlue",
 						"ej_CheroContainerSmallRed",
 						"ej_CheroContainerSmallGray",
-						"ej_CheroContainerSmallOrange"
+						"ej_CheroContainerSmallOrange",
+						"ej_CheroContainerSmallMedevac",
+						"ej_CheroContainerSmallFuel",
+						"ej_CheroContainerSmallAmmo",
+						"ej_CheroContainerSmallRepair"
 		};
 		weapons[]={};
 	};
@@ -1963,6 +1967,325 @@ class CfgVehicles
 		hiddenSelectionsTextures[]={"\uh-60\data\Container_LightGreen_co.paa"};
 		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
 		displayName="Small Cherokee Container (Light Green)";
+	};
+	class ej_CheroContainerSmallMedevac: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		mapSize=6.3099999;
+		scope=2;
+		scopeCurator=2;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]=
+			{
+				
+				{
+					"medicalhide",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=1.359;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Medic_small_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Medic Container";
+		faction="TF160";
+
+		class ACE_Actions 
+		{
+            
+            		class ACE_MainActions 
+			{
+                		class Medical_Menu 
+				{
+                    			displayName = CSTRING(OpenMenu);
+                    			runOnHover = 0;
+                    			exceptions[] = {"isNotInside"};
+                    			condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
+                    			statement = QUOTE([_target] call DFUNC(openMenu));
+                    			icon = PATHTOEF(medical,UI\icons\medical_cross.paa);
+                		};
+            		};
+        	};
+		accuracy=0.5;
+		attendant=1;
+		class AnimationSources: AnimationSources
+		{
+			class HideMedical
+			{
+				source="user";
+				animPeriod=1e-006;
+				initPhase=0;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name="FirstAidKit";
+				count=100;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=20;
+			};
+		};
+	};
+	class ej_CheroContainerSmallFuel: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerFuel";
+		scope=2;
+		mapSize=6.1900001;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.362;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		scopeCurator=2;
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Fuel_small_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Fuel Container";
+		accuracy=0.5;
+		faction="TF160";
+		transportFuel=1000000000000;
+		secondaryExplosion=10000;
+		explosionEffect="SupplyExplosion";
+		damageTexDelay=1;
+		class DestructionEffects
+		{
+			class FireBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionFire1";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class FireBig2
+			{
+				simulation="particles";
+				type="ObjectDestructionFire2";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class FireSparksBig1
+			{
+				simulation="particles";
+				type="FireSparks";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=2.8;
+			};
+			class LightBig1
+			{
+				simulation="light";
+				type="ObjectDestructionLight";
+				position="";
+				intensity=0.001;
+				interval=1;
+				lifeTime=3;
+			};
+			class Refract1
+			{
+				simulation="particles";
+				type="ObjectDestructionRefract";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class SmokeBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionSmoke";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3.5;
+			};
+			class SmokeBig1_2
+			{
+				simulation="particles";
+				type="ObjectDestructionSmoke1_2";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3.5;
+			};
+			class Sound
+			{
+				simulation="sound";
+				type="Fire";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+			class SparksBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionSparks";
+				position="";
+				intensity=0;
+				interval=1;
+				lifeTime=3;
+			};
+		};
+	};
+	class ej_CheroContainerSmallAmmo: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		_generalMacro="ej_CheroContainerFuel";
+		scope=2;
+		mapSize=6.1900001;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.362;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		scopeCurator=2;
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_Ammo_small_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Ammo Container";
+		accuracy=0.5;
+		faction="TF160";
+		transportAmmo=1000000000000;
+		secondaryExplosion=10000;
+		explosionEffect="SupplyExplosion";
+		damageTexDelay=1;
+		disableInventory=1;
+		class DestructionEffects
+		{
+			class FireBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionFire1";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class FireBig2
+			{
+				simulation="particles";
+				type="ObjectDestructionFire2";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class FireSparksBig1
+			{
+				simulation="particles";
+				type="FireSparks";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=2.8;
+			};
+			class LightBig1
+			{
+				simulation="light";
+				type="ObjectDestructionLight";
+				position="";
+				intensity=0.001;
+				interval=1;
+				lifeTime=3;
+			};
+			class Refract1
+			{
+				simulation="particles";
+				type="ObjectDestructionRefract";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3;
+			};
+			class SmokeBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionSmoke";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3.5;
+			};
+			class SmokeBig1_2
+			{
+				simulation="particles";
+				type="ObjectDestructionSmoke1_2";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=3.5;
+			};
+			class Sound
+			{
+				simulation="sound";
+				type="Fire";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+			class SparksBig1
+			{
+				simulation="particles";
+				type="ObjectDestructionSparks";
+				position="";
+				intensity=0;
+				interval=1;
+				lifeTime=3;
+			};
+		};
+	};
+	class ej_CheroContainerSmallRepair: ej_CheroContainerSmallBase
+	{
+		author="Flanker562";
+		mapSize=6.3099999;
+		scope=2;
+		scopeCurator=2;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.3609999;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		hiddenSelectionsTextures[]={"\uh-60\data\Container_repair_small_co.paa"};
+		hiddenSelectionsMaterials[]={"\uh-60\data\Mat\Container.rvmat"};
+		displayName="Small Cherokee Repair Container";
+		accuracy=0.5;
+		faction="TF160";
+		transportRepair=1000000000000;
+		class TransportItems
+		{
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=1;
+			};
+		};
 	};
 
 };

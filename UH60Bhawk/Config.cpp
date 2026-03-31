@@ -661,7 +661,7 @@ class CfgVehicles
 		availableForSupportTypes[]={"CAS_Heli"};
 		displayName = UH-60M Battlehawk;
 		model = "\UH-60\UH60\kj_UH60M_BHAWK.p3d";
-		crew = "B_helipilot_F"";
+		crew = "B_helipilot_F";
 		enableManualFire=1;
 		selectionFireAnim="muzzleFlash_1";
 		transportSoldier = 0;
@@ -876,7 +876,8 @@ class CfgVehicles
 							"B_MH60_Rocket",
 							"B_FUELTANK_HELI_UH60",
 							"CANNON_PODS_RF",
-							"20MM_TWIN_CANNON"
+							"20MM_TWIN_CANNON",
+							"M230_uh60_r",
 						};
 						maxweight=400;
 						UIposition[]={0.079999998,0.34999999};
@@ -894,7 +895,8 @@ class CfgVehicles
 							"B_MH60_Rocket",
 							"B_FUELTANK_HELI_UH60",
 							"CANNON_PODS_RF",
-							"20MM_TWIN_CANNON"
+							"20MM_TWIN_CANNON",
+							"M230_uh60",
 						};
 						maxweight=400;
 						UIposition[]={0.56999999,0.34999999};

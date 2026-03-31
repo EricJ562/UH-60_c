@@ -832,7 +832,7 @@ class CfgVehicles
 							"B_MH60_Rocket",
 							"CANNON_PODS_RF",
 						};
-						turret[]={0};
+						turret[]={1};
 						maxweight=400;
 						UIposition[]={0.059999999,0.40000001};
 					};

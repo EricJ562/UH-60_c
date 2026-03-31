@@ -791,7 +791,7 @@ class CfgVehicles
 							"CANNON_PODS_RF",
 							"20MM_TWIN_CANNON"
 						};
-						turret[]={0};
+						turret[]={1};
 						maxweight=400;
 						UIposition[]={0.059999999,0.40000001};
 					};
@@ -807,7 +807,8 @@ class CfgVehicles
 							"B_MH60_Rocket",
 							"B_FUELTANK_HELI_UH60",
 							"CANNON_PODS_RF",
-							"20MM_TWIN_CANNON"
+							"20MM_TWIN_CANNON",
+							"M230_uh60_r",
 						};
 						maxweight=400;
 						UIposition[]={0.079999998,0.34999999};
@@ -818,14 +819,14 @@ class CfgVehicles
 						priority=3;
 						hardpoints[]=
 						{
-							"B_AH6_Rocket",
 							"B_MISSILE_PYLON",
 							"UNI_SCALPEL",
 							"B_UH60_Hellfire",
 							"B_MH60_Rocket",
 							"B_FUELTANK_HELI_UH60",
 							"CANNON_PODS_RF",
-							"20MM_TWIN_CANNON"
+							"20MM_TWIN_CANNON",
+							"M230_uh60",
 						};
 						maxweight=400;
 						UIposition[]={0.56999999,0.34999999};
@@ -836,7 +837,6 @@ class CfgVehicles
 						priority=2;
 						hardpoints[]=
 						{
-							"B_AH6_Rocket",
 							"B_MISSILE_PYLON",
 							"UNI_SCALPEL",
 							"B_UH60_Hellfire",
