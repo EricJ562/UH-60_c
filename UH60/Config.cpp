@@ -552,7 +552,6 @@ class CfgVehicles
 		};
 		class AnimationSources: AnimationSources
 		{
-			class AddHellfire {source = user; animPeriod = 0.000001; initPhase = 0;};
 			class Gun_HRot{source="user";animPeriod=1e-006;initPhase=0;};
 			class Gun_VRot{source="user";animPeriod=1e-006;initPhase=0;};
 			class HideWeapon{source = "user";animPeriod = 0.00001;initPhase = 0;};
