@@ -3589,7 +3589,7 @@ class CfgMagazines
 		descriptionShort = "7.62x51 mm";
 		weight = 180;
 		tracersEvery=3;
-		muzzleImpulseFactor[] = {+0.6,0.5};
+		muzzleImpulseFactor[]={0,0};
 	};
 	class 3000Rnd_762x51_Belt_Red: 5000Rnd_762x51_Belt
 	{
@@ -3600,7 +3600,7 @@ class CfgMagazines
 		descriptionShort = "7.62x51 mm";
 		weight = 180;
 		tracersEvery=3;
-		muzzleImpulseFactor[] = {+0.6,0.5};
+		muzzleImpulseFactor[]={0,0};
 	};
 	class 2000Rnd_762x51_Belt_Red: 5000Rnd_762x51_Belt
 	{
@@ -3611,7 +3611,7 @@ class CfgMagazines
 		descriptionShort = "7.62x51 mm";
 		weight = 180;
 		tracersEvery=3;
-		muzzleImpulseFactor[] = {+0.6,0.5};
+		muzzleImpulseFactor[]={0,0};
 	};
 	class 750Rnd_M197_MH60: VehicleMagazine
 	{
