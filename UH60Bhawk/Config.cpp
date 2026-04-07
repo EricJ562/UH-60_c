@@ -663,7 +663,7 @@ class CfgVehicles
 		model = "\UH-60\UH60\kj_UH60M_BHAWK.p3d";
 		crew = "B_helipilot_F";
 		enableManualFire=1;
-		selectionFireAnim="muzzleFlash_1";
+		selectionFireAnim="muzzleFlash";
 		transportSoldier = 0;
 		cost=200000;
 		textureList[]={"USArmy",1};

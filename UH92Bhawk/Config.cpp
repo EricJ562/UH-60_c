@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class Ej_UH92_battlehawk
 	{
-		units[] = {"kj_UH92_BHAWK"};
+		units[] = {"kj_UH92_CHAWK"};
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
@@ -79,13 +79,13 @@ class CfgVehicles
 		class RotorLibHelicopterProperties;
 		class Reflectors{class Right;};
 	};
-	class kj_uh92_BAWK_base: Helicopter_Base_H
+	class kj_uh92_CHAWK_base: Helicopter_Base_H
 	{
 		features = "Slingload: Slingloads up to 6000kg";
 		destrType = "DestructWreck";		
 		picture="\UH-60\Data\UI\UH_92_icon.paa";
 		icon="\UH-60\Data\UI\Map_UH_92.paa";
-		model="UH-60\UH92\kj_UH92_BHAWK.p3d";
+		model="UH-60\UH92\kj_UH92_CHAWK.p3d";
 		editorSubcategory="EdSubcat_Helicopters";
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		mapSize = 15;
@@ -149,7 +149,6 @@ class CfgVehicles
 		incomingMissileDetectionSystem=16
 		threat[]={0.80000001,0.1,0.60000002};
 		visualTargetSize=0.96;
-		selectionFireAnim = "muzzleFlash";
 		selectionHRotorStill = "main rotor static";
 		selectionHRotorMove = "main rotor blur";
 		selectionVRotorStill = "tail rotor static";
@@ -1271,12 +1270,13 @@ class CfgVehicles
 			init="if (local (_this select 0)) then {[(_this select 0), """", false, false] call bis_fnc_initVehicle;};";
 		};
 	};
-	class kj_UH92_BHAWK: kj_uh92_BAWK_base
+	class kj_UH92_CHAWK: kj_uh92_Chawk_base
 	{
 		author="Flanker562";
 		scope=2;
 		accuracy=1;
 		side=1;
+		selectionFireAnim = "muzzleFlash";
 		faction="BLU_F";
 		crew="B_Helipilot_F";
 		typicalCargo[]={"B_Helipilot_F"};

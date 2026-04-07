@@ -4,10 +4,7 @@ class CfgPatches
 {
 	class ka145_F
 	{
-		units[] = 
-		{
-			"ej_ka145"
-		};
+		units[] ={"ej_ka145"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Air_F"};

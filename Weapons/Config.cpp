@@ -1370,6 +1370,125 @@ class CfgWeapons
 			maxRangeProbab = 0.60;
 		};
 	};
+	class M134_sentry: M134_minigun
+	{
+		scope = 1;
+		displayname = "M134 Minigun";
+		cursor = "EmptyCursor";
+		cursorAim = "EmptyCursor";
+		magazines[] = {"1000Rnd_762x51_M134"};
+		canLock = 0;
+		modes[] = {"Low","High","close","short","medium","far"};
+		weight = 40;
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				effectName="MachineGun1";
+				positionName="muzzle_1";
+				directionName="chamber_1";
+			};
+			class effect1
+			{
+				effectName = "MachineGunCartridge";
+				positionName = "Gatling_pos";
+				directionName = "Gatling_eject_dir";
+			};
+		};
+		class Low: Mode_FullAuto
+		{
+			displayName = "LOW";
+			textureType = "burst";
+			sounds[] = {"StandardSound"};
+			class StandardSound
+			{
+				begin1[] = {"A3\Sounds_F\arsenal\weapons_vehicles\gatling_762mm\762mm_01_burst",3.9810717,1,1300,{2,36879}};
+				soundBegin[] = {"begin1",1};
+				closure1[] = {"A3\sounds_f\weapons\gatling\gatling_rotation_short_2",0.31622776,1,20};
+				closure2[] = {"A3\sounds_f\weapons\gatling\gatling_rotation_short_3",0.31622776,1,20};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			soundContinuous = 1;
+			flash = "gunfire";
+			flashSize = 0.1;
+			recoil = "Empty";
+			aiDispersionCoefX = 3;
+			aiDispersionCoefY = 3;
+			ffMagnitude = 0.5;
+			ffFrequency = 11;
+			ffCount = 6;
+			reloadTime = 0.03;
+			dispersion = 0.0055;
+			minRange = 1;
+			minRangeProbab = 0.06;
+			midRange = 2;
+			midRangeProbab = 0.06;
+			maxRange = 3;
+			maxRangeProbab = 0.004;
+			showToPlayer = 1;
+			multiplier = 1;
+		};
+		class High: Low
+		{
+			displayName = "HIGH";
+			textureType = "fullAuto";
+			minRangeProbab = 0.08;
+			midRangeProbab = 0.058;
+			reloadTime = 0.015;
+		};
+		class close: High
+		{
+			showToPlayer = 0;
+			soundBurst = 0;
+			burst = 15;
+			aiRateOfFire = 0.3;//0.5
+			aiRateOfFireDistance = 50;
+			minRange = 0;
+			minRangeProbab = 0.70; //0.05
+			midRange = 500;
+			midRangeProbab = 0.95; //0.7
+			maxRange = 1000;
+			maxRangeProbab = 0.95;//0.1
+		};
+		class short: close
+		{
+			burst = 30;
+			aiRateOfFire = 0.5;//2
+			aiRateOfFireDistance = 300;
+			minRange = 500;
+			minRangeProbab = 0.95;//0.05
+			midRange = 1000;
+			midRangeProbab = 0.90;
+			maxRange = 1500;
+			maxRangeProbab = 0.85;
+		};
+		class medium: Low
+		{
+			showToPlayer = 0;
+			soundBurst = 0;
+			burst = 45;
+			aiRateOfFire = 0.7;
+			aiRateOfFireDistance = 600;
+			minRange = 1000;
+			minRangeProbab = 0.90;
+			midRange = 1500;
+			midRangeProbab = 0.85;
+			maxRange = 2000;
+			maxRangeProbab = 0.70;
+		};
+		class far: medium
+		{
+			burst = 20;
+			aiRateOfFire = 1;
+			aiRateOfFireDistance = 1000;
+			minRange = 1500;
+			minRangeProbab = 0.85;
+			midRange = 2500;
+			midRangeProbab = 0.65;
+			maxRange = 3000;
+			maxRangeProbab = 0.60;
+		};
+	};
 	class M134_uh60: M134_minigun
 	{
 		scope = 1;
@@ -3547,6 +3666,7 @@ class CfgMagazines
 		tracersEvery = 4;
 		lastRoundsTracer = 4;
 		nameSound="mgun";
+		selectionFireAnim="muzzleflash";
 		descriptionShort = "100RND_M240";
 	};
 	class 1000Rnd_762x51_M134: VehicleMagazine
