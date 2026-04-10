@@ -1297,6 +1297,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="ej_AH96";
 		scope=2;
+		Scopecurator=2;
 		side=1;
 		faction="BLU_F";
 		crew="B_Helipilot_F";

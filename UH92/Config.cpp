@@ -1241,6 +1241,7 @@ class CfgVehicles
 		author="Flanker562";
 		scope=2;
 		accuracy=1;
+		scopecurator=2;
 		side=1;
 		faction="USA";
 		crew="B_Helipilot_F";
@@ -1254,6 +1255,7 @@ class CfgVehicles
 	{
 		author="Flanker562";
 		scope=2;
+		scopecurator=2;
 		accuracy=1;
 		side=1;
 		ForceInGarage=1;
@@ -1270,6 +1272,7 @@ class CfgVehicles
 		author="Flanker562";
 		scope=2;
 		accuracy=1;
+		scopecurator=2;
 		side=1;
 		faction="USA";
 		cost=200000;
@@ -1456,6 +1459,7 @@ class CfgVehicles
 		scope=2;
 		accuracy=1;
 		side=1;
+		scopecurator=2;
 		faction="USA";
 		cost=200000;
 		crew="B_Helipilotusa_F";
@@ -1671,6 +1675,7 @@ class CfgVehicles
 		author="Flanker562";
 		scope=2;
 		accuracy=1;
+		scopecurator=2;
 		side=2;
 		faction="RWG";
 		receiveRemoteTargets=0;
@@ -1930,6 +1935,7 @@ class CfgVehicles
 		scope=2;
 		accuracy=1;
 		side=0;
+		scopecurator=2;
 		Forceingarage=1;
 		editorPreview="\uh-60\data\Previews\UH92BRPMC.jpg";
 		displayName = UH-92 Cherokee (Black River PMC);
@@ -1945,6 +1951,7 @@ class CfgVehicles
 		scope=2;
 		accuracy=1;
 		side=1;
+		scopecurator=2;
 		faction="TF160";
 		editorPreview="\uh-60\data\Previews\MH92.jpg";
 		picture="\UH-60\Data\UI\MH_92_Icon.paa";
@@ -2733,6 +2740,7 @@ class CfgVehicles
 		scope=2;
 		accuracy=1;
 		side=1;
+		scopecurator=2;
 		faction="TF160";
 		crew = "160th_SOAR_Pilot";
 		editorPreview="\uh-60\data\Previews\MH92.jpg";

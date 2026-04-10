@@ -719,6 +719,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="ej_S70_U";
 		scope=2;
+		Scopecurator=2;
 		accuracy=1;
 		side=3;
 		faction="CIV_F";

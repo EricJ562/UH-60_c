@@ -627,6 +627,7 @@ class CfgVehicles
 		author="Flanker562";
 		vehicleClass="Air";
 		side=1;
+		scopecurator=2;
 		scope=2;
 		slingLoadMaxCargoMass=12700;
 		receiveRemoteTargets=1;
@@ -734,6 +735,7 @@ class CfgVehicles
 		scope=2;
 		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Heli_Transport_01_F.jpg";
 		side=1;
+		scopecurator=2;
 		Armor=50;
 		ForceinGarage=1;
 		faction="TF160";

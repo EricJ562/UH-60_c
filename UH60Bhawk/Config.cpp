@@ -655,6 +655,7 @@ class CfgVehicles
 		dlc=Flanker562_UH60;
 		scope=2;
 		accuracy=1;
+		scopecurator=2;
 		side=1;
 		faction="BLU_F";
 		editorPreview="\uh-60\data\Previews\UH60MBHAWK.jpg";
@@ -867,7 +868,7 @@ class CfgVehicles
 					class PylonLeft2: PylonLeft1
 					{
 						attachment="PylonRack_4Rnd_LG_scalpel";
-						priority=4;
+						priority=5;
 						hardpoints[]=
 						{
 							"B_MISSILE_PYLON",
@@ -885,7 +886,7 @@ class CfgVehicles
 					class PylonRight2: PylonLeft2
 					{
 						attachment="PylonRack_4Rnd_LG_scalpel";
-						priority=3;
+						priority=5;
 						hardpoints[]=
 						{
 							"B_AH6_Rocket",
@@ -904,7 +905,7 @@ class CfgVehicles
 					class PylonRight1: PylonLeft1
 					{
 						attachment="PylonRack_4Rnd_LG_scalpel";
-						priority=2;
+						priority=5;
 						hardpoints[]=
 						{
 							"B_AH6_Rocket",

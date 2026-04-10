@@ -961,6 +961,7 @@ class CfgVehicles
 		scope=2;
 		accuracy=1;
 		side=1;
+		Scopecurator=2;
 		faction="TF160";
 		vehicleClass = "Air";
 		editorPreview="\uh-60\data\Previews\MH60DAP4.jpg";
@@ -1239,6 +1240,7 @@ class CfgVehicles
 		scope=2;
 		accuracy=1;
 		side=1;
+		Scopecurator=2;
 		picture="\uh-60\data\ui\HH_60_icon.paa";
 		icon="\uh-60\Data\UI\Map_UH_60_ca.paa";
 		faction="USN";
@@ -1413,6 +1415,7 @@ class CfgVehicles
 	{
 		dlc=Flanker562_UH60;
 		scope=2;
+		Scopecurator=2;
 		accuracy=1;
 		side=1;
 		faction="USN";

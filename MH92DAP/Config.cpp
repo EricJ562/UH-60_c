@@ -832,7 +832,7 @@ class CfgVehicles
 							"B_MH60_Rocket",
 							"CANNON_PODS_RF",
 						};
-						turret[]={1};
+						turret[]={0};
 						maxweight=400;
 						UIposition[]={0.059999999,0.40000001};
 					};
@@ -1238,6 +1238,7 @@ class CfgVehicles
 		author="Flanker562";
 		scope=2;
 		accuracy=1;
+		Scopecurator=2;
 		side=1;
 		enableManualFire=1;
 		faction="TF160";

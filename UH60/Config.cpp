@@ -963,6 +963,7 @@ class CfgVehicles
 	class ej_UH60M: ej_UH60M_base
 	{
 		author="Flanker562";
+		Scopecurator=2;
 		scope=2;
 		accuracy=1;
 		side=1;
@@ -985,6 +986,7 @@ class CfgVehicles
 	class ej_UH60M_MEV: ej_UH60M_base
 	{
 		author="Flanker562";
+		Scopecurator=2;
 		scope=2;
 		accuracy=1;
 		side=1;
@@ -1145,6 +1147,7 @@ class CfgVehicles
 	{
 		author="Flanker562";
 		scope=2;
+		Scopecurator=2;
 		accuracy=1;
 		side=1;
 		faction="USA";
@@ -1249,6 +1252,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="MH60S";
 		scope=2;
+		Scopecurator=2;
 		accuracy=1;
 		side=1;
 		faction="USN";
@@ -1276,6 +1280,7 @@ class CfgVehicles
 		scope=2;
 		accuracy=1;
 		side=1;
+		Scopecurator=2;
 		faction="USN";
 		crew="B_Helipilot_F";
 		typicalCargo[]={"B_Helipilot_F"};
@@ -1400,6 +1405,7 @@ class CfgVehicles
 		scope=2;
 		accuracy=1;
 		side=1;
+		Scopecurator=2;
 		picture="\uh-60\data\ui\HH_60_icon.paa";
 		icon="\uh-60\Data\UI\Map_UH_60_ca.paa";
 		faction="USN";
@@ -1633,6 +1639,7 @@ class CfgVehicles
 		scope=2;
 		accuracy=1;
 		side=1;
+		Scopecurator=2;
 		faction="TF160";
 		vehicleClass = "Air";
 		model = "\UH-60\MH60\ej_MH60A.p3d";
@@ -2068,6 +2075,7 @@ class TurnOut
 		scope=2;
 		accuracy=1;
 		side=1;
+		Scopecurator=2;
 		faction="TF160";
 		vehicleClass = "Air";
 		model = "\UH-60\MH60\ej_MH60AL.p3d";
@@ -2510,6 +2518,7 @@ class TurnOut
 		scope=2;
 		accuracy=1;
 		side=1;
+		Scopecurator=2;
 		faction="TF160";
 		vehicleClass = "Air";
 		model = "\UH-60\MH60\ej_MH60M.p3d";
@@ -3016,6 +3025,7 @@ class TurnOut
 		scope=2;
 		accuracy=1;
 		side=1;
+		Scopecurator=2;
 		faction="TF160";
 		vehicleClass = "Air";
 		editorPreview="\uh-60\data\Previews\MH60M.jpg";

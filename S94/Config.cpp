@@ -655,6 +655,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="ej_S94";
 		scope=2;
+		Scopecurator=2;
 		accuracy=1;
 		side=3;
 		faction="CIV_F";
@@ -671,6 +672,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="ej_S94U";
 		scope=2;
+		scopecurator=2;
 		slingLoadMaxCargoMass=6000;
 		ForceinGarage=1;
 		editorPreview="\uh-60\data\Previews\S94.jpg";

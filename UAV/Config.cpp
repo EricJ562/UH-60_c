@@ -283,6 +283,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="ej_MQ17";
 		scope=2;
+		scopecurator=2;
 		accuracy=1;
 		faction="BLU_F";
 		side=1;
@@ -341,6 +342,7 @@ class CfgVehicles
 		_generalMacro="ej_MQ17";
 		scope=2;
 		accuracy=1;
+		scopecurator=2;
 		faction="BLU_F";
 		side=1;
 		crew="B_UAV_AI";
@@ -356,6 +358,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="ej_MQ17";
 		scope=2;
+		scopecurator=2;
 		accuracy=1;
 		faction="TF160";
 		cost=200000;
@@ -372,6 +375,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="ej_MQ17";
 		scope=2;
+		scopecurator=2;
 		accuracy=1;
 		side=1;
 		faction="BLU_F";
@@ -389,6 +393,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="ej_MQ17";
 		scope=2;
+		scopecurator=2;
 		accuracy=1;
 		side=3;
 		cost=200000;
@@ -407,6 +412,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="ej_MQ37";
 		scope=2;
+		scopecurator=2;
 		accuracy=1;
 		side=1;
 		faction="BLU_F";
@@ -435,6 +441,7 @@ class CfgVehicles
 		_generalMacro="ej_MQ37";
 		scope=2;
 		accuracy=1;
+		scopecurator=2;
 		side=1;
 		crew="B_UAV_AI";
 		typicalCargo[]={"B_UAV_AI"};
@@ -451,6 +458,7 @@ class CfgVehicles
 		_generalMacro="ej_MQ37";
 		scope=2;
 		accuracy=1;
+		scopecurator=2;
 		side=1;
 		cost=200000;
 		faction="USMC";
@@ -466,6 +474,7 @@ class CfgVehicles
 		author="Flanker562";
 		_generalMacro="ej_MQ37";
 		scope=2;
+		scopecurator=2;
 		accuracy=1;
 		side=1;
 		crew="B_UAV_AI";

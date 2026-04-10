@@ -790,14 +790,14 @@ class CfgVehicles
 							"CANNON_PODS_RF",
 							"20MM_TWIN_CANNON"
 						};
-						turret[]={1};
+						turret[]={0};
 						maxweight=400;
 						UIposition[]={0.059999999,0.40000001};
 					};
 					class PylonLeft2: PylonLeft1
 					{
 						attachment="PylonRack_4Rnd_LG_scalpel";
-						priority=4;
+						priority=5;
 						hardpoints[]=
 						{
 							"B_MISSILE_PYLON",
@@ -815,7 +815,7 @@ class CfgVehicles
 					class PylonRight2: PylonLeft2
 					{
 						attachment="PylonRack_4Rnd_LG_scalpel";
-						priority=3;
+						priority=5;
 						hardpoints[]=
 						{
 							"B_MISSILE_PYLON",
@@ -833,7 +833,7 @@ class CfgVehicles
 					class PylonRight1: PylonLeft1
 					{
 						attachment="PylonRack_4Rnd_LG_scalpel";
-						priority=2;
+						priority=5;
 						hardpoints[]=
 						{
 							"B_MISSILE_PYLON",
@@ -1274,6 +1274,7 @@ class CfgVehicles
 	{
 		author="Flanker562";
 		scope=2;
+		scopecurator=2;
 		accuracy=1;
 		side=1;
 		selectionFireAnim = "muzzleFlash";
