@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class ej_ArtyContainer_uh60
 	{
-		requiredaddons[]={"A3_Static_F"};
+		requiredaddons[]={"KJ_UH_60","A3_Static_F"};
 		requiredversion=0.1;
 		units[]={"ArtyContainer","O_ArtyContainer","I_ArtyContainer"};
 		weapons[]={};

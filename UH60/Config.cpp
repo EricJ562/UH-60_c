@@ -8,7 +8,7 @@ class CfgPatches
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 2.20;
-		requiredAddons[] = {"A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F","CBA_Main"};
+		requiredAddons[] = {"KJ_UH_60","A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F","CBA_Main"};
 		authorUrl = "https://discord.gg/HbPTn278f6";
 	};
 };
@@ -825,7 +825,7 @@ class CfgVehicles
 				stabilizedInAxes = 0;
 				gunBeg="muzzle_2";
 				gunEnd="chamber_2";
-				weapons[] = {"M240_veh_2"};
+				weapons[] = {"kj_master_arms_safe","M240_veh_2"};
 				magazines[] = {"100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240"};
 				gunnerName = "Right M240 Gunner";
 				memoryPointGun="machinegun_1";
@@ -866,7 +866,7 @@ class CfgVehicles
 				gunEnd = "chamber_1";
 				discreteDistance[]={100,200,300,400,500,600,700,800,1000,1200};
 				discreteDistanceInitIndex=1;
-				weapons[] = {"M240_veh"};
+				weapons[] = {"kj_master_arms_safe","M240_veh"};
 				magazines[] = {"100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240"};
 				gunnerName = "Left M240 Gunner";
 				memoryPointGun = "machinegun";
@@ -1267,7 +1267,7 @@ class CfgVehicles
 		displayName = MH-60S (Transport);
 		editorPreview="\uh-60\data\Previews\MH60S.jpg";
 		model = "\UH-60\MH60\ej_MH60S.p3d";
-		weapons[]={"ej_master_arms_safe"};
+		weapons[]={"kj_master_arms_safe"};
 		textureList[]={"USN",1};
 		ace_fastroping_enabled = 1;
 		ace_fastroping_ropeOrigins[] = {"ropeOriginLeft", "ropeOriginRight"};
@@ -1344,7 +1344,7 @@ class CfgVehicles
 				stabilizedInAxes = 0;
 				gunBeg="muzzle_2";
 				gunEnd="chamber_2";
-				weapons[] = {"M240_veh_2"};
+				weapons[] = {"kj_master_arms_safe","M240_veh_2"};
 				magazines[] = {"100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240"};
 				gunnerName = "Right M240 Gunner";
 				memoryPointGun="machinegun_1";
@@ -1384,7 +1384,7 @@ class CfgVehicles
 				gunEnd = "chamber_1";
 				discreteDistance[]={100,200,300,400,500,600,700,800,1000,1200};
 				discreteDistanceInitIndex=1;
-				weapons[] = {"M240_veh"};
+				weapons[] = {"kj_master_arms_safe","M240_veh"};
 				magazines[] = {"100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240","100Rnd_762x51_M240"};
 				gunnerName = "Left M240 Gunner";
 				memoryPointGun = "machinegun";
@@ -1470,7 +1470,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
+				weapons[] = {kj_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,kuy_IR_Jammer_Magazine,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 1;
@@ -1567,7 +1567,7 @@ class CfgVehicles
 				stabilizedInAxes = 0;
 				gunBeg="muzzle_2";
 				gunEnd="chamber_2";
-				weapons[]={"ad_50BMG"};
+				weapons[]={"kj_master_arms_safe","ad_50BMG"};
 				magazines[]={"ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag"};
 				gunnerName = "Right M2 Gunner";
 				memoryPointGun="machinegun_2";
@@ -1922,7 +1922,7 @@ class CfgVehicles
 				stabilizedInAxes = 0;
 				gunBeg="muzzle_2";
 				gunEnd="chamber_2";
-				weapons[]={"M134E_uh60_2"};
+				weapons[]={"kj_master_arms_safe","M134E_uh60_2"};
 				magazines[]={"2000Rnd_762x51_Belt_Red"};
 				gunnerName = "Right M134 Gunner";
 				memoryPointGun="machinegun";
@@ -1971,7 +1971,7 @@ class CfgVehicles
 				stabilizedInAxes = 0;
 				gunBeg = "muzzle_1";
 				gunEnd = "chamber_1";
-				weapons[]={"M134E_uh60"};
+				weapons[]={"kj_master_arms_safe","M134E_uh60"};
 				magazines[]={"2000Rnd_762x51_Belt_Red"};
 				gunnerName = "Left M134 Gunner";
 				memoryPointGun = "machinegun_2";
@@ -2358,7 +2358,7 @@ class TurnOut
 				stabilizedInAxes = 0;
 				gunBeg="muzzle_2";
 				gunEnd="chamber_2";
-				weapons[]={"M134E_uh60_2"};
+				weapons[]={"kj_master_arms_safe","M134E_uh60_2"};
 				magazines[]={"2000Rnd_762x51_Belt_Red"};
 				gunnerName = "Right M134 Gunner";
 				memoryPointGun="machinegun";
@@ -2407,7 +2407,7 @@ class TurnOut
 				stabilizedInAxes = 0;
 				gunBeg = "muzzle_1";
 				gunEnd = "chamber_1";
-				weapons[]={"M134E_uh60"};
+				weapons[]={"kj_master_arms_safe","M134E_uh60"};
 				magazines[]={"2000Rnd_762x51_Belt_Red"};
 				gunnerName = "Left M134 Gunner";
 				memoryPointGun = "machinegun_2";
@@ -2768,7 +2768,7 @@ class TurnOut
 				gunnerOpticsShowCursor = 1;
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon};
+				weapons[] = {kj_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon};
 				magazines[] = {Laserbatteries,kuy_IR_Jammer_Magazine};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -2865,7 +2865,7 @@ class TurnOut
 				stabilizedInAxes = 0;
 				gunBeg="muzzle_2";
 				gunEnd="chamber_2";
-				weapons[]={"M134_uh60_2"};
+				weapons[]={"kj_master_arms_safe","M134_uh60_2"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Right M134 Gunner";
 				memoryPointGun="machinegun";
@@ -2914,7 +2914,7 @@ class TurnOut
 				stabilizedInAxes = 0;
 				gunBeg = "muzzle_1";
 				gunEnd = "chamber_1";
-				weapons[]={"M134_uh60"};
+				weapons[]={"kj_master_arms_safe","M134_uh60"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Left M134 Gunner";
 				memoryPointGun = "machinegun_2";
@@ -3261,7 +3261,7 @@ class TurnOut
 				gunnerOpticsShowCursor = 1;
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon};
+				weapons[] = {kj_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon};
 				magazines[] = {Laserbatteries,kuy_IR_Jammer_Magazine};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -3358,7 +3358,7 @@ class TurnOut
 				stabilizedInAxes = 0;
 				gunBeg="muzzle_2";
 				gunEnd="chamber_2";
-				weapons[]={"M134_uh60_2"};
+				weapons[]={"kj_master_arms_safe","M134_uh60_2"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Right M134 Gunner";
 				memoryPointGun="machinegun";
@@ -3407,7 +3407,7 @@ class TurnOut
 				stabilizedInAxes = 0;
 				gunBeg = "muzzle_1";
 				gunEnd = "chamber_1";
-				weapons[]={"M134_uh60"};
+				weapons[]={"kj_master_arms_safe","M134_uh60"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Left M134 Gunner";
 				memoryPointGun = "machinegun_2";

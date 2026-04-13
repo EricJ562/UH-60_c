@@ -8,7 +8,7 @@ class CfgPatches
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
+		requiredAddons[] = {"KJ_UH_60","A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
 	};
 };
 class CfgVehicles
@@ -295,7 +295,7 @@ class CfgVehicles
 		reportOwnPosition=1;
 		editorPreview="\uh-60\data\Previews\MQ17.jpg";
 		typicalCargo[]={"B_UAV_AI"};
-		weapons[]={"ej_master_arms_safe","Flanker562_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
+		weapons[]={"kj_master_arms_safe","Flanker562_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
 		class Components: Components
 		{
@@ -432,7 +432,7 @@ class CfgVehicles
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[]={"uh-60\data\mq17_co.paa","uh-60\data\natoductfans_co.paa","uh-60\data\drone_co.paa"};
 		slingLoadCargoMemoryPoints[]={"SlingLoad1","SlingLoad2","SlingLoad3","SlingLoad4"};
-		weapons[]={"ej_master_arms_safe","Flanker562_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
+		weapons[]={"kj_master_arms_safe","Flanker562_CMFlareLauncherUH92","kuy_IR_Jammer_Weapon"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
           };
 	class ej_MQ37D: ej_MQ37

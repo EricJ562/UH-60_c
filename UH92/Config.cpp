@@ -8,7 +8,7 @@ class CfgPatches
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
+		requiredAddons[] = {"KJ_UH_60","A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
 	};
 };
 
@@ -1001,7 +1001,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,"Flanker562_CMFlareLauncherDAP"};
+				weapons[] = {"kj_master_arms_safe",Laserdesignator_mounted,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1098,7 +1098,7 @@ class CfgVehicles
 				stabilizedInAxes = 0;
 				gunBeg="muzzle_2";
 				gunEnd="chamber_2";
-				weapons[]={"M134_uh60_2"};
+				weapons[]={"kj_master_arms_safe","M134_uh60_2"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Right M134 Gunner";
 				memoryPointGun="machinegun_1";
@@ -1149,7 +1149,7 @@ class CfgVehicles
 				gunEnd = "chamber_1";
 				discreteDistance[]={100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100};
 				discreteDistanceInitIndex=5;
-				weapons[]={"M134_uh60"};
+				weapons[]={"kj_master_arms_safe","M134_uh60"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Left M134 Gunner";
 				memoryPointGun = "machinegun";
@@ -1373,7 +1373,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,"Flanker562_CMFlareLauncherDAP"};
+				weapons[] = {kj_master_arms_safe,Laserdesignator_mounted,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1543,7 +1543,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,"Flanker562_CMFlareLauncherDAP"};
+				weapons[] = {kj_master_arms_safe,Laserdesignator_mounted,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1764,7 +1764,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted};
+				weapons[] = {kj_master_arms_safe,Laserdesignator_mounted};
 				magazines[] = {Laserbatteries};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1861,7 +1861,7 @@ class CfgVehicles
 				stabilizedInAxes = 0;
 				gunBeg="muzzle_2";
 				gunEnd="chamber_2";
-				weapons[]={"M134_uh60_2"};
+				weapons[]={"kj_master_arms_safe","M134_uh60_2"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Right M134 Gunner";
 				memoryPointGun="machinegun_1";
@@ -1912,7 +1912,7 @@ class CfgVehicles
 				gunEnd = "chamber_1";
 				discreteDistance[]={100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100};
 				discreteDistanceInitIndex=5;
-				weapons[]={"M134_uh60"};
+				weapons[]={"kj_master_arms_safe","M134_uh60"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Left M134 Gunner";
 				memoryPointGun = "machinegun";
@@ -2445,7 +2445,7 @@ class CfgVehicles
 				gunnerOpticsShowCursor = 1;
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
+				weapons[] = {kj_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
 				magazines[] = {240Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,Laserbatteries};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -2546,7 +2546,7 @@ class CfgVehicles
 				stabilizedInAxes = 0;
 				gunBeg="muzzle_2";
 				gunEnd="chamber_2";
-				weapons[]={"M134_UH60_2"};
+				weapons[]={"kj_master_arms_safe","M134_UH60_2"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Right M134 Gunner";
 				memoryPointGun="machinegun_1";
@@ -2601,7 +2601,7 @@ class CfgVehicles
 				gunEnd = "chamber_1";
 				discreteDistance[]={100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100};
 				discreteDistanceInitIndex=5;
-				weapons[]={"M134_UH60"};
+				weapons[]={"kj_master_arms_safe","M134_UH60"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Left M134 Gunner";
 				memoryPointGun = "machinegun";
@@ -2902,7 +2902,7 @@ class CfgVehicles
 				gunnerOpticsShowCursor = 1;
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
+				weapons[] = {"kj_master_arms_safe",Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
 				magazines[] = {240Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,Laserbatteries};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -2999,7 +2999,7 @@ class CfgVehicles
 				stabilizedInAxes = 0;
 				gunBeg="muzzle_2";
 				gunEnd="chamber_2";
-				weapons[]={"M134_UH60_2"};
+				weapons[]={"kj_master_arms_safe","M134_UH60_2"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Right M134 Gunner";
 				memoryPointGun="machinegun_1";
@@ -3050,7 +3050,7 @@ class CfgVehicles
 				gunEnd = "chamber_1";
 				discreteDistance[]={100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100};
 				discreteDistanceInitIndex=5;
-				weapons[]={"M134_UH60"};
+				weapons[]={"kj_master_arms_safe","M134_UH60"};
 				magazines[]={"3000Rnd_762x51_Belt_Red"};
 				gunnerName = "Left M134 Gunner";
 				memoryPointGun = "machinegun";

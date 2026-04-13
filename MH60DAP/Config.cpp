@@ -8,7 +8,7 @@ class CfgPatches
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
+		requiredAddons[] = {"KJ_UH_60","A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
 	};
 };
 
@@ -727,7 +727,7 @@ class CfgVehicles
 		cost=200000;
 		ace_fastroping_enabled = 0;
 		textureList[]={"SOAR",1};
-		weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
+		weapons[] = {kj_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,5000Rnd_762x51_Belt_Red};
 		memoryPointGun[]=
 		{
@@ -788,7 +788,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
+				weapons[] = {kj_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,kuy_IR_Jammer_Magazine,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -977,7 +977,7 @@ class CfgVehicles
         	USAF_RefuelType = "probe";
         	USAF_RefuelPoint[] = {-1.146, -1.159, -9.243};
 		textureList[]={"SOAR",1};
-		weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
+		weapons[] = {kj_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,5000Rnd_762x51_Belt_Red};
 		memoryPointGun[]=
 		{
@@ -1331,7 +1331,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
+				weapons[] = {kj_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,kuy_IR_Jammer_Magazine,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1518,7 +1518,7 @@ class CfgVehicles
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				showAllTargets = 2;				
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
+				weapons[] = {kj_master_arms_safe,Laserdesignator_mounted,kuy_IR_Jammer_Weapon,"Flanker562_CMFlareLauncherDAP"};
 				magazines[] = {Laserbatteries,kuy_IR_Jammer_Magazine,"168Rnd_CMFlare_Chaff_Magazine"};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;

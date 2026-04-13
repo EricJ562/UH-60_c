@@ -7,7 +7,7 @@ class CfgPatches
 		units[]={"BRPMC_UAV_F","BRPMC_UGV","BRMPC_PO30","BRPMC_Soldier","BRPMC_LMG","BRPMC_Sniper","BRPMC_SLeader","BRPMC_Helicrew","BRPMC_Pilot"};
 		weapons[]={};
 		requiredVersion=0.1;
-		requiredAddons[]={"A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F","A3_Structures_F"};
+		requiredAddons[]={"KJ_UH_60","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F","A3_Structures_F"};
 	};
 };
 

@@ -8,7 +8,7 @@ class CfgPatches
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
+		requiredAddons[] = {"KJ_UH_60","A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
 	};
 };
 
@@ -141,7 +141,7 @@ class CfgVehicles
 		slingLoadMaxCargoMass=6000;
 		slingLoadMemoryPoint="slingLoad0";
 		memoryPointDriverOptics="slingCamera";
-		weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncherUH92,ej_M134_minigun,kuy_IR_Jammer_Weapon};
+		weapons[] = {kj_master_arms_safe,Flanker562_CMFlareLauncherUH92,ej_M134_minigun,kuy_IR_Jammer_Weapon};
 		magazines[] = {240Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,5000Rnd_762x51_Belt_Red};
 		availableForSupportTypes[]={"CAS_Heli"};
 		LockDetectionSystem="1 + 8 + 4";
@@ -1095,7 +1095,7 @@ class CfgVehicles
 				gunnerOpticsShowCursor = 1;
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
+				weapons[] = {kj_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
 				magazines[] = {240Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,Laserbatteries};									
 								
 				stabilizedInAxes = "StabilizedInAxesBoth";

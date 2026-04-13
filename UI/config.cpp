@@ -5,7 +5,7 @@ class CfgPatches
 		units[]={};
 		weapons[]={};
 		requiredVersion=0.1;
-		requiredAddons[]={"A3_UI_F","A3_Functions_F","A3_UIFonts_F","A3_Data_F"};
+		requiredAddons[]={"KJ_UH_60","A3_UI_F","A3_Functions_F","A3_UIFonts_F","A3_Data_F"};
 	};
 };
 

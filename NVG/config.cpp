@@ -5,7 +5,7 @@ class CfgPatches
 		units[]={};
 		weapons[]={"ej_PVS15","ej_PVS15D"};
 		requiredVersion=0.1;
-		requiredAddons[]={"A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F","A3_Structures_F"};
+		requiredAddons[]={"KJ_UH_60","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F","A3_Structures_F"};
 	};
 };
 

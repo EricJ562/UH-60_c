@@ -8,7 +8,7 @@ class CfgPatches
 		weapons[] = {"Missile_AGM145_ah96_F","UH60_Hellfire","UH60_Rattler","M260_ah6_rockets"};
 		magazines[]={};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
+		requiredAddons[] = {"KJ_UH_60","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
 	};
 };
 
@@ -2996,10 +2996,10 @@ class CfgWeapons
 		};
 	};
 	class RocketPods;
-	class ej_master_arms_safe: RocketPods
+	class kj_master_arms_safe: RocketPods
 	{
 		CanLock=0;
-		displayName="MASTER ARM - SAFE";
+		displayName="SAFE";
 		displayNameMagazine="MASTER ARM - SAFE";
 		shortNameMagazine="MASTER ARM - SAFE";
 		nameSound="";

@@ -10,6 +10,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
+			"KJ_UH_60",
 			"A3_Air_F",
 			"A3_Characters_F",
 			"A3_Data_F",
@@ -620,7 +621,7 @@ class CfgVehicles
 		editorPreview="\uh-60\data\Previews\AH6J.jpg";
 		displayName="AH-6J Little Bird";
 		accuracy=1.5;
-		weapons[] = {ej_master_arms_safe,ej_M134_minigun,Flanker562_CMFlareLauncher};
+		weapons[] = {kj_master_arms_safe,ej_M134_minigun,Flanker562_CMFlareLauncher};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,5000Rnd_762x51_Belt_Red};
  		hiddenSelectionsTextures[]=
 		{
@@ -720,7 +721,7 @@ class CfgVehicles
 		picture="\UH-60\Data\UI\AH_15M_Icon.paa";
 		mainBladeRadius = 1.1;
 		tailBladeRadius=1.1;
-		weapons[] = {ej_master_arms_safe,ej_M134_minigun,Flanker562_CMFlareLauncher};
+		weapons[] = {kj_master_arms_safe,ej_M134_minigun,Flanker562_CMFlareLauncher};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,5000Rnd_762x51_Belt_Red};
 		model="\uh-60\MH6\ej_ah15m.p3d";
 		receiveRemoteTargets=1;

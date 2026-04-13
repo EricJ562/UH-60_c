@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class ej_MLRSContainer_uh60
 	{
-		requiredaddons[]={"A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
+		requiredaddons[]={"KJ_UH_60","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
 		requiredversion=0.1;
 		units[]={"MLRSContainer"};
 		weapons[]={};

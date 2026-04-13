@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class ej_Mortar_Container
 	{
-		requiredaddons[]={};
+		requiredaddons[]={"KJ_UH_60"};
 		requiredversion=0.1;
 		units[]={"ej_Mortar_Container"};
 		weapons[]={};

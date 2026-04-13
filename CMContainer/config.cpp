@@ -5,7 +5,7 @@ class CfgPatches
 		addonRootClass="A3_Static_F_Destroyer";
 		requiredAddons[]=
 		{
-			"A3_Static_F_Destroyer"
+			"KJ_UH_60","A3_Static_F_Destroyer"
 		};
 		requiredVersion=0.1;
 		units[]=

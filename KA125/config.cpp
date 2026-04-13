@@ -7,7 +7,23 @@ class CfgPatches
 		units[] ={"kj_ka125_Black","kj_ka125"};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Air_F"};
+		requiredAddons[] = {"KJ_UH_60","A3_Air_F"};
+	};
+};
+
+class CfgVehicleClasses
+{
+	class RUSFE{displayName="Russian Armed Forces";};
+};
+
+class CfgFactionClasses
+{
+	class RUSFED
+	{
+		displayName="Russian Armed Forces";
+		priority=1;
+		side=0;
+		icon="\ej_pif\data\cfgfactionclasses_raven.paa";
 	};
 };
 
@@ -280,7 +296,7 @@ class CfgVehicles
 		incomingMissileDetectionSystem = CM_Missile;
 		selectionFireAnim = "muzzleFlash";
 		memoryPointGun="machinegun_end";
-		weapons[] = {"gatling_2A42","CMFlareLauncher","Laserdesignator_mounted"};
+		weapons[] = {"kj_master_arms_safe","gatling_2A42","CMFlareLauncher","Laserdesignator_mounted"};
 		magazines[] = {"250Rnd_30mm_HE_shells_Tracer_Green","250Rnd_30mm_APDS_shells_Tracer_Green","192Rnd_CMFlare_Chaff_Magazine","Laserbatteries"};
 
 		class Components: Components

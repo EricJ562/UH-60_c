@@ -5,7 +5,7 @@ class CfgPatches
 	{
 		units[] = {};
 		weapons[] = {};
-		requiredAddons[] = {};
+		requiredAddons[] = {"KJ_UH_60"};
 		version = "1.0";
 	};
 

@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class Ej_containers
 	{
-		requiredAddons[]={"A3_Supplies_F_Heli_Slingload","A3_Data_F","A3_Weapons_F","A3_Weapons_F_Ammoboxes","A3_UI_F","A3_Characters_F_Common","A3_Characters_F_Proxies","A3_Supplies_F_Heli"};
+		requiredAddons[]={"KJ_UH_60","A3_Supplies_F_Heli_Slingload","A3_Data_F","A3_Weapons_F","A3_Weapons_F_Ammoboxes","A3_UI_F","A3_Characters_F_Common","A3_Characters_F_Proxies","A3_Supplies_F_Heli"};
 		requiredVersion=0.1;
 		units[]={			"ej_CheroContainerRepairAAF",
 						"ej_CheroContainer_OPFOR",

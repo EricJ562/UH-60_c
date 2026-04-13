@@ -7,7 +7,7 @@ class CfgPatches
 		units[] ={"ej_ka145"};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Air_F"};
+		requiredAddons[] = {"KJ_UH_60","A3_Air_F"};
 	};
 };
 
@@ -212,7 +212,7 @@ class CfgVehicles
 		incomingMissileDetectionSystem = CM_Missile;
 		selectionFireAnim = "muzzleFlash";
 		memoryPointGun="machinegun_end";
-		weapons[] = {"gatling_2A42","CMFlareLauncher"};
+		weapons[] = {"kj_master_arms_safe","gatling_2A42","CMFlareLauncher"};
 		magazines[] = {"250Rnd_30mm_HE_shells_Tracer_Green","250Rnd_30mm_APDS_shells_Tracer_Green","192Rnd_CMFlare_Chaff_Magazine"};
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[] ={"uh-60\data\ka52_01_co.paa","uh-60\data\ka52_02_co.paa","uh-60\data\ka145ductfans_co.paa"};

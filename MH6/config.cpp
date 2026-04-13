@@ -10,6 +10,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
+			"KJ_UH_60",
 			"A3_Air_F",
 			"A3_Characters_F",
 			"A3_Data_F",

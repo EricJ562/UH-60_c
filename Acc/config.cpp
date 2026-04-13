@@ -7,7 +7,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {"SF762MX_ej","SF762MXS_kj"};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Items"};
+		requiredAddons[] = {"KJ_UH_60","A3_Weapons_F","A3_Weapons_F_Items"};
 	};
 };
 
