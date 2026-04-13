@@ -1022,53 +1022,6 @@ class CfgVehicles
 		class CargoTurret;
 		class Turrets: Turrets
 		{
-			class CargoTurret_01: CargoTurret
-			{
-				gunnerAction="passenger_inside_2";
-				gunnerCompartments="Compartment3";
-				memoryPointsGetInGunner="pos gunner";
-				memoryPointsGetInGunnerDir="pos gunner dir";
-				gunnerName="Left Side Crew Chief";
-				proxyIndex=2;
-				maxElev=23;
-				minElev=-30;
-				maxTurn=35;
-				minTurn=-35;
-				isPersonTurret=1;
-				onlyForPlayer=1;
-				ejectDeadGunner=1;
-				usepip=0;
-				gunnerOutOpticsModel="";
-				gunnerOpticsModel="";
-				startEngine=0;
-				outGunnerMayFire=1;
-				inGunnerMayFire=0;
-				memoryPointGunnerOptics="";
-				enabledByAnimationSource="";
-			};
-			class CargoTurret_02: CargoTurret
-			{
-				gunnerAction="passenger_inside_2";
-				gunnerCompartments="Compartment3";
-				memoryPointsGetInGunner="pos gunner2";
-				memoryPointsGetInGunnerDir="pos gunner2 dir";
-				gunnerName="Right Side Crew Chief";
-				proxyIndex=1;
-				maxElev=23;
-				minElev=-30;
-				maxTurn=35;
-				minTurn=-35;				
-				isPersonTurret=1;
-				ejectDeadGunner=0;
-				onlyForPlayer=1;
-				usepip=0;
-				gunnerOutOpticsModel="";
-				gunnerOpticsModel="";
-				startEngine=0;
-				outGunnerMayFire=1;
-				inGunnerMayFire=0;
-				memoryPointGunnerOptics="";
-			};
 			class CoPilotObs: MainTurret
 			{
 				ace_laser_selfdesignate_Enabled = 1;
@@ -1197,6 +1150,53 @@ class CfgVehicles
 					minFov = 0.3; 
 					maxFov = 1.0;
 				};
+			};
+			class CargoTurret_01: CargoTurret
+			{
+				gunnerAction="passenger_inside_2";
+				gunnerCompartments="Compartment3";
+				memoryPointsGetInGunner="pos gunner";
+				memoryPointsGetInGunnerDir="pos gunner dir";
+				gunnerName="Left Side Crew Chief";
+				proxyIndex=2;
+				maxElev=23;
+				minElev=-30;
+				maxTurn=35;
+				minTurn=-35;
+				isPersonTurret=1;
+				onlyForPlayer=1;
+				ejectDeadGunner=1;
+				usepip=0;
+				gunnerOutOpticsModel="";
+				gunnerOpticsModel="";
+				startEngine=0;
+				outGunnerMayFire=1;
+				inGunnerMayFire=0;
+				memoryPointGunnerOptics="";
+				enabledByAnimationSource="";
+			};
+			class CargoTurret_02: CargoTurret
+			{
+				gunnerAction="passenger_inside_2";
+				gunnerCompartments="Compartment3";
+				memoryPointsGetInGunner="pos gunner2";
+				memoryPointsGetInGunnerDir="pos gunner2 dir";
+				gunnerName="Right Side Crew Chief";
+				proxyIndex=1;
+				maxElev=23;
+				minElev=-30;
+				maxTurn=35;
+				minTurn=-35;				
+				isPersonTurret=1;
+				ejectDeadGunner=0;
+				onlyForPlayer=1;
+				usepip=0;
+				gunnerOutOpticsModel="";
+				gunnerOpticsModel="";
+				startEngine=0;
+				outGunnerMayFire=1;
+				inGunnerMayFire=0;
+				memoryPointGunnerOptics="";
 			};
 		};
 		class textureSources

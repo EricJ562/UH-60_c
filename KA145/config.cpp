@@ -72,7 +72,6 @@ class CfgVehicles
 	class ka145_base: Helicopter_Base_H
 	{
 		scope=0;
-		editorSubcategory="EdSubcat_Helicopters";
 		vehicleClass="Air";
 		altFullForce = 4000;
 		picture="\uh-60\data\ui\KA_145_Icon.paa";
@@ -2228,10 +2227,10 @@ class CfgVehicles
 	class ej_ka145: ka145_base
 	{
 		scope = 2;
-		scopeCurator = public;
+		scopecurator=2;
 		side = 0;
 		editorPreview="\uh-60\data\Previews\ka145.jpg";
-		faction	= RUSFED;
+		faction	= "RUSFED";
 		crew = "O_HelicrewRUS_F";
 		displayName="Ka-145 Hoplite";
 		accuracy = 1.50;

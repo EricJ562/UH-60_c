@@ -16,8 +16,8 @@ class CfgVehicleClasses
 	class USA{displayName="US Army";};
 	class USN{displayName="US Navy";};
 	class USMC{displayName="USMC";};
-	class RUSFED{displayName="Russian Federation";};
 	class BRPMC{displayName="Black River PMC";};
+	class RUSFED{displayName="Russian Federation";};
 };
 
 class SensorTemplatePassiveRadar;
@@ -33,19 +33,13 @@ class Components;
 
 class CfgFactionClasses
 {
-	class RUSFED
-	{
-		displayName="Russian Federation";
-		priority=1;
-		side=0;
-		icon="\uh-60\data\cfgfactionclasses_raven.paa";
-	};
 	class RWG
 	{
 		displayName="Raven Warfare Group";
 		priority=1;
 		side=2;
 		icon="\UH-60\data\cfgfactionclasses_raven.paa";
+		flag = "\UH-60\data\Flags\flag_rwg_co.paa";
 	};
 	class TF160
 	{
@@ -53,6 +47,7 @@ class CfgFactionClasses
 		priority=1;
 		side=1;
 		icon="\UH-60\data\cfgfactionclasses_soar.paa";
+		flag = "\UH-60\data\Flags\flag_usa_co.paa";
 	};
 	class USA
 	{
@@ -60,6 +55,7 @@ class CfgFactionClasses
 		priority=1;
 		side=1;
 		icon="\UH-60\data\cfgfactionclasses_USArmy.paa";
+		flag = "\UH-60\data\Flags\flag_usa_co.paa";
 	};
 	class USN
 	{
@@ -67,6 +63,7 @@ class CfgFactionClasses
 		priority=1;
 		side=1;
 		icon="\UH-60\data\cfgfactionclasses_USN.paa";
+		flag = "\UH-60\data\Flags\flag_usa_co.paa";
 	};
 	class USMC
 	{
@@ -74,6 +71,7 @@ class CfgFactionClasses
 		priority=1;
 		side=1;
 		icon="\UH-60\data\cfgfactionclasses_USMC.paa";
+		flag = "\UH-60\data\Flags\flag_usa_co.paa";
 	};
 	class BRPMC
 	{
@@ -81,6 +79,15 @@ class CfgFactionClasses
 		priority=1;
 		side=0;
 		icon="\UH-60\data\cfgfactionclasses_blackriver.paa";
+		flag = "\UH-60\data\Flags\flag_rwg_co.paa";
+	};
+	class RUSFED
+	{
+		displayName="Russian Federation";
+		priority=1;
+		side=0;
+		icon="\UH-60\data\cfgfactionclasses_blackriver.paa";
+		flag = "\UH-60\data\Flags\flag_rus_co.paa";
 	};
 };
 

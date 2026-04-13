@@ -652,7 +652,6 @@ class CfgVehicles
 	};
         class kj_UH60M_BHAWK: kj_UH60bhawk_base
 	{
-		dlc=Flanker562_UH60;
 		scope=2;
 		accuracy=1;
 		scopecurator=2;

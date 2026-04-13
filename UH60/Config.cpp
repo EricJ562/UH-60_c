@@ -779,6 +779,37 @@ class CfgVehicles
 		class CargoTurret;
 		class Turrets: Turrets
 		{
+			class CoPilotObs: MainTurret
+			{
+				isCopilot = 1;
+				gunnerAction = "pilot_Heli_Transport_01";
+				gunnerInAction = "pilot_Heli_Light_03_Enter";
+				memoryPointsGetInGunner="pos copilot";
+				memoryPointsGetInGunnerDir="pos copilot dir";		
+				gunnerGetInAction="GetInHeli_Transport_01Cargo";
+				gunnerGetOutAction="GetOutLow";
+				memoryPointGunnerOptics = "";		
+				CanEject = 0;
+				gunnerType="B_helipilot_F";
+				startEngine = 0;
+				gunnerCompartments="Compartment3";
+				commanding=-3;	
+				primaryGunner = 0;										
+				selectionFireAnim = "";
+				castGunnerShadow = 1;
+				viewGunnerShadow = 1;
+				turretInfoType = "";
+				showAllTargets = 2;				
+				copilotHasFlares = 1;
+				LockDetectionSystem = 1 + 2 + 4 + 8;
+				incomingMissileDetectionSystem = 16;
+				TurretCanSee = 1+2+4+8+16;
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
+				stabilizedInAxes = "StabilizedInAxesBoth";
+				proxyIndex = 3;
+				gunnerName = "Co-Pilot"; 
+			};
 			class RightDoorGun: MainTurret
 			{
 				isCopilot = 0;
@@ -850,37 +881,7 @@ class CfgVehicles
 				primaryGunner = 0;
 				gunnerCompartments = "Compartment2";
 			};
-			class CoPilotObs: MainTurret
-			{
-				isCopilot = 1;
-				gunnerAction = "pilot_Heli_Transport_01";
-				gunnerInAction = "pilot_Heli_Light_03_Enter";
-				memoryPointsGetInGunner="pos copilot";
-				memoryPointsGetInGunnerDir="pos copilot dir";		
-				gunnerGetInAction="GetInHeli_Transport_01Cargo";
-				gunnerGetOutAction="GetOutLow";
-				memoryPointGunnerOptics = "";		
-				CanEject = 0;
-				gunnerType="B_helipilot_F";
-				startEngine = 0;
-				gunnerCompartments="Compartment3";
-				commanding=-3;	
-				primaryGunner = 0;										
-				selectionFireAnim = "";
-				castGunnerShadow = 1;
-				viewGunnerShadow = 1;
-				turretInfoType = "";
-				showAllTargets = 2;				
-				copilotHasFlares = 1;
-				LockDetectionSystem = 1 + 2 + 4 + 8;
-				incomingMissileDetectionSystem = 16;
-				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
-				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
-				stabilizedInAxes = "StabilizedInAxesBoth";
-				proxyIndex = 3;
-				gunnerName = "Co-Pilot"; 
-			};
+
 		};
 		class textureSources
 		{
@@ -1009,6 +1010,36 @@ class CfgVehicles
 
 		class Turrets: Turrets
 		{
+			class CoPilotObs: MainTurret
+			{
+				isCopilot = 1;
+				gunnerAction = "pilot_Heli_Transport_01";
+				gunnerInAction = "pilot_Heli_Light_03_Enter";
+				memoryPointsGetInGunner="pos copilot";
+				memoryPointsGetInGunnerDir="pos copilot dir";		
+				gunnerGetInAction="GetInHeli_Transport_01Cargo";
+				gunnerGetOutAction="GetOutLow";
+				memoryPointGunnerOptics = "";		
+				CanEject = 0;
+				startEngine = 0;
+				gunnerCompartments="Compartment3";
+				commanding=-3;	
+				primaryGunner = 0;										
+				selectionFireAnim = "";
+				castGunnerShadow = 1;
+				viewGunnerShadow = 1;
+				turretInfoType = "";
+				showAllTargets = 2;				
+				copilotHasFlares = 1;
+				LockDetectionSystem = 1 + 2 + 4 + 8;
+				incomingMissileDetectionSystem = 16;
+				TurretCanSee = 1+2+4+8+16;
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
+				stabilizedInAxes = "StabilizedInAxesBoth";
+				proxyIndex = 1;
+				gunnerName = "Co-Pilot"; 
+			};
 			class CargoTurret_01: CargoTurret
 			{
 				gunnerAction="passenger_inside_2";
@@ -1055,36 +1086,6 @@ class CfgVehicles
 				outGunnerMayFire=1;
 				inGunnerMayFire=0;
 				memoryPointGunnerOptics="";
-			};
-			class CoPilotObs: MainTurret
-			{
-				isCopilot = 1;
-				gunnerAction = "pilot_Heli_Transport_01";
-				gunnerInAction = "pilot_Heli_Light_03_Enter";
-				memoryPointsGetInGunner="pos copilot";
-				memoryPointsGetInGunnerDir="pos copilot dir";		
-				gunnerGetInAction="GetInHeli_Transport_01Cargo";
-				gunnerGetOutAction="GetOutLow";
-				memoryPointGunnerOptics = "";		
-				CanEject = 0;
-				startEngine = 0;
-				gunnerCompartments="Compartment3";
-				commanding=-3;	
-				primaryGunner = 0;										
-				selectionFireAnim = "";
-				castGunnerShadow = 1;
-				viewGunnerShadow = 1;
-				turretInfoType = "";
-				showAllTargets = 2;				
-				copilotHasFlares = 1;
-				LockDetectionSystem = 1 + 2 + 4 + 8;
-				incomingMissileDetectionSystem = 16;
-				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
-				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
-				stabilizedInAxes = "StabilizedInAxesBoth";
-				proxyIndex = 1;
-				gunnerName = "Co-Pilot"; 
 			};
 		};
 		class Components: Components
@@ -1166,6 +1167,36 @@ class CfgVehicles
 
 		class Turrets: Turrets
 		{
+			class CoPilotObs: MainTurret
+			{
+				isCopilot = 1;
+				gunnerAction = "pilot_Heli_Transport_01";
+				gunnerInAction = "pilot_Heli_Light_03_Enter";
+				memoryPointsGetInGunner="pos copilot";
+				memoryPointsGetInGunnerDir="pos copilot dir";		
+				gunnerGetInAction="GetInHeli_Transport_01Cargo";
+				gunnerGetOutAction="GetOutLow";
+				memoryPointGunnerOptics = "";		
+				CanEject = 0;
+				startEngine = 0;
+				gunnerCompartments="Compartment3";
+				commanding=-3;	
+				primaryGunner = 0;										
+				selectionFireAnim = "";
+				castGunnerShadow = 1;
+				viewGunnerShadow = 1;
+				turretInfoType = "";
+				showAllTargets = 2;				
+				copilotHasFlares = 1;
+				LockDetectionSystem = 1 + 2 + 4 + 8;
+				incomingMissileDetectionSystem = 16;
+				TurretCanSee = 1+2+4+8+16;
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
+				stabilizedInAxes = "StabilizedInAxesBoth";
+				proxyIndex = 1;
+				gunnerName = "Co-Pilot"; 
+			};
 			class CargoTurret_01: CargoTurret
 			{
 				gunnerAction="passenger_inside_2";
@@ -1212,36 +1243,6 @@ class CfgVehicles
 				outGunnerMayFire=1;
 				inGunnerMayFire=0;
 				memoryPointGunnerOptics="";
-			};
-			class CoPilotObs: MainTurret
-			{
-				isCopilot = 1;
-				gunnerAction = "pilot_Heli_Transport_01";
-				gunnerInAction = "pilot_Heli_Light_03_Enter";
-				memoryPointsGetInGunner="pos copilot";
-				memoryPointsGetInGunnerDir="pos copilot dir";		
-				gunnerGetInAction="GetInHeli_Transport_01Cargo";
-				gunnerGetOutAction="GetOutLow";
-				memoryPointGunnerOptics = "";		
-				CanEject = 0;
-				startEngine = 0;
-				gunnerCompartments="Compartment3";
-				commanding=-3;	
-				primaryGunner = 0;										
-				selectionFireAnim = "";
-				castGunnerShadow = 1;
-				viewGunnerShadow = 1;
-				turretInfoType = "";
-				showAllTargets = 2;				
-				copilotHasFlares = 1;
-				LockDetectionSystem = 1 + 2 + 4 + 8;
-				incomingMissileDetectionSystem = 16;
-				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
-				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
-				stabilizedInAxes = "StabilizedInAxesBoth";
-				proxyIndex = 1;
-				gunnerName = "Co-Pilot"; 
 			};
 		};
 	};
@@ -1294,8 +1295,41 @@ class CfgVehicles
 		class CargoTurret;
 		memoryPointsGetInCargo="pos cargo";
 		memoryPointsGetInCargoDir="pos cargo dir";
+
 		class Turrets: Turrets
 		{
+			class CoPilotObs: MainTurret
+			{
+				isCopilot = 1;
+				gunnerAction = "pilot_Heli_Transport_01";
+				gunnerInAction = "pilot_Heli_Light_03_Enter";
+				memoryPointsGetInGunner="pos copilot";
+				memoryPointsGetInGunnerDir="pos copilot dir";		
+				gunnerGetInAction="GetInHeli_Transport_01Cargo";
+				gunnerGetOutAction="GetOutLow";
+				memoryPointGunnerOptics = "";
+				CanEject = 0;
+				startEngine = 0;
+				soundServo[] = {,db-40,1.0};				
+				outGunnerMayFire = 1; 
+				gunnerCompartments="Compartment3";
+				commanding=-3;	
+				primaryGunner = 0;										
+				selectionFireAnim = "";
+				castGunnerShadow = 1;
+				viewGunnerShadow = 1;
+				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
+				showAllTargets = 2;				
+				copilotHasFlares = 1;
+				LockDetectionSystem = 1 + 2 + 4 + 8;
+				incomingMissileDetectionSystem = 16;
+				TurretCanSee = 1+2+4+8+16;
+				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
+				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
+				stabilizedInAxes = "StabilizedInAxesBoth";
+				proxyIndex = 3;
+				gunnerName = "Co-Pilot"; 
+			};
 			class RightDoorGun: MainTurret
 			{
 				isCopilot = 0;
@@ -1365,38 +1399,6 @@ class CfgVehicles
 				selectionFireAnim = "m134flash";
 				gunnerCompartments = "Compartment2";
 			};
-			class CoPilotObs: MainTurret
-			{
-				isCopilot = 1;
-				gunnerAction = "pilot_Heli_Transport_01";
-				gunnerInAction = "pilot_Heli_Light_03_Enter";
-				memoryPointsGetInGunner="pos copilot";
-				memoryPointsGetInGunnerDir="pos copilot dir";		
-				gunnerGetInAction="GetInHeli_Transport_01Cargo";
-				gunnerGetOutAction="GetOutLow";
-				memoryPointGunnerOptics = "";
-				CanEject = 0;
-				startEngine = 0;
-				soundServo[] = {,db-40,1.0};				
-				outGunnerMayFire = 1; 
-				gunnerCompartments="Compartment3";
-				commanding=-3;	
-				primaryGunner = 0;										
-				selectionFireAnim = "";
-				castGunnerShadow = 1;
-				viewGunnerShadow = 1;
-				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
-				showAllTargets = 2;				
-				copilotHasFlares = 1;
-				LockDetectionSystem = 1 + 2 + 4 + 8;
-				incomingMissileDetectionSystem = 16;
-				TurretCanSee = 1+2+4+8+16;
-				weapons[] = {"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
-				magazines[] = {"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};									
-				stabilizedInAxes = "StabilizedInAxesBoth";
-				proxyIndex = 3;
-				gunnerName = "Co-Pilot"; 
-			};
                 };
         };
 	class ej_HH60HA: ej_UH60M_base
@@ -1426,88 +1428,6 @@ class CfgVehicles
 		class CargoTurret;
 		class Turrets: Turrets
 		{
-			class RightDoorGun: MainTurret
-			{
-				isCopilot = 0;
-				body = "Turret2";
-				gun = "Gun_2";
-				minElev=-40;
-				maxElev=15;
-				initElev=-20;	
-				minTurn=-140; 
-				maxTurn=5; 
-				initTurn=-90;
-				soundServo[] = {,db-40,1.0};
-				animationSourceHatch = "";
-				animationSourceBody = "Turret_2";
-				animationSourceGun = "Gun_2";
-				stabilizedInAxes = 0;
-				gunBeg="muzzle_2";
-				gunEnd="chamber_2";
-				weapons[]={"ad_50BMG"};
-				magazines[]={"ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag"};
-				gunnerName = "Right M2 Gunner";
-				memoryPointGun="machinegun_2";
-				memoryPointGunnerOptics="gunnerview_2";
-				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
-				gunnerOutOpticsShowCursor = 0;
-				gunnerOpticsShowCursor = 0;
-				gunnerAction="gunner_hmg02_low";
-				gunnerInAction="gunner_Heli_Transport_01";
-				commanding = -3;
-				primaryGunner = 0;			
-				selectionFireAnim = "m134flash_1";
-				proxyIndex = 2;
-				gunnerCompartments = "Compartment2";		
-				hasGunner = 1;
-				hasCrew = 1;
-				class ViewOptics
-				{
-					initAngleX=0;
-					minAngleX=-30;
-					maxAngleX=+30;
-					initAngleY=0;
-					minAngleY=-100;
-					maxAngleY=+100;
-					initFov=0.7;
-					minFov=0.25;
-					maxFov=1.1;
-				};
-			};
-			class MainTurret: MainTurret 
-			{
-				isCopilot = 0;
-				body = "mainTurret";
-				gun = "mainGun";			
-				minElev=-30; 
-				maxElev=15; 
-				initElev=-30;				
-				minTurn=-5; 
-				maxTurn=160; 
-				initTurn=90;				
-				soundServo[] = {,db-40,1.0};
-				animationSourceHatch = "";
-				animationSourceBody="mainTurret";
-				animationSourceGun="mainGun";
-				stabilizedInAxes = 0;
-				gunBeg = "muzzle_1";
-				gunEnd = "chamber_1";
-				weapons[]={"M134_uh60"};
-				magazines[]={"3000Rnd_762x51_Belt_Red"};
-				gunnerName = "Left M134 Gunner";
-				memoryPointGun = "machinegun";
-				memoryPointGunnerOptics = "gunnerview";
-				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
-				gunnerOutOpticsShowCursor = 0;
-				gunnerOpticsShowCursor = 0;
-				gunnerAction="gunner_Heli_Transport_01";
-				gunnerInAction="gunner_Heli_Transport_01";
-				commanding = -2;
-				proxyIndex = 3;
-				primaryGunner = 0;
-				selectionFireAnim = "m134flash";
-				gunnerCompartments = "Compartment2";
-			};
 			class CoPilotObs: MainTurret
 			{
 				ace_laser_selfdesignate_Enabled = 1;
@@ -1627,8 +1547,91 @@ class CfgVehicles
 					minFov = 0.3; 
 					maxFov = 1.0;
 				};
-                           };
-		   };
+                        
+			};
+			class RightDoorGun: MainTurret
+			{
+				isCopilot = 0;
+				body = "Turret2";
+				gun = "Gun_2";
+				minElev=-40;
+				maxElev=15;
+				initElev=-20;	
+				minTurn=-140; 
+				maxTurn=5; 
+				initTurn=-90;
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody = "Turret_2";
+				animationSourceGun = "Gun_2";
+				stabilizedInAxes = 0;
+				gunBeg="muzzle_2";
+				gunEnd="chamber_2";
+				weapons[]={"ad_50BMG"};
+				magazines[]={"ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag","ad_100Rnd_SLAP_mag"};
+				gunnerName = "Right M2 Gunner";
+				memoryPointGun="machinegun_2";
+				memoryPointGunnerOptics="gunnerview_2";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_hmg02_low";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -3;
+				primaryGunner = 0;			
+				selectionFireAnim = "m134flash_1";
+				proxyIndex = 2;
+				gunnerCompartments = "Compartment2";		
+				hasGunner = 1;
+				hasCrew = 1;
+				class ViewOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=+30;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=+100;
+					initFov=0.7;
+					minFov=0.25;
+					maxFov=1.1;
+				};
+			};
+			class MainTurret: MainTurret 
+			{
+				isCopilot = 0;
+				body = "mainTurret";
+				gun = "mainGun";			
+				minElev=-30; 
+				maxElev=15; 
+				initElev=-30;				
+				minTurn=-5; 
+				maxTurn=160; 
+				initTurn=90;				
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody="mainTurret";
+				animationSourceGun="mainGun";
+				stabilizedInAxes = 0;
+				gunBeg = "muzzle_1";
+				gunEnd = "chamber_1";
+				weapons[]={"M134_uh60"};
+				magazines[]={"3000Rnd_762x51_Belt_Red"};
+				gunnerName = "Left M134 Gunner";
+				memoryPointGun = "machinegun";
+				memoryPointGunnerOptics = "gunnerview";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_Heli_Transport_01";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -2;
+				proxyIndex = 3;
+				primaryGunner = 0;
+				selectionFireAnim = "m134flash";
+				gunnerCompartments = "Compartment2";
+			};
+		};
 	};
 
 
@@ -1780,89 +1783,6 @@ class CfgVehicles
 		};
 		class Turrets: Turrets
 		{
-			class RightDoorGun: MainTurret
-			{
-				isCopilot = 0;
-				body = "Turret2";
-				gun = "Gun_2";
-				gunnerType="B_helicrew_160_Early";
-				minElev=-60;
-				maxElev=2;
-				initElev=-45;	
-				minTurn=-160; 
-				maxTurn=5; 
-				initTurn=-90;
-				soundServo[] = {,db-40,1.0};
-				animationSourceHatch = "";
-				animationSourceBody = "Turret_2";
-				animationSourceGun = "Gun_2";
-				stabilizedInAxes = 0;
-				gunBeg="muzzle_2";
-				gunEnd="chamber_2";
-				weapons[]={"M134E_uh60_2"};
-				magazines[]={"2000Rnd_762x51_Belt_Red"};
-				gunnerName = "Right M134 Gunner";
-				memoryPointGun="machinegun";
-				memoryPointGunnerOptics="gunnerview_2";
-				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
-				gunnerOutOpticsShowCursor = 0;
-				gunnerOpticsShowCursor = 0;
-				gunnerAction="gunner_Heli_Transport_01";
-				gunnerInAction="gunner_Heli_Transport_01";
-				commanding = -3;
-				primaryGunner = 0;			
-				selectionFireAnim = "m134flash_1";
-				proxyIndex = 2;
-				gunnerCompartments = "Compartment2";		
-				hasGunner = 1;
-				hasCrew = 1;
-				class ViewOptics
-				{
-					initAngleX=0;
-					minAngleX=-30;
-					maxAngleX=+30;
-					initAngleY=0;
-					minAngleY=-100;
-					maxAngleY=+100;
-					initFov=0.7;
-					minFov=0.25;
-					maxFov=1.1;
-				};
-			};
-			class MainTurret: MainTurret 
-			{
-				isCopilot = 0;
-				body = "mainTurret";
-				gun = "mainGun";
-				gunnerType="B_helicrew_160_Early";			
-				minElev=-60; 
-				maxElev=2; 
-				initElev=-45;				
-				minTurn=-5; 
-				maxTurn=160; 
-				initTurn=90;				
-				soundServo[] = {,db-40,1.0};
-				animationSourceHatch = "";
-				animationSourceBody="mainTurret";
-				animationSourceGun="mainGun";
-				stabilizedInAxes = 0;
-				gunBeg = "muzzle_1";
-				gunEnd = "chamber_1";
-				weapons[]={"M134E_uh60"};
-				magazines[]={"2000Rnd_762x51_Belt_Red"};
-				gunnerName = "Left M134 Gunner";
-				memoryPointGun = "machinegun_2";
-				memoryPointGunnerOptics = "gunnerview";
-				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
-				gunnerOutOpticsShowCursor = 0;
-				gunnerOpticsShowCursor = 0;
-				gunnerAction="gunner_Heli_Transport_01";
-				gunnerInAction="gunner_Heli_Transport_01";
-				commanding = -2;
-				primaryGunner = 1;
-				selectionFireAnim = "m134flash";
-				gunnerCompartments = "Compartment2";
-			};
 			class CoPilotObs: MainTurret
 			{
 				isCopilot = 1;
@@ -1982,6 +1902,89 @@ class CfgVehicles
 					minFov = 0.3; 
 					maxFov = 1.0;
 				};
+			};
+			class RightDoorGun: MainTurret
+			{
+				isCopilot = 0;
+				body = "Turret2";
+				gun = "Gun_2";
+				gunnerType="B_helicrew_160_Early";
+				minElev=-60;
+				maxElev=2;
+				initElev=-45;	
+				minTurn=-160; 
+				maxTurn=5; 
+				initTurn=-90;
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody = "Turret_2";
+				animationSourceGun = "Gun_2";
+				stabilizedInAxes = 0;
+				gunBeg="muzzle_2";
+				gunEnd="chamber_2";
+				weapons[]={"M134E_uh60_2"};
+				magazines[]={"2000Rnd_762x51_Belt_Red"};
+				gunnerName = "Right M134 Gunner";
+				memoryPointGun="machinegun";
+				memoryPointGunnerOptics="gunnerview_2";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_Heli_Transport_01";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -3;
+				primaryGunner = 0;			
+				selectionFireAnim = "m134flash_1";
+				proxyIndex = 2;
+				gunnerCompartments = "Compartment2";		
+				hasGunner = 1;
+				hasCrew = 1;
+				class ViewOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=+30;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=+100;
+					initFov=0.7;
+					minFov=0.25;
+					maxFov=1.1;
+				};
+			};
+			class MainTurret: MainTurret 
+			{
+				isCopilot = 0;
+				body = "mainTurret";
+				gun = "mainGun";
+				gunnerType="B_helicrew_160_Early";			
+				minElev=-60; 
+				maxElev=2; 
+				initElev=-45;				
+				minTurn=-5; 
+				maxTurn=160; 
+				initTurn=90;				
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody="mainTurret";
+				animationSourceGun="mainGun";
+				stabilizedInAxes = 0;
+				gunBeg = "muzzle_1";
+				gunEnd = "chamber_1";
+				weapons[]={"M134E_uh60"};
+				magazines[]={"2000Rnd_762x51_Belt_Red"};
+				gunnerName = "Left M134 Gunner";
+				memoryPointGun = "machinegun_2";
+				memoryPointGunnerOptics = "gunnerview";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_Heli_Transport_01";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -2;
+				primaryGunner = 1;
+				selectionFireAnim = "m134flash";
+				gunnerCompartments = "Compartment2";
 			};
 			class CargoTurret_01: CargoTurret
 			{
@@ -2216,89 +2219,6 @@ class TurnOut
 		};
 		class Turrets: Turrets
 		{
-			class RightDoorGun: MainTurret
-			{
-				isCopilot = 0;
-				body = "Turret2";
-				gun = "Gun_2";
-				gunnerType="B_helicrew_160_Early";
-				minElev=-60;
-				maxElev=2;
-				initElev=-45;	
-				minTurn=-160; 
-				maxTurn=5; 
-				initTurn=-90;
-				soundServo[] = {,db-40,1.0};
-				animationSourceHatch = "";
-				animationSourceBody = "Turret_2";
-				animationSourceGun = "Gun_2";
-				stabilizedInAxes = 0;
-				gunBeg="muzzle_2";
-				gunEnd="chamber_2";
-				weapons[]={"M134E_uh60_2"};
-				magazines[]={"2000Rnd_762x51_Belt_Red"};
-				gunnerName = "Right M134 Gunner";
-				memoryPointGun="machinegun";
-				memoryPointGunnerOptics="gunnerview_2";
-				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
-				gunnerOutOpticsShowCursor = 0;
-				gunnerOpticsShowCursor = 0;
-				gunnerAction="gunner_Heli_Transport_01";
-				gunnerInAction="gunner_Heli_Transport_01";
-				commanding = -3;
-				primaryGunner = 0;			
-				selectionFireAnim = "m134flash_1";
-				proxyIndex = 2;
-				gunnerCompartments = "Compartment2";		
-				hasGunner = 1;
-				hasCrew = 1;
-				class ViewOptics
-				{
-					initAngleX=0;
-					minAngleX=-30;
-					maxAngleX=+30;
-					initAngleY=0;
-					minAngleY=-100;
-					maxAngleY=+100;
-					initFov=0.7;
-					minFov=0.25;
-					maxFov=1.1;
-				};
-			};
-			class MainTurret: MainTurret 
-			{
-				isCopilot = 0;
-				body = "mainTurret";
-				gun = "mainGun";
-				gunnerType="B_helicrew_160_Early";			
-				minElev=-60; 
-				maxElev=2; 
-				initElev=-45;				
-				minTurn=-5; 
-				maxTurn=160; 
-				initTurn=90;				
-				soundServo[] = {,db-40,1.0};
-				animationSourceHatch = "";
-				animationSourceBody="mainTurret";
-				animationSourceGun="mainGun";
-				stabilizedInAxes = 0;
-				gunBeg = "muzzle_1";
-				gunEnd = "chamber_1";
-				weapons[]={"M134E_uh60"};
-				magazines[]={"2000Rnd_762x51_Belt_Red"};
-				gunnerName = "Left M134 Gunner";
-				memoryPointGun = "machinegun_2";
-				memoryPointGunnerOptics = "gunnerview";
-				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
-				gunnerOutOpticsShowCursor = 0;
-				gunnerOpticsShowCursor = 0;
-				gunnerAction="gunner_Heli_Transport_01";
-				gunnerInAction="gunner_Heli_Transport_01";
-				commanding = -2;
-				primaryGunner = 1;
-				selectionFireAnim = "m134flash";
-				gunnerCompartments = "Compartment2";
-			};
 			class CoPilotObs: MainTurret
 			{
 				isCopilot = 1;
@@ -2418,6 +2338,89 @@ class TurnOut
 					minFov = 0.3; 
 					maxFov = 1.0;
 				};
+			};
+			class RightDoorGun: MainTurret
+			{
+				isCopilot = 0;
+				body = "Turret2";
+				gun = "Gun_2";
+				gunnerType="B_helicrew_160_Early";
+				minElev=-60;
+				maxElev=2;
+				initElev=-45;	
+				minTurn=-160; 
+				maxTurn=5; 
+				initTurn=-90;
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody = "Turret_2";
+				animationSourceGun = "Gun_2";
+				stabilizedInAxes = 0;
+				gunBeg="muzzle_2";
+				gunEnd="chamber_2";
+				weapons[]={"M134E_uh60_2"};
+				magazines[]={"2000Rnd_762x51_Belt_Red"};
+				gunnerName = "Right M134 Gunner";
+				memoryPointGun="machinegun";
+				memoryPointGunnerOptics="gunnerview_2";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_Heli_Transport_01";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -3;
+				primaryGunner = 0;			
+				selectionFireAnim = "m134flash_1";
+				proxyIndex = 2;
+				gunnerCompartments = "Compartment2";		
+				hasGunner = 1;
+				hasCrew = 1;
+				class ViewOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=+30;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=+100;
+					initFov=0.7;
+					minFov=0.25;
+					maxFov=1.1;
+				};
+			};
+			class MainTurret: MainTurret 
+			{
+				isCopilot = 0;
+				body = "mainTurret";
+				gun = "mainGun";
+				gunnerType="B_helicrew_160_Early";			
+				minElev=-60; 
+				maxElev=2; 
+				initElev=-45;				
+				minTurn=-5; 
+				maxTurn=160; 
+				initTurn=90;				
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody="mainTurret";
+				animationSourceGun="mainGun";
+				stabilizedInAxes = 0;
+				gunBeg = "muzzle_1";
+				gunEnd = "chamber_1";
+				weapons[]={"M134E_uh60"};
+				magazines[]={"2000Rnd_762x51_Belt_Red"};
+				gunnerName = "Left M134 Gunner";
+				memoryPointGun = "machinegun_2";
+				memoryPointGunnerOptics = "gunnerview";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_Heli_Transport_01";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -2;
+				primaryGunner = 1;
+				selectionFireAnim = "m134flash";
+				gunnerCompartments = "Compartment2";
 			};
 			class CargoTurret_01: CargoTurret
 			{
@@ -2723,89 +2726,6 @@ class TurnOut
 		};
 		class Turrets: Turrets
 		{
-			class RightDoorGun: MainTurret
-			{
-				isCopilot = 0;
-				body = "Turret2";
-				gun = "Gun_2";
-				gunnerType="160th_SOAR_Crew";
-				minElev=-60;
-				maxElev=2;
-				initElev=-45;	
-				minTurn=-160; 
-				maxTurn=5; 
-				initTurn=-90;
-				soundServo[] = {,db-40,1.0};
-				animationSourceHatch = "";
-				animationSourceBody = "Turret_2";
-				animationSourceGun = "Gun_2";
-				stabilizedInAxes = 0;
-				gunBeg="muzzle_2";
-				gunEnd="chamber_2";
-				weapons[]={"M134_uh60_2"};
-				magazines[]={"3000Rnd_762x51_Belt_Red"};
-				gunnerName = "Right M134 Gunner";
-				memoryPointGun="machinegun";
-				memoryPointGunnerOptics="gunnerview_2";
-				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
-				gunnerOutOpticsShowCursor = 0;
-				gunnerOpticsShowCursor = 0;
-				gunnerAction="gunner_Heli_Transport_01";
-				gunnerInAction="gunner_Heli_Transport_01";
-				commanding = -3;
-				primaryGunner = 0;			
-				selectionFireAnim = "m134flash_1";
-				proxyIndex = 2;
-				gunnerCompartments = "Compartment2";		
-				hasGunner = 1;
-				hasCrew = 1;
-				class ViewOptics
-				{
-					initAngleX=0;
-					minAngleX=-30;
-					maxAngleX=+30;
-					initAngleY=0;
-					minAngleY=-100;
-					maxAngleY=+100;
-					initFov=0.7;
-					minFov=0.25;
-					maxFov=1.1;
-				};
-			};
-			class MainTurret: MainTurret 
-			{
-				isCopilot = 0;
-				body = "mainTurret";
-				gun = "mainGun";
-				gunnerType="160th_SOAR_Crew";			
-				minElev=-60; 
-				maxElev=2; 
-				initElev=-45;				
-				minTurn=-5; 
-				maxTurn=160; 
-				initTurn=90;				
-				soundServo[] = {,db-40,1.0};
-				animationSourceHatch = "";
-				animationSourceBody="mainTurret";
-				animationSourceGun="mainGun";
-				stabilizedInAxes = 0;
-				gunBeg = "muzzle_1";
-				gunEnd = "chamber_1";
-				weapons[]={"M134_uh60"};
-				magazines[]={"3000Rnd_762x51_Belt_Red"};
-				gunnerName = "Left M134 Gunner";
-				memoryPointGun = "machinegun_2";
-				memoryPointGunnerOptics = "gunnerview";
-				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
-				gunnerOutOpticsShowCursor = 0;
-				gunnerOpticsShowCursor = 0;
-				gunnerAction="gunner_Heli_Transport_01";
-				gunnerInAction="gunner_Heli_Transport_01";
-				commanding = -2;
-				primaryGunner = 1;
-				selectionFireAnim = "m134flash";
-				gunnerCompartments = "Compartment2";
-			};
 			class CoPilotObs: MainTurret
 			{
 				isCopilot = 1;
@@ -2925,6 +2845,89 @@ class TurnOut
 					minFov = 0.3; 
 					maxFov = 1.0;
 				};
+			};
+			class RightDoorGun: MainTurret
+			{
+				isCopilot = 0;
+				body = "Turret2";
+				gun = "Gun_2";
+				gunnerType="160th_SOAR_Crew";
+				minElev=-60;
+				maxElev=2;
+				initElev=-45;	
+				minTurn=-160; 
+				maxTurn=5; 
+				initTurn=-90;
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody = "Turret_2";
+				animationSourceGun = "Gun_2";
+				stabilizedInAxes = 0;
+				gunBeg="muzzle_2";
+				gunEnd="chamber_2";
+				weapons[]={"M134_uh60_2"};
+				magazines[]={"3000Rnd_762x51_Belt_Red"};
+				gunnerName = "Right M134 Gunner";
+				memoryPointGun="machinegun";
+				memoryPointGunnerOptics="gunnerview_2";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_Heli_Transport_01";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -3;
+				primaryGunner = 0;			
+				selectionFireAnim = "m134flash_1";
+				proxyIndex = 2;
+				gunnerCompartments = "Compartment2";		
+				hasGunner = 1;
+				hasCrew = 1;
+				class ViewOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=+30;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=+100;
+					initFov=0.7;
+					minFov=0.25;
+					maxFov=1.1;
+				};
+			};
+			class MainTurret: MainTurret 
+			{
+				isCopilot = 0;
+				body = "mainTurret";
+				gun = "mainGun";
+				gunnerType="160th_SOAR_Crew";			
+				minElev=-60; 
+				maxElev=2; 
+				initElev=-45;				
+				minTurn=-5; 
+				maxTurn=160; 
+				initTurn=90;				
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody="mainTurret";
+				animationSourceGun="mainGun";
+				stabilizedInAxes = 0;
+				gunBeg = "muzzle_1";
+				gunEnd = "chamber_1";
+				weapons[]={"M134_uh60"};
+				magazines[]={"3000Rnd_762x51_Belt_Red"};
+				gunnerName = "Left M134 Gunner";
+				memoryPointGun = "machinegun_2";
+				memoryPointGunnerOptics = "gunnerview";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_Heli_Transport_01";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -2;
+				primaryGunner = 1;
+				selectionFireAnim = "m134flash";
+				gunnerCompartments = "Compartment2";
 			};
 			class CargoTurret_01: CargoTurret
 			{
@@ -3216,89 +3219,6 @@ class TurnOut
 		};
 		class Turrets: Turrets
 		{
-			class RightDoorGun: MainTurret
-			{
-				isCopilot = 0;
-				body = "Turret2";
-				gun = "Gun_2";
-				gunnerType="160th_SOAR_Crew";
-				minElev=-60;
-				maxElev=2;
-				initElev=-45;	
-				minTurn=-160; 
-				maxTurn=5; 
-				initTurn=-90;
-				soundServo[] = {,db-40,1.0};
-				animationSourceHatch = "";
-				animationSourceBody = "Turret_2";
-				animationSourceGun = "Gun_2";
-				stabilizedInAxes = 0;
-				gunBeg="muzzle_2";
-				gunEnd="chamber_2";
-				weapons[]={"M134_uh60_2"};
-				magazines[]={"3000Rnd_762x51_Belt_Red"};
-				gunnerName = "Right M134 Gunner";
-				memoryPointGun="machinegun";
-				memoryPointGunnerOptics="gunnerview_2";
-				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
-				gunnerOutOpticsShowCursor = 0;
-				gunnerOpticsShowCursor = 0;
-				gunnerAction="gunner_Heli_Transport_01";
-				gunnerInAction="gunner_Heli_Transport_01";
-				commanding = -3;
-				primaryGunner = 0;			
-				selectionFireAnim = "m134flash_1";
-				proxyIndex = 2;
-				gunnerCompartments = "Compartment2";		
-				hasGunner = 1;
-				hasCrew = 1;
-				class ViewOptics
-				{
-					initAngleX=0;
-					minAngleX=-30;
-					maxAngleX=+30;
-					initAngleY=0;
-					minAngleY=-100;
-					maxAngleY=+100;
-					initFov=0.7;
-					minFov=0.25;
-					maxFov=1.1;
-				};
-			};
-			class MainTurret: MainTurret 
-			{
-				isCopilot = 0;
-				body = "mainTurret";
-				gun = "mainGun";
-				gunnerType="160th_SOAR_Crew";			
-				minElev=-60; 
-				maxElev=2; 
-				initElev=-45;				
-				minTurn=-5; 
-				maxTurn=160; 
-				initTurn=90;				
-				soundServo[] = {,db-40,1.0};
-				animationSourceHatch = "";
-				animationSourceBody="mainTurret";
-				animationSourceGun="mainGun";
-				stabilizedInAxes = 0;
-				gunBeg = "muzzle_1";
-				gunEnd = "chamber_1";
-				weapons[]={"M134_uh60"};
-				magazines[]={"3000Rnd_762x51_Belt_Red"};
-				gunnerName = "Left M134 Gunner";
-				memoryPointGun = "machinegun_2";
-				memoryPointGunnerOptics = "gunnerview";
-				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
-				gunnerOutOpticsShowCursor = 0;
-				gunnerOpticsShowCursor = 0;
-				gunnerAction="gunner_Heli_Transport_01";
-				gunnerInAction="gunner_Heli_Transport_01";
-				commanding = -2;
-				primaryGunner = 1;
-				selectionFireAnim = "m134flash";
-				gunnerCompartments = "Compartment2";
-			};
 			class CoPilotObs: MainTurret
 			{
 				isCopilot = 1;
@@ -3418,6 +3338,89 @@ class TurnOut
 					minFov = 0.3; 
 					maxFov = 1.0;
 				};
+			};
+			class RightDoorGun: MainTurret
+			{
+				isCopilot = 0;
+				body = "Turret2";
+				gun = "Gun_2";
+				gunnerType="160th_SOAR_Crew";
+				minElev=-60;
+				maxElev=2;
+				initElev=-45;	
+				minTurn=-160; 
+				maxTurn=5; 
+				initTurn=-90;
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody = "Turret_2";
+				animationSourceGun = "Gun_2";
+				stabilizedInAxes = 0;
+				gunBeg="muzzle_2";
+				gunEnd="chamber_2";
+				weapons[]={"M134_uh60_2"};
+				magazines[]={"3000Rnd_762x51_Belt_Red"};
+				gunnerName = "Right M134 Gunner";
+				memoryPointGun="machinegun";
+				memoryPointGunnerOptics="gunnerview_2";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_Heli_Transport_01";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -3;
+				primaryGunner = 0;			
+				selectionFireAnim = "m134flash_1";
+				proxyIndex = 2;
+				gunnerCompartments = "Compartment2";		
+				hasGunner = 1;
+				hasCrew = 1;
+				class ViewOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=+30;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=+100;
+					initFov=0.7;
+					minFov=0.25;
+					maxFov=1.1;
+				};
+			};
+			class MainTurret: MainTurret 
+			{
+				isCopilot = 0;
+				body = "mainTurret";
+				gun = "mainGun";
+				gunnerType="160th_SOAR_Crew";			
+				minElev=-60; 
+				maxElev=2; 
+				initElev=-45;				
+				minTurn=-5; 
+				maxTurn=160; 
+				initTurn=90;				
+				soundServo[] = {,db-40,1.0};
+				animationSourceHatch = "";
+				animationSourceBody="mainTurret";
+				animationSourceGun="mainGun";
+				stabilizedInAxes = 0;
+				gunBeg = "muzzle_1";
+				gunEnd = "chamber_1";
+				weapons[]={"M134_uh60"};
+				magazines[]={"3000Rnd_762x51_Belt_Red"};
+				gunnerName = "Left M134 Gunner";
+				memoryPointGun = "machinegun_2";
+				memoryPointGunnerOptics = "gunnerview";
+				gunnerOpticsModel = "\uh-60\Misc\optika_empty";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerOpticsShowCursor = 0;
+				gunnerAction="gunner_Heli_Transport_01";
+				gunnerInAction="gunner_Heli_Transport_01";
+				commanding = -2;
+				primaryGunner = 1;
+				selectionFireAnim = "m134flash";
+				gunnerCompartments = "Compartment2";
 			};
 			class CargoTurret_01: CargoTurret
 			{
