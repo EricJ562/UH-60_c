@@ -11,22 +11,6 @@ class CfgPatches
 	};
 };
 
-class CfgVehicleClasses
-{
-	class RUSFE{displayName="Russian Armed Forces";};
-};
-
-class CfgFactionClasses
-{
-	class RUSFED
-	{
-		displayName="Russian Armed Forces";
-		priority=1;
-		side=0;
-		icon="\ej_pif\data\cfgfactionclasses_raven.paa";
-	};
-};
-
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
 class SensorTemplateActiveRadar;

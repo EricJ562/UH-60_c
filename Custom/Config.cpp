@@ -17,6 +17,7 @@ class CfgVehicleClasses
 	class USN{displayName="US Navy";};
 	class USMC{displayName="USMC";};
 	class BRPMC{displayName="Black River PMC";};
+	class RUSFE{displayName="Russian Armed Forces";};
 };
 
 class CfgFactionClasses
@@ -68,6 +69,13 @@ class CfgFactionClasses
 		side=0;
 		icon="\UH-60\data\cfgfactionclasses_blackriver.paa";
 		flag = "\UH-60\data\Flags\flag_rwg_co.paa";
+	};
+	class RUSFED
+	{
+		displayName="Russian Armed Forces";
+		priority=1;
+		side=0;
+		icon="\ej_pif\data\cfgfactionclasses_raven.paa";
 	};
 };
 
