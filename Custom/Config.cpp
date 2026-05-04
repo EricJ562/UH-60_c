@@ -355,6 +355,33 @@ class CfgWeapons
 
 class CfgVehicles
 {
+	class B_Heli_Transport_01_F;
+	class kj_UH80D: B_Heli_Transport_01_F 
+	{
+		author="Flanker562";
+		scope=2;
+		side=1;
+		faction="BLU_F";
+		displayName = "UH-80D Ghost Hawk";
+		crew="B_Helipilot_F";
+		receiveRemoteTargets=1;
+		reportRemoteTargets=1;
+		reportOwnPosition=1;
+		typicalCargo[]=
+		{
+			"B_Helipilot_F"
+		};
+		availableForSupportTypes[]=
+		{
+			"Drop",
+			"Transport"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext01_CO.paa",
+			"\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"
+		};
+	};
 	class B_ViperLightHarness_blk_F;
 	class ej_assaultpack_BRPMC: B_ViperLightHarness_blk_F	
 	{

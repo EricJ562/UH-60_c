@@ -1440,7 +1440,7 @@ class CfgVehicles
 				memoryPointsGetInGunnerDir="pos copilot dir";		
 				gunnerGetInAction="GetInHeli_Transport_01Cargo";
 				gunnerGetOutAction="GetOutLow";
-				minElev = -2;
+				minElev = -25;
 				maxElev = +25;
 				initElev = 0;
 				minTurn = -360;  

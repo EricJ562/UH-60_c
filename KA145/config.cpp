@@ -220,7 +220,7 @@ class CfgVehicles
 		{
 			class TransportPylonsComponent
 			{
-				uiPicture="\A3\Air_F_Beta\Heli_Attack_02\Data\UI\Heli_Attack_02_3DEN_CA.paa";
+				uiPicture="\UH-60\Data\UI\Heli_ka145.paa";
 				class Pylons
 				{
 					class PylonLeft1

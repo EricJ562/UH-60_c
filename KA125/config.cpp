@@ -287,7 +287,7 @@ class CfgVehicles
 		{
 			class TransportPylonsComponent
 			{
-				uiPicture="\UH-60\Data\UI\Heli_Blackhawk.paa";
+				uiPicture="\UH-60\Data\UI\Heli_ka125.paa";
 				class Pylons
 				{
 					class PylonLeft1

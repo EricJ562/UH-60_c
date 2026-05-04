@@ -1294,7 +1294,6 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
 		};
 		respawnWeapons[]=
 		{
@@ -1302,7 +1301,6 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_MRD_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
 		};
 		magazines[]=
 		{
