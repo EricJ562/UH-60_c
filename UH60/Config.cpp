@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class Ej_UH60M
 	{
-		units[] = {"ej_MH60A","ej_MH60AL","ej_MH60L","ej_UH60M_MEV","ej_UH60M","ej_MH60S","ej_MH60SI","ej_MH60M","ej_MH60MS","ej_HH60HA"};
+		units[] = {"kj_UH60M_UAS","ej_MH60A","ej_MH60AL","ej_MH60L","ej_UH60M_MEV","ej_UH60M","ej_MH60S","ej_MH60SI","ej_MH60M","ej_MH60MS","ej_HH60HA"};
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 2.20;

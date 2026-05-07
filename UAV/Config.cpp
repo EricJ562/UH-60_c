@@ -80,14 +80,14 @@ class CfgVehicles
 		fuelCapacity = 100;
 		maxSpeed = 200;
 		camouflage=5;
-		slingLoadMaxCargoMass=50;
+		slingLoadMaxCargoMass=500;
 		slingLoadMemoryPoint="slingLoad0";
 		LockDetectionSystem="1 + 8 + 4";
 		incomingMissileDetectionSystem=16
 		threat[] = {0.8, 1, 0.6};
 		unitInfoType = "RscOptics_AV_pilot";
 		unitInfoTypeRTD = "RscOptics_AV_pilot";
-		memoryPointDriverOptics = "Driver_pos";
+		memoryPointDriverOptics = "light_pos";
 		driverOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UGV_01_Optics_Driver_F.p3d";
 		driverForceOptics = 1;
 		disableInventory=1;
@@ -486,4 +486,57 @@ class CfgVehicles
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[]={"uh-60\data\mq17USN_co.paa","uh-60\data\usnductfans_co.paa","uh-60\data\drone_usn_co.paa"};
           };
+	class kj_UH60M_UAS: ej_MQ17_base
+	{
+		picture="\uh-60\data\ui\uh_60_icon.paa";
+		icon="\UH-60\Data\UI\Map_UH_60_ca.paa";
+		author="Flanker562";
+		Scopecurator=2;
+		scope=2;
+		accuracy=1;
+		side=1;
+		faction="USA";
+		accuracy = 1.5;
+		transportSoldier = 12;
+		crew="B_UAV_AI";
+		isUav=1;
+		cargoCanControlUAV=0;
+		class ViewOptics: ViewOptics
+		{
+			visionMode[]=
+			{
+				"Normal",
+				"NVG"
+			};
+			initFov=0.85000002;
+			minFov=0.85000002;
+			maxFov=0.85000002;
+		};
+		cargoAction[]=
+		{
+			"passenger_low01",
+			"passenger_generic01_leanleft",
+			"passenger_generic01_leanleft",
+			"passenger_generic01_leanright",
+			"passenger_generic01_foldhands",
+			"passenger_mantisrear",
+			"passenger_mantisrear",
+			"passenger_generic01_foldhands"
+		};
+		memoryPointTaskMarker="TaskMarker_1_pos";
+		receiveRemoteTargets=1;
+		reportRemoteTargets=1;
+		reportOwnPosition=1;
+		driverOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UGV_01_Optics_Driver_F.p3d";
+		driverForceOptics = 1;
+		editorPreview="\uh-60\data\Previews\UH60M.jpg";
+		displayName = UH-60M UAS;
+		textureList[]={"USArmy",1};
+		ace_fastroping_enabled = 1;
+		ace_fastroping_ropeOrigins[] = {"ropeOriginLeft", "ropeOriginRight"};
+		memoryPointsGetInCargo="pos cargo";
+		memoryPointsGetInCargoDir="pos cargo dir";
+		model = "\UH-60\UH60\kj_UH60M_UAS.p3d";
+		#include "sounds.hpp"
+	};
 };
