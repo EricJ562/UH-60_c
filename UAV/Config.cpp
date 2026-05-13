@@ -11,20 +11,33 @@ class CfgPatches
 		requiredAddons[] = {"KJ_UH_60","A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
 	};
 };
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class SensorTemplateDataLink;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
 class CfgVehicles
 {
 	class Air;
 	class Helicopter: Air
 	{
-		class Turrets;
+		class NewTurret;
 		class HitPoints;
 	};
 	class Helicopter_Base_F: Helicopter
 	{
-		class Turrets: Turrets
-		{
-			class MainTurret;
-		};
 		class HitPoints: HitPoints
 		{
 			class HitHRotor;
@@ -66,7 +79,7 @@ class CfgVehicles
 		irtarget=0;
 		crew = "B_UAV_AI";
 		typicalCargo[] = {"B_UAV_AI"};
-		irScanRangeMax = 2000;
+		irScanRangeMax = 5000;
 		class Library{libTextDesc = "MQ-17";};
 		simulation = "helicopterX";
 		armor = 40;
@@ -103,6 +116,7 @@ class CfgVehicles
 		LODTurnedIn=-1;
 		LODTurnedOut=-1;
 		cost=3000000;
+		memoryPointTaskMarker="TaskMarker_1_pos";
 		radarTargetSize=0.3;
 		visualTargetSize=0.69999999;
 		irTargetSize=0.5;
@@ -112,6 +126,8 @@ class CfgVehicles
 		slingLoadCargoMemoryPoints[]={"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 		uavCameraDriverPos = "light_pos";
 		uavCameraDriverDir = "light_dir";
+		uavCameraGunnerPos="laserstart";
+		uavCameraGunnerDir="commanderview";
 		vehicleClass="Autonomous";
 		class TransportItems{};
 		class MFD{};
@@ -183,21 +199,189 @@ class CfgVehicles
 				effect="ExhaustsEffect";
 			};
 		};
-		class Turrets: Turrets
+		class Components: Components
 		{
-			class MainTurret: MainTurret
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=2500;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						maxTrackableSpeed=50;
+						angleRangeHorizontal=51;
+						angleRangeVertical=37;
+						animDirection="mainGun";
+						aimDown=-0.5;
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=2500;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						maxTrackableSpeed=50;
+						angleRangeHorizontal=51;
+						angleRangeVertical=37;
+						animDirection="mainGun";
+						aimDown=-0.5;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+						class AirTarget
+						{
+							minRange=6000;
+							maxRange=6000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=6000;
+							maxRange=6000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,1000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,1000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+		};
+		class Turrets
+		{
+			class MainTurret: NewTurret
 			{
 				isCopilot=0;
-				minElev=-90;
-				maxElev=3;
-				initElev=-3;
+				minElev=-85;
+				maxElev=10;
+				initElev=0;
 				minTurn=-360;
 				maxTurn=360;
 				initTurn=0;
+				maxHorizontalRotSpeed=10;
+				maxVerticalRotSpeed=10;
+				outGunnerMayFire=1;
+				inGunnerMayFire=1;
+				commanding=-1;
 				body="mainTurret";
 				gun="mainGun";
-				animationSourceBody="mainTurret";
-				animationSourceGun="mainGun";
+				animationSourceBody = "ObsTurret";
+				animationSourceGun = "ObsGun";
+				memoryPointGun="laserstart";
+				memoryPointGunnerOptics="commanderview";
+				gunBeg="commanderview";
+				gunEnd="laserstart";
+				gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UGV_01_Optics_Gunner_F.p3d";
+				gunnerForceOptics=1;
+				turretInfoType="RscOptics_UAV_gunner";
+				stabilizedInAxes=3;
+				enableManualFire=0;
+				showAllTargets=4;
+				weapons[]=
+				{
+					"Laserdesignator_mounted"
+				};
+				magazines[]=
+				{
+					"Laserbatteries",
+				};
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\servo_drone_turret_2",
+					0.056234129,
+					1,
+					10
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\servo_drone_turret_2",
+					0.056234129,
+					1,
+					10
+				};
+				GunnerCompartments="Compartment1";
+				startEngine=0;
+				LODTurnedIn=-1;
+				LODTurnedOut=-1;
 				class OpticsIn
 				{
 					class Wide
@@ -216,7 +400,8 @@ class CfgVehicles
 						visionMode[]=
 						{
 							"Normal",
-							"NVG"
+							"NVG",
+							"Ti"
 						};
 						thermalMode[]={0,1};
 						gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
@@ -260,21 +445,60 @@ class CfgVehicles
 						gunnerOpticsEffect[]={};
 					};
 				};
-				inGunnerMayFire=1;
-				outGunnerMayFire=1;
-				commanding=-1;
-				primaryGunner=1;
-				memoryPointGun="PIP0_dir";
-				memoryPointGunnerOptics="PIP0_pos";
-				gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UGV_01_Optics_Gunner_F.p3d";
-				gunnerForceOptics=1;
-				turretInfoType="RscOptics_UAV_gunner";
-				stabilizedInAxes=3;
-				soundServo[]={"A3\Sounds_F\vehicles\air\noises\servo_drone_turret_1",0.079432823,1,10};
-				soundServoVertical[]={"A3\Sounds_F\vehicles\air\noises\servo_drone_turret_2",0.099999994,1,10};
-				GunnerCompartments="Compartment1";
-				LODTurnedIn=-1;
-				LODTurnedOut=-1;
+				class Components
+				{
+					class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+					{
+						class components
+						{
+							class EmptyDisplay
+							{
+								componentType="EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType="MinimapDisplayComponent";
+								resource="RscCustomInfoMiniMap";
+							};
+							class UAVDisplay
+							{
+								componentType="UAVFeedDisplayComponent";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={4000,2000,1000,8000};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+					{
+						defaultDisplay="SensorDisplay";
+						class components
+						{
+							class EmptyDisplay
+							{
+								componentType="EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType="MinimapDisplayComponent";
+								resource="RscCustomInfoMiniMap";
+							};
+							class UAVDisplay
+							{
+								componentType="UAVFeedDisplayComponent";
+							};
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={4000,2000,1000,8000};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+				};
 			};
 		};
 	};
@@ -312,10 +536,11 @@ class CfgVehicles
 						{
 							"B_MISSILE_PYLON",
 							"B_RATTLER_PYLON",
-							"M134_mq17"
+							"M134_mq17",
+							"20MM_TWIN_CANNON"
 						};
 						turret[]={1};
-						maxweight=150;
+						maxweight=300;
 						UIposition[]={0.59999999,0.40000001};
 					};
 					class PylonLeft2: PylonLeft1
@@ -326,8 +551,10 @@ class CfgVehicles
 						{
 							"B_MISSILE_PYLON",
 							"B_RATTLER_PYLON",
-							"M134_mq17"
+							"M134_mq17",
+							"20MM_TWIN_CANNON"
 						};
+						maxweight=300;
 						turret[]={1};
 						UIposition[]={0.059999999,0.40000001};									maxweight=150;						
 					};
@@ -527,6 +754,10 @@ class CfgVehicles
 		receiveRemoteTargets=1;
 		reportRemoteTargets=1;
 		reportOwnPosition=1;
+		fuelCapacity = 1360;
+		fuelConsumptionRate=0.126;
+		maxSpeed = 282;
+		slingLoadMaxCargoMass=4100;
 		driverOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UGV_01_Optics_Driver_F.p3d";
 		driverForceOptics = 1;
 		editorPreview="\uh-60\data\Previews\UH60M.jpg";
