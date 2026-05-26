@@ -115,6 +115,8 @@ class CfgVehicles
 		damageResistance=0.0055499999;
 		armor = 70;
 		laserScanner=1;
+		radarTargetSize=1.25;
+		visualTargetSize=0.95;
 		irtargetsize=1.2;
 		RadarTargetSize=1.4;
 		numberPhysicalWheels=3;
@@ -1961,8 +1963,7 @@ class CfgVehicles
 		displayName = MH-92F (Insertion);
 		model = "\UH-60\MH92\ej_MH92.p3d";
 		cost=250000;
-		RadarTargetSize=1.4;
-		irTargetSize=0.80000001;
+		irTargetSize=0.85;
 		irScanRangeMax = 4000;
         	USAF_RefuelType = "probe";
         	USAF_RefuelPoint[] = {-0.495, -0.413, -7.883};
@@ -1991,6 +1992,108 @@ class CfgVehicles
 			maxMainRotorStress=200000;
 			maxTailRotorStress=25000;
 			rtd_center="rtd_center";
+		};
+		class AnimationSources: AnimationSources
+		{
+			class Gun_HRot{source="user";animPeriod=1e-006;initPhase=0;};
+			class Gun_VRot{source="user";animPeriod=1e-006;initPhase=0;};
+			class HideWeapon{source = "user";animPeriod = 0.00001;initPhase = 0;};
+			class Gatling_1{source="revolving";weapon=M134_UH60;};
+			class Gatling_2{source="revolving";weapon=M134_UH60_2;};
+			class ReloadAnim{source="reload";weapon="M240_veh";};
+			class ReloadMagazine{source="reloadmagazine";weapon="M240_veh";};
+			class Revolving{source="revolving";weapon="M240_veh";};
+			class ReloadAnim_2{source="reload";weapon="M240_veh_2";};
+			class ReloadMagazine_2{source="reloadmagazine";weapon="M240_veh_2";};
+			class Revolving_2{source="revolving";weapon="M240_veh_2";};
+			class HidePilotMFD{source="user";animPeriod=0;initPhase=0;};
+			class HideGunMFD{source="user";animPeriod=0;initPhase=0;};	
+			class HideSlingFeed{source="user";animPeriod=0;initPhase=0;};
+			class Probe_Show{source="user";animPeriod=0;initPhase=0;};
+    			class lights_green_hide{source = "user";animPeriod = 0.001;initPhase = 1;};
+             		class EOTech_opticrail_xps3
+              		{
+                  		DisplayName="Show EOTech Optic";
+                  		source="user";
+                  		useSource=1;
+                  		animPeriod=0.01;
+                  		initPhase=1;
+                  		author="ADFRC";
+                  		forceAnimatePhase = 0;
+                  		forceAnimate[] = {"EOTech_opticrail_spectr",1,};
+              };
+    			class hitGlass1
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass1";
+        			raw = 1;
+    			};
+    			class hitGlass2
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass2";
+        			raw = 1;
+    			};
+    			class hitGlass3
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass3";
+        			raw = 1;
+    			};
+    			class hitGlass4
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass4";
+        			raw = 1;
+    			};
+    			class hitGlass5
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass5";
+        			raw = 1;
+    			};
+    			class hitGlass6
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass6";
+        			raw = 1;
+    			};
+    			class hitGlass7
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass7";
+        			raw = 1;
+    			};
+    			class hitGlass8
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass8";
+        			raw = 1;
+    			};
+    			class hitGlass9
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass9";
+        			raw = 1;
+    			};
+    			class hitGlass10
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass10";
+        			raw = 1;
+    			};
+    			class hitGlass11
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass11";
+        			raw = 1;
+    			};
+    			class hitGlass12
+    			{
+        			source = "Hit";
+        			hitpoint = "hitGlass12";
+        			raw = 1;
+    			};
 		};
 		class RenderTargets
 		{
