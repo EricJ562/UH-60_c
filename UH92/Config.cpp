@@ -2013,15 +2013,26 @@ class CfgVehicles
     			class lights_green_hide{source = "user";animPeriod = 0.001;initPhase = 1;};
              		class EOTech_opticrail_xps3
               		{
-                  		DisplayName="Show EOTech Optic";
+                  		DisplayName="Show Right EOTech Optic";
                   		source="user";
                   		useSource=1;
                   		animPeriod=0.01;
                   		initPhase=1;
-                  		author="ADFRC";
+                  		author="Flanker562";
                   		forceAnimatePhase = 0;
                   		forceAnimate[] = {"EOTech_opticrail_spectr",1,};
-              };
+              		};
+             		class EOTech_opticrail_xps32
+              		{
+                  		DisplayName="Show Left EOTech Optic";
+                  		source="user";
+                  		useSource=1;
+                  		animPeriod=0.01;
+                  		initPhase=1;
+                  		author="Flanker562";
+                  		forceAnimatePhase = 0;
+                  		forceAnimate[] = {"EOTech_opticrail_spectr",1,};
+              		};
     			class hitGlass1
     			{
         			source = "Hit";
