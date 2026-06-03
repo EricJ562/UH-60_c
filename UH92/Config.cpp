@@ -2013,22 +2013,22 @@ class CfgVehicles
     			class lights_green_hide{source = "user";animPeriod = 0.001;initPhase = 1;};
              		class EOTech_opticrail_xps3
               		{
-                  		DisplayName="Show Right EOTech Optic";
+                  		DisplayName="Toggle Right EOTech Optic";
                   		source="user";
                   		useSource=1;
                   		animPeriod=0.01;
-                  		initPhase=1;
+                  		initPhase=0;
                   		author="Flanker562";
                   		forceAnimatePhase = 0;
                   		forceAnimate[] = {"EOTech_opticrail_spectr",1,};
               		};
              		class EOTech_opticrail_xps32
               		{
-                  		DisplayName="Show Left EOTech Optic";
+                  		DisplayName="Toggle Left EOTech Optic";
                   		source="user";
                   		useSource=1;
                   		animPeriod=0.01;
-                  		initPhase=1;
+                  		initPhase=0;
                   		author="Flanker562";
                   		forceAnimatePhase = 0;
                   		forceAnimate[] = {"EOTech_opticrail_spectr",1,};
@@ -3229,18 +3229,153 @@ class CfgVehicles
 
 		};
 	};
-	class HelicopterWreck;
-	class uh92_wreck_F: HelicopterWreck
+	class Wreck_Base_F;
+	class Land_Wreck_Heli_UH92_F: Wreck_base_F
 	{
-		scope=1;	// we don't want to see wreck model in editor (you can use scope=2 if you want to see it)
-		model="UH-60\Misc\MH_92Wreck.p3d";
-		typicalCargo[]={};
-		irTarget=0;
-		transportAmmo=0;
-		transportRepair=0;
-		transportFuel=0;
-		transportSoldier=1;
-		class Eventhandlers{};
+		author = "Flanker562";
+		mapSize = 15.97;
+		class SimpleObject
+		{
+			eden = 0;
+			animate[] = {};
+			hide[] = {};
+			verticalOffset = 2.792;
+			verticalOffsetWorld = 0;
+			init = "''";
+		};
+		editorPreview = "\UH-60\data\previews\MH92wreck.jpg";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "UH-92 Wreck";
+		model = "\UH-60\Misc\MH_92Wreck.p3d";
+		icon = "iconObject_1x3";
+		editorSubcategory = "EdSubcat_Helicopters";
+	};
+	class Land_Wreck_Heli_UH60_F: Wreck_base_F
+	{
+		author = "Flanker562";
+		mapSize = 15.97;
+		class SimpleObject
+		{
+			eden = 0;
+			animate[] = {};
+			hide[] = {};
+			verticalOffset = 2.792;
+			verticalOffsetWorld = 0;
+			init = "''";
+		};
+		editorPreview = "\UH-60\data\previews\MH60wreck.jpg";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "UH-60 Wreck";
+		model = "\UH-60\Misc\MH_60Wreck.p3d";
+		icon = "iconObject_1x3";
+		editorSubcategory = "EdSubcat_Helicopters";
+	};
+	class Land_Wreck_Heli_AH6_F: Wreck_base_F
+	{
+		author = "Flanker562";
+		mapSize = 15.97;
+		class SimpleObject
+		{
+			eden = 0;
+			animate[] = {};
+			hide[] = {};
+			verticalOffset = 2.792;
+			verticalOffsetWorld = 0;
+			init = "''";
+		};
+		editorPreview = "\UH-60\data\previews\AH6wreck.jpg";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "AH-6 Wreck";
+		model = "\UH-60\Misc\ah6Wreck.p3d";
+		icon = "iconObject_1x3";
+		editorSubcategory = "EdSubcat_Helicopters";
+	};
+	class Land_Wreck_Heli_Ka145_F: Wreck_base_F
+	{
+		author = "Flanker562";
+		mapSize = 5.96;
+		class SimpleObject
+		{
+			eden = 0;
+			animate[] = {};
+			hide[] = {};
+			verticalOffset = 2.792;
+			verticalOffsetWorld = 0;
+			init = "''";
+		};
+		editorPreview = "\UH-60\data\previews\ka145wreck.jpg";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Ka-145 Wreck";
+		model = "\UH-60\Misc\Ka145Wreck.p3d";
+		icon = "iconObject_1x3";
+		editorSubcategory = "EdSubcat_Helicopters";
+	};
+	class Land_Wreck_Heli_S94_F: Wreck_base_F
+	{
+		author = "Flanker562";
+		mapSize = 15.97;
+		class SimpleObject
+		{
+			eden = 0;
+			animate[] = {};
+			hide[] = {};
+			verticalOffset = 2.792;
+			verticalOffsetWorld = 0;
+			init = "''";
+		};
+		editorPreview = "\UH-60\data\previews\S94wreck.jpg";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "S-94 Wreck";
+		model = "\UH-60\Misc\S94Wreck.p3d";
+		icon = "iconObject_1x3";
+		editorSubcategory = "EdSubcat_Helicopters";
+	};
+	class Land_Wreck_Heli_MQ17_F: Wreck_base_F
+	{
+		author = "Flanker562";
+		mapSize = 15.97;
+		class SimpleObject
+		{
+			eden = 0;
+			animate[] = {};
+			hide[] = {};
+			verticalOffset = 2.792;
+			verticalOffsetWorld = 0;
+			init = "''";
+		};
+		editorPreview = "\UH-60\data\previews\mq17wreck.jpg";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "MQ-17 Wreck";
+		model = "\UH-60\Misc\mq17Wreck.p3d";
+		icon = "iconObject_1x3";
+		editorSubcategory = "EdSubcat_Helicopters";
+	};
+	class Land_Wreck_Heli_AH96_F: Wreck_base_F
+	{
+		author = "Flanker562";
+		mapSize = 15.97;
+		class SimpleObject
+		{
+			eden = 0;
+			animate[] = {};
+			hide[] = {};
+			verticalOffset = 2.792;
+			verticalOffsetWorld = 0;
+			init = "''";
+		};
+		editorPreview = "\UH-60\data\previews\AH96wreck.jpg";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "MQ-17 Wreck";
+		model = "\UH-60\Misc\AH96Wreck.p3d";
+		icon = "iconObject_1x3";
+		editorSubcategory = "EdSubcat_Helicopters";
 	};
 };
 
