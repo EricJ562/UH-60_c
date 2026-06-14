@@ -92,7 +92,8 @@ class CfgVehicles
 				{
 					"50rd_105mm_Shells",
 					"32Rnd_105mm_Smoke_white",
-					"32Rnd_105mm_Guided",
+					"20Rnd_105mm_Guided",
+					"12Rnd_105mm_LaserGuided",
 					"32Rnd_105mm_Flare_white",
 					"16Rnd_105mm_Illum_white"
 				};

@@ -56,8 +56,8 @@ class CfgVehicles
 			"ItemGPS",
 			"NVGoggles_OPFOR"
 		};
-		weapons[]={"arifle_MX_Black_F","hgun_P07_F","Throw","Put"};
-		respawnWeapons[]={"arifle_MX_Black_F","hgun_P07_F","Throw","Put"};
+		weapons[]={"ej_MX_UsArmy_F","hgun_P07_F","Throw","Put"};
+		respawnWeapons[]={"ej_MX_UsArmy_F","hgun_P07_F","Throw","Put"};
 		magazines[]=
 		{
 			"30Rnd_65x39_caseless_black_mag",
@@ -137,8 +137,8 @@ class CfgVehicles
 			"ItemGPS",
 			"ej_PVS15"
 		};
-		weapons[]={"arifle_MX_Black_F","hgun_P07_F","Throw","Put"};
-		respawnWeapons[]={"arifle_MX_Black_F","hgun_P07_F","Throw","Put"};
+		weapons[]={"ej_MX_UsArmy_F","hgun_P07_F","Throw","Put"};
+		respawnWeapons[]={"ej_MX_UsArmy_F","hgun_P07_F","Throw","Put"};
 		magazines[]=
 		{
 			"30Rnd_65x39_caseless_black_mag",

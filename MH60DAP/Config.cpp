@@ -90,7 +90,8 @@ class CfgVehicles
 		altNoForce = 6000;
 		bodyFrictionCoef = 0.7;
 		irtargetsize=1.2;
-		RadarTargetSize=1.2;
+		radarTargetSize=0.95;
+		visualTargetSize=0.95;
 		supplyRadius = 2.5;
 		liftForceCoef = 1.1;
 		cyclicAsideForceCoef = 1.0;
@@ -1037,7 +1038,7 @@ class CfgVehicles
 				gunnerOpticsShowCursor = 1;
 				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
 				copilotHasFlares = 1;
-				weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
+				weapons[] = {kj_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
 				magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,Laserbatteries,5000Rnd_762x51_Belt};									
 				stabilizedInAxes = "StabilizedInAxesBoth";
 				proxyIndex = 3;
@@ -1457,7 +1458,7 @@ class CfgVehicles
 				statement="this animate [""copip5"",0];";
 			};
 		};
-		weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
+		weapons[] = {kj_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,ej_M134_minigun};
 		magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,5000Rnd_762x51_Belt};
 		memoryPointGun[]=
 		{

@@ -2,10 +2,10 @@
 
 class CfgPatches
 {
-	class Items_ej
+	class Items_kj
 	{
 		units[] = {};
-		weapons[] = {"SF762MX_ej","SF762MXS_kj"};
+		weapons[] = {"SF762MX_ej","SF762MXS_kj","EOTech_kj","CompM4_kj"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"KJ_UH_60","A3_Weapons_F","A3_Weapons_F_Items"};
 	};
@@ -21,6 +21,26 @@ class MuzzleSlot_65: MuzzleSlot
 	};
 };
 
+class asdg_OpticRail;
+class CowsSlot_Rail: asdg_OpticRail 
+{
+	class compatibleItems 
+	{
+		EOTech_kj = 1;
+		CompM4_kj = 1;
+	};
+};
+
+class asdg_OpticRail1913: asdg_OpticRail 
+{
+	class compatibleItems 
+	{
+		EOTech_kj = 1;
+		CompM4_kj = 1;
+	};
+};
+
+
 class cfgWeapons
 {
 	class ItemCore;
@@ -31,6 +51,88 @@ class cfgWeapons
 	class InventoryUnderItem_Base_F;
 	class acc_pointer_IR;
 	class acc_flashlight;
+	class EOTech_kj: ItemCore
+	{
+		dlc=u100;
+		scope = 2;
+		author="Flanker562";
+		displayName = "EOTech 553 (Rifle)";
+		picture = "\uh-60\data\UI\EOTechinv.paa";
+		model = "\UH-60\Misc\Item\kj_EOTech2.p3d";
+		descriptionShort = "Reflex Sight";
+		weaponInfoType = "RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			opticType = 1;
+			mass = 4;
+			modelOptics = "\UH-60\Misc\Item\kj_EOTech2.p3d";
+			optics = 1;
+			class OpticsModes
+			{
+				class m68_ej
+				{
+					opticsID = 2;
+					opticsZoomMin = 0.375;
+					opticsZoomMax = 1.1;
+					opticsZoomInit = 0.75;
+					useModelOptics = 0;
+					memoryPointCamera = "OpticView";
+					opticsFlare = 1;
+					opticsDisablePeripherialVision = 0.67;
+					discreteDistance[] = {300};
+					discreteDistanceInitIndex = 1;
+					distanceZoomMin = 300;
+					distanceZoomMax = 300;
+					cameraDir = "";
+					visionMode[] = {};
+					opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
+				};
+
+			};
+		};
+		inertia = 0.1;
+	};
+	class CompM4_kj: ItemCore
+	{
+		dlc=u100;
+		scope = 2;
+		author="Flanker562";
+		displayName = "Aimpoint CompM4";
+		picture = "\uh-60\data\UI\CompM4inv.paa";
+		model = "\UH-60\Misc\Item\kj_compm4.p3d";
+		descriptionShort = "Reflex Sight";
+		weaponInfoType = "RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			opticType = 1;
+			mass = 4;
+			modelOptics = "\UH-60\Misc\Item\kj_compm4.p3d";
+			optics = 1;
+			class OpticsModes
+			{
+				class m68_ej
+				{
+					opticsID = 2;
+					opticsZoomMin = 0.375;
+					opticsZoomMax = 1.1;
+					opticsZoomInit = 0.75;
+					useModelOptics = 0;
+					memoryPointCamera = "OpticView";
+					opticsFlare = 1;
+					opticsDisablePeripherialVision = 0.67;
+					discreteDistance[] = {300};
+					discreteDistanceInitIndex = 1;
+					distanceZoomMin = 300;
+					distanceZoomMax = 300;
+					cameraDir = "";
+					visionMode[] = {};
+					opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
+				};
+
+			};
+		};
+		inertia = 0.1;
+	};
 	class SF762MX_ej: ItemCore
 	{
 		scope=2;

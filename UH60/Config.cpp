@@ -91,6 +91,8 @@ class CfgVehicles
 		altFullForce = 4000;
 		altNoForce = 6000;
 		bodyFrictionCoef = 0.7;
+		radarTargetSize=0.95;
+		visualTargetSize=0.95;
 		irtargetsize=1.2;
 		RadarTargetSize=1.2;
 		supplyRadius = 2.5;
@@ -904,7 +906,7 @@ class CfgVehicles
 				displayName="RDA SEC-FOR";
 				author="Flanker562";
 				textures[]={"\uh-60\data\uh60m_fuselage_rda_co.paa","\uh-60\data\uh60m_engine_rda_co.paa","\uh-60\data\default_co.paa"};
-				factions[]={"BLU_F"};
+				factions[]={"TF160","BLU_F"};
 			};
 			class Desert
 			{

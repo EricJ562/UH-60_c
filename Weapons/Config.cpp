@@ -368,9 +368,10 @@ class CfgWeapons
 		{
 			"50rd_105mm_Shells",
 			"32Rnd_105mm_Smoke_white",
-			"32Rnd_105mm_Guided",
+			"20Rnd_105mm_Guided",
 			"32Rnd_105mm_Flare_white",
-			"16Rnd_105mm_Illum_white"
+			"16Rnd_105mm_Illum_white",
+			"12Rnd_105mm_LaserGuided"
 		};
 		class StandardSound
 		{
@@ -4015,12 +4016,21 @@ class CfgMagazines
 		displayNameShort="Smoke";
 		initSpeed=520;
 	};
-	class 32Rnd_105mm_Guided: 8Rnd_82mm_Mo_shells
+	class 20Rnd_105mm_Guided: 8Rnd_82mm_Mo_shells
 	{
 		author="Flanker562";
 		count=32;
 		ammo="105mm_Guided";
 		displayName="Guided Round";
+		displayNameShort="Guided";
+		initSpeed=500;
+	};
+	class 12Rnd_105mm_LaserGuided: 8Rnd_82mm_Mo_shells
+	{
+		author="Flanker562";
+		count=12;
+		ammo="105mm_LG";
+		displayName="Laser Guided Round";
 		displayNameShort="Guided";
 		initSpeed=500;
 	};
@@ -4195,7 +4205,7 @@ class CfgAmmo
 		submunitionAmmo="M_Mo_82mm_AT";
 		submunitionCount=1;
 		submunitionConeAngle=0;
-		laserLock=1;
+		laserLock=0;
 		autoSeekTarget=1;
 		cost=200;
 		muzzleEffect="";
@@ -4216,6 +4226,14 @@ class CfgAmmo
 			frequency=20;
 			distance=1;
 		};
+	};
+	class 105mm_LG: 105mm_guided
+	{
+		submunitionAmmo="M_Mo_82mm_AT_LG";
+		cost=500;
+		laserLock=1;
+		irLock=0;
+		muzzleEffect="";
 	};
 	class ammo_Missile_AntiRadiationBase;
 	class EJ_ammo_Missile_AGM152: ammo_Missile_AntiRadiationBase
@@ -4644,8 +4662,8 @@ class CfgAmmo
 		thrust=390;
 		fuseDistance=300;
 		explosionAngle=60;
-		CraterEffects="AAMissileCrater";
-		explosionEffects="AAMissileExplosion";
+		CraterEffects="ATRocketCrater";
+		explosionEffects="ATRocketExplosion";
 		whistleDist=20;
 		cmImmunity=0.95999998;
 		missileLockMaxDistance=8000;

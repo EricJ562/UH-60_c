@@ -141,7 +141,8 @@ class CfgVehicles
 			rtd_center="rtd_center";
 		};
 		threat[]={0.80000001,0.1,0.60000002};
-		visualTargetSize=0.96;
+		radarTargetSize=0.95;
+		visualTargetSize=0.95;
 		selectionFireAnim = "muzzleFlash";
 		memoryPointsGetInDriver="pos pilot";
 		memoryPointsGetInDriverDir="pos pilot dir";

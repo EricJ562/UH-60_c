@@ -126,7 +126,8 @@ class CfgVehicles
 		irtargetsize=1.2;
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
-		RadarTargetSize=1.4;
+		radarTargetSize=1.2;
+		visualTargetSize=0.95;
 		selectionHRotorStill = "main rotor static";
 		selectionHRotorMove = "main rotor blur";
 		selectionVRotorStill = "tail rotor static";

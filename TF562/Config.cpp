@@ -84,6 +84,16 @@ class CfgVehicles
 				backpack="B_AssaultPack_rgr_ReconMedic";
 				count=1;
 			};
+			class _xx_UA57_support_F
+			{
+				backpack="UA57_support_F";
+				count=1;
+			};
+			class _xx_UA57_weapon_F
+			{
+				backpack="UA57_weapon_F";
+				count=1;
+			};
 		};
 		class TransportMagazines
 		{
@@ -140,6 +150,16 @@ class CfgVehicles
 			class _xx_B_AssaultPack_rgr_ReconMedic
 			{
 				backpack="B_AssaultPack_rgr_ReconMedic";
+				count=1;
+			};
+			class _xx_UA57_support_F
+			{
+				backpack="UA57_support_F";
+				count=1;
+			};
+			class _xx_UA57_weapon_F
+			{
+				backpack="UA57_weapon_F";
 				count=1;
 			};
 		};

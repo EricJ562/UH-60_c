@@ -110,10 +110,11 @@ class CfgVehicles
 		displayName = "Ka-145 Hoplite";
 		model = "\uh-60\ka145\ej_ka145.p3d";
 		driveOnComponent[] = {"Wheels"};
+		radarTargetSize=1.2;
+		visualTargetSize=0.85;
 		irtargetsize=1.2;
 		memoryPointsGetInDriver="pos driver";
 		memoryPointsGetInDriverDir="pos driver dir";
-		RadarTargetSize=1.4;
 		selectionHRotorStill = "main rotor static";
 		selectionHRotorMove = "main rotor blur";
 		selectionVRotorStill = "tail rotor static";

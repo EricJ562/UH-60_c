@@ -4,7 +4,7 @@ class CfgPatches
 	{
 		units[] = {"B_T_LSV_01_repair_F","ej_speedball","ej_skram","ej_skram_SOAR","ej_survivalbag","ej_lmgsparpack"};
 		weapons[] = {};
-		magazines[]={"30Rnd_65x39_caseless_FMJBT","30Rnd_65x39_caseless_khaki_FMJBT","30Rnd_65x39_caseless_black_FMJBT","100Rnd_65x39_caseless_khaki_FMJBT","100Rnd_65x39_caseless_black_FMJBT","30Rnd_65x39_caseless_M651","30Rnd_65x39_caseless_khaki_M651","30Rnd_65x39_caseless_black_M651","100Rnd_65x39_caseless_M651","100Rnd_65x39_caseless_khaki_M651","100Rnd_65x39_caseless_black_M651","9rdJHPPlus_Mag"};
+		magazines[]={"30Rnd_65x39_caseless_FMJBT","30Rnd_65x39_caseless_khaki_FMJBT","30Rnd_65x39_caseless_black_FMJBT","100Rnd_65x39_caseless_khaki_FMJBT","100Rnd_65x39_caseless_black_FMJBT","30Rnd_65x39_caseless_M651","30Rnd_65x39_caseless_khaki_M651","30Rnd_65x39_caseless_black_M651","100Rnd_65x39_caseless_M651","100Rnd_65x39_caseless_khaki_M651","100Rnd_65x39_caseless_black_M651","11rdJHPPlus_Mag"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"KJ_UH_60","A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F"};
 	};
@@ -136,7 +136,24 @@ class CfgWeapons
 			class LinkedItemsOptic
 			{
 				slot = "CowsSlot";
-				item = "optic_Holosight";
+				item = "EOTech_kj";
+			};			
+			class LinkedItemsAcc
+			{
+				slot = "PointerSlot";
+				item = "acc_pointer_IR";
+			};
+		};
+	};
+	class arifle_MX_Black_F;
+	class ej_MX_UsArmy_F: arifle_MX_Black_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "CompM4_kj";
 			};			
 			class LinkedItemsAcc
 			{
@@ -587,9 +604,9 @@ class CfgVehicles
 				count=6;
 				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
-			class _xx_9Rnd_45ACP_Mag
+			class _xx_11rdJHPPlus_Mag
 			{
-				magazine="9Rnd_45ACP_Mag";
+				magazine="11rdJHPPlus_Mag";
 				count=2;
 			};
 			class _xx_SmokeShell
@@ -740,7 +757,7 @@ class CfgMagazineWells
 	{
 		BI_Magazines[]=
 		{
-			"11Rnd_45ACP_Mag"
+			"11rdJHPPlus_Mag"
 		};
 	};
 };
@@ -828,16 +845,14 @@ class CfgMagazines
 		displayNameMFDFormat="MISSILE";
 		count=1;
 	};
-	class 9Rnd_45ACP_Mag;
-	class 11rdJHPPlus_Mag: 9Rnd_45ACP_Mag
+	class 11Rnd_45ACP_Mag;
+	class 11rdJHPPlus_Mag: 11Rnd_45ACP_Mag
 	{
 		ammo = "ej_B_JHPPlus";
 		displayNameShort="JHP+";
-		displayname = "9-round JHP+";
+		displayname = "11-round JHP+";
 		initspeed = 384;
 		scope = 2;
-		mass=3;
-		count=11;
 	};
 };
 

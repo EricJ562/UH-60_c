@@ -137,6 +137,8 @@ class CfgVehicles
 		receiveRemoteTargets=1;
 		reportRemoteTargets=1;
 		reportOwnPosition=1;
+		radarTargetSize=1.2;
+		visualTargetSize=0.85;
 		irtargetsize=1.3;
 		RadarTargetSize=1.4;
 		driverAction="Heli_Attack_01_pilot";

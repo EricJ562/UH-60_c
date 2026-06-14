@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class Ej_UAV
 	{
-		units[] = {"ej_MQ17SOAR","ej_MQ17","ej_MQ17C","ej_MQ17C_CIV_F","ej_MQ37","ej_MQ37D","ej_MQ17D"};
+		units[] = {"ej_MQ17SOAR","ej_MQ17","ej_MQ17C","ej_MQ17C_CIV_F","ej_MQ37","ej_MQ37D","ej_MQ17D","kj_UH60M_UAS"};
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
@@ -117,7 +117,7 @@ class CfgVehicles
 		LODTurnedOut=-1;
 		cost=3000000;
 		memoryPointTaskMarker="TaskMarker_1_pos";
-		radarTargetSize=0.3;
+		radarTargetSize=0.85;
 		visualTargetSize=0.69999999;
 		irTargetSize=0.5;
 		availableForSupportTypes[]={"CAS_Heli"};
@@ -656,6 +656,9 @@ class CfgVehicles
 		reportRemoteTargets=1;
 		reportOwnPosition=1;
 		cost=200000;
+		radarTargetSize=0.75;
+		visualTargetSize=0.8;
+		irTargetSize=0.7;
 		hiddenSelections[]={"camo1","camo2","camo3"};
 		hiddenSelectionsTextures[]={"uh-60\data\mq17_co.paa","uh-60\data\natoductfans_co.paa","uh-60\data\drone_co.paa"};
 		slingLoadCargoMemoryPoints[]={"SlingLoad1","SlingLoad2","SlingLoad3","SlingLoad4"};
@@ -757,6 +760,7 @@ class CfgVehicles
 		fuelCapacity = 1360;
 		fuelConsumptionRate=0.126;
 		maxSpeed = 282;
+		radarTargetSize=1.1;
 		slingLoadMaxCargoMass=4100;
 		driverOpticsModel = "A3\drones_f\Weapons_F_Gamma\Reticle\UGV_01_Optics_Driver_F.p3d";
 		driverForceOptics = 1;

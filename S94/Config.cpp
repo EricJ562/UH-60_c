@@ -70,6 +70,8 @@ class CfgVehicles
 		cyclicAsideForceCoef = 1.0;
 		cyclicForwardForceCoef = 1.0;
 		backRotorForceCoef = 1.0;
+		radarTargetSize=1.25;
+		visualTargetSize=0.95;
 		irtargetsize=1.2;
 		RadarTargetSize=1.4;
 		enableManualFire = 0;

@@ -89,6 +89,8 @@ class CfgVehicles
 		altFullForce = 4000;
 		altNoForce = 6000;
 		bodyFrictionCoef = 0.7;
+		radarTargetSize=0.95;
+		visualTargetSize=0.95;
 		irtargetsize=1.2;
 		RadarTargetSize=1.2;
 		supplyRadius = 2.5;
@@ -116,9 +118,6 @@ class CfgVehicles
 		LockDetectionSystem = CM_Lock_Radar + CM_Lock_Laser;
 		incomingMissileDetectionSystem = CM_Missile;
 		slingLoadMaxCargoMass=4082;
-		receiveRemoteTargets=1;
-		reportRemoteTargets=1;
-		reportOwnPosition=1;
 		slingLoadMemoryPoint="slingLoad0";
 		cargoDoors[]={"LDoor","LDoor","LDoor","LDoor","RDoor","RDoor","RDoor","RDoor"};
 		unitInfoTypeRTD="RscUnitInfoAirRTDBasic";

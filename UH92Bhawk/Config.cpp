@@ -115,6 +115,8 @@ class CfgVehicles
 		damageResistance=0.0055499999;
 		armor = 70;
 		laserScanner=1;
+		radarTargetSize=1.25;
+		visualTargetSize=0.95;
 		irtargetsize=1.2;
 		RadarTargetSize=1.4;
 		numberPhysicalWheels=3;
