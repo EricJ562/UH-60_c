@@ -167,8 +167,8 @@ class cfgWeapons
 				artilleryDispersionCoef="1.0f";
 				fireLightCoef="0.1f";
 				dispersionCoef="0.9f";
-				recoilCoef="0.9f";
-				recoilProneCoef="0.9f";
+				recoilCoef="0.8f";
+				recoilProneCoef="0.7f";
 				minRangeCoef="1.0f";
 				minRangeProbabCoef="1.0f";
 				midRangeCoef="1.0f";
@@ -213,8 +213,8 @@ class cfgWeapons
 				artilleryDispersionCoef="1.0f";
 				fireLightCoef="0.1f";
 				dispersionCoef="0.9f";
-				recoilCoef="0.9f";
-				recoilProneCoef="0.9f";
+				recoilCoef="0.8f";
+				recoilProneCoef="0.7f";
 				minRangeCoef="1.0f";
 				minRangeProbabCoef="1.0f";
 				midRangeCoef="1.0f";

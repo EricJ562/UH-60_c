@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class Ej_TF562
 	{
-		units[] = {TF562_Offroad_01_B,B_GMV_HMG,TF562_TL,TF562_Medic,TF562_JTAC,TF562_Grenadier,TF562_Rifleman,TF562_Engineer,TF562_Sharpshooter,TF562_LMG,TF562_UAV,TF562_UGV_MULE,TF562_MAR10Sniper};
+		units[] = {TF562_Offroad_01_B,B_GMV_HMG,TF562_TL,TF562_Medic,TF562_JTAC,TF562_Grenadier,TF562_Rifleman,TF562_Engineer,TF562_Sharpshooter,TF562_LMG,TF562_UAV,TF562_UGV_MULE,TF562_MAR10Sniper,TF562_sniper_F,TF562_spotter_F};
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
@@ -362,6 +362,161 @@ class CfgVehicles
 			"Blufor",
 			1
 		};
+	};
+	class B_sniper_F;
+	class TF562_sniper_F: B_sniper_F
+	{
+		author="Flanker562";
+		textSingular="$STR_A3_nameSound_veh_infantry_sniper_s";
+		textPlural="$STR_A3_nameSound_veh_infantry_sniper_p";
+		nameSound="veh_infantry_sniper_s";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_sniper_F.jpg";
+		scope=2;
+		side=1;
+		faction="TF562";
+		displayName="TF562 Ghillie Sniper";
+		weapons[]=
+		{
+			"ej_MXM_S_F",
+			"hgun_Pistol_heavy_01_MRD_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+		};
+		respawnWeapons[]=
+		{
+			"ej_MXM_S_F",
+			"hgun_Pistol_heavy_01_MRD_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+		};
+		magazines[]=
+		{
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Chemlight_green",
+			"Chemlight_green",
+		};
+		respawnMagazines[]=
+		{
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Chemlight_green",
+			"Chemlight_green",
+		};
+		cost=250000;
+		role="Marksman";
+		threat[]={0.80000001,0.30000001,0.30000001};
+		camouflage=0.60000002;
+		detectSkill=85;
+		backpack="B_Kitbag_mcamo";
+	};
+	class TF562_sniper_F;
+	class TF562_spotter_F: TF562_sniper_F
+	{
+		author="Flanker562";
+		displayName="TF562 Ghillie Spotter";
+		weapons[]=
+		{
+			"ej_MX_MK17_S_F",
+			"hgun_Pistol_heavy_01_MRD_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+		};
+		respawnWeapons[]=
+		{
+			"ej_MX_MK17_S_F",
+			"hgun_Pistol_heavy_01_MRD_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+		};
+		magazines[]=
+		{
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Chemlight_green",
+			"Chemlight_green",
+		};
+		respawnMagazines[]=
+		{
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"30Rnd_65x39_caseless_FMJBT",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"11rdJHPPlus_Mag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Chemlight_green",
+			"Chemlight_green",
+		};
+		cost=250000;
+		role="Marksman";
+		threat[]={0.80000001,0.30000001,0.30000001};
+		camouflage=0.60000002;
+		detectSkill=85;
+		backpack="B_Kitbag_mcamo";
 	};
 	class B_recon_F;
 	class TF562_TL: B_recon_F
@@ -1445,7 +1600,6 @@ class CfgVehicles
 			"10Rnd_338_Mag",
 			"10Rnd_338_Mag",
 			"10Rnd_338_Mag",
-			"10Rnd_338_Mag",
 			"11rdJHPPlus_Mag",
 			"11rdJHPPlus_Mag",
 			"11rdJHPPlus_Mag",
@@ -1454,7 +1608,6 @@ class CfgVehicles
 			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
-			"Chemlight_green",
 			"Chemlight_green",
 			"laserbatteries"
 		};
@@ -1477,7 +1630,6 @@ class CfgVehicles
 			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
-			"Chemlight_green",
 			"Chemlight_green",
 			"laserbatteries"
 		};

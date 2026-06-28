@@ -406,7 +406,7 @@ class CfgWeapons
 			};
 			reloadSound[]={"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",1,1,20};
 			reloadTime=8;
-			artilleryDispersion=7.1999998;
+			artilleryDispersion=3.2;
 			artilleryCharge=0.100000;
 			minRange=50;
 			minRangeProbab=0.60000002;
