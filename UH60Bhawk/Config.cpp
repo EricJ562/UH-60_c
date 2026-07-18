@@ -62,6 +62,7 @@ class CfgVehicles
 			class HitFuel;
 			class HitWinch;
 		};
+		class ViewPilot;
 		class AnimationSources;
 		class ViewOptics;
 		class NewTurret;
@@ -677,120 +678,43 @@ class CfgVehicles
 			{
 				ace_laser_selfdesignate_Enabled = 1;
 				isCopilot = 1;
-				body = "ObsTurret";
-				gun = "ObsGun";
-				gunnerAction = "pilot_Heli_Transport_01";
-				gunnerInAction = "pilot_Heli_Light_03_Enter";
+				CanEject=0;
+				gunnerAction="pilot_Heli_Transport_01";
+				gunnerInAction="pilot_Heli_Transport_01";
 				memoryPointsGetInGunner="pos copilot";
-				memoryPointsGetInGunnerDir="pos copilot dir";		
+				memoryPointsGetInGunnerDir="pos copilot dir";
 				gunnerGetInAction="GetInHeli_Transport_01Cargo";
 				gunnerGetOutAction="GetOutLow";
-				minElev = -80;
-				maxElev = +25;
-				initElev = 0;
-				minTurn = -360;  
-				maxTurn = 360; 
-				initTurn = 0;
-				gunBeg = "gun_end"; 
-				gunEnd = "gun_begin"; 						
-				memoryPointGunnerOptics = "commanderview";
-				animationSourceBody = "ObsTurret";
-				animationSourceGun = "ObsGun";
-				
-				showHMD = 1;
-				CanEject = 0;
-				startEngine = 0;
-				soundServo[] = {,db-40,1.0};				
-				outGunnerMayFire = 1; 
-				gunnerCompartments="Compartment3";
-				commanding=-3;	
-				primaryGunner = 1;										
-				selectionFireAnim = "";
-				castGunnerShadow = 1;
-				viewGunnerShadow = 1;
-				gunnerOpticsModel = "";
-				gunnerOpticsEffect[] = {"TankCommanderOptics1"};				
-				gunnerForceOptics = false;
-				gunnerOpticsShowCursor = 1;
-				turretInfoType="Rsc_HMDs_Kimi_Helo_UI_Turret";
+				preciseGetInOut=0;
+				GunnerDoor="";
 				copilotHasFlares = 1;
+				gunnerLeftHandAnimName="lever_copilot";
+				gunnerRightHandAnimName="stick_copilot";
+				gunnerLeftLegAnimName="PedalL";
+				gunnerRightLegAnimName="PedalR";
+				proxyIndex=3;
+				LODTurnedIn=1100;
+				LODTurnedOut=1100;
+				gunnerCompartments="Compartment3";
+				commanding=-3;
 				weapons[] = {ej_master_arms_safe,Flanker562_CMFlareLauncher,kuy_IR_Jammer_Weapon,Laserdesignator_mounted};
-				magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,Laserbatteries,5000Rnd_762x51_Belt};									
-				stabilizedInAxes = "StabilizedInAxesBoth";
-				proxyIndex = 1;
-				gunnerName = "Co-Pilot"; 
-
-				class OpticsIn 
+				magazines[] = {168Rnd_CMFlare_Chaff_Magazine,kuy_IR_Jammer_Magazine,Laserbatteries,5000Rnd_762x51_Belt};
+				class ViewGunner: ViewPilot
 				{
-					class Wide
-					{
-						initAngleX=0;
-						minAngleX=-30;
-						maxAngleX=30;
-						initAngleY=0;
-						minAngleY=-100;
-						maxAngleY=100;
-						initFov=0.46599999;
-						minFov=0.46599999;
-						maxFov=0.46599999;
-						opticsDisplayName="WFOV";
-						visionMode[]=
-						{
-							"Normal",
-							"NVG",
-							"Ti"
-						};
-						thermalMode[]={0,1};
-						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MBT_03_w_F.p3d";
-					};
-					class Medium: Wide
-					{
-						initFov=0.093000002;
-						minFov=0.093000002;
-						maxFov=0.093000002;
-						opticsDisplayName="MFOV";
-						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MBT_03_w_F.p3d";
-					};
-					class Narrow: Wide
-					{
-						initFov=0.028999999;
-						minFov=0.028999999;
-						maxFov=0.028999999;
-						opticsDisplayName="NFOV";
-						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MBT_03_w_F.p3d";
-					};			
 				};
-				class OpticsOut 
+				class Components
 				{
-					class Monocular 
+					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
 					{
-						initAngleX = 0;
-						minAngleX = -30;
-						maxAngleX = 30;
-						initAngleY = 0;
-						minAngleY = -100;
-						maxAngleY = 100;
-						initFov = 1.1;
-						minFov = 0.133;
-						maxFov = 1.1;
-						visionMode[] = {"Normal","NVG","Ti"};
-						thermalMode[] = {2, 3};						
-						gunnerOpticsModel = "";
-						gunnerOpticsEffect[] = {};
+					};
+					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+					{
 					};
 				};
-				class ViewOptics
+				class Hitpoints
 				{
-					initAngleX = 0; 
-					minAngleX = -30; 
-					maxAngleX = +30;
-					initAngleY = 40; 
-					minAngleY = -100; 
-					maxAngleY = +100;
-					initFov = 1.4; 
-					minFov = 0.3; 
-					maxFov = 1.0;
 				};
+				selectionFireAnim="";
 			};
 			class CargoTurret_01: CargoTurret
 			{
@@ -919,6 +843,37 @@ class CfgVehicles
 						};
 						maxweight=400;
 						UIposition[]={0.58999997,0.40000001};
+					};
+					class camera: PylonLeft1
+					{
+						hardpoints[]=
+						{
+							"B_CAMERA_HELI"
+						};
+						UIposition[]={0.34999999,0.55000001};
+						attachment="PylonRadarPod_01_F";
+						priority=3;
+						turretsAvailable[]={-1,0};
+					};
+					class wingtip1: PylonLeft1
+					{
+						attachment="PylonECMPod_01_Flare_R";
+						hardpoints[]=
+						{
+							"ECM_POD_R"
+						};
+						UIposition[]={0.625,0.28};
+						priority=4;
+					};
+					class wingtip2: wingtip1
+					{
+						attachment="PylonECMPod_01_Flare_L";
+						hardpoints[]=
+						{
+							"ECM_POD_L"
+						};
+						UIposition[]={0.039999999,0.28};
+						mirroredMissilePos=6;
 					};
 				};
 			};

@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class Ej_MH80
 	{
-		units[] = {"B_LSV_01_Medic_F","B_LSV_01_Repair_F","B_LSV_01_Rearm_F","B_LSV_01_Refuel_F","160th_SOAR_Pilot","160th_SOAR_Crew","ej_MH80","ej_MH67","B_Helipilot_160_Early","B_helicrew_160_Early","TF160_Mechanic"};
+		units[] = {"B_LSV_01_Medic_F","B_LSV_01_Repair_F","B_LSV_01_Rearm_F","B_LSV_01_Refuel_F","160th_SOAR_Pilot","160th_SOAR_Crew","ej_MH80","ej_MH67","B_Helipilot_160_Early","B_helicrew_160_Early","TF160_Mechanic","kj_MH80_DAP"};
 		weapons[] = {};
 		magazines[]={};
 		requiredVersion = 0.1;
@@ -726,14 +726,12 @@ class CfgVehicles
 			};
 		};
 	};
-	class B_Heli_Transport_01_F;
-	class ej_MH80: B_Heli_Transport_01_F
+	class B_CTRG_Heli_Transport_01_Assault_F;
+	class ej_MH80: B_CTRG_Heli_Transport_01_Assault_F
 	{
 		#include "sounds.hpp"
 		author="Flanker562";
-		_generalMacro="B_Heli_Transport_01_F";
 		scope=2;
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_Heli_Transport_01_F.jpg";
 		side=1;
 		scopecurator=2;
 		Armor=50;
@@ -742,15 +740,6 @@ class CfgVehicles
 		mainBladeRadius = 8.18;
 		crew="160th_SOAR_Pilot";
 		typicalCargo[]={"160th_SOAR_Pilot"};
-		availableForSupportTypes[]={"Drop","Transport"};
-		irtarget=0;
-		cost=100;
-		receiveRemoteTargets=1;
-		reportOwnPosition=1;
-		washDownStrength="1.2f";
-		camouflage=18;
-		radarTargetSize=0.39999999;
-		hiddenSelectionsTextures[]={"\UH-60\Data\Heli_Transport_01_ext01_160th_CO.paa","\UH-60\Data\Heli_Transport_01_ext02_160th_CO.paa"};
 		displayName="MH-80 (TF160)";
 		weapons[]={"Flanker562_CMFlareLauncher"};
 		magazines[]={"168Rnd_CMFlare_Chaff_Magazine"};
@@ -847,233 +836,115 @@ class CfgVehicles
 				count=2;
 			};
 		};
-		class Components: Components
+	};
+	class B_CTRG_Heli_Transport_01_DAP_F;
+	class kj_MH80_DAP: B_CTRG_Heli_Transport_01_DAP_F
+	{
+		#include "sounds.hpp"
+		author="Flanker562";
+		scope=2;
+		side=1;
+		scopecurator=2;
+		Armor=50;
+		ForceinGarage=1;
+		faction="TF160";
+		mainBladeRadius = 8.18;
+		crew="160th_SOAR_Pilot";
+		typicalCargo[]={"160th_SOAR_Pilot"};
+		displayName="MH-80 DAP (TF160)";
+		weapons[]={"Flanker562_CMFlareLauncher"};
+		magazines[]={"168Rnd_CMFlare_Chaff_Magazine"};
+
+		class TransportBackpacks
 		{
-			class SensorsManagerComponent
+			class _xx_ej_skram_SOAR
 			{
-				class Components
-				{
-					class VisualSensorComponent: SensorTemplateVisual
-					{
-						class AirTarget
-						{
-							minRange=100;
-							maxRange=8000;
-							objectDistanceLimitCoef=-1;
-							viewDistanceLimitCoef=1;
-						};
-						class GroundTarget
-						{
-							minRange=100;
-							maxRange=8000;
-							objectDistanceLimitCoef=1;
-							viewDistanceLimitCoef=1;
-						};
-						maxTrackableSpeed=70;
-						animDirection="Gun";
-						angleRangeHorizontal=26;
-						angleRangeVertical=26;
-					};
-					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
-					{
-					};
-					class LaserSensorComponent: SensorTemplateLaser
-					{
-					};
-					class NVSensorComponent: SensorTemplateNV
-					{
-					};
-				};
+				backpack="ej_skram_SOAR";
+				count=4;
 			};
-			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			class _xx_ej_speedball
 			{
-				class Components: components
-				{
-					class EmptyDisplay
-					{
-						componentType="EmptyDisplayComponent";
-					};
-					class MinimapDisplay
-					{
-						componentType="MinimapDisplayComponent";
-						resource="RscCustomInfoAirborneMiniMap";
-					};
-					class CrewDisplay
-					{
-						componentType="CrewDisplayComponent";
-						resource="RscCustomInfoCrew";
-					};
-					class UAVDisplay
-					{
-						componentType="UAVFeedDisplayComponent";
-					};
-					class VehiclePrimaryGunnerDisplay
-					{
-						componentType="TransportFeedDisplayComponent";
-						source="PrimaryGunner";
-					};
-					class VehicleMissileDisplay
-					{
-						componentType="TransportFeedDisplayComponent";
-						source="Missile";
-					};
-					class SensorDisplay
-					{
-						componentType="SensorsDisplayComponent";
-						range[]={4000,2000,16000,8000};
-						resource="RscCustomInfoSensors";
-					};
-				};
-			};
-			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
-			{
-				defaultDisplay="SensorDisplay";
-				class Components: components
-				{
-					class EmptyDisplay
-					{
-						componentType="EmptyDisplayComponent";
-					};
-					class MinimapDisplay
-					{
-						componentType="MinimapDisplayComponent";
-						resource="RscCustomInfoAirborneMiniMap";
-					};
-					class CrewDisplay
-					{
-						componentType="CrewDisplayComponent";
-						resource="RscCustomInfoCrew";
-					};
-					class UAVDisplay
-					{
-						componentType="UAVFeedDisplayComponent";
-					};
-					class VehiclePrimaryGunnerDisplay
-					{
-						componentType="TransportFeedDisplayComponent";
-						source="PrimaryGunner";
-					};
-					class VehicleMissileDisplay
-					{
-						componentType="TransportFeedDisplayComponent";
-						source="Missile";
-					};
-					class SensorDisplay
-					{
-						componentType="SensorsDisplayComponent";
-						range[]={4000,2000,16000,8000};
-						resource="RscCustomInfoSensors";
-					};
-				};
+				backpack="ej_speedball";
+				count=4;
 			};
 		};
-		class Turrets: Turrets
+		class TransportMagazines
 		{
-			class CopilotTurret: CopilotTurret
+			class _xx_SmokeShellYellow
 			{
-				CanEject=0;
-				gunnerAction="pilot_Heli_Transport_01";
-				gunnerInAction="pilot_Heli_Transport_01";
-				memoryPointsGetInGunner="pos copilot";
-				memoryPointsGetInGunnerDir="pos copilot dir";
-				gunnerGetInAction="GetInHeli_Transport_01Cargo";
-				gunnerGetOutAction="GetOutLow";
-				preciseGetInOut=0;
-				GunnerDoor="";
-				gunnerLeftHandAnimName="lever_copilot";
-				gunnerRightHandAnimName="stick_copilot";
-				gunnerLeftLegAnimName="PedalL";
-				gunnerRightLegAnimName="PedalR";
-				proxyIndex=3;
-				LODTurnedIn=1100;
-				LODTurnedOut=1100;
-				weapons[]={"Flanker562_CMFlareLauncher","kuy_IR_Jammer_Weapon"};
-				magazines[]={"168Rnd_CMFlare_Chaff_Magazine","kuy_IR_Jammer_Magazine"};
-				gunnerCompartments="Compartment3";
-				commanding=-3;
+				count=10;
+				magazine="SmokeShellYellow";
 			};
-			class MainTurret: MainTurret
+			class _xx_30Rnd_65x39_caseless_FMJBT
 			{
-				CanEject=1;
-				isCopilot=0;
-				body="mainTurret";
-				gun="mainGun";
-				gunnerType="B_helicrew_F";
-				minElev=-50;
-				maxElev=2;
-				initElev="--15";
-				minTurn=15;
-				maxTurn=160;
-				initTurn=90;
-				animationSourceHatch="";
-				animationSourceBody="mainTurret";
-				animationSourceGun="mainGun";
-				stabilizedInAxes=0;
-				gunBeg="muzzle_beg";
-				gunEnd="muzzle_end";
-				gunnerName="$STR_A3_LEFT_GUNNER";
-				gunnerOutOpticsShowCursor=1;
-				gunnerOpticsShowCursor=1;
-				memoryPointGunnerOptics="Eye";
-				gunnerAction="gunner_Heli_Transport_01";
-				gunnerInAction="gunner_Heli_Transport_01";
-				gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Heli_Transport_01_Optics_Gunner_F";
-				weapons[]={"LMG_Minigun_Transport"};
-				magazines[]={"2000Rnd_65x39_Belt_Tracer_Red"};
-				commanding=-2;
-				primaryGunner=1;
-				class ViewOptics
-				{
-					initAngleX=0;
-					minAngleX=-30;
-					maxAngleX=30;
-					initAngleY=0;
-					minAngleY=-100;
-					maxAngleY=100;
-					minFov=0.25;
-					maxFov=1.25;
-					initFov=0.75;
-				};
-				gunnerCompartments="Compartment2";
-				memoryPointsGetInGunner="pos gunner";
-				memoryPointsGetInGunnerDir="pos gunner dir";
-				proxyIndex=1;
-				LODTurnedIn=1000;
-				LODTurnedOut=1000;
-				gunnerLeftHandAnimName="";
-				gunnerRightHandAnimName="";
-				castGunnerShadow=1;
-				viewGunnerShadow=1;
-				gunnerDoor="";
-				playerPosition=3;
-				soundAttenuationTurret="HeliAttenuationGunner";
-				disableSoundAttenuation=0;
+				count=14;
+				magazine="30Rnd_65x39_caseless_FMJBT";
 			};
-			class RightDoorGun: MainTurret
+			class _xx_SmokeShellPurple
 			{
-				minTurn=-160;
-				maxTurn=-15;
-				initTurn=-90;
-				body="mainTurret2";
-				gun="mainGun2";
-				animationSourceBody="mainTurret2";
-				animationSourceGun="mainGun2";
-				selectionFireAnim="zasleh_1";
-				proxyIndex=2;
-				gunnerName="$STR_A3_RIGHT_GUNNER";
-				weapons[]={"LMG_Minigun_Transport2"};
-				magazines[]={"2000Rnd_65x39_Belt_Tracer_Red"};
-				commanding=-3;
-				gunBeg="muzzle_beg_2";
-				gunEnd="muzzle_end_2";
-				primaryGunner=0;
-				memoryPointGun="";
-				memoryPointGunnerOptics="Eye2";
-				gunnerCompartments="Compartment2";
-				memoryPointsGetInGunner="pos gunner2";
-				memoryPointsGetInGunnerDir="pos gunner2 dir";
-				gunnerDoor="";
-				turretCanSee="1 + 2 + 4 + 8 + 16";
+				count=10;
+				magazine="SmokeShellPurple";
+			};
+			class _xx_FlareGreen_F
+			{
+				count=10;
+				magazine="FlareGreen_F";
+			};
+			class _xx_FlareRed_F
+			{
+				count=10;
+				magazine="FlareRed_F";
+			};
+			class _xx_FlareWhite_F
+			{
+				count=10;
+				magazine="FlareWhite_F";
+			};
+			class _xx_FlareYellow_F
+			{
+				count=10;
+				magazine="FlareYellow_F";
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				count=10;
+				name="FirstAidKit";
+			};
+			class _xx_Toolkit
+			{
+				name="Toolkit";
+				count=1;
+			};
+			class _xx_Medikit
+			{
+				name="Medikit";
+				count=1;
+			};
+			class _xx_ItemGPS
+			{
+				count=2;
+				name="ItemGPS";
+			};
+			class _xx_ej_160th_ANVIS
+			{
+				count=2;
+				name="160th_ANVIS";
+			};
+		};
+		class TransportWeapons
+		{
+			class _xx_ej_flaregun
+			{
+				weapon="ej_flaregun";
+				count=2;
+			};
+			class _xx_ej_MX_SA_F
+			{
+				weapon="ej_MX_SA_F";
+				count=2;
 			};
 		};
 	};

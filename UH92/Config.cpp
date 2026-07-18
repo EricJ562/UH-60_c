@@ -2672,6 +2672,7 @@ class CfgVehicles
 				gunnerInAction="gunner_Heli_Transport_01";
 				gunnerCompartments="Compartment3";
 				commanding=-3;
+				enableManualFire=1;
 				primaryGunner = 0;			
 				selectionFireAnim = "m134flash_1";
 				proxyIndex = 2;
@@ -2726,6 +2727,7 @@ class CfgVehicles
 				gunnerAction="gunner_Heli_Transport_01";
 				gunnerInAction="gunner_Heli_Transport_01";
 				commanding = -2;
+				enableManualFire=1;
 				selectionFireAnim = "M134flash";
 				primaryGunner = 0;
 				gunnerCompartments = "Compartment2";
@@ -3125,6 +3127,7 @@ class CfgVehicles
 				gunnerInAction="gunner_Heli_Transport_01";
 				gunnerCompartments="Compartment3";
 				commanding=-3;
+				enableManualFire=1;
 				primaryGunner = 0;			
 				selectionFireAnim = "m134flash_1";
 				proxyIndex = 2;
@@ -3175,6 +3178,7 @@ class CfgVehicles
 				gunnerAction="gunner_Heli_Transport_01";
 				gunnerInAction="gunner_Heli_Transport_01";
 				commanding = -2;
+				enableManualFire=1;
 				selectionFireAnim = "M134flash";
 				primaryGunner = 0;
 				gunnerCompartments = "Compartment2";

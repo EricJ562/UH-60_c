@@ -7,7 +7,7 @@ class CfgPatches
 		units[] = {"kj_UH60M_UAS","ej_MH60A","ej_MH60AL","ej_MH60L","ej_UH60M_MEV","ej_UH60M","ej_MH60S","ej_MH60SI","ej_MH60M","ej_MH60MS","ej_HH60HA"};
 		weapons[] = {};
 		magazines[]={};
-		requiredVersion = 2.20;
+		requiredVersion = 2.22;
 		requiredAddons[] = {"KJ_UH_60","A3_Air_F","A3_Characters_F","A3_Data_F","A3_Soft_F","A3_UI_F","A3_Anims_F_Config_Sdr","A3_Weapons_F","CBA_Main"};
 		authorUrl = "https://discord.gg/HbPTn278f6";
 	};

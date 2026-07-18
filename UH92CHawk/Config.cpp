@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class Ej_UH92_battlehawk
+	class Ej_UH92_cherohawk
 	{
 		units[] = {"kj_UH92_CHAWK"};
 		weapons[] = {};
@@ -848,6 +848,26 @@ class CfgVehicles
 						};
 						maxweight=400;
 						UIposition[]={0.58999997,0.40000001};
+					};
+					class wingtip1: PylonLeft1
+					{
+						attachment="PylonECMPod_01_Flare_R";
+						hardpoints[]=
+						{
+							"ECM_POD_L"
+						};
+						UIposition[]={0.625,0.28};
+						priority=4;
+					};
+					class wingtip2: wingtip1
+					{
+						attachment="PylonECMPod_01_Flare_L";
+						hardpoints[]=
+						{
+							"ECM_POD_R"
+						};
+						UIposition[]={0.039999999,0.28};
+						mirroredMissilePos=6;
 					};
 				};
 			};
